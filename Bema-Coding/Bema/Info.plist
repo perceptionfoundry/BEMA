@@ -16,6 +16,17 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>bema</string>
+            </array>
+        </dict>
+    </array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -29,7 +40,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Bema will use the camera for Augmented Reality.</string>
 	<key>SCSDKClientId</key>
-	<string>a6f125a2-1366-4769-b07b-1950297eca8b</string>
+	<string>06135c5b-9137-4687-8ff3-97790ce271f1</string>
 	<key>SCSDKRedirectUrl</key>
 	<string>bema://snap-kit/oauth2</string>
 	<key>SCSDKScopes</key>
