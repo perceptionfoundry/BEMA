@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -14,6 +15,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // OUTLET
     
     @IBOutlet weak var contactList: UITableView!
+    @IBOutlet weak var DisplayImage: UIImageView!
     
     
     
@@ -26,8 +28,22 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         contactList.delegate = self
         contactList.dataSource = self
         contactList.reloadData()
+        
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(sideMenuAction))
+        
+        self.DisplayImage.addGestureRecognizer(tap)
     }
     
+    
+    
+  //********** PERSONALIZE FUNCTION
+    
+    @objc func sideMenuAction(){
+        
+        self.performSegue(withIdentifier: "Menu_Segue", sender: nil)
+     
+    }
  //********** TABLE VIEW *****
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

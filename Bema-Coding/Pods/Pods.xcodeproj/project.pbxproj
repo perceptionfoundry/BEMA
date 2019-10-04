@@ -7,96 +7,121 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00D5CEA91CB0425A7E33C0A7AA8C5EEB /* PINOperation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9154A701976F9C79FED18D15F85BE36D /* PINOperation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27E2ACAB5553AF46488DDAAF0B8537D2 /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A6443563A1E2C8DB6C4B92EE6B8045BE /* PINCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		299793A90C94631056A4C690652EB720 /* PINOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D695F8F7F2128B20332A8B8FE3FE1935 /* PINOperationQueue.m */; };
-		2C70DD89E7D24CD0B4E0F631D62E8044 /* PINOperationMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B61F77874CA584E258BFD1CD3882B39 /* PINOperationMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F7EEA8B734D44018BBE6E65863DAB54 /* PINOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 66340AB2CA7503ADFFF3047F270D5BDF /* PINOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D8A1FB7701C95E1B3CDCE125FA16463 /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F189265F386605A737EC06F2D817CE53 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4E1C1B888CA1C3AF1299FB177B9AFA52 /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = AC35334731EB92DFF02F367EE8CB179E /* PINDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4ED17109EF9F05A6C6037B9D5B572103 /* Pods-Bema-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A072A60C36424E3810495B6D9BBC990C /* Pods-Bema-dummy.m */; };
-		68A966DC9FE75F46B517A0A01458F0DD /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 639356A6E8B2FE7A3E1AC97A55098A24 /* PINCache-dummy.m */; };
-		6CE66B52EA65DF5B232359DC23937968 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		75743394069F16FAD115015B35870F92 /* PINOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460A40379A38194E68FB2BC974F05B2 /* PINOperation-dummy.m */; };
-		7628FE2B08BDD18141ABF40064412E5A /* PINOperationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8E1146D1FE60F4F213F4C969EABFEF /* PINOperationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D00332C0E554E00DCFAC03EDCCCA5FC /* Nullability.h in Headers */ = {isa = PBXBuildFile; fileRef = F37DDCE307C946D947499A555705E69C /* Nullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F70A189CDDBDF56F58C136A195D59A4 /* Pods-Bema-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA522B79995E6B5FD63DDA8021462C7C /* Pods-Bema-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4276999F7266A6C44E2CA706D24340F /* PINCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E7847F6029F202BEC2BD2E12C8C5A48 /* PINCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A51B4367F6F95276CFE4D0D9030D772A /* PINOperationGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 261BB52DF7CCE06E3168CD57358CBBB9 /* PINOperationGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B00EC20A95367E3634CC70121385F419 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B73BC8FEFC48B9C64EDEAC4B4B764637 /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B78733BE001F4E19F992AF47E71BE2B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C3AFD8599CDE7D9A7979816155A9A9F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CB0AE936FDB8F7BFA2FA0F242BB19357 /* PINOperationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9FFC8A706E14F8A6125C93833D31D1 /* PINOperationGroup.m */; };
-		D15F7F93047B54CDC5A9AEB85AFCD5B6 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A5D068E653F123EFDD2C4563FFEAF4 /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2E7CCC6FA04A436D5BCE04E5D639093 /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 919B9ED162C4C27D0EDF059E74F32396 /* PINMemoryCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D4AB193A949BDB9210C7A3F60D035693 /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FF68800E6981AB912F811806847B550A /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA4951096E4902A328AB0D6E72225576 /* PINOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F04AF389CE82938A10E22EA1A7E85D /* PINOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00D5CEA91CB0425A7E33C0A7AA8C5EEB /* PINOperation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 306FAB94A4F861147A2C81FE109E8845 /* PINOperation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E2ACAB5553AF46488DDAAF0B8537D2 /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D01F0B6CFD342D99808678E1E95418 /* PINCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		299793A90C94631056A4C690652EB720 /* PINOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 934515A2801281DE55C9A26C7461B8F8 /* PINOperationQueue.m */; };
+		2C70DD89E7D24CD0B4E0F631D62E8044 /* PINOperationMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E2A19BB184FE1576B06309A9666203 /* PINOperationMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F7EEA8B734D44018BBE6E65863DAB54 /* PINOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A19E072465514C379D53465F1F91CB9B /* PINOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37C3AD492AF23471A5B6C3DF44B1AD99 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD6025A426002975003AAF6780D99CB /* SideMenuManager.swift */; };
+		4258E8714B4290FD60EBAA55BCCE42E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		4D8A1FB7701C95E1B3CDCE125FA16463 /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 73192E007B68FAB2C38FE31908CBFA72 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4E1C1B888CA1C3AF1299FB177B9AFA52 /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B4230AC2447A69B8DE6CFE611AE6E1A /* PINDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5032D6BC990B45126F7740FB5DE5662B /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE07BE8E4DE6C35203BD599AFD20A28E /* UITableViewVibrantCell.swift */; };
+		567AE2F804B60146691B6A7E1CFC224F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		573504F4DD874F7172D774B084D921A4 /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98985B29DDFF17FC0778DE31FE474407 /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		609EBDED7C1E3AD45D9C8237371D652A /* Pods-Bema-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA522B79995E6B5FD63DDA8021462C7C /* Pods-Bema-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68A966DC9FE75F46B517A0A01458F0DD /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD5A32ECEB3D72A8E0EAC2EB8205718 /* PINCache-dummy.m */; };
+		75743394069F16FAD115015B35870F92 /* PINOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE28100783AE196F59FFC6C741DBFC /* PINOperation-dummy.m */; };
+		7628FE2B08BDD18141ABF40064412E5A /* PINOperationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F115DF3F41AAF967A4FE70D344F7C5F /* PINOperationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D00332C0E554E00DCFAC03EDCCCA5FC /* Nullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3594E12C6BEE23B08705DAA0AC60D93C /* Nullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9532071DB3A2593F1D4BF09784DD40AE /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82615DE2645A6AF91CDC3085642DC06F /* SideMenuTransition.swift */; };
+		9556A0F6E89DF1B493CA273E546EAA95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		99493DA5BC7E81F1E6A0A35438D5E952 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8471EC42EB9F36B2C71C16EB38DBC /* SideMenu-dummy.m */; };
+		A4276999F7266A6C44E2CA706D24340F /* PINCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8922C621496C1D793D33B3FC5B4AD96F /* PINCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A51B4367F6F95276CFE4D0D9030D772A /* PINOperationGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 63617003EA39E0DDC7B2DE035FC9BBF1 /* PINOperationGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B00EC20A95367E3634CC70121385F419 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE4747E88BD2AF657C57395401E061C /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C21D13B37126AD5EAD61AB458A94E027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		CB0AE936FDB8F7BFA2FA0F242BB19357 /* PINOperationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E19E3FBE7B9530D8D86E53132E5A0DFA /* PINOperationGroup.m */; };
+		D15F7F93047B54CDC5A9AEB85AFCD5B6 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = D649C42263301EFDBC53E46FD68E84A6 /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2E7CCC6FA04A436D5BCE04E5D639093 /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4C870469C709CB571AADE7F5AD0588 /* PINMemoryCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D4AB193A949BDB9210C7A3F60D035693 /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2611AFEB15743044060239A0C293A0 /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8ECF98BFC439FAE04EACC944723E297 /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405B96CD369FEC608A1F41B434E581E1 /* UISideMenuNavigationController.swift */; };
+		EA4951096E4902A328AB0D6E72225576 /* PINOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8455FCE7915F4697932405F52BFB0854 /* PINOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD40A79458334C85606C651C0EBBBC23 /* Pods-Bema-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A072A60C36424E3810495B6D9BBC990C /* Pods-Bema-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4FE883317DBADE97885928144500B189 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B9136EE4DFA99BAD23B1A8D29A43786;
-			remoteInfo = PINOperation;
-		};
-		E37FEF486BB2D08E687D9E3444C52EB9 /* PBXContainerItemProxy */ = {
+		76F2F3C1C9607D873AA79D3427D9CDDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6A4878A4A87B118BAF0877A103373708;
 			remoteInfo = PINCache;
 		};
+		89ECD5AB913C7E0510281FD199FAD42C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B9136EE4DFA99BAD23B1A8D29A43786;
+			remoteInfo = PINOperation;
+		};
+		EFD42390A08BA1D1E34668FA9F66A306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F030143FAEDB69C2F7C7324F68A87FCE;
+			remoteInfo = SideMenu;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02E1127ED745AB73FC84BEFDA6A5DE54 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		063BFED14D3E099F3949624BD975A580 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07F04AF389CE82938A10E22EA1A7E85D /* PINOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationQueue.h; path = Source/PINOperationQueue.h; sourceTree = "<group>"; };
-		0FFBA9EFF5DA09B1BB4163381808BB26 /* PINOperation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINOperation.modulemap; sourceTree = "<group>"; };
-		18D689F0D14345FA46F238AB5FED906E /* Pods_Bema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bema.framework; path = "Pods-Bema.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C9FFC8A706E14F8A6125C93833D31D1 /* PINOperationGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationGroup.m; path = Source/PINOperationGroup.m; sourceTree = "<group>"; };
+		08E2A37F8DF414DE8F56EF2FD750F25D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A4C870469C709CB571AADE7F5AD0588 /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = PINCache/PINMemoryCache.m; sourceTree = "<group>"; };
+		0ABDD872DECA6F0A2938D6D96F33A2D6 /* SideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.xcconfig; sourceTree = "<group>"; };
+		14378187770BBF143C48941A8E1F659E /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
+		183FA6AD5CA6124A0A966B771CAE9268 /* Pods_Bema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bema.framework; path = "Pods-Bema.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23E2A19BB184FE1576B06309A9666203 /* PINOperationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationMacros.h; path = Source/PINOperationMacros.h; sourceTree = "<group>"; };
 		250D2BC690AA4DC7B08F3FC6DABB951D /* Pods-Bema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bema.release.xcconfig"; sourceTree = "<group>"; };
-		261BB52DF7CCE06E3168CD57358CBBB9 /* PINOperationGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationGroup.h; path = Source/PINOperationGroup.h; sourceTree = "<group>"; };
-		49A5D068E653F123EFDD2C4563FFEAF4 /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = PINCache/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
-		5B61F77874CA584E258BFD1CD3882B39 /* PINOperationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationMacros.h; path = Source/PINOperationMacros.h; sourceTree = "<group>"; };
-		639356A6E8B2FE7A3E1AC97A55098A24 /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		66340AB2CA7503ADFFF3047F270D5BDF /* PINOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperation.h; path = Source/PINOperation.h; sourceTree = "<group>"; };
-		6C54CA150640F82A8ED88A45B7610F94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29AE4F084887070668D908B5D8EAC349 /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
+		2FD8471EC42EB9F36B2C71C16EB38DBC /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
+		305F30DC31141F31E124B33686AEF20B /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINCache.modulemap; sourceTree = "<group>"; };
+		306FAB94A4F861147A2C81FE109E8845 /* PINOperation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-umbrella.h"; sourceTree = "<group>"; };
+		32B51554FF514CC39548E4765A7F7909 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3594E12C6BEE23B08705DAA0AC60D93C /* Nullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nullability.h; path = PINCache/Nullability.h; sourceTree = "<group>"; };
+		3D2611AFEB15743044060239A0C293A0 /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
+		405B96CD369FEC608A1F41B434E581E1 /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISideMenuNavigationController.swift; path = Pod/Classes/UISideMenuNavigationController.swift; sourceTree = "<group>"; };
+		41A0DE456E4E31512FA41841E705D6B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		441DD989B52A622B4A52520F18A5AC40 /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenu.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3C3C321BE645CC94B9173CBC0D8794 /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
+		4BD5A32ECEB3D72A8E0EAC2EB8205718 /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
+		5017304F2BA962A8E1115925E4E5517B /* PINOperation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINOperation.modulemap; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		608C3A462CF6CA5BA66F4D1BE843BA37 /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
+		63617003EA39E0DDC7B2DE035FC9BBF1 /* PINOperationGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationGroup.h; path = Source/PINOperationGroup.h; sourceTree = "<group>"; };
 		6E07DB90270BCD956BD6CDA905DD3670 /* Pods-Bema.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Bema.modulemap"; sourceTree = "<group>"; };
-		7116766BFF3867B76310C481E5112D54 /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
+		6F115DF3F41AAF967A4FE70D344F7C5F /* PINOperationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationTypes.h; path = Source/PINOperationTypes.h; sourceTree = "<group>"; };
 		7228B2AF6EE87F7C0E6874B0F9085070 /* Pods-Bema-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bema-resources.sh"; sourceTree = "<group>"; };
-		73ACA8EC5EFF94CD39CDDB43D8C303DF /* SCSDKCreativeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCreativeKit.framework; sourceTree = "<group>"; };
-		7E7847F6029F202BEC2BD2E12C8C5A48 /* PINCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-umbrella.h"; sourceTree = "<group>"; };
-		862902849E6FAC5BAB48AFE1D3BC1623 /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINCache.modulemap; sourceTree = "<group>"; };
+		73192E007B68FAB2C38FE31908CBFA72 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = PINCache/PINDiskCache.m; sourceTree = "<group>"; };
+		7A570BCF5D2F71D69EEC60EFF90B463D /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
+		7B4230AC2447A69B8DE6CFE611AE6E1A /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = PINCache/PINDiskCache.h; sourceTree = "<group>"; };
+		82615DE2645A6AF91CDC3085642DC06F /* SideMenuTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransition.swift; path = Pod/Classes/SideMenuTransition.swift; sourceTree = "<group>"; };
+		8455FCE7915F4697932405F52BFB0854 /* PINOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationQueue.h; path = Source/PINOperationQueue.h; sourceTree = "<group>"; };
+		8922C621496C1D793D33B3FC5B4AD96F /* PINCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-umbrella.h"; sourceTree = "<group>"; };
 		90E32762B77C9F6C37E61305723DD99F /* Pods-Bema-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bema-acknowledgements.plist"; sourceTree = "<group>"; };
-		9154A701976F9C79FED18D15F85BE36D /* PINOperation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-umbrella.h"; sourceTree = "<group>"; };
-		919B9ED162C4C27D0EDF059E74F32396 /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = PINCache/PINMemoryCache.m; sourceTree = "<group>"; };
-		91D9F435832DCF98DD53CDB64AD80491 /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
+		934515A2801281DE55C9A26C7461B8F8 /* PINOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationQueue.m; path = Source/PINOperationQueue.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9460A40379A38194E68FB2BC974F05B2 /* PINOperation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINOperation-dummy.m"; sourceTree = "<group>"; };
+		942AB5EFABFC8E673D031F3E7D125F84 /* PINOperation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-prefix.pch"; sourceTree = "<group>"; };
+		98985B29DDFF17FC0778DE31FE474407 /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
 		A072A60C36424E3810495B6D9BBC990C /* Pods-Bema-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bema-dummy.m"; sourceTree = "<group>"; };
-		A6443563A1E2C8DB6C4B92EE6B8045BE /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = PINCache/PINCache.m; sourceTree = "<group>"; };
+		A19E072465514C379D53465F1F91CB9B /* PINOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperation.h; path = Source/PINOperation.h; sourceTree = "<group>"; };
 		AA522B79995E6B5FD63DDA8021462C7C /* Pods-Bema-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bema-umbrella.h"; sourceTree = "<group>"; };
-		AC35334731EB92DFF02F367EE8CB179E /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = PINCache/PINDiskCache.h; sourceTree = "<group>"; };
+		ABD6025A426002975003AAF6780D99CB /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
 		AE5CDE1711BA7A33B84108182ABEA67C /* Pods-Bema-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bema-frameworks.sh"; sourceTree = "<group>"; };
-		B13CD7CF2C4540DC2A5D13EC60AB3D7C /* SCSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKLoginKit.framework; sourceTree = "<group>"; };
-		B73BC8FEFC48B9C64EDEAC4B4B764637 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = PINCache/PINCache.h; sourceTree = "<group>"; };
-		C326DE6AF6866B7D1A2168CBC6D468D8 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D01F0B6CFD342D99808678E1E95418 /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = PINCache/PINCache.m; sourceTree = "<group>"; };
+		B5BE28100783AE196F59FFC6C741DBFC /* PINOperation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINOperation-dummy.m"; sourceTree = "<group>"; };
+		C109D85B29F7100E56447AB3B2133124 /* SCSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKLoginKit.framework; sourceTree = "<group>"; };
+		C22D85EFF8D07E138C5586FA1AF746A8 /* SCSDKCreativeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCreativeKit.framework; sourceTree = "<group>"; };
 		C695B35DB34256B977EF4BD7B9E40F6E /* Pods-Bema-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Bema-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CDA5671668B1A05688F05005130AB70E /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
-		CDD2AF539007787BEA8D88E862984AD8 /* PINOperation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINOperation.xcconfig; sourceTree = "<group>"; };
-		CF8E1146D1FE60F4F213F4C969EABFEF /* PINOperationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationTypes.h; path = Source/PINOperationTypes.h; sourceTree = "<group>"; };
+		CAA857EC4EEE33A782AB170070132D58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29830AF4EF6152471BF0BD7AADAEF64 /* Pods-Bema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bema.debug.xcconfig"; sourceTree = "<group>"; };
-		D695F8F7F2128B20332A8B8FE3FE1935 /* PINOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationQueue.m; path = Source/PINOperationQueue.m; sourceTree = "<group>"; };
-		DCD0EE3023AF438141ABE9F43FE52627 /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
-		DD6F8AF2C063FC3E0265DB0B3116ED9B /* PINOperation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-prefix.pch"; sourceTree = "<group>"; };
-		F189265F386605A737EC06F2D817CE53 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = PINCache/PINDiskCache.m; sourceTree = "<group>"; };
-		F37DDCE307C946D947499A555705E69C /* Nullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nullability.h; path = PINCache/Nullability.h; sourceTree = "<group>"; };
+		D649C42263301EFDBC53E46FD68E84A6 /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = PINCache/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
+		DB2A6A59E0678730EE9E79D09CDEF2FF /* PINOperation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINOperation.xcconfig; sourceTree = "<group>"; };
+		DCDE907330AB560806D1FD064BCEC104 /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenu.modulemap; sourceTree = "<group>"; };
+		E19E3FBE7B9530D8D86E53132E5A0DFA /* PINOperationGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationGroup.m; path = Source/PINOperationGroup.m; sourceTree = "<group>"; };
+		E1B4B675CDC9D19103FE1470B39B1450 /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE4747E88BD2AF657C57395401E061C /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = PINCache/PINCache.h; sourceTree = "<group>"; };
+		FE07BE8E4DE6C35203BD599AFD20A28E /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
 		FEE9046B2518C4ACB2F01C176B2F1199 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF68800E6981AB912F811806847B550A /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CE66B52EA65DF5B232359DC23937968 /* Foundation.framework in Frameworks */,
+				4258E8714B4290FD60EBAA55BCCE42E4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,92 +137,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78733BE001F4E19F992AF47E71BE2B9 /* Foundation.framework in Frameworks */,
+				C21D13B37126AD5EAD61AB458A94E027 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C142F8FB18D745E7A5DC239E79A81FCE /* Frameworks */ = {
+		9BC625C4A5784F51E0D344B061901DDD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3AFD8599CDE7D9A7979816155A9A9F4 /* Foundation.framework in Frameworks */,
+				9556A0F6E89DF1B493CA273E546EAA95 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF14E422E2D31B0B6E9E569AA6A1E7D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				567AE2F804B60146691B6A7E1CFC224F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06215ADA6CA9E3C24E3748ADC699E284 /* Pods */ = {
+		088F4F6B19835A87308190B46988A65F /* SnapSDK */ = {
 			isa = PBXGroup;
 			children = (
-				89A1009ED5C2B2443DEC5092701927C0 /* PINCache */,
-				3A2690C26E3EA036D5830452C39AB972 /* PINOperation */,
-				3029E57DA68CE85A98C4493E35321D74 /* SnapSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		0C9EE0FE22AA5E47380F381EB6EF5C4B /* SCSDKCreativeKit */ = {
-			isa = PBXGroup;
-			children = (
-				4F4804C028E5C52A0F6606E43948CC2F /* Frameworks */,
-			);
-			name = SCSDKCreativeKit;
-			sourceTree = "<group>";
-		};
-		3029E57DA68CE85A98C4493E35321D74 /* SnapSDK */ = {
-			isa = PBXGroup;
-			children = (
-				373CD7BCAAA6015CBA200DBBAAF9AD17 /* SCSDKBitmojiKit */,
-				0C9EE0FE22AA5E47380F381EB6EF5C4B /* SCSDKCreativeKit */,
-				E4E27E561E0B70C5CC6A021BFFF2CAC0 /* SCSDKLoginKit */,
+				4FDBB3EA62F7F0E8397AA79E49F927B2 /* SCSDKBitmojiKit */,
+				E233CE57C81FF32F571F8CF6AAB4AFC1 /* SCSDKCreativeKit */,
+				92381986FE095C43EA3CDFF8F17F9BFE /* SCSDKLoginKit */,
 			);
 			name = SnapSDK;
 			path = SnapSDK;
 			sourceTree = "<group>";
 		};
-		373CD7BCAAA6015CBA200DBBAAF9AD17 /* SCSDKBitmojiKit */ = {
+		14D578EFA9B407E083B504E2030B5A0F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				85DA693196790E76DE568D76716358C7 /* Frameworks */,
+				41A0DE456E4E31512FA41841E705D6B3 /* Info.plist */,
+				5017304F2BA962A8E1115925E4E5517B /* PINOperation.modulemap */,
+				DB2A6A59E0678730EE9E79D09CDEF2FF /* PINOperation.xcconfig */,
+				B5BE28100783AE196F59FFC6C741DBFC /* PINOperation-dummy.m */,
+				942AB5EFABFC8E673D031F3E7D125F84 /* PINOperation-prefix.pch */,
+				306FAB94A4F861147A2C81FE109E8845 /* PINOperation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINOperation";
+			sourceTree = "<group>";
+		};
+		4FDBB3EA62F7F0E8397AA79E49F927B2 /* SCSDKBitmojiKit */ = {
+			isa = PBXGroup;
+			children = (
+				65E6955B624DFBBB8EDED75062F07665 /* Frameworks */,
 			);
 			name = SCSDKBitmojiKit;
 			sourceTree = "<group>";
 		};
-		3A2690C26E3EA036D5830452C39AB972 /* PINOperation */ = {
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				66340AB2CA7503ADFFF3047F270D5BDF /* PINOperation.h */,
-				261BB52DF7CCE06E3168CD57358CBBB9 /* PINOperationGroup.h */,
-				1C9FFC8A706E14F8A6125C93833D31D1 /* PINOperationGroup.m */,
-				5B61F77874CA584E258BFD1CD3882B39 /* PINOperationMacros.h */,
-				07F04AF389CE82938A10E22EA1A7E85D /* PINOperationQueue.h */,
-				D695F8F7F2128B20332A8B8FE3FE1935 /* PINOperationQueue.m */,
-				CF8E1146D1FE60F4F213F4C969EABFEF /* PINOperationTypes.h */,
-				8F53364B4757324894EC50AB3E133C69 /* Support Files */,
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
 			);
-			name = PINOperation;
-			path = PINOperation;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		4E9871629AD5B76EC9AA7B1C21370D7C /* Support Files */ = {
+		65E6955B624DFBBB8EDED75062F07665 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C54CA150640F82A8ED88A45B7610F94 /* Info.plist */,
-				862902849E6FAC5BAB48AFE1D3BC1623 /* PINCache.modulemap */,
-				7116766BFF3867B76310C481E5112D54 /* PINCache.xcconfig */,
-				639356A6E8B2FE7A3E1AC97A55098A24 /* PINCache-dummy.m */,
-				CDA5671668B1A05688F05005130AB70E /* PINCache-prefix.pch */,
-				7E7847F6029F202BEC2BD2E12C8C5A48 /* PINCache-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PINCache";
-			sourceTree = "<group>";
-		};
-		4F4804C028E5C52A0F6606E43948CC2F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				73ACA8EC5EFF94CD39CDDB43D8C303DF /* SCSDKCreativeKit.framework */,
+				29AE4F084887070668D908B5D8EAC349 /* SCSDKBitmojiKit.framework */,
+				4A3C3C321BE645CC94B9173CBC0D8794 /* SCSDKCoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,50 +233,54 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				06215ADA6CA9E3C24E3748ADC699E284 /* Pods */,
-				E67A965B07BFD272B6B7CEE894A872C6 /* Products */,
+				D05C351CBD326DE8026B3AD596F81F50 /* Pods */,
+				E85E553A718C3AF2CB8188A2A1E0DC50 /* Products */,
 				97D49B46BF9162AED6DDF626A0662CB6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		85DA693196790E76DE568D76716358C7 /* Frameworks */ = {
+		7E778067BB5A1CA96E77449E36EBE697 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				91D9F435832DCF98DD53CDB64AD80491 /* SCSDKBitmojiKit.framework */,
-				DCD0EE3023AF438141ABE9F43FE52627 /* SCSDKCoreKit.framework */,
+				08E2A37F8DF414DE8F56EF2FD750F25D /* Info.plist */,
+				DCDE907330AB560806D1FD064BCEC104 /* SideMenu.modulemap */,
+				0ABDD872DECA6F0A2938D6D96F33A2D6 /* SideMenu.xcconfig */,
+				2FD8471EC42EB9F36B2C71C16EB38DBC /* SideMenu-dummy.m */,
+				7A570BCF5D2F71D69EEC60EFF90B463D /* SideMenu-prefix.pch */,
+				98985B29DDFF17FC0778DE31FE474407 /* SideMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SideMenu";
+			sourceTree = "<group>";
+		};
+		7E77C4D45DF09422C2E524293A10A2A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C22D85EFF8D07E138C5586FA1AF746A8 /* SCSDKCreativeKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		89A1009ED5C2B2443DEC5092701927C0 /* PINCache */ = {
+		8921CC58FC6FB0D8AB5099D31B18EBA0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F37DDCE307C946D947499A555705E69C /* Nullability.h */,
-				B73BC8FEFC48B9C64EDEAC4B4B764637 /* PINCache.h */,
-				A6443563A1E2C8DB6C4B92EE6B8045BE /* PINCache.m */,
-				49A5D068E653F123EFDD2C4563FFEAF4 /* PINCacheObjectSubscripting.h */,
-				AC35334731EB92DFF02F367EE8CB179E /* PINDiskCache.h */,
-				F189265F386605A737EC06F2D817CE53 /* PINDiskCache.m */,
-				FF68800E6981AB912F811806847B550A /* PINMemoryCache.h */,
-				919B9ED162C4C27D0EDF059E74F32396 /* PINMemoryCache.m */,
-				4E9871629AD5B76EC9AA7B1C21370D7C /* Support Files */,
-			);
-			name = PINCache;
-			path = PINCache;
-			sourceTree = "<group>";
-		};
-		8F53364B4757324894EC50AB3E133C69 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				063BFED14D3E099F3949624BD975A580 /* Info.plist */,
-				0FFBA9EFF5DA09B1BB4163381808BB26 /* PINOperation.modulemap */,
-				CDD2AF539007787BEA8D88E862984AD8 /* PINOperation.xcconfig */,
-				9460A40379A38194E68FB2BC974F05B2 /* PINOperation-dummy.m */,
-				DD6F8AF2C063FC3E0265DB0B3116ED9B /* PINOperation-prefix.pch */,
-				9154A701976F9C79FED18D15F85BE36D /* PINOperation-umbrella.h */,
+				CAA857EC4EEE33A782AB170070132D58 /* Info.plist */,
+				305F30DC31141F31E124B33686AEF20B /* PINCache.modulemap */,
+				14378187770BBF143C48941A8E1F659E /* PINCache.xcconfig */,
+				4BD5A32ECEB3D72A8E0EAC2EB8205718 /* PINCache-dummy.m */,
+				608C3A462CF6CA5BA66F4D1BE843BA37 /* PINCache-prefix.pch */,
+				8922C621496C1D793D33B3FC5B4AD96F /* PINCache-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/PINOperation";
+			path = "../Target Support Files/PINCache";
+			sourceTree = "<group>";
+		};
+		92381986FE095C43EA3CDFF8F17F9BFE /* SCSDKLoginKit */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A2A049ECD2E86377419896AEBB8A0 /* Frameworks */,
+			);
+			name = SCSDKLoginKit;
 			sourceTree = "<group>";
 		};
 		97D49B46BF9162AED6DDF626A0662CB6 /* Targets Support Files */ = {
@@ -279,56 +291,114 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B62C09373AEA3E18351DA565A4ABE1C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B13CD7CF2C4540DC2A5D13EC60AB3D7C /* SCSDKLoginKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		CD0A2A049ECD2E86377419896AEBB8A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				C109D85B29F7100E56447AB3B2133124 /* SCSDKLoginKit.framework */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E4E27E561E0B70C5CC6A021BFFF2CAC0 /* SCSDKLoginKit */ = {
+		D05C351CBD326DE8026B3AD596F81F50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B62C09373AEA3E18351DA565A4ABE1C7 /* Frameworks */,
+				F6BCAAF2CE6D173072135764088C00D2 /* PINCache */,
+				FC0B75B3F2C44C4699FE254485B29319 /* PINOperation */,
+				F97EB11080E40B81300ED2EC6D3B02CB /* SideMenu */,
+				088F4F6B19835A87308190B46988A65F /* SnapSDK */,
 			);
-			name = SCSDKLoginKit;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		E67A965B07BFD272B6B7CEE894A872C6 /* Products */ = {
+		E233CE57C81FF32F571F8CF6AAB4AFC1 /* SCSDKCreativeKit */ = {
 			isa = PBXGroup;
 			children = (
-				02E1127ED745AB73FC84BEFDA6A5DE54 /* PINCache.framework */,
-				C326DE6AF6866B7D1A2168CBC6D468D8 /* PINOperation.framework */,
-				18D689F0D14345FA46F238AB5FED906E /* Pods_Bema.framework */,
+				7E77C4D45DF09422C2E524293A10A2A5 /* Frameworks */,
+			);
+			name = SCSDKCreativeKit;
+			sourceTree = "<group>";
+		};
+		E85E553A718C3AF2CB8188A2A1E0DC50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32B51554FF514CC39548E4765A7F7909 /* PINCache.framework */,
+				E1B4B675CDC9D19103FE1470B39B1450 /* PINOperation.framework */,
+				183FA6AD5CA6124A0A966B771CAE9268 /* Pods_Bema.framework */,
+				441DD989B52A622B4A52520F18A5AC40 /* SideMenu.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F6BCAAF2CE6D173072135764088C00D2 /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				3594E12C6BEE23B08705DAA0AC60D93C /* Nullability.h */,
+				EDE4747E88BD2AF657C57395401E061C /* PINCache.h */,
+				B3D01F0B6CFD342D99808678E1E95418 /* PINCache.m */,
+				D649C42263301EFDBC53E46FD68E84A6 /* PINCacheObjectSubscripting.h */,
+				7B4230AC2447A69B8DE6CFE611AE6E1A /* PINDiskCache.h */,
+				73192E007B68FAB2C38FE31908CBFA72 /* PINDiskCache.m */,
+				3D2611AFEB15743044060239A0C293A0 /* PINMemoryCache.h */,
+				0A4C870469C709CB571AADE7F5AD0588 /* PINMemoryCache.m */,
+				8921CC58FC6FB0D8AB5099D31B18EBA0 /* Support Files */,
+			);
+			name = PINCache;
+			path = PINCache;
+			sourceTree = "<group>";
+		};
+		F97EB11080E40B81300ED2EC6D3B02CB /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				ABD6025A426002975003AAF6780D99CB /* SideMenuManager.swift */,
+				82615DE2645A6AF91CDC3085642DC06F /* SideMenuTransition.swift */,
+				405B96CD369FEC608A1F41B434E581E1 /* UISideMenuNavigationController.swift */,
+				FE07BE8E4DE6C35203BD599AFD20A28E /* UITableViewVibrantCell.swift */,
+				7E778067BB5A1CA96E77449E36EBE697 /* Support Files */,
+			);
+			name = SideMenu;
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		FC0B75B3F2C44C4699FE254485B29319 /* PINOperation */ = {
+			isa = PBXGroup;
+			children = (
+				A19E072465514C379D53465F1F91CB9B /* PINOperation.h */,
+				63617003EA39E0DDC7B2DE035FC9BBF1 /* PINOperationGroup.h */,
+				E19E3FBE7B9530D8D86E53132E5A0DFA /* PINOperationGroup.m */,
+				23E2A19BB184FE1576B06309A9666203 /* PINOperationMacros.h */,
+				8455FCE7915F4697932405F52BFB0854 /* PINOperationQueue.h */,
+				934515A2801281DE55C9A26C7461B8F8 /* PINOperationQueue.m */,
+				6F115DF3F41AAF967A4FE70D344F7C5F /* PINOperationTypes.h */,
+				14D578EFA9B407E083B504E2030B5A0F /* Support Files */,
+			);
+			name = PINOperation;
+			path = PINOperation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2A8786250CAD5B7F4EEC85AC1BF1FEAB /* Headers */ = {
+		17C6D42A8E95E3D023E1C9F16C624ECD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F70A189CDDBDF56F58C136A195D59A4 /* Pods-Bema-umbrella.h in Headers */,
+				573504F4DD874F7172D774B084D921A4 /* SideMenu-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5983AEC8A7674D852A783CB047217177 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609EBDED7C1E3AD45D9C8237371D652A /* Pods-Bema-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,23 +431,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		234E496C7D06355686252CE7AE3B7F79 /* Pods-Bema */ = {
+		4C6EC1BE927C3A9D326BE85B4CC23890 /* Pods-Bema */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 168EE6ACFA6004F5FF5417F78DB6BEDA /* Build configuration list for PBXNativeTarget "Pods-Bema" */;
+			buildConfigurationList = C020D9497F43D57221156AE5D86C6962 /* Build configuration list for PBXNativeTarget "Pods-Bema" */;
 			buildPhases = (
-				D18EE9A82FF5C84E2FC5AD416C64477D /* Sources */,
-				C142F8FB18D745E7A5DC239E79A81FCE /* Frameworks */,
-				2A8786250CAD5B7F4EEC85AC1BF1FEAB /* Headers */,
+				06264373793A9DC999734DADF87029AF /* Sources */,
+				DF14E422E2D31B0B6E9E569AA6A1E7D6 /* Frameworks */,
+				5983AEC8A7674D852A783CB047217177 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				309F1B7A5352847E03CF2A21D94C8D38 /* PBXTargetDependency */,
-				781E603E0E31516E6B0FD7CC35240A3C /* PBXTargetDependency */,
+				BD5095FD1840B740674959CD23A9857E /* PBXTargetDependency */,
+				8F45688F5EE3CE2B4132C006189C30C4 /* PBXTargetDependency */,
+				283AF26F53D34E3AD12F327F6B7B7F01 /* PBXTargetDependency */,
 			);
 			name = "Pods-Bema";
 			productName = "Pods-Bema";
-			productReference = 18D689F0D14345FA46F238AB5FED906E /* Pods_Bema.framework */;
+			productReference = 183FA6AD5CA6124A0A966B771CAE9268 /* Pods_Bema.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6A4878A4A87B118BAF0877A103373708 /* PINCache */ = {
@@ -394,7 +465,7 @@
 			);
 			name = PINCache;
 			productName = PINCache;
-			productReference = 02E1127ED745AB73FC84BEFDA6A5DE54 /* PINCache.framework */;
+			productReference = 32B51554FF514CC39548E4765A7F7909 /* PINCache.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7B9136EE4DFA99BAD23B1A8D29A43786 /* PINOperation */ = {
@@ -411,7 +482,24 @@
 			);
 			name = PINOperation;
 			productName = PINOperation;
-			productReference = C326DE6AF6866B7D1A2168CBC6D468D8 /* PINOperation.framework */;
+			productReference = E1B4B675CDC9D19103FE1470B39B1450 /* PINOperation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F030143FAEDB69C2F7C7324F68A87FCE /* SideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4CC9089AF322F199E730653D62EF158 /* Build configuration list for PBXNativeTarget "SideMenu" */;
+			buildPhases = (
+				2609F115C4AE6DE1AD0257BD6FCA25D7 /* Sources */,
+				9BC625C4A5784F51E0D344B061901DDD /* Frameworks */,
+				17C6D42A8E95E3D023E1C9F16C624ECD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SideMenu;
+			productName = SideMenu;
+			productReference = 441DD989B52A622B4A52520F18A5AC40 /* SideMenu.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -431,18 +519,27 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E67A965B07BFD272B6B7CEE894A872C6 /* Products */;
+			productRefGroup = E85E553A718C3AF2CB8188A2A1E0DC50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6A4878A4A87B118BAF0877A103373708 /* PINCache */,
 				7B9136EE4DFA99BAD23B1A8D29A43786 /* PINOperation */,
-				234E496C7D06355686252CE7AE3B7F79 /* Pods-Bema */,
+				4C6EC1BE927C3A9D326BE85B4CC23890 /* Pods-Bema */,
+				F030143FAEDB69C2F7C7324F68A87FCE /* SideMenu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		06264373793A9DC999734DADF87029AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD40A79458334C85606C651C0EBBBC23 /* Pods-Bema-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06A5C791F37C3C61E858A02BAB9C23C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,6 +548,18 @@
 				27E2ACAB5553AF46488DDAAF0B8537D2 /* PINCache.m in Sources */,
 				4D8A1FB7701C95E1B3CDCE125FA16463 /* PINDiskCache.m in Sources */,
 				D2E7CCC6FA04A436D5BCE04E5D639093 /* PINMemoryCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2609F115C4AE6DE1AD0257BD6FCA25D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99493DA5BC7E81F1E6A0A35438D5E952 /* SideMenu-dummy.m in Sources */,
+				37C3AD492AF23471A5B6C3DF44B1AD99 /* SideMenuManager.swift in Sources */,
+				9532071DB3A2593F1D4BF09784DD40AE /* SideMenuTransition.swift in Sources */,
+				E8ECF98BFC439FAE04EACC944723E297 /* UISideMenuNavigationController.swift in Sources */,
+				5032D6BC990B45126F7740FB5DE5662B /* UITableViewVibrantCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,28 +573,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D18EE9A82FF5C84E2FC5AD416C64477D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4ED17109EF9F05A6C6037B9D5B572103 /* Pods-Bema-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		309F1B7A5352847E03CF2A21D94C8D38 /* PBXTargetDependency */ = {
+		283AF26F53D34E3AD12F327F6B7B7F01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PINCache;
-			target = 6A4878A4A87B118BAF0877A103373708 /* PINCache */;
-			targetProxy = E37FEF486BB2D08E687D9E3444C52EB9 /* PBXContainerItemProxy */;
+			name = SideMenu;
+			target = F030143FAEDB69C2F7C7324F68A87FCE /* SideMenu */;
+			targetProxy = EFD42390A08BA1D1E34668FA9F66A306 /* PBXContainerItemProxy */;
 		};
-		781E603E0E31516E6B0FD7CC35240A3C /* PBXTargetDependency */ = {
+		8F45688F5EE3CE2B4132C006189C30C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PINOperation;
 			target = 7B9136EE4DFA99BAD23B1A8D29A43786 /* PINOperation */;
-			targetProxy = 4FE883317DBADE97885928144500B189 /* PBXContainerItemProxy */;
+			targetProxy = 89ECD5AB913C7E0510281FD199FAD42C /* PBXContainerItemProxy */;
+		};
+		BD5095FD1840B740674959CD23A9857E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = 6A4878A4A87B118BAF0877A103373708 /* PINCache */;
+			targetProxy = 76F2F3C1C9607D873AA79D3427D9CDDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -555,7 +662,7 @@
 		};
 		15894076EAF2A4B827C6D4F7944201D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDD2AF539007787BEA8D88E862984AD8 /* PINOperation.xcconfig */;
+			baseConfigurationReference = DB2A6A59E0678730EE9E79D09CDEF2FF /* PINOperation.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -570,7 +677,11 @@
 				INFOPLIST_FILE = "Target Support Files/PINOperation/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
 				PRODUCT_MODULE_NAME = PINOperation;
 				PRODUCT_NAME = PINOperation;
@@ -584,7 +695,7 @@
 			};
 			name = Debug;
 		};
-		58C04C84ED0DDE1B5AC45A8970F2C968 /* Release */ = {
+		380F31933EA8667D19853B1F83E0F920 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 250D2BC690AA4DC7B08F3FC6DABB951D /* Pods-Bema.release.xcconfig */;
 			buildSettings = {
@@ -602,7 +713,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Bema/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Bema/Pods-Bema.modulemap";
 				OTHER_LDFLAGS = "";
@@ -612,6 +727,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -619,9 +735,46 @@
 			};
 			name = Release;
 		};
+		68F64086932A0D21E58FEDCAAA179AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABDD872DECA6F0A2938D6D96F33A2D6 /* SideMenu.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
+				PRODUCT_MODULE_NAME = SideMenu;
+				PRODUCT_NAME = SideMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		8373D03882FA59AE135E0BEA2736680A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7116766BFF3867B76310C481E5112D54 /* PINCache.xcconfig */;
+			baseConfigurationReference = 14378187770BBF143C48941A8E1F659E /* PINCache.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -636,7 +789,11 @@
 				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
 				PRODUCT_MODULE_NAME = PINCache;
 				PRODUCT_NAME = PINCache;
@@ -650,9 +807,47 @@
 			};
 			name = Debug;
 		};
+		91E6DEE4D5F95636F470997C973CD31D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABDD872DECA6F0A2938D6D96F33A2D6 /* SideMenu.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenu/SideMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SideMenu/SideMenu.modulemap";
+				PRODUCT_MODULE_NAME = SideMenu;
+				PRODUCT_NAME = SideMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9677309C3C3EFF904AD164D8EDB759FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7116766BFF3867B76310C481E5112D54 /* PINCache.xcconfig */;
+			baseConfigurationReference = 14378187770BBF143C48941A8E1F659E /* PINCache.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -667,7 +862,11 @@
 				INFOPLIST_FILE = "Target Support Files/PINCache/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
 				PRODUCT_MODULE_NAME = PINCache;
 				PRODUCT_NAME = PINCache;
@@ -684,7 +883,7 @@
 		};
 		A9423DA551CC8E1BAB0AE5831BDF2102 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDD2AF539007787BEA8D88E862984AD8 /* PINOperation.xcconfig */;
+			baseConfigurationReference = DB2A6A59E0678730EE9E79D09CDEF2FF /* PINOperation.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -699,7 +898,11 @@
 				INFOPLIST_FILE = "Target Support Files/PINOperation/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
 				PRODUCT_MODULE_NAME = PINOperation;
 				PRODUCT_NAME = PINOperation;
@@ -713,40 +916,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		C7324EE1E547D51D8BC22CB0EAFB61E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D29830AF4EF6152471BF0BD7AADAEF64 /* Pods-Bema.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Bema/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Bema/Pods-Bema.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		CD8324D57CD462761E218EEA4EA91EC7 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -806,18 +975,49 @@
 			};
 			name = Release;
 		};
+		F485EA675C0F017A5FBF27D01A565C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29830AF4EF6152471BF0BD7AADAEF64 /* Pods-Bema.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Bema/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Bema/Pods-Bema.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		168EE6ACFA6004F5FF5417F78DB6BEDA /* Build configuration list for PBXNativeTarget "Pods-Bema" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7324EE1E547D51D8BC22CB0EAFB61E3 /* Debug */,
-				58C04C84ED0DDE1B5AC45A8970F2C968 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -841,6 +1041,24 @@
 			buildConfigurations = (
 				15894076EAF2A4B827C6D4F7944201D2 /* Debug */,
 				A9423DA551CC8E1BAB0AE5831BDF2102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C020D9497F43D57221156AE5D86C6962 /* Build configuration list for PBXNativeTarget "Pods-Bema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F485EA675C0F017A5FBF27D01A565C35 /* Debug */,
+				380F31933EA8667D19853B1F83E0F920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4CC9089AF322F199E730653D62EF158 /* Build configuration list for PBXNativeTarget "SideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68F64086932A0D21E58FEDCAAA179AE0 /* Debug */,
+				91E6DEE4D5F95636F470997C973CD31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
