@@ -160,6 +160,7 @@
 		F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */; };
 		F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F5234B95E800F3BA47 /* TermVC.swift */; };
 		F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */; };
+		F2EE38FA234B9A0A00F3BA47 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */; };
 		F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F764C6234B4A71001A981F /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -321,6 +322,7 @@
 		F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
 		F2EE38F5234B95E800F3BA47 /* TermVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermVC.swift; sourceTree = "<group>"; };
 		F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordVC.swift; sourceTree = "<group>"; };
+		F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
 		F2F764C6234B4A71001A981F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -572,6 +574,7 @@
 				F2E223562343135700931AFA /* Main.storyboard */,
 				F2F764C6234B4A71001A981F /* Profile.storyboard */,
 				F2A28A03234B7D0A001AE873 /* Settings.storyboard */,
+				F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				F21B7B5523431C72005EE90F /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				F21B7B8023431C72005EE90F /* NewYorkSmall-Regular.otf in Resources */,
 				F21B7B8123431C72005EE90F /* NewYorkSmall-RegularItalic.otf in Resources */,
+				F2EE38FA234B9A0A00F3BA47 /* Wallet.storyboard in Resources */,
 				F2B479742345BF7E00DAA960 /* Montserrat-ExtraBoldItalic.otf in Resources */,
 				F21B7B3323431C72005EE90F /* SF-Pro-Display-Heavy.otf in Resources */,
 				F21B7B3623431C72005EE90F /* SF-Pro-Display-LightItalic.otf in Resources */,
