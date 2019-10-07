@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UWT-vn-7RZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zy9-2j-7Pr">
+            <objects>
+                <viewController storyboardIdentifier="Profile" id="UWT-vn-7RZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v3S-Jh-Adf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Htb-ea-tKI" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZZ-ef-Ioi">
+                                        <rect key="frame" x="189.5" y="66.5" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ES-on-P75">
+                                        <rect key="frame" x="354" y="60" width="40" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hd-1z-E77">
+                                        <rect key="frame" x="20" y="55" width="30" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="&lt;"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7ES-on-P75" firstAttribute="centerY" secondItem="VZZ-ef-Ioi" secondAttribute="centerY" id="Bvr-U0-gEb"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ES-on-P75" secondAttribute="trailing" constant="20" id="Ct8-1L-Ykk"/>
+                                    <constraint firstItem="VZZ-ef-Ioi" firstAttribute="centerX" secondItem="Htb-ea-tKI" secondAttribute="centerX" id="G8y-CW-pf6"/>
+                                    <constraint firstItem="7Hd-1z-E77" firstAttribute="leading" secondItem="Htb-ea-tKI" secondAttribute="leading" constant="20" id="VmX-XF-6Lx"/>
+                                    <constraint firstAttribute="bottom" secondItem="VZZ-ef-Ioi" secondAttribute="bottom" constant="15" id="aQT-4n-uPl"/>
+                                    <constraint firstItem="7Hd-1z-E77" firstAttribute="centerY" secondItem="VZZ-ef-Ioi" secondAttribute="centerY" id="h0y-Q8-Z7f"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99997597932815552" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Htb-ea-tKI" firstAttribute="height" secondItem="G1u-uy-WOd" secondAttribute="height" multiplier="0.125" id="48U-0Z-Hkd"/>
+                            <constraint firstItem="Htb-ea-tKI" firstAttribute="trailing" secondItem="G1u-uy-WOd" secondAttribute="trailing" id="S7Y-cK-zM0"/>
+                            <constraint firstItem="Htb-ea-tKI" firstAttribute="top" secondItem="v3S-Jh-Adf" secondAttribute="top" id="bo4-cc-V8y"/>
+                            <constraint firstItem="Htb-ea-tKI" firstAttribute="leading" secondItem="G1u-uy-WOd" secondAttribute="leading" id="xDG-sP-wKk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G1u-uy-WOd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wrF-xM-BeZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWz-em-bil" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068.1159420289855" y="173.4375"/>
+        </scene>
+    </scenes>
+</document>

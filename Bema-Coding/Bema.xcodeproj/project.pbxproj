@@ -154,6 +154,7 @@
 		F2E223582343135700931AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E223562343135700931AFA /* Main.storyboard */; };
 		F2E2235A2343135800931AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E223592343135800931AFA /* Assets.xcassets */; };
 		F2E2235D2343135800931AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E2235B2343135800931AFA /* LaunchScreen.storyboard */; };
+		F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F764C6234B4A71001A981F /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -308,6 +309,7 @@
 		F2E223592343135800931AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E2235C2343135800931AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E2235E2343135800931AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2F764C6234B4A71001A981F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E223562343135700931AFA /* Main.storyboard */,
+				F2F764C6234B4A71001A981F /* Profile.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 				F21B7B5623431C72005EE90F /* SF-Pro-Text-Semibold.otf in Resources */,
 				F21B7B2823431C72005EE90F /* NewYorkExtraLarge-BlackItalic.otf in Resources */,
 				F21B7B5723431C72005EE90F /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */,
 				F21B7B4123431C72005EE90F /* SF-Pro-Rounded-Black.otf in Resources */,
 				F21B7B6C23431C72005EE90F /* NewYorkMedium-Black.otf in Resources */,
 				F21B7B3023431C72005EE90F /* SF-Pro-Display-BlackItalic.otf in Resources */,

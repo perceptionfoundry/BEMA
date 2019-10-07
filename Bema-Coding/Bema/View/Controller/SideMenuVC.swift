@@ -32,8 +32,31 @@ class SideMenuVC: UIViewController {
     }
     
 
+    //************ OUTLET ACTION *************
+    
+    @IBAction func profileButtonAction(_ sender: Any) {
+        
+        
+//        let story = UIStoryboard.init(name: "Profile", bundle: nil)
+//        
+//        let vc = story.instantiateViewController(withIdentifier: "Profile") as! UIViewController
+//        
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        self.performSegue(withIdentifier: "Profile", sender: nil)
+        
+    }
     
     
+    @IBAction func bitmojiButtonAction(_ sender: Any) {}
+
+    @IBAction func walletButtonAction(_ sender: Any) {}
+
+    @IBAction func settingButtonAction(_ sender: Any) {}
+
+    @IBAction func logoutButtonAction(_ sender: Any) {}
+
+    @IBAction func inviteButtonAction(_ sender: Any) {}
 
     
     @IBAction func backButtonAction(_ sender: Any) {
