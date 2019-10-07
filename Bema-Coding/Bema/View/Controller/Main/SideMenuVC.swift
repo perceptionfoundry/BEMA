@@ -60,14 +60,9 @@ class SideMenuVC: UIViewController {
 
     
     @IBAction func backButtonAction(_ sender: Any) {
-          
-     
+
             self.dismiss(animated: true, completion: nil)
-
-
-        
-    
-        
+   
     }
 //
 //    override func viewWillDisappear(_ animated: Bool) {

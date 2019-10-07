@@ -107,6 +107,8 @@
 		F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8823431EE1005EE90F /* Custom_Label.swift */; };
 		F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE4234332D60015E658 /* SignInVC.swift */; };
 		F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE62343342B0015E658 /* UserEntity.swift */; };
+		F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A28A01234B6749001AE873 /* editProfileVC.swift */; };
+		F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A28A03234B7D0A001AE873 /* Settings.storyboard */; };
 		F2B479542345BF7E00DAA960 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */; };
 		F2B479552345BF7E00DAA960 /* MontserratAlternates-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479302345BF7A00DAA960 /* MontserratAlternates-Medium.otf */; };
 		F2B479562345BF7E00DAA960 /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479312345BF7A00DAA960 /* MontserratAlternates-SemiBold.otf */; };
@@ -147,6 +149,7 @@
 		F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */; };
 		F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD07362344F15600FB766F /* ChatMainVC.swift */; };
 		F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD07382344F16B00FB766F /* WalletMainVC.swift */; };
+		F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE8069234B8E06009933A2 /* SettingVC.swift */; };
 		F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */; };
 		F2E223512343135700931AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E223502343135700931AFA /* AppDelegate.swift */; };
 		F2E223532343135700931AFA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E223522343135700931AFA /* art.scnassets */; };
@@ -154,6 +157,9 @@
 		F2E223582343135700931AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E223562343135700931AFA /* Main.storyboard */; };
 		F2E2235A2343135800931AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E223592343135800931AFA /* Assets.xcassets */; };
 		F2E2235D2343135800931AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E2235B2343135800931AFA /* LaunchScreen.storyboard */; };
+		F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */; };
+		F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F5234B95E800F3BA47 /* TermVC.swift */; };
+		F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */; };
 		F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F764C6234B4A71001A981F /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -260,6 +266,8 @@
 		F21B7B8823431EE1005EE90F /* Custom_Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Label.swift; sourceTree = "<group>"; };
 		F24E1EE4234332D60015E658 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		F24E1EE62343342B0015E658 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		F2A28A01234B6749001AE873 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
+		F2A28A03234B7D0A001AE873 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.otf"; sourceTree = "<group>"; };
 		F2B479302345BF7A00DAA960 /* MontserratAlternates-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Medium.otf"; sourceTree = "<group>"; };
 		F2B479312345BF7A00DAA960 /* MontserratAlternates-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.otf"; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 		F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		F2BD07362344F15600FB766F /* ChatMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainVC.swift; sourceTree = "<group>"; };
 		F2BD07382344F16B00FB766F /* WalletMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletMainVC.swift; sourceTree = "<group>"; };
+		F2CE8069234B8E06009933A2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		F2E2234D2343135700931AFA /* Bema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E223502343135700931AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -309,6 +318,9 @@
 		F2E223592343135800931AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E2235C2343135800931AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E2235E2343135800931AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
+		F2EE38F5234B95E800F3BA47 /* TermVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermVC.swift; sourceTree = "<group>"; };
+		F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordVC.swift; sourceTree = "<group>"; };
 		F2F764C6234B4A71001A981F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -376,7 +388,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F2B479792345C1FF00DAA960 /* Controller */ = {
+		F2A289FF234B66FF001AE873 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				F24E1EE4234332D60015E658 /* SignInVC.swift */,
@@ -384,6 +396,27 @@
 				F2BD07362344F15600FB766F /* ChatMainVC.swift */,
 				F2BD07382344F16B00FB766F /* WalletMainVC.swift */,
 				F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F2A28A00234B6712001AE873 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F2A28A01234B6749001AE873 /* editProfileVC.swift */,
+				F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */,
+				F2EE38F5234B95E800F3BA47 /* TermVC.swift */,
+				F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F2B479792345C1FF00DAA960 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2A289FF234B66FF001AE873 /* Main */,
+				F2A28A00234B6712001AE873 /* Profile */,
+				F2CE806B234B8E14009933A2 /* Settings */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -538,8 +571,17 @@
 			children = (
 				F2E223562343135700931AFA /* Main.storyboard */,
 				F2F764C6234B4A71001A981F /* Profile.storyboard */,
+				F2A28A03234B7D0A001AE873 /* Settings.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F2CE806B234B8E14009933A2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F2CE8069234B8E06009933A2 /* SettingVC.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		F2E223442343135700931AFA = {
@@ -673,6 +715,7 @@
 				F21B7B8323431C72005EE90F /* NewYorkSmall-SemiboldItalic.otf in Resources */,
 				F21B7B3223431C72005EE90F /* SF-Pro-Display-BoldItalic.otf in Resources */,
 				F2B4795C2345BF7E00DAA960 /* Montserrat-BlackItalic.otf in Resources */,
+				F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */,
 				F2B479702345BF7E00DAA960 /* Montserrat-ExtraLight.otf in Resources */,
 				F21B7B7923431C72005EE90F /* NewYorkSmall-BlackItalic.otf in Resources */,
 				F21B7B2723431C72005EE90F /* NewYorkExtraLarge-Black.otf in Resources */,
@@ -835,17 +878,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E223552343135700931AFA /* AugmentVC.swift in Sources */,
+				F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */,
 				F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */,
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,
 				F2E223512343135700931AFA /* AppDelegate.swift in Sources */,
 				F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */,
+				F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */,
+				F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */,
 				F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */,
 				F21B7B8923431EE1005EE90F /* Custom_View.swift in Sources */,
 				F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */,
 				F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */,
 				F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
+				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
+				F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

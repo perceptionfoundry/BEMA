@@ -394,6 +394,16 @@
             </objects>
             <point key="canvasLocation" x="1064" y="2626"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="m42-R8-qMx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="5hX-Tz-krV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lpP-Lh-WDe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpD-3Q-Syi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="2626"/>
+        </scene>
         <!--Side MenuVC-->
         <scene sceneID="mQI-n1-7go">
             <objects>
@@ -653,6 +663,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="72.5"/>
                                                 <connections>
                                                     <action selector="settingButtonAction:" destination="Lz2-Nz-jfF" eventType="touchUpInside" id="czG-6w-sCo"/>
+                                                    <segue destination="5hX-Tz-krV" kind="show" id="N7o-P4-d1E"/>
                                                 </connections>
                                             </button>
                                         </subviews>
