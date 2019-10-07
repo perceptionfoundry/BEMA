@@ -105,6 +105,8 @@
 		F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8623431EE0005EE90F /* Custom_ImageView.swift */; };
 		F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8723431EE0005EE90F /* Custom_Button.swift */; };
 		F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8823431EE1005EE90F /* Custom_Label.swift */; };
+		F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365E9D234BA2870072463E /* ManageWalletVC.swift */; };
+		F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */; };
 		F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE4234332D60015E658 /* SignInVC.swift */; };
 		F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE62343342B0015E658 /* UserEntity.swift */; };
 		F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A28A01234B6749001AE873 /* editProfileVC.swift */; };
@@ -265,6 +267,8 @@
 		F21B7B8623431EE0005EE90F /* Custom_ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_ImageView.swift; sourceTree = "<group>"; };
 		F21B7B8723431EE0005EE90F /* Custom_Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Button.swift; sourceTree = "<group>"; };
 		F21B7B8823431EE1005EE90F /* Custom_Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Label.swift; sourceTree = "<group>"; };
+		F2365E9D234BA2870072463E /* ManageWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWalletVC.swift; sourceTree = "<group>"; };
+		F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		F24E1EE4234332D60015E658 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		F24E1EE62343342B0015E658 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		F2A28A01234B6749001AE873 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
@@ -366,6 +370,14 @@
 			path = "Customize UI";
 			sourceTree = "<group>";
 		};
+		F2365E9F234BA2910072463E /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				F2365E9D234BA2870072463E /* ManageWalletVC.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
 		F24E1EE1234332250015E658 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +431,7 @@
 				F2A289FF234B66FF001AE873 /* Main */,
 				F2A28A00234B6712001AE873 /* Profile */,
 				F2CE806B234B8E14009933A2 /* Settings */,
+				F2365E9F234BA2910072463E /* Wallet */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -427,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */,
+				F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -887,6 +901,7 @@
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,
 				F2E223512343135700931AFA /* AppDelegate.swift in Sources */,
+				F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */,
 				F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */,
 				F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */,
 				F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */,
@@ -897,6 +912,7 @@
 				F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
+				F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */,
 				F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -402,7 +402,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KpD-3Q-Syi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="2626"/>
+            <point key="canvasLocation" x="2311" y="2702"/>
+        </scene>
+        <!--Wallet-->
+        <scene sceneID="pXB-3Q-2wj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Wallet" id="wlO-YN-as7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b8T-pf-J0m"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRe-cS-yJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="2719"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="mQI-n1-7go">
@@ -610,6 +620,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="72.5"/>
                                                 <connections>
                                                     <action selector="walletButtonAction:" destination="Lz2-Nz-jfF" eventType="touchUpInside" id="2xd-h8-A3c"/>
+                                                    <segue destination="wlO-YN-as7" kind="show" id="NO2-BE-5Kr"/>
                                                 </connections>
                                             </button>
                                         </subviews>
