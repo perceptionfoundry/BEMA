@@ -109,6 +109,9 @@
 		F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */; };
 		F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE4234332D60015E658 /* SignInVC.swift */; };
 		F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE62343342B0015E658 /* UserEntity.swift */; };
+		F25197E5234CF6DE00973F65 /* SetBitmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */; };
+		F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E6234CF6F800973F65 /* InviteVC.swift */; };
+		F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E8234CF72F00973F65 /* LogoutVc.swift */; };
 		F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811440234CE1CE005FE144 /* TrustWalletVC.swift */; };
 		F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A28A01234B6749001AE873 /* editProfileVC.swift */; };
 		F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A28A03234B7D0A001AE873 /* Settings.storyboard */; };
@@ -290,6 +293,9 @@
 		F25197E1234CEE9500973F65 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		F25197E2234CEE9600973F65 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
 		F25197E3234CEE9600973F65 /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
+		F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBitmojiVC.swift; sourceTree = "<group>"; };
+		F25197E6234CF6F800973F65 /* InviteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteVC.swift; sourceTree = "<group>"; };
+		F25197E8234CF72F00973F65 /* LogoutVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVc.swift; sourceTree = "<group>"; };
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F2A28A01234B6749001AE873 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
 		F2A28A03234B7D0A001AE873 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -636,6 +642,9 @@
 			isa = PBXGroup;
 			children = (
 				F2CE8069234B8E06009933A2 /* SettingVC.swift */,
+				F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */,
+				F25197E6234CF6F800973F65 /* InviteVC.swift */,
+				F25197E8234CF72F00973F65 /* LogoutVc.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -934,12 +943,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25197E5234CF6DE00973F65 /* SetBitmojiVC.swift in Sources */,
+				F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */,
 				F2E223552343135700931AFA /* AugmentVC.swift in Sources */,
 				F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */,
 				F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */,
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,
 				F2E223512343135700931AFA /* AppDelegate.swift in Sources */,
+				F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */,
 				F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */,
 				F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */,
 				F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */,
