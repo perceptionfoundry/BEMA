@@ -30,7 +30,7 @@ class ManageWalletVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    
+    //******** TABLE VIEW
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currency.count
         
@@ -65,6 +65,9 @@ class ManageWalletVC: UIViewController, UITableViewDataSource, UITableViewDelega
         self.currencyList.reloadData()
     }
     
+    
+    
+    //******** OUTLET ACTION
     @IBAction func backButtonAction(_ sender: Any) {
 
              self.navigationController?.popViewController(animated: true)

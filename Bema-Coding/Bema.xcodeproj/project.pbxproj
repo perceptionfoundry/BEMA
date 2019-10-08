@@ -109,6 +109,7 @@
 		F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */; };
 		F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE4234332D60015E658 /* SignInVC.swift */; };
 		F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE62343342B0015E658 /* UserEntity.swift */; };
+		F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811440234CE1CE005FE144 /* TrustWalletVC.swift */; };
 		F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A28A01234B6749001AE873 /* editProfileVC.swift */; };
 		F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A28A03234B7D0A001AE873 /* Settings.storyboard */; };
 		F2B479542345BF7E00DAA960 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */; };
@@ -271,6 +272,25 @@
 		F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		F24E1EE4234332D60015E658 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		F24E1EE62343342B0015E658 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		F25197D2234CEE9100973F65 /* Poppins-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.otf"; sourceTree = "<group>"; };
+		F25197D3234CEE9100973F65 /* Poppins-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.otf"; sourceTree = "<group>"; };
+		F25197D4234CEE9200973F65 /* Poppins-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.otf"; sourceTree = "<group>"; };
+		F25197D5234CEE9200973F65 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		F25197D6234CEE9200973F65 /* Poppins-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.otf"; sourceTree = "<group>"; };
+		F25197D7234CEE9200973F65 /* Poppins-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.otf"; sourceTree = "<group>"; };
+		F25197D8234CEE9300973F65 /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
+		F25197D9234CEE9300973F65 /* Poppins-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		F25197DA234CEE9300973F65 /* Poppins-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.otf"; sourceTree = "<group>"; };
+		F25197DB234CEE9400973F65 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
+		F25197DC234CEE9400973F65 /* Poppins-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		F25197DD234CEE9400973F65 /* Poppins-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.otf"; sourceTree = "<group>"; };
+		F25197DE234CEE9400973F65 /* Poppins-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.otf"; sourceTree = "<group>"; };
+		F25197DF234CEE9500973F65 /* Poppins-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		F25197E0234CEE9500973F65 /* Poppins-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.otf"; sourceTree = "<group>"; };
+		F25197E1234CEE9500973F65 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		F25197E2234CEE9600973F65 /* Poppins-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.otf"; sourceTree = "<group>"; };
+		F25197E3234CEE9600973F65 /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
+		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F2A28A01234B6749001AE873 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
 		F2A28A03234B7D0A001AE873 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.otf"; sourceTree = "<group>"; };
@@ -374,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				F2365E9D234BA2870072463E /* ManageWalletVC.swift */,
+				F2811440234CE1CE005FE144 /* TrustWalletVC.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -448,6 +469,24 @@
 		F2C163F7234317DF000E8F14 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F25197DD234CEE9400973F65 /* Poppins-Black.otf */,
+				F25197DA234CEE9300973F65 /* Poppins-BlackItalic.otf */,
+				F25197D8234CEE9300973F65 /* Poppins-Bold.otf */,
+				F25197D3234CEE9100973F65 /* Poppins-BoldItalic.otf */,
+				F25197E3234CEE9600973F65 /* Poppins-ExtraBold.otf */,
+				F25197DF234CEE9500973F65 /* Poppins-ExtraBoldItalic.otf */,
+				F25197D2234CEE9100973F65 /* Poppins-ExtraLight.otf */,
+				F25197DC234CEE9400973F65 /* Poppins-ExtraLightItalic.otf */,
+				F25197D7234CEE9200973F65 /* Poppins-Italic.otf */,
+				F25197E2234CEE9600973F65 /* Poppins-Light.otf */,
+				F25197D4234CEE9200973F65 /* Poppins-LightItalic.otf */,
+				F25197E1234CEE9500973F65 /* Poppins-Medium.otf */,
+				F25197DE234CEE9400973F65 /* Poppins-MediumItalic.otf */,
+				F25197D5234CEE9200973F65 /* Poppins-Regular.otf */,
+				F25197DB234CEE9400973F65 /* Poppins-SemiBold.otf */,
+				F25197D9234CEE9300973F65 /* Poppins-SemiBoldItalic.otf */,
+				F25197D6234CEE9200973F65 /* Poppins-Thin.otf */,
+				F25197E0234CEE9500973F65 /* Poppins-ThinItalic.otf */,
 				F2B479322345BF7A00DAA960 /* Montserrat-Black.otf */,
 				F2B479372345BF7A00DAA960 /* Montserrat-BlackItalic.otf */,
 				F2B4793D2345BF7B00DAA960 /* Montserrat-Bold.otf */,
@@ -905,6 +944,7 @@
 				F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */,
 				F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */,
 				F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */,
+				F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */,
 				F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */,
 				F21B7B8923431EE1005EE90F /* Custom_View.swift in Sources */,
 				F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */,
