@@ -157,6 +157,34 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 
     
     
+    private func localAuth(){
+             let context = LAContext()
+                        
+                        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+                            
+                            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
+                                
+                                if state{
+                                    // SEGUE
+                                  DispatchQueue.main.async {
+                                    
+                                    self.crytoList.reloadData()
+                                    self.tabbarView.isHidden = false
+                                    self.walletListView.isHidden = false
+                                    }
+                                }
+                                else{
+//                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
+                                }
+                            }
+                        }
+                       
+                        else{
+                            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
+                        }
+    }
+    
+    
     //******** SEND BUTTON ACTION ***********
     @IBAction func sendButtonAction(_ sender: Any) {
         
@@ -169,24 +197,7 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 let temp = self.amountTF.text ?? ""
                 self.amountTF.text = "\(temp).0"
                 
-                let context = LAContext()
-                
-                if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-                    
-                    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
-                        
-                        if state{
-                            // SEGUE
-                        }
-                        else{
-                            self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
-                        }
-                    }
-                }
-               
-                else{
-                    self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
-                }
+                self.localAuth()
             }
             
         }

@@ -1209,7 +1209,7 @@ you want to leave.</string>
         <!--Tab Bar Controller-->
         <scene sceneID="EQS-9v-Rrk">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hGA-cG-O7w" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tab" automaticallyAdjustsScrollViewInsets="NO" id="hGA-cG-O7w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oYL-z2-VNF"/>
                     <nil key="simulatedBottomBarMetrics"/>
