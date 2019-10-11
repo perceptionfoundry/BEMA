@@ -113,6 +113,7 @@
 		F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E6234CF6F800973F65 /* InviteVC.swift */; };
 		F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E8234CF72F00973F65 /* LogoutVc.swift */; };
 		F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811440234CE1CE005FE144 /* TrustWalletVC.swift */; };
+		F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */; };
 		F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A28A01234B6749001AE873 /* editProfileVC.swift */; };
 		F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A28A03234B7D0A001AE873 /* Settings.storyboard */; };
 		F2B479542345BF7E00DAA960 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */; };
@@ -297,6 +298,7 @@
 		F25197E6234CF6F800973F65 /* InviteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteVC.swift; sourceTree = "<group>"; };
 		F25197E8234CF72F00973F65 /* LogoutVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVc.swift; sourceTree = "<group>"; };
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
+		F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_CryptoTableView.swift; sourceTree = "<group>"; };
 		F2A28A01234B6749001AE873 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
 		F2A28A03234B7D0A001AE873 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.otf"; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 			children = (
 				F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */,
 				F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */,
+				F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 				F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */,
 				F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */,
 				F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */,
+				F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
 				F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */,
