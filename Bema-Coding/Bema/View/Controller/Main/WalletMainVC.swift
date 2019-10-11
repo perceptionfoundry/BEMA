@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import LocalAuthentication
 
-class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     //****** Outlet
     @IBOutlet weak var tabbarView: UIView!
@@ -18,6 +19,11 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var selectedCrypto: UILabel!
     @IBOutlet weak var amountTF: UITextField!
     @IBOutlet weak var userNameTF: UITextField!
+    
+    //********* KEYBOARD COMPONENT *******
+    @IBOutlet weak var keyboardView: UIView!
+    @IBOutlet var keyboardKeys: [Custom_Button]!
+    
     
     
     
@@ -33,13 +39,17 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            self.tabBarController?.tabBar.isHidden = true
+        
+        self.keyboardView.isHidden = true
+
+        
+    self.tabBarController?.tabBar.isHidden = true
 
    
     let tapWalletView = UITapGestureRecognizer(target: self, action: #selector(MoveUp))
     self.touchArea.addGestureRecognizer(tapWalletView)
 
-  
+        self.amountTF.delegate  = self
         
         self.crytoList.delegate = self
         self.crytoList.dataSource = self
@@ -64,7 +74,6 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.walletListView.isHidden = true
@@ -75,6 +84,36 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    
+    
+    //********** TEXTFIELD DELEGATE FUNNCTION **
+
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField == amountTF{
+            
+            amountTF.inputView = keyboardView
+            
+            self.keyboardView.isHidden = false
+            
+        }
+        
+        else{
+            
+            amountTF.inputView = nil
+            self.keyboardView.isHidden = true
+            
+
+        }
+        return true
+    }
+    
+    
+   
+    
+    
     //******** PERSONALIZE FUNCTION ***********
     
     @objc func MoveUp(){
@@ -97,22 +136,144 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 self.walletListView.frame.origin.y = self.lastY!
                  }
         }
-        
-        
-        
-        
-     
-//        }
-//        else if moveStatus.direction == .down{
-//
-//            self.walletListViewConstant.constant = -30
-//        }
-//
+
     }
+    
+    
+    func ShowAlert(Title : String, Message: String){
+        let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+        let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        alertVC.addAction(Dismiss)
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    //******** CHAT BUTTON ACTION ***********
+
     @IBAction func chatButtonAction(_ sender: Any) {
         
         self.tabBarController?.selectedIndex = 0
      }
 
-
+    
+    
+    //******** SEND BUTTON ACTION ***********
+    @IBAction func sendButtonAction(_ sender: Any) {
+        
+        if amountTF.text?.isEmpty == false && userNameTF.text?.isEmpty == false{
+            
+            self.amountTF.endEditing(true)
+            self.keyboardView.isHidden = true
+            
+            if amountTF.text!.contains(".") == false{
+                let temp = self.amountTF.text ?? ""
+                self.amountTF.text = "\(temp).0"
+                
+                let context = LAContext()
+                
+                if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+                    
+                    context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
+                        
+                        if state{
+                            // SEGUE
+                        }
+                        else{
+                            self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
+                        }
+                    }
+                }
+               
+                else{
+                    self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
+                }
+            }
+            
+        }
+     }
+    
+    
+    
+    //******** KEYBOARD ACTION **************
+    @IBAction func keyboardKeyAction(_ sender: UIButton) {
+        
+        if sender.tag == 0{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+               }
+            
+    else if sender.tag == 1{
+          let temp = self.amountTF.text ?? ""
+                       self.amountTF.text = "\(temp)\(sender.tag)"
+         }
+    
+            else if sender.tag == 2{
+                let temp = self.amountTF.text ?? ""
+                           self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 3{
+            let temp = self.amountTF.text ?? ""
+                          self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 4{
+                 let temp = self.amountTF.text ?? ""
+                            self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 5{
+              let temp = self.amountTF.text ?? ""
+                         self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 6{
+              let temp = self.amountTF.text ?? ""
+                           self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 7{
+               let temp = self.amountTF.text ?? ""
+                          self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 8{
+            let temp = self.amountTF.text ?? ""
+                         self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 9{
+               let temp = self.amountTF.text ?? ""
+                           self.amountTF.text = "\(temp)\(sender.tag)"
+                 }
+            
+            else if sender.tag == 10{
+            
+            if amountTF.text?.isEmpty == true{
+                self.amountTF.text = "0."
+            }
+            
+            else{
+                
+                 let temp = self.amountTF.text
+                
+                if temp!.contains("."){
+                    return
+                }
+                
+                else{
+            self.amountTF.text = "\((temp)!)."
+                }
+            }
+            
+                 }
+            
+            
+            else if sender.tag == 11{
+            self.amountTF.text?.removeLast()
+                
+                }
+        
+    }
+    
 }
