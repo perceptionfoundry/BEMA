@@ -18,6 +18,7 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var walletListView: Custom_View!
     @IBOutlet weak var selectedCrypto: UILabel!
     @IBOutlet weak var amountTF: UITextField!
+    @IBOutlet weak var cryptoNameTF: UITextField!
     @IBOutlet weak var userNameTF: UITextField!
     
     //********* KEYBOARD COMPONENT *******
@@ -41,16 +42,16 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
         
         self.keyboardView.isHidden = true
+        self.walletListView.isHidden = true
 
         
     self.tabBarController?.tabBar.isHidden = true
 
    
-    let tapWalletView = UITapGestureRecognizer(target: self, action: #selector(MoveUp))
-    self.touchArea.addGestureRecognizer(tapWalletView)
+  
 
         self.amountTF.delegate  = self
-        
+        self.cryptoNameTF.delegate = self
         self.crytoList.delegate = self
         self.crytoList.dataSource = self
         self.crytoList.reloadData()
@@ -77,7 +78,7 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.walletListView.isHidden = true
-        self.tabbarView.isHidden = true
+//        self.tabbarView.isHidden = true
     }
     
     
@@ -97,14 +98,24 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             amountTF.inputView = keyboardView
             
             self.keyboardView.isHidden = false
+            self.walletListView.isHidden = true
+
+        }
             
+        else if textField == cryptoNameTF{
+            amountTF.inputView = walletListView
+                      
+            self.walletListView.isHidden = false
+            self.keyboardView.isHidden = true
+
         }
         
         else{
             
             amountTF.inputView = nil
             self.keyboardView.isHidden = true
-            
+            self.walletListView.isHidden = true
+
 
         }
         return true
@@ -115,29 +126,7 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     
     //******** PERSONALIZE FUNCTION ***********
-    
-    @objc func MoveUp(){
-        
-        
-        print(self.walletListView.frame.origin.y)
-        print(currentViewStatus)
-        
-        if currentViewStatus == false{
-            self.currentViewStatus = true
-            
-            UIView.animate(withDuration: 1) {
-                self.lastY = self.walletListView.frame.origin.y
-                self.walletListView.frame.origin.y =  (self.view.frame.origin.y + 40)
-                 }
-        }
-        else{
-            self.currentViewStatus = false
-            UIView.animate(withDuration: 1) {
-                self.walletListView.frame.origin.y = self.lastY!
-                 }
-        }
-
-    }
+   
     
     
     func ShowAlert(Title : String, Message: String){
@@ -169,8 +158,7 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
                                   DispatchQueue.main.async {
                                     
                                     self.crytoList.reloadData()
-                                    self.tabbarView.isHidden = false
-                                    self.walletListView.isHidden = false
+                                    self.walletListView.isHidden = true
                                     
                                     self.performSegue(withIdentifier: "Next", sender: nil)
                                     }
