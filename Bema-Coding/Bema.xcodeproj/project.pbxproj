@@ -160,6 +160,8 @@
 		F2C5CD4723560CB4009D7F74 /* SendToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */; };
 		F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE8069234B8E06009933A2 /* SettingVC.swift */; };
 		F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */; };
+		F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E13D9C2356116A00CC5519 /* SendTokenMainVC.swift */; };
+		F2E13D9F2356118000CC5519 /* SendTokenConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E13D9E2356118000CC5519 /* SendTokenConfirmVC.swift */; };
 		F2E223512343135700931AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E223502343135700931AFA /* AppDelegate.swift */; };
 		F2E223532343135700931AFA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E223522343135700931AFA /* art.scnassets */; };
 		F2E223552343135700931AFA /* AugmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E223542343135700931AFA /* AugmentVC.swift */; };
@@ -347,6 +349,8 @@
 		F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendToken.storyboard; sourceTree = "<group>"; };
 		F2CE8069234B8E06009933A2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		F2E13D9C2356116A00CC5519 /* SendTokenMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenMainVC.swift; sourceTree = "<group>"; };
+		F2E13D9E2356118000CC5519 /* SendTokenConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenConfirmVC.swift; sourceTree = "<group>"; };
 		F2E2234D2343135700931AFA /* Bema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E223502343135700931AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E223522343135700931AFA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -466,6 +470,7 @@
 				F2A28A00234B6712001AE873 /* Profile */,
 				F2CE806B234B8E14009933A2 /* Settings */,
 				F2365E9F234BA2910072463E /* Wallet */,
+				F2E13D9B2356111500CC5519 /* SendToken */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -656,6 +661,15 @@
 				F25197E8234CF72F00973F65 /* LogoutVc.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F2E13D9B2356111500CC5519 /* SendToken */ = {
+			isa = PBXGroup;
+			children = (
+				F2E13D9C2356116A00CC5519 /* SendTokenMainVC.swift */,
+				F2E13D9E2356118000CC5519 /* SendTokenConfirmVC.swift */,
+			);
+			path = SendToken;
 			sourceTree = "<group>";
 		};
 		F2E223442343135700931AFA = {
@@ -960,6 +974,7 @@
 				F2E223552343135700931AFA /* AugmentVC.swift in Sources */,
 				F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */,
 				F29094AC235606A0004E692F /* confirmToken.swift in Sources */,
+				F2E13D9F2356118000CC5519 /* SendTokenConfirmVC.swift in Sources */,
 				F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */,
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,
@@ -978,6 +993,7 @@
 				F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
+				F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */,
 				F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */,
 				F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */,
 			);

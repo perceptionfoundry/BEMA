@@ -1220,14 +1220,24 @@ you want to leave.</string>
                     </tabBar>
                     <connections>
                         <segue destination="tkv-9A-zwW" kind="relationship" relationship="viewControllers" id="xOj-YW-NCm"/>
-                        <segue destination="3Vr-9w-whh" kind="relationship" relationship="viewControllers" id="Gyx-Kw-9Hy"/>
+                        <segue destination="bGV-B7-P5w" kind="relationship" relationship="viewControllers" id="Gyx-Kw-9Hy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDa-Yh-DTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063.768115942029" y="140.625"/>
         </scene>
-        <!--Chat-->
+        <!--SendToken-->
+        <scene sceneID="NYf-pq-gqx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SendToken" id="5Oy-a0-YZV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7mb-aW-BGC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gy7-Nz-9rL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3324" y="-831.18440779610205"/>
+        </scene>
+        <!--Wallet MainVC-->
         <scene sceneID="0zl-s6-PbM">
             <objects>
                 <viewController id="3Vr-9w-whh" customClass="WalletMainVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
@@ -1267,6 +1277,9 @@ you want to leave.</string>
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="5Oy-a0-YZV" kind="show" id="fGn-5h-buo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlT-hh-pur" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="216" y="165.5" width="112" height="40"/>
@@ -2042,7 +2055,6 @@ you want to leave.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M4x-9O-Vsa"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chat" id="Gby-Mo-feg"/>
                     <navigationItem key="navigationItem" id="aJT-Yc-Rc2"/>
                     <connections>
                         <outlet property="amountTF" destination="y5z-qo-qfy" id="bf8-IO-eRs"/>
@@ -2070,7 +2082,7 @@ you want to leave.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvg-tZ-bRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823.2" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="2762.4000000000001" y="-543.77811094452773"/>
         </scene>
         <!--Confirm Token-->
         <scene sceneID="oWG-9o-hWn">
@@ -2214,7 +2226,7 @@ Successful!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeJ-gs-0UL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2605.5999999999999" y="-258.62068965517244"/>
+            <point key="canvasLocation" x="3544.8000000000002" y="-258.62068965517244"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mpg-ot-1it">
@@ -2584,7 +2596,7 @@ Successful!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3I-g7-YXH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3262" y="-790"/>
+            <point key="canvasLocation" x="4200.8000000000002" y="-790.25487256371821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L17-qf-Wh1">
@@ -2603,6 +2615,25 @@ Successful!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TC6-pQ-oz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1825" y="2109"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="GUg-0d-R43">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="bGV-B7-P5w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" id="Gby-Mo-feg"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EvB-c2-E3G">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Vr-9w-whh" kind="relationship" relationship="rootViewController" id="P8Q-yB-J2Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8i-OX-5S3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.2" y="-543.77811094452773"/>
         </scene>
     </scenes>
     <resources>
