@@ -114,6 +114,7 @@
 		F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E8234CF72F00973F65 /* LogoutVc.swift */; };
 		F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811440234CE1CE005FE144 /* TrustWalletVC.swift */; };
 		F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */; };
+		F29094AC235606A0004E692F /* confirmToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29094AB235606A0004E692F /* confirmToken.swift */; };
 		F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A28A01234B6749001AE873 /* editProfileVC.swift */; };
 		F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A28A03234B7D0A001AE873 /* Settings.storyboard */; };
 		F2B479542345BF7E00DAA960 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */; };
@@ -156,6 +157,7 @@
 		F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */; };
 		F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD07362344F15600FB766F /* ChatMainVC.swift */; };
 		F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD07382344F16B00FB766F /* WalletMainVC.swift */; };
+		F2C5CD4723560CB4009D7F74 /* SendToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */; };
 		F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE8069234B8E06009933A2 /* SettingVC.swift */; };
 		F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */; };
 		F2E223512343135700931AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E223502343135700931AFA /* AppDelegate.swift */; };
@@ -299,6 +301,7 @@
 		F25197E8234CF72F00973F65 /* LogoutVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVc.swift; sourceTree = "<group>"; };
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_CryptoTableView.swift; sourceTree = "<group>"; };
+		F29094AB235606A0004E692F /* confirmToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmToken.swift; sourceTree = "<group>"; };
 		F2A28A01234B6749001AE873 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
 		F2A28A03234B7D0A001AE873 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.otf"; sourceTree = "<group>"; };
@@ -341,6 +344,7 @@
 		F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		F2BD07362344F15600FB766F /* ChatMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainVC.swift; sourceTree = "<group>"; };
 		F2BD07382344F16B00FB766F /* WalletMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletMainVC.swift; sourceTree = "<group>"; };
+		F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendToken.storyboard; sourceTree = "<group>"; };
 		F2CE8069234B8E06009933A2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		F2E2234D2343135700931AFA /* Bema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bema.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -439,6 +443,7 @@
 				F2BD07362344F15600FB766F /* ChatMainVC.swift */,
 				F2BD07382344F16B00FB766F /* WalletMainVC.swift */,
 				F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */,
+				F29094AB235606A0004E692F /* confirmToken.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -637,6 +642,7 @@
 				F2F764C6234B4A71001A981F /* Profile.storyboard */,
 				F2A28A03234B7D0A001AE873 /* Settings.storyboard */,
 				F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */,
+				F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -802,6 +808,7 @@
 				F21B7B5B23431C72005EE90F /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				F2B479672345BF7E00DAA960 /* Montserrat-Regular.otf in Resources */,
 				F2B479782345BF7E00DAA960 /* Montserrat-Thin.otf in Resources */,
+				F2C5CD4723560CB4009D7F74 /* SendToken.storyboard in Resources */,
 				F21B7B7D23431C72005EE90F /* NewYorkSmall-HeavyItalic.otf in Resources */,
 				F2B4795D2345BF7E00DAA960 /* Montserrat-BoldItalic.otf in Resources */,
 				F21B7B6B23431C72005EE90F /* NewYorkLarge-SemiboldItalic.otf in Resources */,
@@ -898,6 +905,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bema/Pods-Bema-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
@@ -908,6 +916,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
@@ -950,6 +959,7 @@
 				F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */,
 				F2E223552343135700931AFA /* AugmentVC.swift in Sources */,
 				F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */,
+				F29094AC235606A0004E692F /* confirmToken.swift in Sources */,
 				F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */,
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,

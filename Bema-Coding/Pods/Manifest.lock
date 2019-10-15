@@ -1,4 +1,5 @@
 PODS:
+  - IQKeyboardManagerSwift (6.2.0)
   - PINCache (2.3)
   - PINOperation (1.1.1)
   - SideMenu (5.0.3)
@@ -9,6 +10,7 @@ PODS:
   - SnapSDK/SCSDKLoginKit (1.2.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - SideMenu
   - SnapSDK/SCSDKBitmojiKit
   - SnapSDK/SCSDKCreativeKit
@@ -16,17 +18,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - IQKeyboardManagerSwift
     - PINCache
     - PINOperation
     - SideMenu
     - SnapSDK
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SnapSDK: ab99c79e619067da4ed60c98ea5a04a288b83dc0
 
-PODFILE CHECKSUM: 79197e9d1d9e6237aae682e0ecafb422fcd76719
+PODFILE CHECKSUM: f3554de2990aaaa671a50f92e6060b169215e766
 
 COCOAPODS: 1.5.2

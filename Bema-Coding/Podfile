@@ -10,4 +10,7 @@ target 'Bema' do
 pod 'SnapSDK', :subspecs => ['SCSDKLoginKit', 'SCSDKCreativeKit', 'SCSDKBitmojiKit']
 
 pod 'SideMenu'
+
+pod 'IQKeyboardManagerSwift'
+
 end

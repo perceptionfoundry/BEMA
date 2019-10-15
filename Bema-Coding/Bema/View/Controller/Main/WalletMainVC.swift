@@ -171,6 +171,8 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                                     self.crytoList.reloadData()
                                     self.tabbarView.isHidden = false
                                     self.walletListView.isHidden = false
+                                    
+                                    self.performSegue(withIdentifier: "Next", sender: nil)
                                     }
                                 }
                                 else{
@@ -199,7 +201,10 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 
                 self.localAuth()
             }
-            
+            else{
+                self.localAuth()
+
+            }
         }
      }
     
@@ -269,11 +274,11 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                  let temp = self.amountTF.text
                 
                 if temp!.contains("."){
-                    return
+                    
                 }
                 
                 else{
-            self.amountTF.text = "\((temp)!)."
+                    self.amountTF.text = "\((temp)!)."
                 }
             }
             
