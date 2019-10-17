@@ -172,6 +172,9 @@
 		F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F5234B95E800F3BA47 /* TermVC.swift */; };
 		F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */; };
 		F2EE38FA234B9A0A00F3BA47 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */; };
+		F2F4694B2358BE7B00EF6007 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4694A2358BE7B00EF6007 /* CameraViewController.swift */; };
+		F2F469522358C25800EF6007 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F469512358C25800EF6007 /* UIImage+Extension.swift */; };
+		F2F51B2A2358BC95001930E6 /* BitmojiAR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F51B292358BC95001930E6 /* BitmojiAR.storyboard */; };
 		F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F764C6234B4A71001A981F /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -363,6 +366,9 @@
 		F2EE38F5234B95E800F3BA47 /* TermVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermVC.swift; sourceTree = "<group>"; };
 		F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordVC.swift; sourceTree = "<group>"; };
 		F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
+		F2F4694A2358BE7B00EF6007 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		F2F469512358C25800EF6007 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		F2F51B292358BC95001930E6 /* BitmojiAR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitmojiAR.storyboard; sourceTree = "<group>"; };
 		F2F764C6234B4A71001A981F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -471,6 +477,7 @@
 				F2CE806B234B8E14009933A2 /* Settings */,
 				F2365E9F234BA2910072463E /* Wallet */,
 				F2E13D9B2356111500CC5519 /* SendToken */,
+				F2F51B2B2358BCA5001930E6 /* BitmojiAR */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -648,6 +655,7 @@
 				F2A28A03234B7D0A001AE873 /* Settings.storyboard */,
 				F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */,
 				F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */,
+				F2F51B292358BC95001930E6 /* BitmojiAR.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -693,6 +701,7 @@
 		F2E2234F2343135700931AFA /* Bema */ = {
 			isa = PBXGroup;
 			children = (
+				F2F469502358C23800EF6007 /* Utils */,
 				F2C88D612344ED4000F3CE2B /* Storyboard */,
 				F24E1EE3234332520015E658 /* View */,
 				F24E1EE22343323C0015E658 /* ViewModel */,
@@ -706,6 +715,22 @@
 				F2E2235E2343135800931AFA /* Info.plist */,
 			);
 			path = Bema;
+			sourceTree = "<group>";
+		};
+		F2F469502358C23800EF6007 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F2F469512358C25800EF6007 /* UIImage+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F2F51B2B2358BCA5001930E6 /* BitmojiAR */ = {
+			isa = PBXGroup;
+			children = (
+				F2F4694A2358BE7B00EF6007 /* CameraViewController.swift */,
+			);
+			path = BitmojiAR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -850,6 +875,7 @@
 				F2E223532343135700931AFA /* art.scnassets in Resources */,
 				F21B7B2D23431C72005EE90F /* NewYorkExtraLarge-Medium.otf in Resources */,
 				F21B7B4323431C72005EE90F /* SF-Pro-Rounded-Heavy.otf in Resources */,
+				F2F51B2A2358BC95001930E6 /* BitmojiAR.storyboard in Resources */,
 				F21B7B4423431C72005EE90F /* SF-Pro-Rounded-Light.otf in Resources */,
 				F21B7B6623431C72005EE90F /* NewYorkLarge-Medium.otf in Resources */,
 				F21B7B6423431C72005EE90F /* NewYorkLarge-Heavy.otf in Resources */,
@@ -991,9 +1017,11 @@
 				F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */,
 				F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */,
 				F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */,
+				F2F469522358C25800EF6007 /* UIImage+Extension.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
 				F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */,
+				F2F4694B2358BE7B00EF6007 /* CameraViewController.swift in Sources */,
 				F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */,
 				F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */,
 			);

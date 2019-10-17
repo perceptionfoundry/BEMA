@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aCM-6A-lFM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AugmentVC-->
+        <scene sceneID="c2G-hh-cac">
+            <objects>
+                <viewController id="YGD-yw-HcW" customClass="AugmentVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bcj-51-vyN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqC-fc-Q9O">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cqC-fc-Q9O" firstAttribute="top" secondItem="Bcj-51-vyN" secondAttribute="top" id="1Nf-th-AzX"/>
+                            <constraint firstItem="cqC-fc-Q9O" firstAttribute="trailing" secondItem="raY-Bx-080" secondAttribute="trailing" id="9QJ-Qh-jL0"/>
+                            <constraint firstItem="cqC-fc-Q9O" firstAttribute="leading" secondItem="raY-Bx-080" secondAttribute="leading" id="G4D-gS-V32"/>
+                            <constraint firstItem="cqC-fc-Q9O" firstAttribute="bottom" secondItem="raY-Bx-080" secondAttribute="bottom" id="z50-ny-08X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="raY-Bx-080"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="cqC-fc-Q9O" id="Utr-ax-9Gq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTh-wD-DEl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1438" y="948"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="8F6-Kg-Epb">
+            <objects>
+                <viewController id="aCM-6A-lFM" customClass="CameraViewController" customModule="SnapClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Sp-Uo-Vjf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYR-Bb-a22">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fCP-e7-CIo">
+                                <rect key="frame" x="95" y="718" width="224" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-pA-ldp">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="64"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="a4V-wU-9Wm"/>
+                                            <constraint firstAttribute="width" constant="100" id="lVg-Hi-H8x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Snap">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxi-Gy-aOB">
+                                        <rect key="frame" x="124" y="0.0" width="100" height="64"/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.79215686269999996" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="K0K-iA-Gok"/>
+                                            <constraint firstAttribute="height" constant="64" id="nXB-ba-fl8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Bitmoji">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="bitmojiButtonTapped:" destination="aCM-6A-lFM" eventType="touchUpInside" id="BBe-8h-cpY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PYR-Bb-a22" secondAttribute="bottom" id="BDT-2h-Y86"/>
+                            <constraint firstItem="fCP-e7-CIo" firstAttribute="centerX" secondItem="2Sp-Uo-Vjf" secondAttribute="centerX" id="IDk-8q-GET"/>
+                            <constraint firstItem="0qJ-al-bEY" firstAttribute="trailing" secondItem="PYR-Bb-a22" secondAttribute="trailing" id="Xwf-NO-lTb"/>
+                            <constraint firstItem="PYR-Bb-a22" firstAttribute="top" secondItem="2Sp-Uo-Vjf" secondAttribute="top" id="g96-Q6-KCY"/>
+                            <constraint firstItem="PYR-Bb-a22" firstAttribute="leading" secondItem="0qJ-al-bEY" secondAttribute="leading" id="jcX-pz-S1j"/>
+                            <constraint firstItem="0qJ-al-bEY" firstAttribute="bottom" secondItem="fCP-e7-CIo" secondAttribute="bottom" constant="80" id="y68-38-3sh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0qJ-al-bEY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="PYR-Bb-a22" id="fuN-rQ-ZrB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dC4-BO-u3Z" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="87.706146926536732"/>
+        </scene>
+    </scenes>
+</document>

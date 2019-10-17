@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGA-cG-O7w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZR-2M-zg9">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -351,10 +351,18 @@
                                         <rect key="frame" x="0.0" y="21.5" width="150" height="85.5"/>
                                         <state key="normal" image="chat_Selected"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-XX-Gi2">
+                                        <rect key="frame" x="150" y="8" width="75" height="60"/>
+                                        <connections>
+                                            <segue destination="K8o-sI-AP8" kind="show" id="V7I-0L-w6b"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TL0-Tl-OmD" firstAttribute="height" secondItem="4Jw-tK-a28" secondAttribute="height" multiplier="0.8" id="2t7-h1-DQu"/>
+                                    <constraint firstItem="YVh-xX-vC4" firstAttribute="leading" secondItem="bQ9-XX-Gi2" secondAttribute="trailing" id="8xf-2z-5PG"/>
+                                    <constraint firstItem="FGk-C9-bSK" firstAttribute="bottom" secondItem="bQ9-XX-Gi2" secondAttribute="bottom" id="CVn-G1-dI3"/>
                                     <constraint firstItem="TL0-Tl-OmD" firstAttribute="leading" secondItem="29K-H7-7ke" secondAttribute="leading" id="Hzj-oi-tly"/>
                                     <constraint firstItem="TL0-Tl-OmD" firstAttribute="width" secondItem="29K-H7-7ke" secondAttribute="width" multiplier="0.4" id="Lpd-Bg-6nP"/>
                                     <constraint firstItem="YVh-xX-vC4" firstAttribute="height" secondItem="TL0-Tl-OmD" secondAttribute="height" id="M4t-u1-P0D"/>
@@ -363,10 +371,12 @@
                                     <constraint firstItem="4Jw-tK-a28" firstAttribute="top" secondItem="29K-H7-7ke" secondAttribute="top" id="RSw-yx-Wzo"/>
                                     <constraint firstAttribute="trailing" secondItem="YVh-xX-vC4" secondAttribute="trailing" id="UPl-gI-g4Y"/>
                                     <constraint firstItem="YVh-xX-vC4" firstAttribute="width" secondItem="TL0-Tl-OmD" secondAttribute="width" id="UeV-2B-p3W"/>
+                                    <constraint firstItem="bQ9-XX-Gi2" firstAttribute="leading" secondItem="TL0-Tl-OmD" secondAttribute="trailing" id="WuY-0z-zer"/>
                                     <constraint firstItem="4Jw-tK-a28" firstAttribute="leading" secondItem="29K-H7-7ke" secondAttribute="leading" id="Ygg-9e-AwZ"/>
                                     <constraint firstAttribute="trailing" secondItem="4Jw-tK-a28" secondAttribute="trailing" id="mJi-i2-vrG"/>
                                     <constraint firstAttribute="bottom" secondItem="4Jw-tK-a28" secondAttribute="bottom" id="nr5-WH-8Ox"/>
                                     <constraint firstAttribute="bottom" secondItem="YVh-xX-vC4" secondAttribute="bottom" id="tC7-VU-888"/>
+                                    <constraint firstItem="bQ9-XX-Gi2" firstAttribute="height" secondItem="TL0-Tl-OmD" secondAttribute="height" multiplier="0.7" id="utu-Cc-QPG"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="FGk-C9-bSK"/>
                             </view>
@@ -425,7 +435,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="283"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xmQ-3i-Ehc">
-                                        <rect key="frame" x="0.0" y="42.5" width="300" height="56"/>
+                                        <rect key="frame" x="0.0" y="47" width="300" height="47"/>
                                         <string key="text">Edit Bitmoji
 Through Snapchat?</string>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
@@ -433,7 +443,7 @@ Through Snapchat?</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqj-BP-4Rl">
-                                        <rect key="frame" x="0.0" y="108.5" width="300" height="39.5"/>
+                                        <rect key="frame" x="0.0" y="104" width="300" height="33"/>
                                         <string key="text">Confirming you want to
 head over to snapchat?</string>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -441,7 +451,7 @@ head over to snapchat?</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmH-1v-2ir" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="37.5" y="188" width="105" height="40"/>
+                                        <rect key="frame" x="37.5" y="177" width="105" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="hqD-zU-a0m"/>
                                         </constraints>
@@ -462,7 +472,7 @@ head over to snapchat?</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67d-g6-f0P" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="157.5" y="188" width="105" height="40"/>
+                                        <rect key="frame" x="157.5" y="177" width="105" height="40"/>
                                         <color key="backgroundColor" red="0.2174637616" green="0.93898904319999998" blue="0.81568568939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="cPX-FZ-SNX"/>
@@ -542,13 +552,13 @@ head over to snapchat?</string>
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="267"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ucd-Xd-vuh">
-                                        <rect key="frame" x="41.5" y="50" width="179.5" height="34"/>
+                                        <rect key="frame" x="52.5" y="53" width="157" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWb-ol-SSx">
-                                        <rect key="frame" x="38.5" y="94" width="185" height="39.5"/>
+                                        <rect key="frame" x="47.5" y="91" width="167" height="33"/>
                                         <string key="text">Ask your snapchat friends 
 to join the fun.</string>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -556,7 +566,7 @@ to join the fun.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSz-Xi-pLE" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="32.5" y="163.5" width="92" height="45"/>
+                                        <rect key="frame" x="32.5" y="154" width="92" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="7JO-Vu-sCk"/>
                                         </constraints>
@@ -577,7 +587,7 @@ to join the fun.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaP-sk-dcW" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="137.5" y="163.5" width="92" height="45"/>
+                                        <rect key="frame" x="137.5" y="154" width="92" height="45"/>
                                         <color key="backgroundColor" red="0.2174637616" green="0.93898904319999998" blue="0.81568568939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <state key="normal" title="Yes">
@@ -649,13 +659,13 @@ to join the fun.</string>
                                 <rect key="frame" x="47" y="200" width="281" height="267"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Logout?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iSn-Zh-afs">
-                                        <rect key="frame" x="28" y="44.5" width="225" height="45"/>
+                                        <rect key="frame" x="28" y="48" width="225" height="37.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFs-DZ-MWd">
-                                        <rect key="frame" x="48.5" y="99.5" width="184" height="39.5"/>
+                                        <rect key="frame" x="58" y="95.5" width="165.5" height="33"/>
                                         <string key="text">Just want to double check
 you want to leave.</string>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
@@ -663,7 +673,7 @@ you want to leave.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nJ-Wg-ROZ" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="35" y="169" width="98.5" height="45"/>
+                                        <rect key="frame" x="35" y="158.5" width="98.5" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="W5O-25-Xuu"/>
                                         </constraints>
@@ -684,7 +694,7 @@ you want to leave.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-yi-kP7" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="147.5" y="169" width="98.5" height="45"/>
+                                        <rect key="frame" x="147.5" y="158.5" width="98.5" height="45"/>
                                         <color key="backgroundColor" red="0.071193896229999998" green="0.61186456680000001" blue="0.60393893720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <state key="normal" title="Yes">
@@ -1630,17 +1640,27 @@ you want to leave.</string>
                                             <action selector="chatButtonAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="7qz-Oz-Gv2"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wt-Km-Xa5">
+                                        <rect key="frame" x="150" y="21.5" width="75" height="85.5"/>
+                                        <connections>
+                                            <segue destination="K8o-sI-AP8" kind="show" id="oQt-gV-h2o"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="4wt-Km-Xa5" firstAttribute="leading" secondItem="p4X-4t-SmM" secondAttribute="trailing" id="2jE-4o-oMy"/>
                                     <constraint firstAttribute="trailing" secondItem="FLS-Sm-PEG" secondAttribute="trailing" id="GY4-GI-m58"/>
                                     <constraint firstAttribute="trailing" secondItem="PJF-eK-sXT" secondAttribute="trailing" id="GgU-se-Jbt"/>
                                     <constraint firstItem="p4X-4t-SmM" firstAttribute="height" secondItem="PJF-eK-sXT" secondAttribute="height" multiplier="0.8" id="MIX-wv-AF3"/>
                                     <constraint firstItem="p4X-4t-SmM" firstAttribute="width" secondItem="kg5-rK-fHA" secondAttribute="width" multiplier="0.4" id="NTS-uW-9pt"/>
+                                    <constraint firstItem="FLS-Sm-PEG" firstAttribute="leading" secondItem="4wt-Km-Xa5" secondAttribute="trailing" id="Nyt-xt-1Kj"/>
                                     <constraint firstItem="FLS-Sm-PEG" firstAttribute="width" secondItem="p4X-4t-SmM" secondAttribute="width" id="OfQ-I4-9Cc"/>
                                     <constraint firstAttribute="bottom" secondItem="FLS-Sm-PEG" secondAttribute="bottom" id="QEn-tR-ZKr"/>
                                     <constraint firstAttribute="bottom" secondItem="p4X-4t-SmM" secondAttribute="bottom" id="ZE8-sC-qLR"/>
+                                    <constraint firstAttribute="bottom" secondItem="4wt-Km-Xa5" secondAttribute="bottom" id="ZR9-Ej-4Ug"/>
                                     <constraint firstAttribute="bottom" secondItem="PJF-eK-sXT" secondAttribute="bottom" id="a18-Oz-7Sh"/>
+                                    <constraint firstItem="4wt-Km-Xa5" firstAttribute="height" secondItem="p4X-4t-SmM" secondAttribute="height" id="b10-Zd-RuB"/>
                                     <constraint firstItem="PJF-eK-sXT" firstAttribute="top" secondItem="kg5-rK-fHA" secondAttribute="top" id="dh8-yq-GaA"/>
                                     <constraint firstAttribute="height" constant="107" id="j4L-Fa-dw4"/>
                                     <constraint firstItem="FLS-Sm-PEG" firstAttribute="height" secondItem="p4X-4t-SmM" secondAttribute="height" id="nOM-Wu-3fY"/>
@@ -1648,8 +1668,8 @@ you want to leave.</string>
                                     <constraint firstItem="PJF-eK-sXT" firstAttribute="leading" secondItem="kg5-rK-fHA" secondAttribute="leading" id="sLI-zc-E5W"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3AT-U9-rAj">
-                                <rect key="frame" x="0.0" y="466" width="375" height="201"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AT-U9-rAj">
+                                <rect key="frame" x="0.0" y="650" width="375" height="201"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byZ-ZO-bO2" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="175.5" width="94" height="30"/>
@@ -2102,7 +2122,7 @@ you want to leave.</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sk-rW-y2O">
-                                        <rect key="frame" x="79" y="28.5" width="142" height="41.5"/>
+                                        <rect key="frame" x="86" y="30" width="128" height="40"/>
                                         <string key="text">Token Transfer is
 Successful!</string>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
@@ -2134,13 +2154,13 @@ Successful!</string>
                                 <rect key="frame" x="28" y="250" width="319" height="167"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm transaction?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSU-6Q-9re">
-                                        <rect key="frame" x="55.5" y="30" width="208" height="23.5"/>
+                                        <rect key="frame" x="70.5" y="30.5" width="178.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-4s-PzM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="48" y="68.5" width="95.5" height="45"/>
+                                        <rect key="frame" x="48" y="68" width="95.5" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Lfk-GO-3fD"/>
                                         </constraints>
@@ -2162,7 +2182,7 @@ Successful!</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSQ-NI-fCM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="175.5" y="68.5" width="95.5" height="45"/>
+                                        <rect key="frame" x="175.5" y="68" width="95.5" height="45"/>
                                         <color key="backgroundColor" red="0.071193896229999998" green="0.61186456680000001" blue="0.60393893720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <state key="normal" title="Yes">
@@ -2635,6 +2655,16 @@ Successful!</string>
             </objects>
             <point key="canvasLocation" x="1823.2" y="-543.77811094452773"/>
         </scene>
+        <!--BitmojiAR-->
+        <scene sceneID="Rrq-FX-pqW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BitmojiAR" id="K8o-sI-AP8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kOg-ER-VDd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xpy-nC-KZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="291"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BEMA_small" width="38" height="46"/>
@@ -2666,4 +2696,7 @@ Successful!</string>
         <image name="wallet_Shot_Button" width="29.5" height="29.5"/>
         <image name="wallet_Unselected" width="36" height="45.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oQt-gV-h2o"/>
+    </inferredMetricsTieBreakers>
 </document>
