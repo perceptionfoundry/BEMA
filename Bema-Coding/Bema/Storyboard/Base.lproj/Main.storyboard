@@ -129,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="-606" y="172"/>
         </scene>
-        <!--Item-->
+        <!--Chat MainVC-->
         <scene sceneID="YPf-ea-o7b">
             <objects>
                 <viewController id="tkv-9A-zwW" customClass="ChatMainVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
@@ -398,7 +398,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5kB-uz-TFk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rCH-hQ-WyE"/>
                     <navigationItem key="navigationItem" id="MOt-KL-hQO"/>
                     <connections>
                         <outlet property="DisplayImage" destination="TiJ-XX-l4B" id="mYI-Pf-m3u"/>
@@ -408,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aho-Ai-hLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="702"/>
+            <point key="canvasLocation" x="2764" y="701.19940029985014"/>
         </scene>
         <!--Profile-->
         <scene sceneID="OJ4-bU-6k4">
@@ -1219,7 +1218,7 @@ you want to leave.</string>
         <!--Tab Bar Controller-->
         <scene sceneID="EQS-9v-Rrk">
             <objects>
-                <tabBarController storyboardIdentifier="Tab" automaticallyAdjustsScrollViewInsets="NO" id="hGA-cG-O7w" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tab_Controller" automaticallyAdjustsScrollViewInsets="NO" id="hGA-cG-O7w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oYL-z2-VNF"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -1229,7 +1228,7 @@ you want to leave.</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tkv-9A-zwW" kind="relationship" relationship="viewControllers" id="xOj-YW-NCm"/>
+                        <segue destination="S7w-q0-Mk6" kind="relationship" relationship="viewControllers" id="xOj-YW-NCm"/>
                         <segue destination="bGV-B7-P5w" kind="relationship" relationship="viewControllers" id="Gyx-Kw-9Hy"/>
                     </connections>
                 </tabBarController>
@@ -2663,7 +2662,26 @@ Successful!</string>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpy-nC-KZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762" y="291"/>
+            <point key="canvasLocation" x="3586" y="414"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ZE0-DL-y7A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="S7w-q0-Mk6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rCH-hQ-WyE"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hxr-dt-8py">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tkv-9A-zwW" kind="relationship" relationship="rootViewController" id="ODJ-tc-nJ4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfr-KK-NPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.8" y="701.19940029985014"/>
         </scene>
     </scenes>
     <resources>
@@ -2697,6 +2715,6 @@ Successful!</string>
         <image name="wallet_Unselected" width="36" height="45.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oQt-gV-h2o"/>
+        <segue reference="V7I-0L-w6b"/>
     </inferredMetricsTieBreakers>
 </document>

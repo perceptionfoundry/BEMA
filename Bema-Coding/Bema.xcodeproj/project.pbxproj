@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7CD5E49A3F21B10398A9F00C /* Pods_Bema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3A156850A34FF59B5014DA /* Pods_Bema.framework */; };
+		F21B43D723673836001DD0C5 /* AR_ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B43D623673836001DD0C5 /* AR_ConfirmVC.swift */; };
 		F21B7B8323431C72005EE90F /* NewYorkSmall-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE323431BF9005EE90F /* NewYorkSmall-SemiboldItalic.otf */; };
 		F21B7B8923431EE1005EE90F /* Custom_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8523431EE0005EE90F /* Custom_View.swift */; };
 		F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8623431EE0005EE90F /* Custom_ImageView.swift */; };
@@ -204,6 +205,7 @@
 		4B3A156850A34FF59B5014DA /* Pods_Bema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB8C366F6C2CC8FE928F587 /* Pods-Bema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bema/Pods-Bema.debug.xcconfig"; sourceTree = "<group>"; };
 		7BC59FDE4A3377CC4DD5599B /* Pods-Bema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bema.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bema/Pods-Bema.release.xcconfig"; sourceTree = "<group>"; };
+		F21B43D623673836001DD0C5 /* AR_ConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_ConfirmVC.swift; sourceTree = "<group>"; };
 		F21B7ACA23431BF7005EE90F /* NewYorkExtraLarge-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		F21B7ACB23431BF7005EE90F /* NewYorkExtraLarge-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkExtraLarge-Black.otf"; sourceTree = "<group>"; };
 		F21B7ACC23431BF7005EE90F /* NewYorkLarge-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkLarge-RegularItalic.otf"; sourceTree = "<group>"; };
@@ -767,6 +769,7 @@
 			children = (
 				F2F4694A2358BE7B00EF6007 /* CameraViewController.swift */,
 				F29E6986235DF20700B22AE1 /* CryptoList_AR_VC.swift */,
+				F21B43D623673836001DD0C5 /* AR_ConfirmVC.swift */,
 			);
 			path = BitmojiAR;
 			sourceTree = "<group>";
@@ -1065,6 +1068,7 @@
 				F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */,
 				F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */,
 				F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */,
+				F21B43D723673836001DD0C5 /* AR_ConfirmVC.swift in Sources */,
 				F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */,
 				F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */,
 				F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */,

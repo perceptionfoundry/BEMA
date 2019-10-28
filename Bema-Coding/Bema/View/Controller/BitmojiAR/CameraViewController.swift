@@ -11,27 +11,21 @@ import SceneKit
 import ARKit
 import SCSDKCreativeKit
 import SCSDKBitmojiKit
+import LocalAuthentication
 
 
 
+protocol DoubleSegueProtocol {
+    func quit()
+}
 
 
-class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransition {
-    
-    
-    func ConfiguredCrypto(value: [String : String]) {
-        
-        self.transitionValue = value
-        
-        cryptoimage.image = UIImage(named: value["NAME"]!)
-        cryptoAmount.text = value["AMOUNT"]
-        
-        cryptoCurrency.isHidden = true
-        cryptoView.isHidden = false
-    }
+class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransition, DoubleSegueProtocol {
+ 
     
     
     
+
     
     
     @IBOutlet weak var sceneView: ARSCNView!
@@ -39,6 +33,15 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     @IBOutlet weak var cryptoView: UIView!
     @IBOutlet weak var cryptoimage: Custom_ImageView!
     @IBOutlet weak var cryptoAmount: UILabel!
+    
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var contactButton: UIButton!
+    @IBOutlet weak var flipButton: UIButton!
+    @IBOutlet weak var gallery: UIImageView!
+    @IBOutlet weak var cameraButton: UIButton!
+
+    
+
     
     
     
@@ -59,7 +62,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         super.viewDidLoad()
         
         cryptoView.isHidden = true
-        
+        sendButton.isHidden = true
+
         // fetch your avatar image.
         SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
             DispatchQueue.main.async {
@@ -72,8 +76,46 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     }
     
     
+    //******** PERSONALIZE FUNCTION ******
     
     
+        private func localAuth(){
+                 let context = LAContext()
+                            
+                            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+                                
+                                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
+                                    
+                                    if state{
+                                        // SEGUE
+                                      DispatchQueue.main.async {
+                                        
+                                        
+                                        self.performSegue(withIdentifier: "Next", sender: nil)
+                                        }
+                                    }
+                                    else{
+    //                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
+                                    }
+                                }
+                            }
+                           
+                            else{
+                                self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
+                            }
+        }
+
+    
+    
+    
+    
+    func ShowAlert(Title : String, Message: String){
+          let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+          let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+          alertVC.addAction(Dismiss)
+          
+          self.present(alertVC, animated: true, completion: nil)
+      }
     
     
     
@@ -87,7 +129,21 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     
     
+    func ConfiguredCrypto(value: [String : String]) {
+          
+          self.transitionValue = value
+          
+          cryptoimage.image = UIImage(named: value["NAME"]!)
+          cryptoAmount.text = value["AMOUNT"]
+          
+          cryptoCurrency.isHidden = true
+          cryptoView.isHidden = false
+      }
     
+    
+    func quit() {
+        self.navigationController?.popViewController(animated: true)
+     }
     
     
     
@@ -155,6 +211,15 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     //*********** OUTLET ACTION *************
     @IBAction func ARSnapButtonAction(_ sender: Any) {
+        
+        cryptoView.center.y = cryptoView.center.y - 50
+        sendButton.isHidden = false
+        
+        contactButton.isHidden = true
+        flipButton.isHidden = true
+        gallery.isHidden = true
+        cameraButton.isHidden = true
+        
     }
     
     @IBAction func addActionButton(_ sender: Any) {
@@ -167,6 +232,14 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     @IBAction func cryptoButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "Crypto_Segue", sender: nil)
     }
+    
+    
+    @IBAction func sendAction(_ sender: Any) {
+        
+       
+        
+        localAuth()
+       }
     
     //************** PREPARE SEGUE ****
     
@@ -182,6 +255,13 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                       
                       dest.cryptoProtocol = self
         }
+        
+        else if segue.identifier == "Next"{
+            let dest = segue.destination as! AR_ConfirmVC
+                                
+                                dest.quitProtocol = self
+        }
+        
     }
     
     @IBAction func backButtonAction(_ sender: UIButton) {
