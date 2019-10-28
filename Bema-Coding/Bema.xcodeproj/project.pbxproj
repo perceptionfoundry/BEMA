@@ -8,98 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7CD5E49A3F21B10398A9F00C /* Pods_Bema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3A156850A34FF59B5014DA /* Pods_Bema.framework */; };
-		F21B7B2723431C72005EE90F /* NewYorkExtraLarge-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACB23431BF7005EE90F /* NewYorkExtraLarge-Black.otf */; };
-		F21B7B2823431C72005EE90F /* NewYorkExtraLarge-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE423431BFA005EE90F /* NewYorkExtraLarge-BlackItalic.otf */; };
-		F21B7B2923431C72005EE90F /* NewYorkExtraLarge-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF823431BFB005EE90F /* NewYorkExtraLarge-Bold.otf */; };
-		F21B7B2A23431C72005EE90F /* NewYorkExtraLarge-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF523431BFB005EE90F /* NewYorkExtraLarge-BoldItalic.otf */; };
-		F21B7B2B23431C72005EE90F /* NewYorkExtraLarge-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF923431BFB005EE90F /* NewYorkExtraLarge-Heavy.otf */; };
-		F21B7B2C23431C72005EE90F /* NewYorkExtraLarge-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF123431BFA005EE90F /* NewYorkExtraLarge-HeavyItalic.otf */; };
-		F21B7B2D23431C72005EE90F /* NewYorkExtraLarge-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACE23431BF7005EE90F /* NewYorkExtraLarge-Medium.otf */; };
-		F21B7B2E23431C72005EE90F /* NewYorkExtraLarge-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE123431BF9005EE90F /* NewYorkExtraLarge-MediumItalic.otf */; };
-		F21B7B2F23431C72005EE90F /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFB23431C4F005EE90F /* SF-Pro-Display-Black.otf */; };
-		F21B7B3023431C72005EE90F /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFC23431C50005EE90F /* SF-Pro-Display-BlackItalic.otf */; };
-		F21B7B3123431C72005EE90F /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2023431C55005EE90F /* SF-Pro-Display-Bold.otf */; };
-		F21B7B3223431C72005EE90F /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0223431C50005EE90F /* SF-Pro-Display-BoldItalic.otf */; };
-		F21B7B3323431C72005EE90F /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0A23431C52005EE90F /* SF-Pro-Display-Heavy.otf */; };
-		F21B7B3423431C72005EE90F /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1A23431C54005EE90F /* SF-Pro-Display-HeavyItalic.otf */; };
-		F21B7B3523431C72005EE90F /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFE23431C50005EE90F /* SF-Pro-Display-Light.otf */; };
-		F21B7B3623431C72005EE90F /* SF-Pro-Display-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0B23431C52005EE90F /* SF-Pro-Display-LightItalic.otf */; };
-		F21B7B3723431C72005EE90F /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1723431C54005EE90F /* SF-Pro-Display-Medium.otf */; };
-		F21B7B3823431C72005EE90F /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1323431C53005EE90F /* SF-Pro-Display-MediumItalic.otf */; };
-		F21B7B3923431C72005EE90F /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0723431C51005EE90F /* SF-Pro-Display-Regular.otf */; };
-		F21B7B3A23431C72005EE90F /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2423431C55005EE90F /* SF-Pro-Display-RegularItalic.otf */; };
-		F21B7B3B23431C72005EE90F /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1223431C53005EE90F /* SF-Pro-Display-Semibold.otf */; };
-		F21B7B3C23431C72005EE90F /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0D23431C52005EE90F /* SF-Pro-Display-SemiboldItalic.otf */; };
-		F21B7B3D23431C72005EE90F /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1123431C53005EE90F /* SF-Pro-Display-Thin.otf */; };
-		F21B7B3E23431C72005EE90F /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1923431C54005EE90F /* SF-Pro-Display-ThinItalic.otf */; };
-		F21B7B3F23431C72005EE90F /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1523431C53005EE90F /* SF-Pro-Display-Ultralight.otf */; };
-		F21B7B4023431C72005EE90F /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1823431C54005EE90F /* SF-Pro-Display-UltralightItalic.otf */; };
-		F21B7B4123431C72005EE90F /* SF-Pro-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1F23431C54005EE90F /* SF-Pro-Rounded-Black.otf */; };
-		F21B7B4223431C72005EE90F /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2123431C55005EE90F /* SF-Pro-Rounded-Bold.otf */; };
-		F21B7B4323431C72005EE90F /* SF-Pro-Rounded-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0123431C50005EE90F /* SF-Pro-Rounded-Heavy.otf */; };
-		F21B7B4423431C72005EE90F /* SF-Pro-Rounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1623431C53005EE90F /* SF-Pro-Rounded-Light.otf */; };
-		F21B7B4523431C72005EE90F /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0023431C50005EE90F /* SF-Pro-Rounded-Medium.otf */; };
-		F21B7B4623431C72005EE90F /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1423431C53005EE90F /* SF-Pro-Rounded-Regular.otf */; };
-		F21B7B4723431C72005EE90F /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2323431C55005EE90F /* SF-Pro-Rounded-Semibold.otf */; };
-		F21B7B4823431C72005EE90F /* SF-Pro-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2623431C55005EE90F /* SF-Pro-Rounded-Thin.otf */; };
-		F21B7B4923431C72005EE90F /* SF-Pro-Rounded-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0623431C51005EE90F /* SF-Pro-Rounded-Ultralight.otf */; };
-		F21B7B4A23431C72005EE90F /* SF-Pro-Text-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0F23431C52005EE90F /* SF-Pro-Text-Black.otf */; };
-		F21B7B4B23431C72005EE90F /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0523431C51005EE90F /* SF-Pro-Text-BlackItalic.otf */; };
-		F21B7B4C23431C72005EE90F /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1B23431C54005EE90F /* SF-Pro-Text-Bold.otf */; };
-		F21B7B4D23431C72005EE90F /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2523431C55005EE90F /* SF-Pro-Text-BoldItalic.otf */; };
-		F21B7B4E23431C72005EE90F /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFA23431C4F005EE90F /* SF-Pro-Text-Heavy.otf */; };
-		F21B7B4F23431C72005EE90F /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1C23431C54005EE90F /* SF-Pro-Text-HeavyItalic.otf */; };
-		F21B7B5023431C72005EE90F /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFF23431C50005EE90F /* SF-Pro-Text-Light.otf */; };
-		F21B7B5123431C72005EE90F /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1D23431C54005EE90F /* SF-Pro-Text-LightItalic.otf */; };
-		F21B7B5223431C72005EE90F /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0323431C51005EE90F /* SF-Pro-Text-Medium.otf */; };
-		F21B7B5323431C72005EE90F /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0C23431C52005EE90F /* SF-Pro-Text-MediumItalic.otf */; };
-		F21B7B5423431C72005EE90F /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0823431C51005EE90F /* SF-Pro-Text-Regular.otf */; };
-		F21B7B5523431C72005EE90F /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0923431C52005EE90F /* SF-Pro-Text-RegularItalic.otf */; };
-		F21B7B5623431C72005EE90F /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0423431C51005EE90F /* SF-Pro-Text-Semibold.otf */; };
-		F21B7B5723431C72005EE90F /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0E23431C52005EE90F /* SF-Pro-Text-SemiboldItalic.otf */; };
-		F21B7B5823431C72005EE90F /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1023431C52005EE90F /* SF-Pro-Text-Thin.otf */; };
-		F21B7B5923431C72005EE90F /* SF-Pro-Text-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1E23431C54005EE90F /* SF-Pro-Text-ThinItalic.otf */; };
-		F21B7B5A23431C72005EE90F /* SF-Pro-Text-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFD23431C50005EE90F /* SF-Pro-Text-Ultralight.otf */; };
-		F21B7B5B23431C72005EE90F /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2223431C55005EE90F /* SF-Pro-Text-UltralightItalic.otf */; };
-		F21B7B5C23431C72005EE90F /* NewYorkExtraLarge-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE923431BFA005EE90F /* NewYorkExtraLarge-Regular.otf */; };
-		F21B7B5D23431C72005EE90F /* NewYorkExtraLarge-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEC23431BFA005EE90F /* NewYorkExtraLarge-RegularItalic.otf */; };
-		F21B7B5E23431C72005EE90F /* NewYorkExtraLarge-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD723431BF8005EE90F /* NewYorkExtraLarge-Semibold.otf */; };
-		F21B7B5F23431C72005EE90F /* NewYorkExtraLarge-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACA23431BF7005EE90F /* NewYorkExtraLarge-SemiboldItalic.otf */; };
-		F21B7B6023431C72005EE90F /* NewYorkLarge-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE523431BFA005EE90F /* NewYorkLarge-Black.otf */; };
-		F21B7B6123431C72005EE90F /* NewYorkLarge-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD523431BF8005EE90F /* NewYorkLarge-BlackItalic.otf */; };
-		F21B7B6223431C72005EE90F /* NewYorkLarge-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADD23431BF9005EE90F /* NewYorkLarge-Bold.otf */; };
-		F21B7B6323431C72005EE90F /* NewYorkLarge-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD423431BF8005EE90F /* NewYorkLarge-BoldItalic.otf */; };
-		F21B7B6423431C72005EE90F /* NewYorkLarge-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADE23431BF9005EE90F /* NewYorkLarge-Heavy.otf */; };
-		F21B7B6523431C72005EE90F /* NewYorkLarge-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD223431BF8005EE90F /* NewYorkLarge-HeavyItalic.otf */; };
-		F21B7B6623431C72005EE90F /* NewYorkLarge-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF323431BFB005EE90F /* NewYorkLarge-Medium.otf */; };
-		F21B7B6723431C72005EE90F /* NewYorkLarge-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD023431BF8005EE90F /* NewYorkLarge-MediumItalic.otf */; };
-		F21B7B6823431C72005EE90F /* NewYorkLarge-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADF23431BF9005EE90F /* NewYorkLarge-Regular.otf */; };
-		F21B7B6923431C72005EE90F /* NewYorkLarge-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACC23431BF7005EE90F /* NewYorkLarge-RegularItalic.otf */; };
-		F21B7B6A23431C72005EE90F /* NewYorkLarge-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF023431BFA005EE90F /* NewYorkLarge-Semibold.otf */; };
-		F21B7B6B23431C72005EE90F /* NewYorkLarge-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE623431BFA005EE90F /* NewYorkLarge-SemiboldItalic.otf */; };
-		F21B7B6C23431C72005EE90F /* NewYorkMedium-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEF23431BFA005EE90F /* NewYorkMedium-Black.otf */; };
-		F21B7B6D23431C72005EE90F /* NewYorkMedium-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACD23431BF7005EE90F /* NewYorkMedium-BlackItalic.otf */; };
-		F21B7B6E23431C72005EE90F /* NewYorkMedium-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEE23431BFA005EE90F /* NewYorkMedium-Bold.otf */; };
-		F21B7B6F23431C72005EE90F /* NewYorkMedium-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE023431BF9005EE90F /* NewYorkMedium-BoldItalic.otf */; };
-		F21B7B7023431C72005EE90F /* NewYorkMedium-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF223431BFB005EE90F /* NewYorkMedium-Heavy.otf */; };
-		F21B7B7123431C72005EE90F /* NewYorkMedium-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADB23431BF9005EE90F /* NewYorkMedium-HeavyItalic.otf */; };
-		F21B7B7223431C72005EE90F /* NewYorkMedium-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AED23431BFA005EE90F /* NewYorkMedium-Medium.otf */; };
-		F21B7B7323431C72005EE90F /* NewYorkMedium-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEA23431BFA005EE90F /* NewYorkMedium-MediumItalic.otf */; };
-		F21B7B7423431C72005EE90F /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF423431BFB005EE90F /* NewYorkMedium-Regular.otf */; };
-		F21B7B7523431C72005EE90F /* NewYorkMedium-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACF23431BF8005EE90F /* NewYorkMedium-RegularItalic.otf */; };
-		F21B7B7623431C72005EE90F /* NewYorkMedium-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE723431BFA005EE90F /* NewYorkMedium-Semibold.otf */; };
-		F21B7B7723431C72005EE90F /* NewYorkMedium-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEB23431BFA005EE90F /* NewYorkMedium-SemiboldItalic.otf */; };
-		F21B7B7823431C72005EE90F /* NewYorkSmall-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF623431BFB005EE90F /* NewYorkSmall-Black.otf */; };
-		F21B7B7923431C72005EE90F /* NewYorkSmall-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD923431BF8005EE90F /* NewYorkSmall-BlackItalic.otf */; };
-		F21B7B7A23431C72005EE90F /* NewYorkSmall-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF723431BFB005EE90F /* NewYorkSmall-Bold.otf */; };
-		F21B7B7B23431C72005EE90F /* NewYorkSmall-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADC23431BF9005EE90F /* NewYorkSmall-BoldItalic.otf */; };
-		F21B7B7C23431C72005EE90F /* NewYorkSmall-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE823431BFA005EE90F /* NewYorkSmall-Heavy.otf */; };
-		F21B7B7D23431C72005EE90F /* NewYorkSmall-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD823431BF8005EE90F /* NewYorkSmall-HeavyItalic.otf */; };
-		F21B7B7E23431C72005EE90F /* NewYorkSmall-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADA23431BF9005EE90F /* NewYorkSmall-Medium.otf */; };
-		F21B7B7F23431C72005EE90F /* NewYorkSmall-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD123431BF8005EE90F /* NewYorkSmall-MediumItalic.otf */; };
-		F21B7B8023431C72005EE90F /* NewYorkSmall-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE223431BF9005EE90F /* NewYorkSmall-Regular.otf */; };
-		F21B7B8123431C72005EE90F /* NewYorkSmall-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD623431BF8005EE90F /* NewYorkSmall-RegularItalic.otf */; };
-		F21B7B8223431C72005EE90F /* NewYorkSmall-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD323431BF8005EE90F /* NewYorkSmall-Semibold.otf */; };
 		F21B7B8323431C72005EE90F /* NewYorkSmall-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE323431BF9005EE90F /* NewYorkSmall-SemiboldItalic.otf */; };
 		F21B7B8923431EE1005EE90F /* Custom_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8523431EE0005EE90F /* Custom_View.swift */; };
 		F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8623431EE0005EE90F /* Custom_ImageView.swift */; };
@@ -115,51 +23,164 @@
 		F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811440234CE1CE005FE144 /* TrustWalletVC.swift */; };
 		F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */; };
 		F29094AC235606A0004E692F /* confirmToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29094AB235606A0004E692F /* confirmToken.swift */; };
+		F29E68F3235DE4C500B22AE1 /* Poppins-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197DD234CEE9400973F65 /* Poppins-Black.otf */; };
+		F29E68F4235DE4C500B22AE1 /* Poppins-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197DA234CEE9300973F65 /* Poppins-BlackItalic.otf */; };
+		F29E68F5235DE4C500B22AE1 /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D8234CEE9300973F65 /* Poppins-Bold.otf */; };
+		F29E68F6235DE4C500B22AE1 /* Poppins-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D3234CEE9100973F65 /* Poppins-BoldItalic.otf */; };
+		F29E68F7235DE4C500B22AE1 /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197E3234CEE9600973F65 /* Poppins-ExtraBold.otf */; };
+		F29E68F8235DE4C500B22AE1 /* Poppins-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197DF234CEE9500973F65 /* Poppins-ExtraBoldItalic.otf */; };
+		F29E68F9235DE4C500B22AE1 /* Poppins-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D2234CEE9100973F65 /* Poppins-ExtraLight.otf */; };
+		F29E68FA235DE4C500B22AE1 /* Poppins-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197DC234CEE9400973F65 /* Poppins-ExtraLightItalic.otf */; };
+		F29E68FB235DE4C500B22AE1 /* Poppins-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D7234CEE9200973F65 /* Poppins-Italic.otf */; };
+		F29E68FC235DE4C500B22AE1 /* Poppins-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197E2234CEE9600973F65 /* Poppins-Light.otf */; };
+		F29E68FD235DE4C500B22AE1 /* Poppins-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D4234CEE9200973F65 /* Poppins-LightItalic.otf */; };
+		F29E68FE235DE4C500B22AE1 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197E1234CEE9500973F65 /* Poppins-Medium.otf */; };
+		F29E68FF235DE4C500B22AE1 /* Poppins-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197DE234CEE9400973F65 /* Poppins-MediumItalic.otf */; };
+		F29E6900235DE4C500B22AE1 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D5234CEE9200973F65 /* Poppins-Regular.otf */; };
+		F29E6901235DE4C500B22AE1 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197DB234CEE9400973F65 /* Poppins-SemiBold.otf */; };
+		F29E6902235DE4C500B22AE1 /* Poppins-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D9234CEE9300973F65 /* Poppins-SemiBoldItalic.otf */; };
+		F29E6903235DE4C500B22AE1 /* Poppins-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197D6234CEE9200973F65 /* Poppins-Thin.otf */; };
+		F29E6904235DE4C500B22AE1 /* Poppins-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F25197E0234CEE9500973F65 /* Poppins-ThinItalic.otf */; };
+		F29E6905235DE4C500B22AE1 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479322345BF7A00DAA960 /* Montserrat-Black.otf */; };
+		F29E6906235DE4C500B22AE1 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479372345BF7A00DAA960 /* Montserrat-BlackItalic.otf */; };
+		F29E6907235DE4C500B22AE1 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793D2345BF7B00DAA960 /* Montserrat-Bold.otf */; };
+		F29E6908235DE4C500B22AE1 /* Montserrat-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479382345BF7B00DAA960 /* Montserrat-BoldItalic.otf */; };
+		F29E6909235DE4C500B22AE1 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479452345BF7C00DAA960 /* Montserrat-ExtraBold.otf */; };
+		F29E690A235DE4C500B22AE1 /* Montserrat-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794F2345BF7D00DAA960 /* Montserrat-ExtraBoldItalic.otf */; };
+		F29E690B235DE4C500B22AE1 /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794B2345BF7D00DAA960 /* Montserrat-ExtraLight.otf */; };
+		F29E690C235DE4C500B22AE1 /* Montserrat-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793C2345BF7B00DAA960 /* Montserrat-ExtraLightItalic.otf */; };
+		F29E690D235DE4C500B22AE1 /* Montserrat-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479462345BF7C00DAA960 /* Montserrat-Italic.otf */; };
+		F29E690E235DE4C500B22AE1 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479482345BF7D00DAA960 /* Montserrat-Light.otf */; };
+		F29E690F235DE4C500B22AE1 /* Montserrat-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793E2345BF7B00DAA960 /* Montserrat-LightItalic.otf */; };
+		F29E6910235DE4C500B22AE1 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479492345BF7D00DAA960 /* Montserrat-Medium.otf */; };
+		F29E6911235DE4C500B22AE1 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479392345BF7B00DAA960 /* Montserrat-MediumItalic.otf */; };
+		F29E6912235DE4C500B22AE1 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479422345BF7C00DAA960 /* Montserrat-Regular.otf */; };
+		F29E6913235DE4C500B22AE1 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793F2345BF7B00DAA960 /* Montserrat-SemiBold.otf */; };
+		F29E6914235DE4C500B22AE1 /* Montserrat-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479342345BF7A00DAA960 /* Montserrat-SemiBoldItalic.otf */; };
+		F29E6915235DE4C500B22AE1 /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479532345BF7E00DAA960 /* Montserrat-Thin.otf */; };
+		F29E6916235DE4C500B22AE1 /* Montserrat-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794C2345BF7D00DAA960 /* Montserrat-ThinItalic.otf */; };
+		F29E6917235DE4C500B22AE1 /* MontserratAlternates-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479412345BF7C00DAA960 /* MontserratAlternates-Black.otf */; };
+		F29E6918235DE4C500B22AE1 /* MontserratAlternates-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479522345BF7E00DAA960 /* MontserratAlternates-BlackItalic.otf */; };
+		F29E6919235DE4C500B22AE1 /* MontserratAlternates-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479362345BF7A00DAA960 /* MontserratAlternates-Bold.otf */; };
+		F29E691A235DE4C500B22AE1 /* MontserratAlternates-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479472345BF7C00DAA960 /* MontserratAlternates-BoldItalic.otf */; };
+		F29E691B235DE4C500B22AE1 /* MontserratAlternates-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479402345BF7C00DAA960 /* MontserratAlternates-ExtraBold.otf */; };
+		F29E691C235DE4C500B22AE1 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479502345BF7E00DAA960 /* MontserratAlternates-ExtraBoldItalic.otf */; };
+		F29E691D235DE4C500B22AE1 /* MontserratAlternates-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793B2345BF7B00DAA960 /* MontserratAlternates-ExtraLight.otf */; };
+		F29E691E235DE4C500B22AE1 /* MontserratAlternates-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479432345BF7C00DAA960 /* MontserratAlternates-ExtraLightItalic.otf */; };
+		F29E691F235DE4C500B22AE1 /* MontserratAlternates-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479442345BF7C00DAA960 /* MontserratAlternates-Italic.otf */; };
+		F29E6920235DE4C500B22AE1 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */; };
+		F29E6921235DE4C500B22AE1 /* MontserratAlternates-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794D2345BF7D00DAA960 /* MontserratAlternates-LightItalic.otf */; };
+		F29E6922235DE4C500B22AE1 /* MontserratAlternates-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479302345BF7A00DAA960 /* MontserratAlternates-Medium.otf */; };
+		F29E6923235DE4C500B22AE1 /* MontserratAlternates-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479512345BF7E00DAA960 /* MontserratAlternates-MediumItalic.otf */; };
+		F29E6924235DE4C500B22AE1 /* MontserratAlternates-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479332345BF7A00DAA960 /* MontserratAlternates-Regular.otf */; };
+		F29E6925235DE4C500B22AE1 /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479312345BF7A00DAA960 /* MontserratAlternates-SemiBold.otf */; };
+		F29E6926235DE4C500B22AE1 /* MontserratAlternates-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479352345BF7A00DAA960 /* MontserratAlternates-SemiBoldItalic.otf */; };
+		F29E6927235DE4C500B22AE1 /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794A2345BF7D00DAA960 /* MontserratAlternates-Thin.otf */; };
+		F29E6928235DE4C500B22AE1 /* MontserratAlternates-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793A2345BF7B00DAA960 /* MontserratAlternates-ThinItalic.otf */; };
+		F29E6929235DE4C500B22AE1 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794E2345BF7D00DAA960 /* SIL Open Font License.txt */; };
+		F29E692A235DE4C500B22AE1 /* NewYorkExtraLarge-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACB23431BF7005EE90F /* NewYorkExtraLarge-Black.otf */; };
+		F29E692B235DE4C500B22AE1 /* NewYorkExtraLarge-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE423431BFA005EE90F /* NewYorkExtraLarge-BlackItalic.otf */; };
+		F29E692C235DE4C500B22AE1 /* NewYorkExtraLarge-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF823431BFB005EE90F /* NewYorkExtraLarge-Bold.otf */; };
+		F29E692D235DE4C500B22AE1 /* NewYorkExtraLarge-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF523431BFB005EE90F /* NewYorkExtraLarge-BoldItalic.otf */; };
+		F29E692E235DE4C500B22AE1 /* NewYorkExtraLarge-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF923431BFB005EE90F /* NewYorkExtraLarge-Heavy.otf */; };
+		F29E692F235DE4C500B22AE1 /* NewYorkExtraLarge-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF123431BFA005EE90F /* NewYorkExtraLarge-HeavyItalic.otf */; };
+		F29E6930235DE4C500B22AE1 /* NewYorkExtraLarge-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACE23431BF7005EE90F /* NewYorkExtraLarge-Medium.otf */; };
+		F29E6931235DE4C500B22AE1 /* NewYorkExtraLarge-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE123431BF9005EE90F /* NewYorkExtraLarge-MediumItalic.otf */; };
+		F29E6932235DE4C500B22AE1 /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFB23431C4F005EE90F /* SF-Pro-Display-Black.otf */; };
+		F29E6933235DE4C500B22AE1 /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFC23431C50005EE90F /* SF-Pro-Display-BlackItalic.otf */; };
+		F29E6934235DE4C500B22AE1 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2023431C55005EE90F /* SF-Pro-Display-Bold.otf */; };
+		F29E6935235DE4C500B22AE1 /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0223431C50005EE90F /* SF-Pro-Display-BoldItalic.otf */; };
+		F29E6936235DE4C500B22AE1 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0A23431C52005EE90F /* SF-Pro-Display-Heavy.otf */; };
+		F29E6937235DE4C500B22AE1 /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1A23431C54005EE90F /* SF-Pro-Display-HeavyItalic.otf */; };
+		F29E6938235DE4C500B22AE1 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFE23431C50005EE90F /* SF-Pro-Display-Light.otf */; };
+		F29E6939235DE4C500B22AE1 /* SF-Pro-Display-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0B23431C52005EE90F /* SF-Pro-Display-LightItalic.otf */; };
+		F29E693A235DE4C500B22AE1 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1723431C54005EE90F /* SF-Pro-Display-Medium.otf */; };
+		F29E693B235DE4C500B22AE1 /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1323431C53005EE90F /* SF-Pro-Display-MediumItalic.otf */; };
+		F29E693C235DE4C500B22AE1 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0723431C51005EE90F /* SF-Pro-Display-Regular.otf */; };
+		F29E693D235DE4C500B22AE1 /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2423431C55005EE90F /* SF-Pro-Display-RegularItalic.otf */; };
+		F29E693E235DE4C500B22AE1 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1223431C53005EE90F /* SF-Pro-Display-Semibold.otf */; };
+		F29E693F235DE4C500B22AE1 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0D23431C52005EE90F /* SF-Pro-Display-SemiboldItalic.otf */; };
+		F29E6940235DE4C500B22AE1 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1123431C53005EE90F /* SF-Pro-Display-Thin.otf */; };
+		F29E6941235DE4C500B22AE1 /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1923431C54005EE90F /* SF-Pro-Display-ThinItalic.otf */; };
+		F29E6942235DE4C500B22AE1 /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1523431C53005EE90F /* SF-Pro-Display-Ultralight.otf */; };
+		F29E6943235DE4C500B22AE1 /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1823431C54005EE90F /* SF-Pro-Display-UltralightItalic.otf */; };
+		F29E6944235DE4C500B22AE1 /* SF-Pro-Rounded-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1F23431C54005EE90F /* SF-Pro-Rounded-Black.otf */; };
+		F29E6945235DE4C500B22AE1 /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2123431C55005EE90F /* SF-Pro-Rounded-Bold.otf */; };
+		F29E6946235DE4C500B22AE1 /* SF-Pro-Rounded-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0123431C50005EE90F /* SF-Pro-Rounded-Heavy.otf */; };
+		F29E6947235DE4C500B22AE1 /* SF-Pro-Rounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1623431C53005EE90F /* SF-Pro-Rounded-Light.otf */; };
+		F29E6948235DE4C500B22AE1 /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0023431C50005EE90F /* SF-Pro-Rounded-Medium.otf */; };
+		F29E6949235DE4C500B22AE1 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1423431C53005EE90F /* SF-Pro-Rounded-Regular.otf */; };
+		F29E694A235DE4C500B22AE1 /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2323431C55005EE90F /* SF-Pro-Rounded-Semibold.otf */; };
+		F29E694B235DE4C500B22AE1 /* SF-Pro-Rounded-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2623431C55005EE90F /* SF-Pro-Rounded-Thin.otf */; };
+		F29E694C235DE4C500B22AE1 /* SF-Pro-Rounded-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0623431C51005EE90F /* SF-Pro-Rounded-Ultralight.otf */; };
+		F29E694D235DE4C500B22AE1 /* SF-Pro-Text-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0F23431C52005EE90F /* SF-Pro-Text-Black.otf */; };
+		F29E694E235DE4C500B22AE1 /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0523431C51005EE90F /* SF-Pro-Text-BlackItalic.otf */; };
+		F29E694F235DE4C500B22AE1 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1B23431C54005EE90F /* SF-Pro-Text-Bold.otf */; };
+		F29E6950235DE4C500B22AE1 /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2523431C55005EE90F /* SF-Pro-Text-BoldItalic.otf */; };
+		F29E6951235DE4C500B22AE1 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFA23431C4F005EE90F /* SF-Pro-Text-Heavy.otf */; };
+		F29E6952235DE4C500B22AE1 /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1C23431C54005EE90F /* SF-Pro-Text-HeavyItalic.otf */; };
+		F29E6953235DE4C500B22AE1 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFF23431C50005EE90F /* SF-Pro-Text-Light.otf */; };
+		F29E6954235DE4C500B22AE1 /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1D23431C54005EE90F /* SF-Pro-Text-LightItalic.otf */; };
+		F29E6955235DE4C500B22AE1 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0323431C51005EE90F /* SF-Pro-Text-Medium.otf */; };
+		F29E6956235DE4C500B22AE1 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0C23431C52005EE90F /* SF-Pro-Text-MediumItalic.otf */; };
+		F29E6957235DE4C500B22AE1 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0823431C51005EE90F /* SF-Pro-Text-Regular.otf */; };
+		F29E6958235DE4C500B22AE1 /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0923431C52005EE90F /* SF-Pro-Text-RegularItalic.otf */; };
+		F29E6959235DE4C500B22AE1 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0423431C51005EE90F /* SF-Pro-Text-Semibold.otf */; };
+		F29E695A235DE4C500B22AE1 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B0E23431C52005EE90F /* SF-Pro-Text-SemiboldItalic.otf */; };
+		F29E695B235DE4C500B22AE1 /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1023431C52005EE90F /* SF-Pro-Text-Thin.otf */; };
+		F29E695C235DE4C500B22AE1 /* SF-Pro-Text-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B1E23431C54005EE90F /* SF-Pro-Text-ThinItalic.otf */; };
+		F29E695D235DE4C500B22AE1 /* SF-Pro-Text-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AFD23431C50005EE90F /* SF-Pro-Text-Ultralight.otf */; };
+		F29E695E235DE4C500B22AE1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7B2223431C55005EE90F /* SF-Pro-Text-UltralightItalic.otf */; };
+		F29E695F235DE4C500B22AE1 /* NewYorkExtraLarge-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE923431BFA005EE90F /* NewYorkExtraLarge-Regular.otf */; };
+		F29E6960235DE4C500B22AE1 /* NewYorkExtraLarge-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEC23431BFA005EE90F /* NewYorkExtraLarge-RegularItalic.otf */; };
+		F29E6961235DE4C500B22AE1 /* NewYorkExtraLarge-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD723431BF8005EE90F /* NewYorkExtraLarge-Semibold.otf */; };
+		F29E6962235DE4C500B22AE1 /* NewYorkExtraLarge-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACA23431BF7005EE90F /* NewYorkExtraLarge-SemiboldItalic.otf */; };
+		F29E6963235DE4C500B22AE1 /* NewYorkLarge-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE523431BFA005EE90F /* NewYorkLarge-Black.otf */; };
+		F29E6964235DE4C500B22AE1 /* NewYorkLarge-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD523431BF8005EE90F /* NewYorkLarge-BlackItalic.otf */; };
+		F29E6965235DE4C500B22AE1 /* NewYorkLarge-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADD23431BF9005EE90F /* NewYorkLarge-Bold.otf */; };
+		F29E6966235DE4C500B22AE1 /* NewYorkLarge-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD423431BF8005EE90F /* NewYorkLarge-BoldItalic.otf */; };
+		F29E6967235DE4C500B22AE1 /* NewYorkLarge-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADE23431BF9005EE90F /* NewYorkLarge-Heavy.otf */; };
+		F29E6968235DE4C500B22AE1 /* NewYorkLarge-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD223431BF8005EE90F /* NewYorkLarge-HeavyItalic.otf */; };
+		F29E6969235DE4C500B22AE1 /* NewYorkLarge-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF323431BFB005EE90F /* NewYorkLarge-Medium.otf */; };
+		F29E696A235DE4C500B22AE1 /* NewYorkLarge-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD023431BF8005EE90F /* NewYorkLarge-MediumItalic.otf */; };
+		F29E696B235DE4C500B22AE1 /* NewYorkLarge-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADF23431BF9005EE90F /* NewYorkLarge-Regular.otf */; };
+		F29E696C235DE4C500B22AE1 /* NewYorkLarge-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACC23431BF7005EE90F /* NewYorkLarge-RegularItalic.otf */; };
+		F29E696D235DE4C500B22AE1 /* NewYorkLarge-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF023431BFA005EE90F /* NewYorkLarge-Semibold.otf */; };
+		F29E696E235DE4C500B22AE1 /* NewYorkLarge-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE623431BFA005EE90F /* NewYorkLarge-SemiboldItalic.otf */; };
+		F29E696F235DE4C500B22AE1 /* NewYorkMedium-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEF23431BFA005EE90F /* NewYorkMedium-Black.otf */; };
+		F29E6970235DE4C500B22AE1 /* NewYorkMedium-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACD23431BF7005EE90F /* NewYorkMedium-BlackItalic.otf */; };
+		F29E6971235DE4C500B22AE1 /* NewYorkMedium-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEE23431BFA005EE90F /* NewYorkMedium-Bold.otf */; };
+		F29E6972235DE4C500B22AE1 /* NewYorkMedium-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE023431BF9005EE90F /* NewYorkMedium-BoldItalic.otf */; };
+		F29E6973235DE4C500B22AE1 /* NewYorkMedium-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF223431BFB005EE90F /* NewYorkMedium-Heavy.otf */; };
+		F29E6974235DE4C500B22AE1 /* NewYorkMedium-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADB23431BF9005EE90F /* NewYorkMedium-HeavyItalic.otf */; };
+		F29E6975235DE4C500B22AE1 /* NewYorkMedium-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AED23431BFA005EE90F /* NewYorkMedium-Medium.otf */; };
+		F29E6976235DE4C500B22AE1 /* NewYorkMedium-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEA23431BFA005EE90F /* NewYorkMedium-MediumItalic.otf */; };
+		F29E6977235DE4C500B22AE1 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF423431BFB005EE90F /* NewYorkMedium-Regular.otf */; };
+		F29E6978235DE4C500B22AE1 /* NewYorkMedium-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ACF23431BF8005EE90F /* NewYorkMedium-RegularItalic.otf */; };
+		F29E6979235DE4C500B22AE1 /* NewYorkMedium-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE723431BFA005EE90F /* NewYorkMedium-Semibold.otf */; };
+		F29E697A235DE4C500B22AE1 /* NewYorkMedium-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AEB23431BFA005EE90F /* NewYorkMedium-SemiboldItalic.otf */; };
+		F29E697B235DE4C500B22AE1 /* NewYorkSmall-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF623431BFB005EE90F /* NewYorkSmall-Black.otf */; };
+		F29E697C235DE4C500B22AE1 /* NewYorkSmall-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD923431BF8005EE90F /* NewYorkSmall-BlackItalic.otf */; };
+		F29E697D235DE4C500B22AE1 /* NewYorkSmall-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AF723431BFB005EE90F /* NewYorkSmall-Bold.otf */; };
+		F29E697E235DE4C500B22AE1 /* NewYorkSmall-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADC23431BF9005EE90F /* NewYorkSmall-BoldItalic.otf */; };
+		F29E697F235DE4C500B22AE1 /* NewYorkSmall-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE823431BFA005EE90F /* NewYorkSmall-Heavy.otf */; };
+		F29E6980235DE4C500B22AE1 /* NewYorkSmall-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD823431BF8005EE90F /* NewYorkSmall-HeavyItalic.otf */; };
+		F29E6981235DE4C500B22AE1 /* NewYorkSmall-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7ADA23431BF9005EE90F /* NewYorkSmall-Medium.otf */; };
+		F29E6982235DE4C500B22AE1 /* NewYorkSmall-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD123431BF8005EE90F /* NewYorkSmall-MediumItalic.otf */; };
+		F29E6983235DE4C500B22AE1 /* NewYorkSmall-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AE223431BF9005EE90F /* NewYorkSmall-Regular.otf */; };
+		F29E6984235DE4C500B22AE1 /* NewYorkSmall-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD623431BF8005EE90F /* NewYorkSmall-RegularItalic.otf */; };
+		F29E6985235DE4C500B22AE1 /* NewYorkSmall-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F21B7AD323431BF8005EE90F /* NewYorkSmall-Semibold.otf */; };
+		F29E6987235DF20700B22AE1 /* CryptoList_AR_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29E6986235DF20700B22AE1 /* CryptoList_AR_VC.swift */; };
 		F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A28A01234B6749001AE873 /* editProfileVC.swift */; };
 		F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A28A03234B7D0A001AE873 /* Settings.storyboard */; };
-		F2B479542345BF7E00DAA960 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */; };
-		F2B479552345BF7E00DAA960 /* MontserratAlternates-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479302345BF7A00DAA960 /* MontserratAlternates-Medium.otf */; };
-		F2B479562345BF7E00DAA960 /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479312345BF7A00DAA960 /* MontserratAlternates-SemiBold.otf */; };
-		F2B479572345BF7E00DAA960 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479322345BF7A00DAA960 /* Montserrat-Black.otf */; };
-		F2B479582345BF7E00DAA960 /* MontserratAlternates-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479332345BF7A00DAA960 /* MontserratAlternates-Regular.otf */; };
-		F2B479592345BF7E00DAA960 /* Montserrat-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479342345BF7A00DAA960 /* Montserrat-SemiBoldItalic.otf */; };
-		F2B4795A2345BF7E00DAA960 /* MontserratAlternates-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479352345BF7A00DAA960 /* MontserratAlternates-SemiBoldItalic.otf */; };
-		F2B4795B2345BF7E00DAA960 /* MontserratAlternates-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479362345BF7A00DAA960 /* MontserratAlternates-Bold.otf */; };
-		F2B4795C2345BF7E00DAA960 /* Montserrat-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479372345BF7A00DAA960 /* Montserrat-BlackItalic.otf */; };
-		F2B4795D2345BF7E00DAA960 /* Montserrat-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479382345BF7B00DAA960 /* Montserrat-BoldItalic.otf */; };
-		F2B4795E2345BF7E00DAA960 /* Montserrat-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479392345BF7B00DAA960 /* Montserrat-MediumItalic.otf */; };
-		F2B4795F2345BF7E00DAA960 /* MontserratAlternates-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793A2345BF7B00DAA960 /* MontserratAlternates-ThinItalic.otf */; };
-		F2B479602345BF7E00DAA960 /* MontserratAlternates-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793B2345BF7B00DAA960 /* MontserratAlternates-ExtraLight.otf */; };
-		F2B479612345BF7E00DAA960 /* Montserrat-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793C2345BF7B00DAA960 /* Montserrat-ExtraLightItalic.otf */; };
-		F2B479622345BF7E00DAA960 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793D2345BF7B00DAA960 /* Montserrat-Bold.otf */; };
-		F2B479632345BF7E00DAA960 /* Montserrat-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793E2345BF7B00DAA960 /* Montserrat-LightItalic.otf */; };
-		F2B479642345BF7E00DAA960 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4793F2345BF7B00DAA960 /* Montserrat-SemiBold.otf */; };
-		F2B479652345BF7E00DAA960 /* MontserratAlternates-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479402345BF7C00DAA960 /* MontserratAlternates-ExtraBold.otf */; };
-		F2B479662345BF7E00DAA960 /* MontserratAlternates-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479412345BF7C00DAA960 /* MontserratAlternates-Black.otf */; };
-		F2B479672345BF7E00DAA960 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479422345BF7C00DAA960 /* Montserrat-Regular.otf */; };
-		F2B479682345BF7E00DAA960 /* MontserratAlternates-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479432345BF7C00DAA960 /* MontserratAlternates-ExtraLightItalic.otf */; };
-		F2B479692345BF7E00DAA960 /* MontserratAlternates-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479442345BF7C00DAA960 /* MontserratAlternates-Italic.otf */; };
-		F2B4796A2345BF7E00DAA960 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479452345BF7C00DAA960 /* Montserrat-ExtraBold.otf */; };
-		F2B4796B2345BF7E00DAA960 /* Montserrat-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479462345BF7C00DAA960 /* Montserrat-Italic.otf */; };
-		F2B4796C2345BF7E00DAA960 /* MontserratAlternates-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479472345BF7C00DAA960 /* MontserratAlternates-BoldItalic.otf */; };
-		F2B4796D2345BF7E00DAA960 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479482345BF7D00DAA960 /* Montserrat-Light.otf */; };
-		F2B4796E2345BF7E00DAA960 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479492345BF7D00DAA960 /* Montserrat-Medium.otf */; };
-		F2B4796F2345BF7E00DAA960 /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794A2345BF7D00DAA960 /* MontserratAlternates-Thin.otf */; };
-		F2B479702345BF7E00DAA960 /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794B2345BF7D00DAA960 /* Montserrat-ExtraLight.otf */; };
-		F2B479712345BF7E00DAA960 /* Montserrat-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794C2345BF7D00DAA960 /* Montserrat-ThinItalic.otf */; };
-		F2B479722345BF7E00DAA960 /* MontserratAlternates-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794D2345BF7D00DAA960 /* MontserratAlternates-LightItalic.otf */; };
-		F2B479732345BF7E00DAA960 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794E2345BF7D00DAA960 /* SIL Open Font License.txt */; };
-		F2B479742345BF7E00DAA960 /* Montserrat-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B4794F2345BF7D00DAA960 /* Montserrat-ExtraBoldItalic.otf */; };
-		F2B479752345BF7E00DAA960 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479502345BF7E00DAA960 /* MontserratAlternates-ExtraBoldItalic.otf */; };
-		F2B479762345BF7E00DAA960 /* MontserratAlternates-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479512345BF7E00DAA960 /* MontserratAlternates-MediumItalic.otf */; };
-		F2B479772345BF7E00DAA960 /* MontserratAlternates-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479522345BF7E00DAA960 /* MontserratAlternates-BlackItalic.otf */; };
-		F2B479782345BF7E00DAA960 /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B479532345BF7E00DAA960 /* Montserrat-Thin.otf */; };
 		F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */; };
 		F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD07362344F15600FB766F /* ChatMainVC.swift */; };
 		F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD07382344F16B00FB766F /* WalletMainVC.swift */; };
 		F2C5CD4723560CB4009D7F74 /* SendToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */; };
 		F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE8069234B8E06009933A2 /* SettingVC.swift */; };
 		F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */; };
+		F2DE25BA235D93400033CBED /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE25B9235D93400033CBED /* ContactListVC.swift */; };
+		F2DE25BF235D981A0033CBED /* AllProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE25BE235D981A0033CBED /* AllProtocols.swift */; };
 		F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E13D9C2356116A00CC5519 /* SendTokenMainVC.swift */; };
 		F2E13D9F2356118000CC5519 /* SendTokenConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E13D9E2356118000CC5519 /* SendTokenConfirmVC.swift */; };
 		F2E223512343135700931AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E223502343135700931AFA /* AppDelegate.swift */; };
@@ -168,6 +189,7 @@
 		F2E223582343135700931AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E223562343135700931AFA /* Main.storyboard */; };
 		F2E2235A2343135800931AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E223592343135800931AFA /* Assets.xcassets */; };
 		F2E2235D2343135800931AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E2235B2343135800931AFA /* LaunchScreen.storyboard */; };
+		F2E579D72359F2F300779073 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E579D62359F2F300779073 /* ContactList.storyboard */; };
 		F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */; };
 		F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F5234B95E800F3BA47 /* TermVC.swift */; };
 		F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */; };
@@ -307,6 +329,7 @@
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_CryptoTableView.swift; sourceTree = "<group>"; };
 		F29094AB235606A0004E692F /* confirmToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmToken.swift; sourceTree = "<group>"; };
+		F29E6986235DF20700B22AE1 /* CryptoList_AR_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoList_AR_VC.swift; sourceTree = "<group>"; };
 		F2A28A01234B6749001AE873 /* editProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileVC.swift; sourceTree = "<group>"; };
 		F2A28A03234B7D0A001AE873 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F2B4792F2345BF7900DAA960 /* MontserratAlternates-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.otf"; sourceTree = "<group>"; };
@@ -352,6 +375,8 @@
 		F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendToken.storyboard; sourceTree = "<group>"; };
 		F2CE8069234B8E06009933A2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		F2DE25B9235D93400033CBED /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
+		F2DE25BE235D981A0033CBED /* AllProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProtocols.swift; sourceTree = "<group>"; };
 		F2E13D9C2356116A00CC5519 /* SendTokenMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenMainVC.swift; sourceTree = "<group>"; };
 		F2E13D9E2356118000CC5519 /* SendTokenConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenConfirmVC.swift; sourceTree = "<group>"; };
 		F2E2234D2343135700931AFA /* Bema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bema.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -362,6 +387,7 @@
 		F2E223592343135800931AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E2235C2343135800931AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E2235E2343135800931AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E579D62359F2F300779073 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
 		F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
 		F2EE38F5234B95E800F3BA47 /* TermVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermVC.swift; sourceTree = "<group>"; };
 		F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordVC.swift; sourceTree = "<group>"; };
@@ -478,6 +504,7 @@
 				F2365E9F234BA2910072463E /* Wallet */,
 				F2E13D9B2356111500CC5519 /* SendToken */,
 				F2F51B2B2358BCA5001930E6 /* BitmojiAR */,
+				F2DE25BB235D93600033CBED /* ContactList */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -656,6 +683,7 @@
 				F2EE38F9234B9A0A00F3BA47 /* Wallet.storyboard */,
 				F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */,
 				F2F51B292358BC95001930E6 /* BitmojiAR.storyboard */,
+				F2E579D62359F2F300779073 /* ContactList.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -669,6 +697,14 @@
 				F25197E8234CF72F00973F65 /* LogoutVc.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F2DE25BB235D93600033CBED /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				F2DE25B9235D93400033CBED /* ContactListVC.swift */,
+			);
+			path = ContactList;
 			sourceTree = "<group>";
 		};
 		F2E13D9B2356111500CC5519 /* SendToken */ = {
@@ -713,6 +749,7 @@
 				F2E223592343135800931AFA /* Assets.xcassets */,
 				F2E2235B2343135800931AFA /* LaunchScreen.storyboard */,
 				F2E2235E2343135800931AFA /* Info.plist */,
+				F2DE25BE235D981A0033CBED /* AllProtocols.swift */,
 			);
 			path = Bema;
 			sourceTree = "<group>";
@@ -729,6 +766,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F4694A2358BE7B00EF6007 /* CameraViewController.swift */,
+				F29E6986235DF20700B22AE1 /* CryptoList_AR_VC.swift */,
 			);
 			path = BitmojiAR;
 			sourceTree = "<group>";
@@ -793,145 +831,164 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B4796A2345BF7E00DAA960 /* Montserrat-ExtraBold.otf in Resources */,
-				F21B7B5F23431C72005EE90F /* NewYorkExtraLarge-SemiboldItalic.otf in Resources */,
-				F2B479692345BF7E00DAA960 /* MontserratAlternates-Italic.otf in Resources */,
-				F21B7B2C23431C72005EE90F /* NewYorkExtraLarge-HeavyItalic.otf in Resources */,
-				F21B7B4523431C72005EE90F /* SF-Pro-Rounded-Medium.otf in Resources */,
-				F2B479632345BF7E00DAA960 /* Montserrat-LightItalic.otf in Resources */,
-				F21B7B4723431C72005EE90F /* SF-Pro-Rounded-Semibold.otf in Resources */,
-				F2B479662345BF7E00DAA960 /* MontserratAlternates-Black.otf in Resources */,
-				F21B7B4E23431C72005EE90F /* SF-Pro-Text-Heavy.otf in Resources */,
-				F21B7B5523431C72005EE90F /* SF-Pro-Text-RegularItalic.otf in Resources */,
-				F21B7B8023431C72005EE90F /* NewYorkSmall-Regular.otf in Resources */,
-				F21B7B8123431C72005EE90F /* NewYorkSmall-RegularItalic.otf in Resources */,
+				F29E693A235DE4C500B22AE1 /* SF-Pro-Display-Medium.otf in Resources */,
+				F2E579D72359F2F300779073 /* ContactList.storyboard in Resources */,
+				F29E6958235DE4C500B22AE1 /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				F29E6979235DE4C500B22AE1 /* NewYorkMedium-Semibold.otf in Resources */,
+				F29E691B235DE4C500B22AE1 /* MontserratAlternates-ExtraBold.otf in Resources */,
+				F29E696B235DE4C500B22AE1 /* NewYorkLarge-Regular.otf in Resources */,
+				F29E694B235DE4C500B22AE1 /* SF-Pro-Rounded-Thin.otf in Resources */,
+				F29E6917235DE4C500B22AE1 /* MontserratAlternates-Black.otf in Resources */,
+				F29E693B235DE4C500B22AE1 /* SF-Pro-Display-MediumItalic.otf in Resources */,
+				F29E6957235DE4C500B22AE1 /* SF-Pro-Text-Regular.otf in Resources */,
+				F29E6902235DE4C500B22AE1 /* Poppins-SemiBoldItalic.otf in Resources */,
+				F29E6938235DE4C500B22AE1 /* SF-Pro-Display-Light.otf in Resources */,
+				F29E692E235DE4C500B22AE1 /* NewYorkExtraLarge-Heavy.otf in Resources */,
+				F29E6916235DE4C500B22AE1 /* Montserrat-ThinItalic.otf in Resources */,
+				F29E6928235DE4C500B22AE1 /* MontserratAlternates-ThinItalic.otf in Resources */,
+				F29E691D235DE4C500B22AE1 /* MontserratAlternates-ExtraLight.otf in Resources */,
+				F29E6943235DE4C500B22AE1 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
 				F2EE38FA234B9A0A00F3BA47 /* Wallet.storyboard in Resources */,
-				F2B479742345BF7E00DAA960 /* Montserrat-ExtraBoldItalic.otf in Resources */,
-				F21B7B3323431C72005EE90F /* SF-Pro-Display-Heavy.otf in Resources */,
-				F21B7B3623431C72005EE90F /* SF-Pro-Display-LightItalic.otf in Resources */,
-				F2B4796F2345BF7E00DAA960 /* MontserratAlternates-Thin.otf in Resources */,
-				F2B479562345BF7E00DAA960 /* MontserratAlternates-SemiBold.otf in Resources */,
-				F21B7B2B23431C72005EE90F /* NewYorkExtraLarge-Heavy.otf in Resources */,
-				F21B7B7423431C72005EE90F /* NewYorkMedium-Regular.otf in Resources */,
-				F21B7B5823431C72005EE90F /* SF-Pro-Text-Thin.otf in Resources */,
-				F21B7B4623431C72005EE90F /* SF-Pro-Rounded-Regular.otf in Resources */,
-				F21B7B3C23431C72005EE90F /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
-				F21B7B4C23431C72005EE90F /* SF-Pro-Text-Bold.otf in Resources */,
-				F21B7B6323431C72005EE90F /* NewYorkLarge-BoldItalic.otf in Resources */,
-				F21B7B5123431C72005EE90F /* SF-Pro-Text-LightItalic.otf in Resources */,
-				F21B7B6723431C72005EE90F /* NewYorkLarge-MediumItalic.otf in Resources */,
-				F2B479642345BF7E00DAA960 /* Montserrat-SemiBold.otf in Resources */,
-				F21B7B4B23431C72005EE90F /* SF-Pro-Text-BlackItalic.otf in Resources */,
-				F21B7B8223431C72005EE90F /* NewYorkSmall-Semibold.otf in Resources */,
-				F21B7B3923431C72005EE90F /* SF-Pro-Display-Regular.otf in Resources */,
-				F2B479622345BF7E00DAA960 /* Montserrat-Bold.otf in Resources */,
-				F2B479592345BF7E00DAA960 /* Montserrat-SemiBoldItalic.otf in Resources */,
+				F29E6953235DE4C500B22AE1 /* SF-Pro-Text-Light.otf in Resources */,
+				F29E694C235DE4C500B22AE1 /* SF-Pro-Rounded-Ultralight.otf in Resources */,
+				F29E691C235DE4C500B22AE1 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
+				F29E690F235DE4C500B22AE1 /* Montserrat-LightItalic.otf in Resources */,
+				F29E6949235DE4C500B22AE1 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				F21B7B8323431C72005EE90F /* NewYorkSmall-SemiboldItalic.otf in Resources */,
-				F21B7B3223431C72005EE90F /* SF-Pro-Display-BoldItalic.otf in Resources */,
-				F2B4795C2345BF7E00DAA960 /* Montserrat-BlackItalic.otf in Resources */,
+				F29E6903235DE4C500B22AE1 /* Poppins-Thin.otf in Resources */,
+				F29E68F3235DE4C500B22AE1 /* Poppins-Black.otf in Resources */,
 				F2A28A04234B7D0A001AE873 /* Settings.storyboard in Resources */,
-				F2B479702345BF7E00DAA960 /* Montserrat-ExtraLight.otf in Resources */,
-				F21B7B7923431C72005EE90F /* NewYorkSmall-BlackItalic.otf in Resources */,
-				F21B7B2723431C72005EE90F /* NewYorkExtraLarge-Black.otf in Resources */,
-				F21B7B4D23431C72005EE90F /* SF-Pro-Text-BoldItalic.otf in Resources */,
-				F21B7B5423431C72005EE90F /* SF-Pro-Text-Regular.otf in Resources */,
-				F2B479652345BF7E00DAA960 /* MontserratAlternates-ExtraBold.otf in Resources */,
-				F2B479712345BF7E00DAA960 /* Montserrat-ThinItalic.otf in Resources */,
-				F21B7B3823431C72005EE90F /* SF-Pro-Display-MediumItalic.otf in Resources */,
-				F21B7B4023431C72005EE90F /* SF-Pro-Display-UltralightItalic.otf in Resources */,
-				F21B7B3723431C72005EE90F /* SF-Pro-Display-Medium.otf in Resources */,
-				F21B7B2E23431C72005EE90F /* NewYorkExtraLarge-MediumItalic.otf in Resources */,
-				F21B7B5E23431C72005EE90F /* NewYorkExtraLarge-Semibold.otf in Resources */,
-				F21B7B6523431C72005EE90F /* NewYorkLarge-HeavyItalic.otf in Resources */,
-				F21B7B5223431C72005EE90F /* SF-Pro-Text-Medium.otf in Resources */,
-				F21B7B5B23431C72005EE90F /* SF-Pro-Text-UltralightItalic.otf in Resources */,
-				F2B479672345BF7E00DAA960 /* Montserrat-Regular.otf in Resources */,
-				F2B479782345BF7E00DAA960 /* Montserrat-Thin.otf in Resources */,
+				F29E6980235DE4C500B22AE1 /* NewYorkSmall-HeavyItalic.otf in Resources */,
+				F29E6960235DE4C500B22AE1 /* NewYorkExtraLarge-RegularItalic.otf in Resources */,
+				F29E695F235DE4C500B22AE1 /* NewYorkExtraLarge-Regular.otf in Resources */,
+				F29E6933235DE4C500B22AE1 /* SF-Pro-Display-BlackItalic.otf in Resources */,
+				F29E6944235DE4C500B22AE1 /* SF-Pro-Rounded-Black.otf in Resources */,
+				F29E6907235DE4C500B22AE1 /* Montserrat-Bold.otf in Resources */,
+				F29E6977235DE4C500B22AE1 /* NewYorkMedium-Regular.otf in Resources */,
+				F29E6969235DE4C500B22AE1 /* NewYorkLarge-Medium.otf in Resources */,
+				F29E68F4235DE4C500B22AE1 /* Poppins-BlackItalic.otf in Resources */,
+				F29E6931235DE4C500B22AE1 /* NewYorkExtraLarge-MediumItalic.otf in Resources */,
+				F29E68F8235DE4C500B22AE1 /* Poppins-ExtraBoldItalic.otf in Resources */,
+				F29E696E235DE4C500B22AE1 /* NewYorkLarge-SemiboldItalic.otf in Resources */,
 				F2C5CD4723560CB4009D7F74 /* SendToken.storyboard in Resources */,
-				F21B7B7D23431C72005EE90F /* NewYorkSmall-HeavyItalic.otf in Resources */,
-				F2B4795D2345BF7E00DAA960 /* Montserrat-BoldItalic.otf in Resources */,
-				F21B7B6B23431C72005EE90F /* NewYorkLarge-SemiboldItalic.otf in Resources */,
-				F21B7B2923431C72005EE90F /* NewYorkExtraLarge-Bold.otf in Resources */,
-				F21B7B7823431C72005EE90F /* NewYorkSmall-Black.otf in Resources */,
-				F21B7B3423431C72005EE90F /* SF-Pro-Display-HeavyItalic.otf in Resources */,
-				F21B7B4823431C72005EE90F /* SF-Pro-Rounded-Thin.otf in Resources */,
-				F21B7B4923431C72005EE90F /* SF-Pro-Rounded-Ultralight.otf in Resources */,
-				F2B479752345BF7E00DAA960 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
-				F2B4795F2345BF7E00DAA960 /* MontserratAlternates-ThinItalic.otf in Resources */,
-				F21B7B4F23431C72005EE90F /* SF-Pro-Text-HeavyItalic.otf in Resources */,
-				F2B479732345BF7E00DAA960 /* SIL Open Font License.txt in Resources */,
-				F21B7B2A23431C72005EE90F /* NewYorkExtraLarge-BoldItalic.otf in Resources */,
-				F2B4795E2345BF7E00DAA960 /* Montserrat-MediumItalic.otf in Resources */,
-				F21B7B3F23431C72005EE90F /* SF-Pro-Display-Ultralight.otf in Resources */,
-				F21B7B3523431C72005EE90F /* SF-Pro-Display-Light.otf in Resources */,
-				F2B4796E2345BF7E00DAA960 /* Montserrat-Medium.otf in Resources */,
-				F2B479772345BF7E00DAA960 /* MontserratAlternates-BlackItalic.otf in Resources */,
-				F21B7B4223431C72005EE90F /* SF-Pro-Rounded-Bold.otf in Resources */,
-				F21B7B7B23431C72005EE90F /* NewYorkSmall-BoldItalic.otf in Resources */,
-				F21B7B6923431C72005EE90F /* NewYorkLarge-RegularItalic.otf in Resources */,
-				F2B479612345BF7E00DAA960 /* Montserrat-ExtraLightItalic.otf in Resources */,
-				F2B479542345BF7E00DAA960 /* MontserratAlternates-Light.otf in Resources */,
-				F21B7B7523431C72005EE90F /* NewYorkMedium-RegularItalic.otf in Resources */,
+				F29E6951235DE4C500B22AE1 /* SF-Pro-Text-Heavy.otf in Resources */,
+				F29E68FA235DE4C500B22AE1 /* Poppins-ExtraLightItalic.otf in Resources */,
+				F29E692A235DE4C500B22AE1 /* NewYorkExtraLarge-Black.otf in Resources */,
+				F29E6952235DE4C500B22AE1 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				F29E6974235DE4C500B22AE1 /* NewYorkMedium-HeavyItalic.otf in Resources */,
+				F29E68F7235DE4C500B22AE1 /* Poppins-ExtraBold.otf in Resources */,
+				F29E6975235DE4C500B22AE1 /* NewYorkMedium-Medium.otf in Resources */,
+				F29E6982235DE4C500B22AE1 /* NewYorkSmall-MediumItalic.otf in Resources */,
+				F29E6948235DE4C500B22AE1 /* SF-Pro-Rounded-Medium.otf in Resources */,
+				F29E6924235DE4C500B22AE1 /* MontserratAlternates-Regular.otf in Resources */,
+				F29E6930235DE4C500B22AE1 /* NewYorkExtraLarge-Medium.otf in Resources */,
+				F29E6955235DE4C500B22AE1 /* SF-Pro-Text-Medium.otf in Resources */,
+				F29E6968235DE4C500B22AE1 /* NewYorkLarge-HeavyItalic.otf in Resources */,
 				F2E223532343135700931AFA /* art.scnassets in Resources */,
-				F21B7B2D23431C72005EE90F /* NewYorkExtraLarge-Medium.otf in Resources */,
-				F21B7B4323431C72005EE90F /* SF-Pro-Rounded-Heavy.otf in Resources */,
+				F29E693D235DE4C500B22AE1 /* SF-Pro-Display-RegularItalic.otf in Resources */,
+				F29E6939235DE4C500B22AE1 /* SF-Pro-Display-LightItalic.otf in Resources */,
+				F29E695A235DE4C500B22AE1 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				F29E6956235DE4C500B22AE1 /* SF-Pro-Text-MediumItalic.otf in Resources */,
+				F29E697D235DE4C500B22AE1 /* NewYorkSmall-Bold.otf in Resources */,
 				F2F51B2A2358BC95001930E6 /* BitmojiAR.storyboard in Resources */,
-				F21B7B4423431C72005EE90F /* SF-Pro-Rounded-Light.otf in Resources */,
-				F21B7B6623431C72005EE90F /* NewYorkLarge-Medium.otf in Resources */,
-				F21B7B6423431C72005EE90F /* NewYorkLarge-Heavy.otf in Resources */,
-				F21B7B6A23431C72005EE90F /* NewYorkLarge-Semibold.otf in Resources */,
-				F21B7B7023431C72005EE90F /* NewYorkMedium-Heavy.otf in Resources */,
-				F21B7B5623431C72005EE90F /* SF-Pro-Text-Semibold.otf in Resources */,
-				F21B7B2823431C72005EE90F /* NewYorkExtraLarge-BlackItalic.otf in Resources */,
-				F21B7B5723431C72005EE90F /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				F29E697E235DE4C500B22AE1 /* NewYorkSmall-BoldItalic.otf in Resources */,
+				F29E6976235DE4C500B22AE1 /* NewYorkMedium-MediumItalic.otf in Resources */,
+				F29E693E235DE4C500B22AE1 /* SF-Pro-Display-Semibold.otf in Resources */,
+				F29E6927235DE4C500B22AE1 /* MontserratAlternates-Thin.otf in Resources */,
+				F29E692F235DE4C500B22AE1 /* NewYorkExtraLarge-HeavyItalic.otf in Resources */,
+				F29E6908235DE4C500B22AE1 /* Montserrat-BoldItalic.otf in Resources */,
+				F29E6964235DE4C500B22AE1 /* NewYorkLarge-BlackItalic.otf in Resources */,
+				F29E6950235DE4C500B22AE1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
+				F29E6923235DE4C500B22AE1 /* MontserratAlternates-MediumItalic.otf in Resources */,
+				F29E6934235DE4C500B22AE1 /* SF-Pro-Display-Bold.otf in Resources */,
+				F29E690B235DE4C500B22AE1 /* Montserrat-ExtraLight.otf in Resources */,
+				F29E6963235DE4C500B22AE1 /* NewYorkLarge-Black.otf in Resources */,
+				F29E6932235DE4C500B22AE1 /* SF-Pro-Display-Black.otf in Resources */,
+				F29E6926235DE4C500B22AE1 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
+				F29E6912235DE4C500B22AE1 /* Montserrat-Regular.otf in Resources */,
+				F29E6981235DE4C500B22AE1 /* NewYorkSmall-Medium.otf in Resources */,
+				F29E690E235DE4C500B22AE1 /* Montserrat-Light.otf in Resources */,
+				F29E68FF235DE4C500B22AE1 /* Poppins-MediumItalic.otf in Resources */,
+				F29E695B235DE4C500B22AE1 /* SF-Pro-Text-Thin.otf in Resources */,
+				F29E68F9235DE4C500B22AE1 /* Poppins-ExtraLight.otf in Resources */,
+				F29E690C235DE4C500B22AE1 /* Montserrat-ExtraLightItalic.otf in Resources */,
+				F29E6961235DE4C500B22AE1 /* NewYorkExtraLarge-Semibold.otf in Resources */,
+				F29E6922235DE4C500B22AE1 /* MontserratAlternates-Medium.otf in Resources */,
+				F29E6905235DE4C500B22AE1 /* Montserrat-Black.otf in Resources */,
+				F29E697A235DE4C500B22AE1 /* NewYorkMedium-SemiboldItalic.otf in Resources */,
+				F29E696A235DE4C500B22AE1 /* NewYorkLarge-MediumItalic.otf in Resources */,
+				F29E6966235DE4C500B22AE1 /* NewYorkLarge-BoldItalic.otf in Resources */,
+				F29E6918235DE4C500B22AE1 /* MontserratAlternates-BlackItalic.otf in Resources */,
+				F29E6904235DE4C500B22AE1 /* Poppins-ThinItalic.otf in Resources */,
+				F29E6942235DE4C500B22AE1 /* SF-Pro-Display-Ultralight.otf in Resources */,
+				F29E68FB235DE4C500B22AE1 /* Poppins-Italic.otf in Resources */,
+				F29E6973235DE4C500B22AE1 /* NewYorkMedium-Heavy.otf in Resources */,
+				F29E694E235DE4C500B22AE1 /* SF-Pro-Text-BlackItalic.otf in Resources */,
+				F29E6911235DE4C500B22AE1 /* Montserrat-MediumItalic.otf in Resources */,
+				F29E695D235DE4C500B22AE1 /* SF-Pro-Text-Ultralight.otf in Resources */,
 				F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */,
-				F21B7B4123431C72005EE90F /* SF-Pro-Rounded-Black.otf in Resources */,
-				F21B7B6C23431C72005EE90F /* NewYorkMedium-Black.otf in Resources */,
-				F21B7B3023431C72005EE90F /* SF-Pro-Display-BlackItalic.otf in Resources */,
-				F21B7B6823431C72005EE90F /* NewYorkLarge-Regular.otf in Resources */,
 				F2E2235D2343135800931AFA /* LaunchScreen.storyboard in Resources */,
-				F21B7B6F23431C72005EE90F /* NewYorkMedium-BoldItalic.otf in Resources */,
-				F2B479722345BF7E00DAA960 /* MontserratAlternates-LightItalic.otf in Resources */,
-				F2B4796C2345BF7E00DAA960 /* MontserratAlternates-BoldItalic.otf in Resources */,
-				F21B7B7E23431C72005EE90F /* NewYorkSmall-Medium.otf in Resources */,
-				F2B4796D2345BF7E00DAA960 /* Montserrat-Light.otf in Resources */,
-				F21B7B7123431C72005EE90F /* NewYorkMedium-HeavyItalic.otf in Resources */,
-				F21B7B3D23431C72005EE90F /* SF-Pro-Display-Thin.otf in Resources */,
-				F2B4795A2345BF7E00DAA960 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
-				F21B7B3123431C72005EE90F /* SF-Pro-Display-Bold.otf in Resources */,
-				F21B7B3A23431C72005EE90F /* SF-Pro-Display-RegularItalic.otf in Resources */,
-				F21B7B7A23431C72005EE90F /* NewYorkSmall-Bold.otf in Resources */,
+				F29E6940235DE4C500B22AE1 /* SF-Pro-Display-Thin.otf in Resources */,
+				F29E692B235DE4C500B22AE1 /* NewYorkExtraLarge-BlackItalic.otf in Resources */,
+				F29E6913235DE4C500B22AE1 /* Montserrat-SemiBold.otf in Resources */,
+				F29E6941235DE4C500B22AE1 /* SF-Pro-Display-ThinItalic.otf in Resources */,
+				F29E6936235DE4C500B22AE1 /* SF-Pro-Display-Heavy.otf in Resources */,
+				F29E6983235DE4C500B22AE1 /* NewYorkSmall-Regular.otf in Resources */,
+				F29E694D235DE4C500B22AE1 /* SF-Pro-Text-Black.otf in Resources */,
+				F29E695C235DE4C500B22AE1 /* SF-Pro-Text-ThinItalic.otf in Resources */,
+				F29E697B235DE4C500B22AE1 /* NewYorkSmall-Black.otf in Resources */,
+				F29E68FD235DE4C500B22AE1 /* Poppins-LightItalic.otf in Resources */,
 				F2E2235A2343135800931AFA /* Assets.xcassets in Resources */,
-				F21B7B7623431C72005EE90F /* NewYorkMedium-Semibold.otf in Resources */,
-				F21B7B5A23431C72005EE90F /* SF-Pro-Text-Ultralight.otf in Resources */,
-				F2B479572345BF7E00DAA960 /* Montserrat-Black.otf in Resources */,
-				F21B7B5023431C72005EE90F /* SF-Pro-Text-Light.otf in Resources */,
-				F2B479602345BF7E00DAA960 /* MontserratAlternates-ExtraLight.otf in Resources */,
-				F21B7B6223431C72005EE90F /* NewYorkLarge-Bold.otf in Resources */,
-				F21B7B5D23431C72005EE90F /* NewYorkExtraLarge-RegularItalic.otf in Resources */,
-				F21B7B5323431C72005EE90F /* SF-Pro-Text-MediumItalic.otf in Resources */,
-				F2B479552345BF7E00DAA960 /* MontserratAlternates-Medium.otf in Resources */,
-				F21B7B3E23431C72005EE90F /* SF-Pro-Display-ThinItalic.otf in Resources */,
-				F21B7B7F23431C72005EE90F /* NewYorkSmall-MediumItalic.otf in Resources */,
-				F21B7B3B23431C72005EE90F /* SF-Pro-Display-Semibold.otf in Resources */,
-				F21B7B7C23431C72005EE90F /* NewYorkSmall-Heavy.otf in Resources */,
-				F21B7B5C23431C72005EE90F /* NewYorkExtraLarge-Regular.otf in Resources */,
-				F21B7B6123431C72005EE90F /* NewYorkLarge-BlackItalic.otf in Resources */,
-				F2B479682345BF7E00DAA960 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
-				F21B7B6023431C72005EE90F /* NewYorkLarge-Black.otf in Resources */,
-				F2B4795B2345BF7E00DAA960 /* MontserratAlternates-Bold.otf in Resources */,
+				F29E6921235DE4C500B22AE1 /* MontserratAlternates-LightItalic.otf in Resources */,
+				F29E6984235DE4C500B22AE1 /* NewYorkSmall-RegularItalic.otf in Resources */,
+				F29E6985235DE4C500B22AE1 /* NewYorkSmall-Semibold.otf in Resources */,
+				F29E6929235DE4C500B22AE1 /* SIL Open Font License.txt in Resources */,
+				F29E68F5235DE4C500B22AE1 /* Poppins-Bold.otf in Resources */,
+				F29E6914235DE4C500B22AE1 /* Montserrat-SemiBoldItalic.otf in Resources */,
+				F29E691E235DE4C500B22AE1 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
+				F29E690D235DE4C500B22AE1 /* Montserrat-Italic.otf in Resources */,
+				F29E6946235DE4C500B22AE1 /* SF-Pro-Rounded-Heavy.otf in Resources */,
+				F29E697F235DE4C500B22AE1 /* NewYorkSmall-Heavy.otf in Resources */,
+				F29E697C235DE4C500B22AE1 /* NewYorkSmall-BlackItalic.otf in Resources */,
+				F29E6906235DE4C500B22AE1 /* Montserrat-BlackItalic.otf in Resources */,
+				F29E6947235DE4C500B22AE1 /* SF-Pro-Rounded-Light.otf in Resources */,
+				F29E691F235DE4C500B22AE1 /* MontserratAlternates-Italic.otf in Resources */,
+				F29E690A235DE4C500B22AE1 /* Montserrat-ExtraBoldItalic.otf in Resources */,
+				F29E6970235DE4C500B22AE1 /* NewYorkMedium-BlackItalic.otf in Resources */,
+				F29E6920235DE4C500B22AE1 /* MontserratAlternates-Light.otf in Resources */,
+				F29E6954235DE4C500B22AE1 /* SF-Pro-Text-LightItalic.otf in Resources */,
+				F29E694A235DE4C500B22AE1 /* SF-Pro-Rounded-Semibold.otf in Resources */,
+				F29E6972235DE4C500B22AE1 /* NewYorkMedium-BoldItalic.otf in Resources */,
+				F29E692D235DE4C500B22AE1 /* NewYorkExtraLarge-BoldItalic.otf in Resources */,
 				F2E223582343135700931AFA /* Main.storyboard in Resources */,
-				F21B7B2F23431C72005EE90F /* SF-Pro-Display-Black.otf in Resources */,
-				F21B7B4A23431C72005EE90F /* SF-Pro-Text-Black.otf in Resources */,
-				F21B7B7323431C72005EE90F /* NewYorkMedium-MediumItalic.otf in Resources */,
-				F2B4796B2345BF7E00DAA960 /* Montserrat-Italic.otf in Resources */,
-				F2B479582345BF7E00DAA960 /* MontserratAlternates-Regular.otf in Resources */,
-				F21B7B6D23431C72005EE90F /* NewYorkMedium-BlackItalic.otf in Resources */,
-				F21B7B7223431C72005EE90F /* NewYorkMedium-Medium.otf in Resources */,
-				F21B7B5923431C72005EE90F /* SF-Pro-Text-ThinItalic.otf in Resources */,
-				F21B7B7723431C72005EE90F /* NewYorkMedium-SemiboldItalic.otf in Resources */,
-				F2B479762345BF7E00DAA960 /* MontserratAlternates-MediumItalic.otf in Resources */,
-				F21B7B6E23431C72005EE90F /* NewYorkMedium-Bold.otf in Resources */,
+				F29E6910235DE4C500B22AE1 /* Montserrat-Medium.otf in Resources */,
+				F29E6959235DE4C500B22AE1 /* SF-Pro-Text-Semibold.otf in Resources */,
+				F29E6971235DE4C500B22AE1 /* NewYorkMedium-Bold.otf in Resources */,
+				F29E691A235DE4C500B22AE1 /* MontserratAlternates-BoldItalic.otf in Resources */,
+				F29E6909235DE4C500B22AE1 /* Montserrat-ExtraBold.otf in Resources */,
+				F29E6962235DE4C500B22AE1 /* NewYorkExtraLarge-SemiboldItalic.otf in Resources */,
+				F29E68FC235DE4C500B22AE1 /* Poppins-Light.otf in Resources */,
+				F29E6919235DE4C500B22AE1 /* MontserratAlternates-Bold.otf in Resources */,
+				F29E696C235DE4C500B22AE1 /* NewYorkLarge-RegularItalic.otf in Resources */,
+				F29E695E235DE4C500B22AE1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
+				F29E6967235DE4C500B22AE1 /* NewYorkLarge-Heavy.otf in Resources */,
+				F29E6965235DE4C500B22AE1 /* NewYorkLarge-Bold.otf in Resources */,
+				F29E6915235DE4C500B22AE1 /* Montserrat-Thin.otf in Resources */,
+				F29E6901235DE4C500B22AE1 /* Poppins-SemiBold.otf in Resources */,
+				F29E6978235DE4C500B22AE1 /* NewYorkMedium-RegularItalic.otf in Resources */,
+				F29E6935235DE4C500B22AE1 /* SF-Pro-Display-BoldItalic.otf in Resources */,
+				F29E68F6235DE4C500B22AE1 /* Poppins-BoldItalic.otf in Resources */,
+				F29E68FE235DE4C500B22AE1 /* Poppins-Medium.otf in Resources */,
+				F29E6945235DE4C500B22AE1 /* SF-Pro-Rounded-Bold.otf in Resources */,
+				F29E6925235DE4C500B22AE1 /* MontserratAlternates-SemiBold.otf in Resources */,
+				F29E696F235DE4C500B22AE1 /* NewYorkMedium-Black.otf in Resources */,
+				F29E694F235DE4C500B22AE1 /* SF-Pro-Text-Bold.otf in Resources */,
+				F29E692C235DE4C500B22AE1 /* NewYorkExtraLarge-Bold.otf in Resources */,
+				F29E693F235DE4C500B22AE1 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
+				F29E6900235DE4C500B22AE1 /* Poppins-Regular.otf in Resources */,
+				F29E693C235DE4C500B22AE1 /* SF-Pro-Display-Regular.otf in Resources */,
+				F29E696D235DE4C500B22AE1 /* NewYorkLarge-Semibold.otf in Resources */,
+				F29E6937235DE4C500B22AE1 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,11 +1076,14 @@
 				F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */,
 				F2F469522358C25800EF6007 /* UIImage+Extension.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
+				F29E6987235DF20700B22AE1 /* CryptoList_AR_VC.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
 				F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */,
 				F2F4694B2358BE7B00EF6007 /* CameraViewController.swift in Sources */,
 				F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */,
 				F2A28A02234B6749001AE873 /* editProfileVC.swift in Sources */,
+				F2DE25BA235D93400033CBED /* ContactListVC.swift in Sources */,
+				F2DE25BF235D981A0033CBED /* AllProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

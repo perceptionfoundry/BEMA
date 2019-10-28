@@ -11,5 +11,8 @@ import UIKit
 class ContactTableViewCell: UITableViewCell {
 
 
-
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userImage: Custom_ImageView!
+    @IBOutlet weak var tickImage: UIImageView!
+    
 }

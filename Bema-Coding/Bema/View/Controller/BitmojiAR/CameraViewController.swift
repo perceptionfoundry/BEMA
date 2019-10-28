@@ -12,8 +12,37 @@ import ARKit
 import SCSDKCreativeKit
 import SCSDKBitmojiKit
 
-class CameraViewController: UIViewController {
+
+
+
+
+class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransition {
+    
+    
+    func ConfiguredCrypto(value: [String : String]) {
+        
+        self.transitionValue = value
+        
+        cryptoimage.image = UIImage(named: value["NAME"]!)
+        cryptoAmount.text = value["AMOUNT"]
+        
+        cryptoCurrency.isHidden = true
+        cryptoView.isHidden = false
+    }
+    
+    
+    
+    
+    
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var cryptoCurrency: UIButton!
+    @IBOutlet weak var cryptoView: UIView!
+    @IBOutlet weak var cryptoimage: Custom_ImageView!
+    @IBOutlet weak var cryptoAmount: UILabel!
+    
+    
+    
+    
     @IBOutlet weak var iconView: UIImageView! {
         didSet {
             iconView.backgroundColor = .white
@@ -24,11 +53,12 @@ class CameraViewController: UIViewController {
     
     private var bitmojiSelectionView: UIView?
     
+    var transitionValue = [String:Any]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-//        sceneView.scene = scene
+        cryptoView.isHidden = true
         
         // fetch your avatar image.
         SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
@@ -40,6 +70,26 @@ class CameraViewController: UIViewController {
             }
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    //***** PROTOCOL **********
+      
+      func FetchContact(userDetail: [String : Any]) {
+          
+        
+        self.showBitmojiList()
+      }
+    
+    
+    
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,31 +127,92 @@ class CameraViewController: UIViewController {
         return node
     }
     
-    @IBAction func snapButtonTapped(_ sender: Any) {
-        let snapshot = sceneView.snapshot()
-        let photo = SCSDKSnapPhoto(image: snapshot)
-        let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
-        
-        // Sticker
-        let sticker = SCSDKSnapSticker(stickerImage: #imageLiteral(resourceName: "snap-ghost"))
-        snap.sticker = sticker
-        
-        // Caption
-        snap.caption = "Snap on Snapchat!"
-        
-        // URL
-        snap.attachmentUrl = "https://www.snapchat.com"
-        
-        let api = SCSDKSnapAPI(content: snap)
-        api.startSnapping { error in
+    private func showBitmojiList(){
+            // Make bitmoji background view
+            let viewHeight: CGFloat = 300
+            let screen: CGRect = UIScreen.main.bounds
+            let backgroundView = UIView(
+                frame: CGRect(
+                    x: 0,
+                    y: screen.height - viewHeight,
+                    width: screen.width,
+                    height: viewHeight
+                )
+            )
+            view.addSubview(backgroundView)
+            bitmojiSelectionView = backgroundView
             
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                // success
-            }
+            // add child ViewController
+            let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+            stickerPickerVC.delegate = self
+    //        addChildViewController(stickerPickerVC)
+    //        backgroundView.addSubview(stickerPickerVC.view)
+    //        stickerPickerVC.didMove(toParentViewController: self)
+                    present(stickerPickerVC, animated: true, completion: nil)
+
+        }
+    
+    
+    //*********** OUTLET ACTION *************
+    @IBAction func ARSnapButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func addActionButton(_ sender: Any) {
+        performSegue(withIdentifier: "Contact_Segue", sender: nil)
+    }
+    
+    @IBAction func flipCameraAction(_ sender: Any) {
+    }
+    
+    @IBAction func cryptoButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "Crypto_Segue", sender: nil)
+    }
+    
+    //************** PREPARE SEGUE ****
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "Contact_Segue"{
+            let dest = segue.destination as! ContactListVC
+            
+            dest.contactProtocol = self
+        }
+        
+        else if segue.identifier == "Crypto_Segue"{
+            let dest = segue.destination as! CryptoList_AR_VC
+                      
+                      dest.cryptoProtocol = self
         }
     }
+    
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+//    @IBAction func snapButtonTapped(_ sender: Any) {
+//        let snapshot = sceneView.snapshot()
+//        let photo = SCSDKSnapPhoto(image: snapshot)
+//        let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
+//
+//        // Sticker
+//        let sticker = SCSDKSnapSticker(stickerImage: #imageLiteral(resourceName: "snap-ghost"))
+//        snap.sticker = sticker
+//
+//        // Caption
+//        snap.caption = "Snap on Snapchat!"
+//
+//        // URL
+//        snap.attachmentUrl = "https://www.snapchat.com"
+//
+//        let api = SCSDKSnapAPI(content: snap)
+//        api.startSnapping { error in
+//
+//            if let error = error {
+//                print(error.localizedDescription)
+//            } else {
+//                // success
+//            }
+//        }
+//    }
     
     @IBAction func bitmojiButtonTapped(_ sender: Any) {
         // Make bitmoji background view
