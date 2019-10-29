@@ -16,6 +16,15 @@
 		F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8823431EE1005EE90F /* Custom_Label.swift */; };
 		F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365E9D234BA2870072463E /* ManageWalletVC.swift */; };
 		F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */; };
+		F237042D2368829F0070B366 /* Custom_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237042C2368829F0070B366 /* Custom_TextField.swift */; };
+		F2370431236889220070B366 /* SenderText_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237042F236889220070B366 /* SenderText_Cell.swift */; };
+		F2370432236889220070B366 /* SenderText_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2370430236889220070B366 /* SenderText_Cell.xib */; };
+		F23704352368894A0070B366 /* RecieverText_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23704332368894A0070B366 /* RecieverText_Cell.swift */; };
+		F23704362368894A0070B366 /* RecieverText_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F23704342368894A0070B366 /* RecieverText_Cell.xib */; };
+		F23704392368898E0070B366 /* SenderImage_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23704372368898E0070B366 /* SenderImage_Cell.swift */; };
+		F237043A2368898E0070B366 /* SenderImage_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F23704382368898E0070B366 /* SenderImage_Cell.xib */; };
+		F237043F23688E200070B366 /* RecieverImage_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237043D23688E200070B366 /* RecieverImage_Cell.swift */; };
+		F237044023688E200070B366 /* RecieverImage_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F237043E23688E200070B366 /* RecieverImage_Cell.xib */; };
 		F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE4234332D60015E658 /* SignInVC.swift */; };
 		F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE62343342B0015E658 /* UserEntity.swift */; };
 		F25197E5234CF6DE00973F65 /* SetBitmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */; };
@@ -181,6 +190,7 @@
 		F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE8069234B8E06009933A2 /* SettingVC.swift */; };
 		F2CFB5B023685735006970FB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CFB5AF23685735006970FB /* Chat.storyboard */; };
 		F2CFB5B323685B1D006970FB /* ChatContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB5B223685B1D006970FB /* ChatContactVC.swift */; };
+		F2CFB5B523687EEF006970FB /* chatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB5B423687EEF006970FB /* chatRoomVC.swift */; };
 		F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */; };
 		F2DE25BA235D93400033CBED /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE25B9235D93400033CBED /* ContactListVC.swift */; };
 		F2DE25BF235D981A0033CBED /* AllProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE25BE235D981A0033CBED /* AllProtocols.swift */; };
@@ -307,6 +317,15 @@
 		F21B7B8823431EE1005EE90F /* Custom_Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Label.swift; sourceTree = "<group>"; };
 		F2365E9D234BA2870072463E /* ManageWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWalletVC.swift; sourceTree = "<group>"; };
 		F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		F237042C2368829F0070B366 /* Custom_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_TextField.swift; sourceTree = "<group>"; };
+		F237042F236889220070B366 /* SenderText_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderText_Cell.swift; sourceTree = "<group>"; };
+		F2370430236889220070B366 /* SenderText_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderText_Cell.xib; sourceTree = "<group>"; };
+		F23704332368894A0070B366 /* RecieverText_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverText_Cell.swift; sourceTree = "<group>"; };
+		F23704342368894A0070B366 /* RecieverText_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecieverText_Cell.xib; sourceTree = "<group>"; };
+		F23704372368898E0070B366 /* SenderImage_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderImage_Cell.swift; sourceTree = "<group>"; };
+		F23704382368898E0070B366 /* SenderImage_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderImage_Cell.xib; sourceTree = "<group>"; };
+		F237043D23688E200070B366 /* RecieverImage_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverImage_Cell.swift; sourceTree = "<group>"; };
+		F237043E23688E200070B366 /* RecieverImage_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecieverImage_Cell.xib; sourceTree = "<group>"; };
 		F24E1EE4234332D60015E658 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		F24E1EE62343342B0015E658 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		F25197D2234CEE9100973F65 /* Poppins-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.otf"; sourceTree = "<group>"; };
@@ -380,6 +399,7 @@
 		F2CE8069234B8E06009933A2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		F2CFB5AF23685735006970FB /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		F2CFB5B223685B1D006970FB /* ChatContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContactVC.swift; sourceTree = "<group>"; };
+		F2CFB5B423687EEF006970FB /* chatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatRoomVC.swift; sourceTree = "<group>"; };
 		F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		F2DE25B9235D93400033CBED /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
 		F2DE25BE235D981A0033CBED /* AllProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProtocols.swift; sourceTree = "<group>"; };
@@ -440,6 +460,7 @@
 				F21B7B8623431EE0005EE90F /* Custom_ImageView.swift */,
 				F21B7B8823431EE1005EE90F /* Custom_Label.swift */,
 				F21B7B8523431EE0005EE90F /* Custom_View.swift */,
+				F237042C2368829F0070B366 /* Custom_TextField.swift */,
 			);
 			path = "Customize UI";
 			sourceTree = "<group>";
@@ -451,6 +472,21 @@
 				F2811440234CE1CE005FE144 /* TrustWalletVC.swift */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		F237042E2368889E0070B366 /* Chat xib file */ = {
+			isa = PBXGroup;
+			children = (
+				F237042F236889220070B366 /* SenderText_Cell.swift */,
+				F2370430236889220070B366 /* SenderText_Cell.xib */,
+				F237043D23688E200070B366 /* RecieverImage_Cell.swift */,
+				F237043E23688E200070B366 /* RecieverImage_Cell.xib */,
+				F23704332368894A0070B366 /* RecieverText_Cell.swift */,
+				F23704342368894A0070B366 /* RecieverText_Cell.xib */,
+				F23704372368898E0070B366 /* SenderImage_Cell.swift */,
+				F23704382368898E0070B366 /* SenderImage_Cell.xib */,
+			);
+			path = "Chat xib file";
 			sourceTree = "<group>";
 		};
 		F24E1EE1234332250015E658 /* Model */ = {
@@ -471,6 +507,7 @@
 		F24E1EE3234332520015E658 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F237042E2368889E0070B366 /* Chat xib file */,
 				F2B4797A2345C20A00DAA960 /* TableViewCell */,
 				F2B479792345C1FF00DAA960 /* Controller */,
 			);
@@ -711,6 +748,7 @@
 			isa = PBXGroup;
 			children = (
 				F2CFB5B223685B1D006970FB /* ChatContactVC.swift */,
+				F2CFB5B423687EEF006970FB /* chatRoomVC.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -882,6 +920,7 @@
 				F29E6944235DE4C500B22AE1 /* SF-Pro-Rounded-Black.otf in Resources */,
 				F29E6907235DE4C500B22AE1 /* Montserrat-Bold.otf in Resources */,
 				F29E6977235DE4C500B22AE1 /* NewYorkMedium-Regular.otf in Resources */,
+				F237044023688E200070B366 /* RecieverImage_Cell.xib in Resources */,
 				F29E6969235DE4C500B22AE1 /* NewYorkLarge-Medium.otf in Resources */,
 				F29E68F4235DE4C500B22AE1 /* Poppins-BlackItalic.otf in Resources */,
 				F29E6931235DE4C500B22AE1 /* NewYorkExtraLarge-MediumItalic.otf in Resources */,
@@ -950,6 +989,7 @@
 				F29E692B235DE4C500B22AE1 /* NewYorkExtraLarge-BlackItalic.otf in Resources */,
 				F29E6913235DE4C500B22AE1 /* Montserrat-SemiBold.otf in Resources */,
 				F29E6941235DE4C500B22AE1 /* SF-Pro-Display-ThinItalic.otf in Resources */,
+				F237043A2368898E0070B366 /* SenderImage_Cell.xib in Resources */,
 				F29E6936235DE4C500B22AE1 /* SF-Pro-Display-Heavy.otf in Resources */,
 				F29E6983235DE4C500B22AE1 /* NewYorkSmall-Regular.otf in Resources */,
 				F29E694D235DE4C500B22AE1 /* SF-Pro-Text-Black.otf in Resources */,
@@ -985,6 +1025,7 @@
 				F29E691A235DE4C500B22AE1 /* MontserratAlternates-BoldItalic.otf in Resources */,
 				F29E6909235DE4C500B22AE1 /* Montserrat-ExtraBold.otf in Resources */,
 				F29E6962235DE4C500B22AE1 /* NewYorkExtraLarge-SemiboldItalic.otf in Resources */,
+				F2370432236889220070B366 /* SenderText_Cell.xib in Resources */,
 				F29E68FC235DE4C500B22AE1 /* Poppins-Light.otf in Resources */,
 				F29E6919235DE4C500B22AE1 /* MontserratAlternates-Bold.otf in Resources */,
 				F29E696C235DE4C500B22AE1 /* NewYorkLarge-RegularItalic.otf in Resources */,
@@ -1000,6 +1041,7 @@
 				F29E6945235DE4C500B22AE1 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				F29E6925235DE4C500B22AE1 /* MontserratAlternates-SemiBold.otf in Resources */,
 				F29E696F235DE4C500B22AE1 /* NewYorkMedium-Black.otf in Resources */,
+				F23704362368894A0070B366 /* RecieverText_Cell.xib in Resources */,
 				F29E694F235DE4C500B22AE1 /* SF-Pro-Text-Bold.otf in Resources */,
 				F29E692C235DE4C500B22AE1 /* NewYorkExtraLarge-Bold.otf in Resources */,
 				F29E693F235DE4C500B22AE1 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
@@ -1079,10 +1121,13 @@
 				F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */,
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,
+				F23704392368898E0070B366 /* SenderImage_Cell.swift in Sources */,
 				F2CFB5B323685B1D006970FB /* ChatContactVC.swift in Sources */,
 				F2E223512343135700931AFA /* AppDelegate.swift in Sources */,
 				F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */,
 				F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */,
+				F2370431236889220070B366 /* SenderText_Cell.swift in Sources */,
+				F2CFB5B523687EEF006970FB /* chatRoomVC.swift in Sources */,
 				F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */,
 				F21B43D723673836001DD0C5 /* AR_ConfirmVC.swift in Sources */,
 				F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */,
@@ -1093,10 +1138,13 @@
 				F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */,
 				F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */,
 				F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */,
+				F237043F23688E200070B366 /* RecieverImage_Cell.swift in Sources */,
 				F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */,
 				F2F469522358C25800EF6007 /* UIImage+Extension.swift in Sources */,
+				F23704352368894A0070B366 /* RecieverText_Cell.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F29E6987235DF20700B22AE1 /* CryptoList_AR_VC.swift in Sources */,
+				F237042D2368829F0070B366 /* Custom_TextField.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
 				F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */,
 				F2F4694B2358BE7B00EF6007 /* CameraViewController.swift in Sources */,

@@ -101,5 +101,9 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func continueButton(_ sender: Any){
+           performSegue(withIdentifier: "Chat_Segue", sender: nil)
+       }
 
 }
