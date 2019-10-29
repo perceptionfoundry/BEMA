@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZR-2M-zg9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGA-cG-O7w">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -301,6 +301,9 @@
                                             <constraint firstAttribute="width" secondItem="L2P-GB-7Dr" secondAttribute="height" multiplier="43:41" id="15x-5X-WEs"/>
                                         </constraints>
                                         <state key="normal" image="New_Msg"/>
+                                        <connections>
+                                            <segue destination="kd8-bo-RfJ" kind="show" id="SYr-fo-mUp"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dp" translatesAutoresizingMaskIntoConstraints="NO" id="TiJ-XX-l4B">
                                         <rect key="frame" x="30" y="35.5" width="30" height="30"/>
@@ -2654,6 +2657,16 @@ Successful!</string>
             </objects>
             <point key="canvasLocation" x="1823.2" y="-543.77811094452773"/>
         </scene>
+        <!--Chat-->
+        <scene sceneID="NH0-kR-wld">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="kd8-bo-RfJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Shv-Ge-Dvz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHt-qM-jeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3377" y="377"/>
+        </scene>
         <!--BitmojiAR-->
         <scene sceneID="Rrq-FX-pqW">
             <objects>
@@ -2662,7 +2675,7 @@ Successful!</string>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpy-nC-KZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586" y="414"/>
+            <point key="canvasLocation" x="3813" y="493"/>
         </scene>
         <!--Item-->
         <scene sceneID="ZE0-DL-y7A">

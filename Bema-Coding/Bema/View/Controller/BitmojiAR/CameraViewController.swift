@@ -266,6 +266,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     @IBAction func backButtonAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+        
+        
     }
     
 //    @IBAction func snapButtonTapped(_ sender: Any) {

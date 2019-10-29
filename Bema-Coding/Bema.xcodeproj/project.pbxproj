@@ -179,6 +179,8 @@
 		F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BD07382344F16B00FB766F /* WalletMainVC.swift */; };
 		F2C5CD4723560CB4009D7F74 /* SendToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */; };
 		F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE8069234B8E06009933A2 /* SettingVC.swift */; };
+		F2CFB5B023685735006970FB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CFB5AF23685735006970FB /* Chat.storyboard */; };
+		F2CFB5B323685B1D006970FB /* ChatContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB5B223685B1D006970FB /* ChatContactVC.swift */; };
 		F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */; };
 		F2DE25BA235D93400033CBED /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE25B9235D93400033CBED /* ContactListVC.swift */; };
 		F2DE25BF235D981A0033CBED /* AllProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE25BE235D981A0033CBED /* AllProtocols.swift */; };
@@ -376,6 +378,8 @@
 		F2BD07382344F16B00FB766F /* WalletMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletMainVC.swift; sourceTree = "<group>"; };
 		F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendToken.storyboard; sourceTree = "<group>"; };
 		F2CE8069234B8E06009933A2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		F2CFB5AF23685735006970FB /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		F2CFB5B223685B1D006970FB /* ChatContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContactVC.swift; sourceTree = "<group>"; };
 		F2D80CEE2347617D00A57D59 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		F2DE25B9235D93400033CBED /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
 		F2DE25BE235D981A0033CBED /* AllProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProtocols.swift; sourceTree = "<group>"; };
@@ -500,6 +504,7 @@
 		F2B479792345C1FF00DAA960 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F2CFB5B123685AD9006970FB /* Chat */,
 				F2A289FF234B66FF001AE873 /* Main */,
 				F2A28A00234B6712001AE873 /* Profile */,
 				F2CE806B234B8E14009933A2 /* Settings */,
@@ -686,6 +691,7 @@
 				F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */,
 				F2F51B292358BC95001930E6 /* BitmojiAR.storyboard */,
 				F2E579D62359F2F300779073 /* ContactList.storyboard */,
+				F2CFB5AF23685735006970FB /* Chat.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -699,6 +705,14 @@
 				F25197E8234CF72F00973F65 /* LogoutVc.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F2CFB5B123685AD9006970FB /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F2CFB5B223685B1D006970FB /* ChatContactVC.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		F2DE25BB235D93600033CBED /* ContactList */ = {
@@ -915,6 +929,7 @@
 				F29E695B235DE4C500B22AE1 /* SF-Pro-Text-Thin.otf in Resources */,
 				F29E68F9235DE4C500B22AE1 /* Poppins-ExtraLight.otf in Resources */,
 				F29E690C235DE4C500B22AE1 /* Montserrat-ExtraLightItalic.otf in Resources */,
+				F2CFB5B023685735006970FB /* Chat.storyboard in Resources */,
 				F29E6961235DE4C500B22AE1 /* NewYorkExtraLarge-Semibold.otf in Resources */,
 				F29E6922235DE4C500B22AE1 /* MontserratAlternates-Medium.otf in Resources */,
 				F29E6905235DE4C500B22AE1 /* Montserrat-Black.otf in Resources */,
@@ -1064,6 +1079,7 @@
 				F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */,
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,
+				F2CFB5B323685B1D006970FB /* ChatContactVC.swift in Sources */,
 				F2E223512343135700931AFA /* AppDelegate.swift in Sources */,
 				F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */,
 				F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */,
