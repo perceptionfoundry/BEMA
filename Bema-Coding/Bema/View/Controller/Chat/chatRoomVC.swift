@@ -8,30 +8,111 @@
 
 import UIKit
 
-class chatRoomVC: UIViewController, UITextViewDelegate {
+class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var ChatTableView : UITableView!
     @IBOutlet weak var ChatTextField : UITextView!
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
-    
     @IBOutlet weak var chatMsg_view: UIView!
-     @IBOutlet weak var navi_view: UIView!
+    
+    
+    
     var maxheight:CGFloat = 80
+    
+    var dumpMsg  = [["Type":"Sender","msg":"hi there"],
+                    ["Type":"Reciever","msg":"hi there"],
+    ["Type":"Sender","msg":"i have job for you"],
+    ["Type":"Sender","msg":"it is iOS development with snapkit integration"],
+    ["Type":"Reciever","msg":"ok"],
+    ["Type":"Reciever","msg":"what's your budget"],]
+    var bubbleHeight = [CGFloat]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        print(navi_view.center.y)
-            print(chatMsg_view.center.y)
+      
         
         ChatTextField.delegate = self
         
         ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
         
+        //********* NIB REGISTERATION *********
+        let senderXib = UINib(nibName: "SenderText_Cell", bundle: nil)
+        ChatTableView.register(senderXib, forCellReuseIdentifier: "SenderText")
+        
+        let receiverXib = UINib(nibName: "RecieverText_Cell", bundle: nil)
+        ChatTableView.register(receiverXib, forCellReuseIdentifier: "ReceiverText")
+        
+        
+        ChatTableView.delegate = self
+        ChatTableView.dataSource = self
+        ChatTableView.reloadData()
     }
     
 
+    
+
+    
+    
+    //********* TABLEVIEW DELEGATE ************
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dumpMsg.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        if dumpMsg[indexPath.row]["Type"] == "Sender"{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SenderText") as! SenderText_Cell
+            
+            cell.selectionStyle = .none
+            
+            cell.senderMessageText.text  = dumpMsg[indexPath.row]["msg"]
+            self.bubbleHeight.append(cell.senderMessageText.contentSize.height)
+            return cell
+        }
+        
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverText") as! RecieverText_Cell
+            
+            cell.selectionStyle = .none
+
+            cell.receiverMessageText.text  = dumpMsg[indexPath.row]["msg"]
+            self.bubbleHeight.append(cell.receiverMessageText.contentSize.height)
+            return cell
+
+        }
+        
+        
+       
+        
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+
+        if indexPath.row < dumpMsg.count{
+            return self.bubbleHeight[indexPath.row] + 25
+        }
+        else{
+            return 0
+        }
+
+        
+    }
+    
+    
+    
+    
+    //********* TEXTFIELD DELEGATE ************
+    
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
 
@@ -41,13 +122,14 @@ class chatRoomVC: UIViewController, UITextViewDelegate {
 
         }
         
-        print(navi_view.center.y)
-        print(chatMsg_view.center.y)
+    
             
         
 
         return true
     }
+    
+    
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
            
@@ -67,10 +149,12 @@ class chatRoomVC: UIViewController, UITextViewDelegate {
         ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
 
     }
-     print(navi_view.center.y)
-     print(chatMsg_view.center.y)
+    
         
         return true
     }
+    
+    
+    
 
 }

@@ -10,6 +10,13 @@ import UIKit
 
 class RecieverText_Cell: UITableViewCell {
 
+    
+    
+    
+    @IBOutlet weak var receiverBubbleImage: UIImageView!
+    @IBOutlet weak var receiverMessageText: UITextView!
+    
+    
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code

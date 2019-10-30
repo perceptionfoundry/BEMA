@@ -479,12 +479,12 @@
 			children = (
 				F237042F236889220070B366 /* SenderText_Cell.swift */,
 				F2370430236889220070B366 /* SenderText_Cell.xib */,
-				F237043D23688E200070B366 /* RecieverImage_Cell.swift */,
-				F237043E23688E200070B366 /* RecieverImage_Cell.xib */,
 				F23704332368894A0070B366 /* RecieverText_Cell.swift */,
 				F23704342368894A0070B366 /* RecieverText_Cell.xib */,
 				F23704372368898E0070B366 /* SenderImage_Cell.swift */,
 				F23704382368898E0070B366 /* SenderImage_Cell.xib */,
+				F237043D23688E200070B366 /* RecieverImage_Cell.swift */,
+				F237043E23688E200070B366 /* RecieverImage_Cell.xib */,
 			);
 			path = "Chat xib file";
 			sourceTree = "<group>";

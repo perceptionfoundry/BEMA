@@ -10,7 +10,14 @@ import UIKit
 
 class SenderText_Cell: UITableViewCell {
 
-//    override func awakeFromNib() {
+    @IBOutlet weak var senderBubbleImage: UIImageView!
+    @IBOutlet weak var senderMessageText: UITextView!
+    
+    
+    
+    
+    
+    //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
 //    }

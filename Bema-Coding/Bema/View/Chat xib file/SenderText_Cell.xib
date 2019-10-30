@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,27 +23,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sender_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="ecx-lY-qH7">
-                        <rect key="frame" x="15" y="5" width="224" height="45"/>
+                        <rect key="frame" x="15" y="5" width="175" height="45"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messsage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGZ-Iu-mkA">
-                        <rect key="frame" x="37.5" y="9.5" width="179" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yws-gK-J8U">
+                        <rect key="frame" x="32.5" y="9.5" width="140" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ecx-lY-qH7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="2j0-Fr-rvo"/>
-                    <constraint firstItem="kGZ-Iu-mkA" firstAttribute="centerY" secondItem="ecx-lY-qH7" secondAttribute="centerY" id="A4g-Mg-e4F"/>
-                    <constraint firstItem="kGZ-Iu-mkA" firstAttribute="centerX" secondItem="ecx-lY-qH7" secondAttribute="centerX" id="SrL-ET-OQg"/>
-                    <constraint firstItem="ecx-lY-qH7" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="XsE-hz-7eQ"/>
-                    <constraint firstItem="kGZ-Iu-mkA" firstAttribute="height" secondItem="ecx-lY-qH7" secondAttribute="height" multiplier="0.8" id="a15-o5-AdQ"/>
+                    <constraint firstItem="yws-gK-J8U" firstAttribute="centerY" secondItem="ecx-lY-qH7" secondAttribute="centerY" id="57T-Rm-ucQ"/>
+                    <constraint firstItem="yws-gK-J8U" firstAttribute="height" secondItem="ecx-lY-qH7" secondAttribute="height" multiplier="0.8" id="DmL-Zf-BvN"/>
+                    <constraint firstItem="yws-gK-J8U" firstAttribute="centerX" secondItem="ecx-lY-qH7" secondAttribute="centerX" id="JIW-6v-3rL"/>
                     <constraint firstAttribute="bottom" secondItem="ecx-lY-qH7" secondAttribute="bottom" constant="5" id="duY-y2-tFD"/>
-                    <constraint firstItem="kGZ-Iu-mkA" firstAttribute="width" secondItem="ecx-lY-qH7" secondAttribute="width" multiplier="0.8" id="kPB-WK-DtY"/>
+                    <constraint firstItem="yws-gK-J8U" firstAttribute="width" secondItem="ecx-lY-qH7" secondAttribute="width" multiplier="0.8" id="q5y-6R-egf"/>
                     <constraint firstItem="ecx-lY-qH7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="tnN-sQ-GLI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="senderBubbleImage" destination="ecx-lY-qH7" id="H5R-tK-8st"/>
+                <outlet property="senderMessageText" destination="yws-gK-J8U" id="Vie-sH-lB7"/>
+            </connections>
             <point key="canvasLocation" x="150.72463768115944" y="114.17410714285714"/>
         </tableViewCell>
     </objects>
