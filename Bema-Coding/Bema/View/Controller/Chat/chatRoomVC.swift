@@ -7,45 +7,60 @@
 //
 
 import UIKit
+import SCSDKCreativeKit
+import SCSDKBitmojiKit
+import IQKeyboardManagerSwift
 
 class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var ChatTableView : UITableView!
     @IBOutlet weak var ChatTextField : UITextView!
+    @IBOutlet weak var ChatBitmojiImage : UIImageView!
+
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
     @IBOutlet weak var chatMsg_view: UIView!
     
     
     
+    var selectedBitMoji : UIImage?
+    private var bitmojiSelectionView: UIView?
+
+    
     var maxheight:CGFloat = 80
     
-    var dumpMsg  = [["Type":"Sender","msg":"hi there"],
+    var dumpMsg = [["Type":"Sender","msg":"hi there"],
                     ["Type":"Reciever","msg":"hi there"],
     ["Type":"Sender","msg":"i have job for you"],
     ["Type":"Sender","msg":"it is iOS development with snapkit integration"],
     ["Type":"Reciever","msg":"ok"],
-    ["Type":"Reciever","msg":"what's your budget"],]
+    ["Type":"Reciever","msg":"what's your budget"]]
     var bubbleHeight = [CGFloat]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-      
+        
+        ChatBitmojiImage.isHidden = true
+        
+        ChatTextField.keyboardToolbar.doneBarButton.setTarget(self, action: #selector(doneAction))
         
         ChatTextField.delegate = self
         
         ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
         
         //********* NIB REGISTERATION *********
-        let senderXib = UINib(nibName: "SenderText_Cell", bundle: nil)
-        ChatTableView.register(senderXib, forCellReuseIdentifier: "SenderText")
+        let senderTextXib = UINib(nibName: "SenderText_Cell", bundle: nil)
+        ChatTableView.register(senderTextXib, forCellReuseIdentifier: "SenderText")
         
-        let receiverXib = UINib(nibName: "RecieverText_Cell", bundle: nil)
-        ChatTableView.register(receiverXib, forCellReuseIdentifier: "ReceiverText")
+        let receiverTextXib = UINib(nibName: "RecieverText_Cell", bundle: nil)
+        ChatTableView.register(receiverTextXib, forCellReuseIdentifier: "ReceiverText")
         
+        
+        
+        let senderImageXib = UINib(nibName: "SenderImage_Cell", bundle: nil)
+           ChatTableView.register(senderImageXib, forCellReuseIdentifier: "SenderImage")
         
         ChatTableView.delegate = self
         ChatTableView.dataSource = self
@@ -53,7 +68,13 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     }
     
 
-    
+    @objc func doneAction(){
+        
+        self.ChatBitmojiImage.isHidden = true
+        self.textViewHeight.constant = 35
+        self.ChatTextField.isHidden = false
+        self.ChatTableView.reloadData()
+    }
 
     
     
@@ -77,7 +98,7 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             return cell
         }
         
-        else{
+        else if dumpMsg[indexPath.row]["Type"] == "Reciever"{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverText") as! RecieverText_Cell
             
             cell.selectionStyle = .none
@@ -88,7 +109,15 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
 
         }
         
-        
+        else{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SenderImage") as! SenderImage_Cell
+                   
+                   cell.selectionStyle = .none
+
+                    cell.senderImage.image = self.selectedBitMoji
+                   self.bubbleHeight.append(500)
+                   return cell
+        }
        
         
         
@@ -99,14 +128,23 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         
 
         if indexPath.row < dumpMsg.count{
+            
+            if dumpMsg[indexPath.row]["Type"] == "Image"{
+                return 300
+                
+            }
+            else{
             return self.bubbleHeight[indexPath.row] + 25
+            }
         }
         else{
             return 0
         }
 
-        
+//        return 400
     }
+    
+    
     
     
     
@@ -123,12 +161,13 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         }
         
     
-            
+    
         
 
         return true
     }
     
+
     
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -136,6 +175,15 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
  
         if ChatTextField.contentSize.height < maxheight{
         textViewHeight.constant = ChatTextField.contentSize.height
+        }
+        
+        if (text == "\n") {
+            self.ChatBitmojiImage.isHidden = true
+            self.textViewHeight.constant = 35
+            textView.resignFirstResponder()
+            self.ChatTextField.isHidden = false
+            self.ChatTableView.reloadData()
+
         }
 
         return true
@@ -156,5 +204,98 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     
     
     
+    
+    //********** OUTLET **********
+    
+    
+        @IBAction func bitmojiButtonTapped(_ sender: Any) {
+            // Make bitmoji background view
+            let viewHeight: CGFloat = 300
+            let screen: CGRect = UIScreen.main.bounds
+            let backgroundView = UIView(
+                frame: CGRect(
+                    x: 0,
+                    y: screen.height - viewHeight,
+                    width: screen.width,
+                    height: viewHeight
+                )
+            )
+            view.addSubview(backgroundView)
+            bitmojiSelectionView = backgroundView
+            
+            // add child ViewController
+            let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+            stickerPickerVC.delegate = self
+  
+            present(stickerPickerVC, animated: true, completion: nil)
 
+        }
+
+    
+    
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+
+}
+
+
+
+extension chatRoomVC: SCSDKBitmojiStickerPickerViewControllerDelegate {
+    
+    
+    func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, didSelectBitmojiWithURL bitmojiURL: String, image: UIImage?) {
+        
+        
+        UIImage.load()
+        
+        if let image = UIImage.load(from: bitmojiURL) {
+            DispatchQueue.main.async {
+//                self.setImageToScene(image: image)
+                self.selectedBitMoji = image
+                
+                let dict  = ["Type":"Image","image": "demo"]
+                self.dumpMsg.append(dict)
+                
+                self.textViewHeight.constant = 80
+                self.ChatBitmojiImage.image = image
+                self.ChatBitmojiImage.isHidden = false
+                
+                self.ChatTextField.becomeFirstResponder()
+                self.ChatTextField.isHidden = true
+                
+                self.dismiss(animated: true, completion: nil)
+
+                self.bitmojiSelectionView?.removeFromSuperview()
+            }
+        }
+    
+    }
+    
+    
+    func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, didSelectBitmojiWithURL bitmojiURL: String) {
+        
+        bitmojiSelectionView?.removeFromSuperview()
+        
+        
+        
+        if let image = UIImage.load(from: bitmojiURL) {
+            DispatchQueue.main.async {
+                self.selectedBitMoji = image
+                
+                self.textViewHeight.constant = 100
+                self.ChatBitmojiImage.image = image
+                self.ChatBitmojiImage.isHidden = false
+               
+                
+
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, searchFieldFocusDidChangeWithFocus hasFocus: Bool) {
+        
+    }
 }
