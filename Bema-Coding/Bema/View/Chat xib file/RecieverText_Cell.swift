@@ -14,7 +14,7 @@ class RecieverText_Cell: UITableViewCell {
     
     
     @IBOutlet weak var receiverBubbleImage: UIImageView!
-    @IBOutlet weak var receiverMessageText: UITextView!
+    @IBOutlet weak var receiverMessageLabel: UILabel!
     
     @IBOutlet weak var bubbleWidth: NSLayoutConstraint!
 

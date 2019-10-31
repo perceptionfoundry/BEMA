@@ -10,37 +10,65 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="SenderText_Cell" customModule="Bema" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="KGk-i7-Jjw" customClass="SenderText_Cell" customModule="Bema" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="96"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                <rect key="frame" x="0.0" y="0.0" width="347" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlI-aa-chL" customClass="Custom_Label" customModule="Bema" customModuleProvider="target">
-                        <rect key="frame" x="15" y="10" width="42" height="35"/>
-                        <color key="backgroundColor" white="0.84682181629999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
-                                <real key="value" value="15"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-ni-q9s">
+                        <rect key="frame" x="0.0" y="10" width="243" height="76"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label jni h h " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlI-aa-chL" customClass="Custom_Label" customModule="Bema" customModuleProvider="target">
+                                <rect key="frame" x="15" y="0.0" width="96" height="76"/>
+                                <color key="backgroundColor" white="0.84682181629999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="border_color">
+                                        <color key="value" white="0.84682181629999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QlI-aa-chL" firstAttribute="leading" secondItem="HAd-ni-q9s" secondAttribute="leading" constant="15" id="Siy-OV-RDW"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QlI-aa-chL" secondAttribute="trailing" id="i5g-ZE-cjp"/>
+                            <constraint firstItem="QlI-aa-chL" firstAttribute="top" secondItem="HAd-ni-q9s" secondAttribute="top" id="nbS-1E-WAV"/>
+                            <constraint firstAttribute="bottom" secondItem="QlI-aa-chL" secondAttribute="bottom" id="y3R-DD-pEA"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="QlI-aa-chL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="DMt-s6-wo5"/>
-                    <constraint firstItem="QlI-aa-chL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Jxw-lV-O38"/>
-                    <constraint firstAttribute="bottom" secondItem="QlI-aa-chL" secondAttribute="bottom" constant="10" id="qLh-wE-hMY"/>
+                    <constraint firstItem="HAd-ni-q9s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" multiplier="0.7" id="16e-dm-hbh"/>
+                    <constraint firstAttribute="bottom" secondItem="HAd-ni-q9s" secondAttribute="bottom" constant="10" id="KLL-DQ-OYK"/>
+                    <constraint firstItem="HAd-ni-q9s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="LlH-r8-gze"/>
+                    <constraint firstItem="HAd-ni-q9s" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="qwD-Ry-AY2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="senderMessageLabel" destination="QlI-aa-chL" id="WXI-rl-rzU"/>
             </connections>
-            <point key="canvasLocation" x="150.72463768115944" y="114.17410714285714"/>
+            <point key="canvasLocation" x="180.43478260869566" y="147.99107142857142"/>
         </tableViewCell>
     </objects>
 </document>

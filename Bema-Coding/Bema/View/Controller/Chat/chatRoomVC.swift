@@ -33,7 +33,7 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     var dumpMsg = [["Type":"Sender","msg":"hi Shahrukh"],
                     ["Type":"Reciever","msg":"hi Gray"],
     ["Type":"Sender","msg":"i have job for you"],
-    ["Type":"Sender","msg":"it is iOS development with snapkit integration"],
+    ["Type":"Sender","msg":"it is iOS developmsd fg sd fg sd fg sd fg s dfg s dfg s gent with snapkit integration"],
     ["Type":"Reciever","msg":"ok"],
     ["Type":"Reciever","msg":"what's your budget"]]
     var bubbleHeight = [CGFloat]()
@@ -94,21 +94,10 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             
             cell.selectionStyle = .none
             
-//            cell.senderMessageText.text  = dumpMsg[indexPath.row]["msg"]
-//            cell.bubbleWidth.constant = cell.senderMessageText.contentSize.width
+
             
             cell.senderMessageLabel.text = dumpMsg[indexPath.row]["msg"]
-            cell.senderMessageLabel.numberOfLines = 100
-            let maximumLabelSize: CGSize = CGSize(width: 50, height: 9999)
-            let expectedLabelSize: CGSize = cell.senderMessageLabel.sizeThatFits(maximumLabelSize)
-            // create a frame that is filled with the UILabel frame data
-            var newFrame: CGRect = cell.senderMessageLabel.frame
-            // resizing the frame to calculated size
-            newFrame.size.height = expectedLabelSize.height
-            // put calculated frame into UILabel frame
-            cell.senderMessageLabel.frame = newFrame
-            
-            self.bubbleHeight.append(expectedLabelSize.height)
+//
             return cell
         }
         
@@ -117,10 +106,8 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             
             cell.selectionStyle = .none
 
-            cell.receiverMessageText.text  = dumpMsg[indexPath.row]["msg"]
-            cell.bubbleWidth.constant = cell.receiverMessageText.contentSize.width
+            cell.receiverMessageLabel.text = dumpMsg[indexPath.row]["msg"]
 
-            self.bubbleHeight.append(cell.receiverMessageText.contentSize.height)
             return cell
 
         }
@@ -131,7 +118,7 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                    cell.selectionStyle = .none
 
                     cell.senderImage.image = self.selectedBitMoji
-                   self.bubbleHeight.append(500)
+//                   self.bubbleHeight.append(500)
                    return cell
         }
        
@@ -141,23 +128,23 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
+
 
         if indexPath.row < dumpMsg.count{
-            
+
             if dumpMsg[indexPath.row]["Type"] == "Image"{
                 return 300
-                
+
             }
             else{
-            return self.bubbleHeight[indexPath.row] + 25
+                return UITableView.automaticDimension
             }
         }
         else{
             return 0
         }
 
-//        return 400
+//
     }
     
     
