@@ -22,36 +22,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reciever_bubble" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-HV-6Wr">
-                        <rect key="frame" x="130" y="5" width="175" height="45"/>
-                    </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m72-cI-dm0">
-                        <rect key="frame" x="130" y="9.5" width="175" height="36"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m72-cI-dm0" customClass="Custom_TextField" customModule="Bema" customModuleProvider="target">
+                        <rect key="frame" x="165" y="10" width="140" height="35"/>
+                        <color key="backgroundColor" red="0.34588277340000001" green="0.63216298820000005" blue="0.96477919820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="oKX-P1-rEO"/>
+                        </constraints>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="WGL-HV-6Wr" secondAttribute="trailing" constant="15" id="0Cy-dS-eoF"/>
-                    <constraint firstAttribute="bottom" secondItem="WGL-HV-6Wr" secondAttribute="bottom" constant="5" id="2DG-Nd-dLo"/>
-                    <constraint firstItem="m72-cI-dm0" firstAttribute="centerX" secondItem="WGL-HV-6Wr" secondAttribute="centerX" id="4Ej-96-TBr"/>
-                    <constraint firstItem="m72-cI-dm0" firstAttribute="centerY" secondItem="WGL-HV-6Wr" secondAttribute="centerY" id="Cvz-3d-R2f"/>
-                    <constraint firstItem="WGL-HV-6Wr" firstAttribute="width" secondItem="m72-cI-dm0" secondAttribute="width" id="iEl-FD-Yg4"/>
-                    <constraint firstItem="m72-cI-dm0" firstAttribute="height" secondItem="WGL-HV-6Wr" secondAttribute="height" multiplier="0.8" id="yaq-uy-bu7"/>
-                    <constraint firstItem="WGL-HV-6Wr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="zlC-DQ-PEf"/>
+                    <constraint firstItem="m72-cI-dm0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Hw4-NR-jTc"/>
+                    <constraint firstAttribute="bottom" secondItem="m72-cI-dm0" secondAttribute="bottom" constant="10" id="UKX-kJ-ygO"/>
+                    <constraint firstAttribute="trailing" secondItem="m72-cI-dm0" secondAttribute="trailing" constant="15" id="eYf-Hb-FWu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="receiverBubbleImage" destination="WGL-HV-6Wr" id="BaB-xb-8q4"/>
+                <outlet property="bubbleWidth" destination="oKX-P1-rEO" id="VFw-R6-jnN"/>
                 <outlet property="receiverMessageText" destination="m72-cI-dm0" id="xUE-DA-kE5"/>
             </connections>
-            <point key="canvasLocation" x="150.72463768115944" y="89.397321428571431"/>
+            <point key="canvasLocation" x="91" y="69"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="reciever_bubble" width="175" height="34.5"/>
-    </resources>
 </document>

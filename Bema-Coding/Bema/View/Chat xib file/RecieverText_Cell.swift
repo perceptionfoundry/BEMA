@@ -16,7 +16,8 @@ class RecieverText_Cell: UITableViewCell {
     @IBOutlet weak var receiverBubbleImage: UIImageView!
     @IBOutlet weak var receiverMessageText: UITextView!
     
-    
+    @IBOutlet weak var bubbleWidth: NSLayoutConstraint!
+
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code

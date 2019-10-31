@@ -19,6 +19,7 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     @IBOutlet weak var ChatBitmojiImage : UIImageView!
 
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
+
     @IBOutlet weak var chatMsg_view: UIView!
     
     
@@ -29,8 +30,8 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     
     var maxheight:CGFloat = 80
     
-    var dumpMsg = [["Type":"Sender","msg":"hi there"],
-                    ["Type":"Reciever","msg":"hi there"],
+    var dumpMsg = [["Type":"Sender","msg":"hi Shahrukh"],
+                    ["Type":"Reciever","msg":"hi Gray"],
     ["Type":"Sender","msg":"i have job for you"],
     ["Type":"Sender","msg":"it is iOS development with snapkit integration"],
     ["Type":"Reciever","msg":"ok"],
@@ -94,6 +95,8 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             cell.selectionStyle = .none
             
             cell.senderMessageText.text  = dumpMsg[indexPath.row]["msg"]
+            cell.bubbleWidth.constant = cell.senderMessageText.contentSize.width
+            
             self.bubbleHeight.append(cell.senderMessageText.contentSize.height)
             return cell
         }
@@ -104,6 +107,8 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             cell.selectionStyle = .none
 
             cell.receiverMessageText.text  = dumpMsg[indexPath.row]["msg"]
+            cell.bubbleWidth.constant = cell.receiverMessageText.contentSize.width
+
             self.bubbleHeight.append(cell.receiverMessageText.contentSize.height)
             return cell
 

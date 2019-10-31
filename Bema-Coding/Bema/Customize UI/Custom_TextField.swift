@@ -8,18 +8,17 @@
 
 import UIKit
 
-class Custom_TextField: UITextField {
+class Custom_TextField: UITextView {
 
    
-        @IBInspectable var placeHolderColor: UIColor? {
-            get {
-                return self.placeHolderColor
-            }
-            set {
-                self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
-            }
-//
-        }
+     @IBInspectable var C_Radius : CGFloat = 0 {
+          didSet{
+              layer.cornerRadius = C_Radius
+              
+              
+          }
+     
+      }
     
 
 }

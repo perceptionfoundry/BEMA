@@ -13,7 +13,8 @@ class SenderText_Cell: UITableViewCell {
     @IBOutlet weak var senderBubbleImage: UIImageView!
     @IBOutlet weak var senderMessageText: UITextView!
     
-    
+    @IBOutlet weak var bubbleWidth: NSLayoutConstraint!
+
     
     
     
