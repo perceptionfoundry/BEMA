@@ -94,10 +94,21 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             
             cell.selectionStyle = .none
             
-            cell.senderMessageText.text  = dumpMsg[indexPath.row]["msg"]
-            cell.bubbleWidth.constant = cell.senderMessageText.contentSize.width
+//            cell.senderMessageText.text  = dumpMsg[indexPath.row]["msg"]
+//            cell.bubbleWidth.constant = cell.senderMessageText.contentSize.width
             
-            self.bubbleHeight.append(cell.senderMessageText.contentSize.height)
+            cell.senderMessageLabel.text = dumpMsg[indexPath.row]["msg"]
+            cell.senderMessageLabel.numberOfLines = 100
+            let maximumLabelSize: CGSize = CGSize(width: 50, height: 9999)
+            let expectedLabelSize: CGSize = cell.senderMessageLabel.sizeThatFits(maximumLabelSize)
+            // create a frame that is filled with the UILabel frame data
+            var newFrame: CGRect = cell.senderMessageLabel.frame
+            // resizing the frame to calculated size
+            newFrame.size.height = expectedLabelSize.height
+            // put calculated frame into UILabel frame
+            cell.senderMessageLabel.frame = newFrame
+            
+            self.bubbleHeight.append(expectedLabelSize.height)
             return cell
         }
         
