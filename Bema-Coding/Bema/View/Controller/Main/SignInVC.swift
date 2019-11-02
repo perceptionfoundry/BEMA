@@ -9,6 +9,9 @@
 import UIKit
 import SCSDKLoginKit
 
+
+let globalVariable = UIApplication.shared.delegate as! AppDelegate
+
 class SignInVC: UIViewController {
 
     override func viewDidLoad() {
@@ -62,8 +65,10 @@ class SignInVC: UIViewController {
     
     // go to next ViewController
     private func goToLoginConfirm(_ entity: UserEntity){
-
-//        vc.userEntity = entity
+        
+        
+        globalVariable.userSnapDetail = entity
+        
         performSegue(withIdentifier: "Home_Segue", sender: nil)
     }
 

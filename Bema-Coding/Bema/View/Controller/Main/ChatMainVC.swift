@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 
 class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 

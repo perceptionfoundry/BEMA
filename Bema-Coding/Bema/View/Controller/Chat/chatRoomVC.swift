@@ -22,6 +22,7 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
 
     @IBOutlet weak var chatMsg_view: UIView!
     
+    var textFieldMsgStatus = true
     
     
     var selectedBitMoji : UIImage?
@@ -71,13 +72,33 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
 
     @objc func doneAction(){
         
-        self.ChatBitmojiImage.isHidden = true
-        self.textViewHeight.constant = 35
-        self.ChatTextField.isHidden = false
-        self.ChatTableView.reloadData()
+        self.returnAction()
     }
 
     
+    
+    
+    func returnAction(){
+        if self.textFieldMsgStatus == false{
+            
+              self.ChatBitmojiImage.isHidden = true
+              self.textViewHeight.constant = 40
+              self.ChatTextField.isHidden = false
+              self.textFieldMsgStatus = true
+              self.ChatTableView.reloadData()
+              
+          }
+              
+              else{
+              let dict = ["Type": "Sender", "msg": ChatTextField.text!] as [String : Any]
+              
+              dumpMsg.append(dict as! [String : String])
+              ChatTextField.text = "Say Something..."
+              ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
+
+              ChatTableView.reloadData()
+              }
+    }
     
     //********* TABLEVIEW DELEGATE ************
 
@@ -181,12 +202,32 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         }
         
         if (text == "\n") {
-            self.ChatBitmojiImage.isHidden = true
-            self.textViewHeight.constant = 35
+            
+            
+            
+            self.returnAction()
             textView.resignFirstResponder()
-            self.ChatTextField.isHidden = false
-            self.ChatTableView.reloadData()
 
+//            if self.textFieldMsgStatus == false{
+//            self.ChatBitmojiImage.isHidden = true
+//            self.textViewHeight.constant = 40
+//            textView.resignFirstResponder()
+//            self.ChatTextField.isHidden = false
+//            self.textFieldMsgStatus = true
+//            self.ChatTableView.reloadData()
+//
+//        }
+//
+//            else{
+//            let dict = ["Type": "Sender", "msg": ChatTextField.text!] as [String : Any]
+//
+//            dumpMsg.append(dict as! [String : String])
+//            textView.text = "Say Something..."
+//            ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
+//                textView.resignFirstResponder()
+//
+//            ChatTableView.reloadData()
+//            }
         }
 
         return true
@@ -264,6 +305,7 @@ extension chatRoomVC: SCSDKBitmojiStickerPickerViewControllerDelegate {
                 self.textViewHeight.constant = 80
                 self.ChatBitmojiImage.image = image
                 self.ChatBitmojiImage.isHidden = false
+                self.textFieldMsgStatus = false
                 
                 self.ChatTextField.becomeFirstResponder()
                 self.ChatTextField.isHidden = true
