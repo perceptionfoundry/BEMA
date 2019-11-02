@@ -30,6 +30,7 @@
 		F25197E5234CF6DE00973F65 /* SetBitmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */; };
 		F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E6234CF6F800973F65 /* InviteVC.swift */; };
 		F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E8234CF72F00973F65 /* LogoutVc.swift */; };
+		F26EA895236DB0BB00CE259A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26EA894236DB0BB00CE259A /* GoogleService-Info.plist */; };
 		F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811440234CE1CE005FE144 /* TrustWalletVC.swift */; };
 		F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */; };
 		F29094AC235606A0004E692F /* confirmToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29094AB235606A0004E692F /* confirmToken.swift */; };
@@ -349,6 +350,7 @@
 		F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBitmojiVC.swift; sourceTree = "<group>"; };
 		F25197E6234CF6F800973F65 /* InviteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteVC.swift; sourceTree = "<group>"; };
 		F25197E8234CF72F00973F65 /* LogoutVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVc.swift; sourceTree = "<group>"; };
+		F26EA894236DB0BB00CE259A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_CryptoTableView.swift; sourceTree = "<group>"; };
 		F29094AB235606A0004E692F /* confirmToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmToken.swift; sourceTree = "<group>"; };
@@ -803,6 +805,7 @@
 				F2E223592343135800931AFA /* Assets.xcassets */,
 				F2E2235B2343135800931AFA /* LaunchScreen.storyboard */,
 				F2E2235E2343135800931AFA /* Info.plist */,
+				F26EA894236DB0BB00CE259A /* GoogleService-Info.plist */,
 				F2DE25BE235D981A0033CBED /* AllProtocols.swift */,
 			);
 			path = Bema;
@@ -1007,6 +1010,7 @@
 				F29E690D235DE4C500B22AE1 /* Montserrat-Italic.otf in Resources */,
 				F29E6946235DE4C500B22AE1 /* SF-Pro-Rounded-Heavy.otf in Resources */,
 				F29E697F235DE4C500B22AE1 /* NewYorkSmall-Heavy.otf in Resources */,
+				F26EA895236DB0BB00CE259A /* GoogleService-Info.plist in Resources */,
 				F29E697C235DE4C500B22AE1 /* NewYorkSmall-BlackItalic.otf in Resources */,
 				F29E6906235DE4C500B22AE1 /* Montserrat-BlackItalic.otf in Resources */,
 				F29E6947235DE4C500B22AE1 /* SF-Pro-Rounded-Light.otf in Resources */,
@@ -1062,25 +1066,39 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bema/Pods-Bema-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKBitmojiKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKBitmojiKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -9,8 +9,16 @@ target 'Bema' do
 
 pod 'SnapSDK', :subspecs => ['SCSDKLoginKit', 'SCSDKCreativeKit', 'SCSDKBitmojiKit']
 
-pod 'SideMenu'
+#pod 'SideMenu'
 
 pod 'IQKeyboardManagerSwift'
+
+pod 'Firebase/Analytics'
+
+pod 'Firebase/Core'
+
+pod 'Firebase/Storage'
+#
+pod 'Firebase/Firestore'
 
 end
