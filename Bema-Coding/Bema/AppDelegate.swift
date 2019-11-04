@@ -11,11 +11,11 @@ import SCSDKLoginKit
 import IQKeyboardManagerSwift
 import Firebase
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var userSnapDetail : UserEntity?
+    var signInStatus = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -25,7 +25,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        
+        //******** IQKEYBOARD ********
         IQKeyboardManager.shared.enable = true
+        
+        
+        //********** SEGUE IF ALREADY SIGN-IN ********
+        
+        self.signInStatus = UserDefaults.standard.bool(forKey: "SIGN_IN")
+        
+        if self.signInStatus == true{
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let mainVC = storyBoard.instantiateViewController(withIdentifier: "Tab_Controller") as! UITabBarController
+            self.window?.rootViewController = mainVC
+        }
+        
+        
+        
+       
+        
         return true
     }
     

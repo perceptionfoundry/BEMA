@@ -8,11 +8,16 @@
 
 import UIKit
 import SCSDKLoginKit
-
+import Firebase
 
 let globalVariable = UIApplication.shared.delegate as! AppDelegate
 
 class SignInVC: UIViewController {
+    
+    
+    let saveImageVM = SaveImageViewModel()
+    var dpImage : UIImage?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +74,53 @@ class SignInVC: UIViewController {
         
         globalVariable.userSnapDetail = entity
         
-        performSegue(withIdentifier: "Home_Segue", sender: nil)
+        
+        //********** CREATE NEW USER NODE *******
+        
+        
+        let dbStore = Firestore.firestore()
+
+        
+        let collectionRef = dbStore.collection("Users").document()
+        
+        let collectionID = collectionRef.documentID
+        
+        let imageUrl = URL(string: entity.avatar!)
+        
+        if let data = try? Data(contentsOf: imageUrl!)
+         {
+            self.dpImage = UIImage(data: data)!
+            
+         }
+        
+        
+        
+        
+        saveImageVM.SaveImageViewModel(collectionID: collectionID, Title: "DP", selectedImage: self.dpImage!) { (imageURL, status, errMsg) in
+            
+            if status{
+                print(imageURL!)
+                
+                     let dict = ["addedDate": FieldValue.serverTimestamp(),
+                                    "displayName":entity.displayName!,
+                                    "imageUrl": imageURL as! String,
+                                    "isActive":true,
+                                    "isDeleted":false,
+                                    "userId":collectionID,] as [String : Any]
+                //
+                        collectionRef.setData(dict)
+                
+                
+                UserDefaults.standard.set(true, forKey: "SIGN_IN")
+                self.performSegue(withIdentifier: "Home_Segue", sender: nil)
+
+                
+            }
+        }
+        
+//
+//
+        
     }
 
     

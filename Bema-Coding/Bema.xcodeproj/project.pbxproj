@@ -31,6 +31,7 @@
 		F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E6234CF6F800973F65 /* InviteVC.swift */; };
 		F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E8234CF72F00973F65 /* LogoutVc.swift */; };
 		F26EA895236DB0BB00CE259A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26EA894236DB0BB00CE259A /* GoogleService-Info.plist */; };
+		F27275E2237060AC0070B88A /* SaveImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27275E1237060AC0070B88A /* SaveImageViewModel.swift */; };
 		F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811440234CE1CE005FE144 /* TrustWalletVC.swift */; };
 		F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */; };
 		F29094AC235606A0004E692F /* confirmToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29094AB235606A0004E692F /* confirmToken.swift */; };
@@ -351,6 +352,7 @@
 		F25197E6234CF6F800973F65 /* InviteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteVC.swift; sourceTree = "<group>"; };
 		F25197E8234CF72F00973F65 /* LogoutVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVc.swift; sourceTree = "<group>"; };
 		F26EA894236DB0BB00CE259A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F27275E1237060AC0070B88A /* SaveImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveImageViewModel.swift; sourceTree = "<group>"; };
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_CryptoTableView.swift; sourceTree = "<group>"; };
 		F29094AB235606A0004E692F /* confirmToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmToken.swift; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 		F24E1EE22343323C0015E658 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F27275E1237060AC0070B88A /* SaveImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -543,8 +546,8 @@
 		F2B479792345C1FF00DAA960 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F2CFB5B123685AD9006970FB /* Chat */,
 				F2A289FF234B66FF001AE873 /* Main */,
+				F2CFB5B123685AD9006970FB /* Chat */,
 				F2A28A00234B6712001AE873 /* Profile */,
 				F2CE806B234B8E14009933A2 /* Settings */,
 				F2365E9F234BA2910072463E /* Wallet */,
@@ -1130,6 +1133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27275E2237060AC0070B88A /* SaveImageViewModel.swift in Sources */,
 				F25197E5234CF6DE00973F65 /* SetBitmojiVC.swift in Sources */,
 				F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */,
 				F2E223552343135700931AFA /* AugmentVC.swift in Sources */,

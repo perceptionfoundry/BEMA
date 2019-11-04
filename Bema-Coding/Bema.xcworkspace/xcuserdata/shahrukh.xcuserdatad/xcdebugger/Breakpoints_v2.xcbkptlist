@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EB3520ED-20E0-49FF-B6A6-3E4A198B5D6D"
+            uuid = "98E70502-0AA7-4122-9A62-028BA095B4E9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bema/View/Controller/SendToken/SendTokenMainVC.swift"
+            filePath = "Bema/View/Controller/Main/SignInVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "textFieldShouldBeginEditing(_:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "goToLoginConfirm(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D916AEF1-AF9D-4EAB-BCDA-2A8AAF5B6E06"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bema/View/Controller/Main/SignInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "goToLoginConfirm(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

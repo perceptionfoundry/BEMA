@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCSDKLoginKit
 
 class LogoutVc: UIViewController {
 
@@ -18,6 +19,28 @@ class LogoutVc: UIViewController {
     
 
  //******** OUTLET ACTION
+    
+    @IBAction func yesButtonAction(_ sender: Any) {
+
+        SCSDKLoginClient.unlinkCurrentSession { (status) in
+            
+            UserDefaults.standard.set(false, forKey: "SIGN_IN")
+            
+            if #available(iOS 13.0, *) {
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                           
+                           let vc = storyBoard.instantiateViewController(withIdentifier: "NaviBarController")
+                
+                self.present(vc, animated: true, completion: nil)
+                           
+//                           self.navigationController?.pushViewController(vc, animated: true)
+                
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+                }
+    
       @IBAction func noButtonAction(_ sender: Any) {
 
                self.dismiss(animated: true, completion: nil)
@@ -25,3 +48,10 @@ class LogoutVc: UIViewController {
              }
 
 }
+
+
+/*
+ SCSDKLoginClient.unlinkCurrentSessionWithCompletion { (success: Bool) in
+   // do something
+ }
+ */
