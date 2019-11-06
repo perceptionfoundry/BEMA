@@ -14,22 +14,30 @@ import IQKeyboardManagerSwift
 class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
+    
+    
+    @IBOutlet weak var recieverName : UILabel!
+    @IBOutlet weak var recieverImage : Custom_ImageView!
     @IBOutlet weak var ChatTableView : UITableView!
     @IBOutlet weak var ChatTextField : UITextView!
     @IBOutlet weak var ChatBitmojiImage : UIImageView!
-
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
-
     @IBOutlet weak var chatMsg_view: UIView!
     
-    var textFieldMsgStatus = true
-    
-    
-    var selectedBitMoji : UIImage?
     private var bitmojiSelectionView: UIView?
-
-    
+    var textFieldMsgStatus = true
+    var chatRoomTitle = ""
+    var senderDetail = globalVariable.userSnapDetail
+    var recieverDetail : User?
+    var selectedBitMoji : UIImage?
     var maxheight:CGFloat = 80
+    
+     var recieverId = ""
+    var reciverImage : UIImage?
+     var senderId = ""
+    
+    
+    var allMessage = [[String:Any]]()
     
     var dumpMsg = [["Type":"Sender","msg":"hi Shahrukh"],
                     ["Type":"Reciever","msg":"hi Gray"],
@@ -37,13 +45,48 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     ["Type":"Sender","msg":"it is iOS developmsd fg sd fg sd fg sd fg s dfg s dfg s gent with snapkit integration"],
     ["Type":"Reciever","msg":"ok"],
     ["Type":"Reciever","msg":"what's your budget"]]
+    
+    
+    
     var bubbleHeight = [CGFloat]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         
+        let urlString = (recieverDetail?.imageUrl)!
+        
+        let imageURL = URL(string: urlString)
+        
+        recieverImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+        
+        
+        recieverName.text = (recieverDetail?.displayName)!
+        
+        
+        self.recieverId = (self.recieverDetail?.userId)!
+        self.senderId = (self.senderDetail?.userId)!
+        
+        if senderId > recieverId{
+            
+            self.chatRoomTitle = "\(senderId)_\(recieverId)"
+        }
+        else{
+            self.chatRoomTitle = "\(recieverId)_\(senderId)"
+        }
+        
+        
+        
+        
+        //***** CONFIGURATION **********
         ChatBitmojiImage.isHidden = true
         
         ChatTextField.keyboardToolbar.doneBarButton.setTarget(self, action: #selector(doneAction))
@@ -53,6 +96,8 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
         
         //********* NIB REGISTERATION *********
+        
+        //**** TEXT
         let senderTextXib = UINib(nibName: "SenderText_Cell", bundle: nil)
         ChatTableView.register(senderTextXib, forCellReuseIdentifier: "SenderText")
         
@@ -60,14 +105,34 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         ChatTableView.register(receiverTextXib, forCellReuseIdentifier: "ReceiverText")
         
         
-        
+        //****** IMAGE
         let senderImageXib = UINib(nibName: "SenderImage_Cell", bundle: nil)
-           ChatTableView.register(senderImageXib, forCellReuseIdentifier: "SenderImage")
+        ChatTableView.register(senderImageXib, forCellReuseIdentifier: "SenderImage")
+        
+        let receiverImageXib = UINib(nibName: "RecieverImage_Cell", bundle: nil)
+        ChatTableView.register(receiverImageXib, forCellReuseIdentifier: "ReceiverImage")
         
         ChatTableView.delegate = self
         ChatTableView.dataSource = self
         ChatTableView.reloadData()
+        
     }
+    
+    
+    
+    //******** PERSONALIZE FUNCITON **********
+       
+       
+       func sendText(){
+           
+        let  contentDict = [ "senderId" : self.senderId,
+                             "receiverId" : self.recieverId,
+                             "type": "TEXT",
+                             "composerId" : self.senderId,
+                             "context"  : ChatTextField.text!,
+                             "isDeleted" : false
+            ] as [String : Any]
+       }
     
 
     @objc func doneAction(){
@@ -90,9 +155,20 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
           }
               
               else{
-              let dict = ["Type": "Sender", "msg": ChatTextField.text!] as [String : Any]
+//              let dict = ["Type": "Sender", "msg": ChatTextField.text!] as [String : Any]
+            
+//            dumpMsg.append(dict as! [String : String])
+
+            
+            let  contentDict = [ "senderId" : self.senderId,
+                                 "receiverId" : self.recieverId,
+                                 "type": "TEXT",
+                                 "composerId" : self.senderId,
+                                 "context"  : ChatTextField.text!,
+                                 "isDeleted" : false
+                ] as [String : Any]
               
-              dumpMsg.append(dict as! [String : String])
+            self.allMessage.append(contentDict)
               ChatTextField.text = "Say Something..."
               ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
 
@@ -100,50 +176,88 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
               }
     }
     
+    
+    
+    
+    
     //********* TABLEVIEW DELEGATE ************
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dumpMsg.count
+        return allMessage.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        if dumpMsg[indexPath.row]["Type"] == "Sender"{
+        
+        //******** TEXT *********
+        if self.allMessage[indexPath.row]["type"] as! String == "TEXT"{
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SenderText") as! SenderText_Cell
+            if self.senderId == self.allMessage[indexPath.row]["composerId"] as! String{
+                
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SenderText") as! SenderText_Cell
+                
+                cell.selectionStyle = .none
+                
+                
+                
+                cell.senderMessageLabel.text = (self.allMessage[indexPath.row]["context"] as! String)
+                
+                return cell
+                
+            }
+            else{
+                
+                  let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverText") as! RecieverText_Cell
+                
+                cell.selectionStyle = .none
+                
+                cell.receiverMessageLabel.text = (self.allMessage[indexPath.row]["context"] as! String)
+                
+                return cell
+            }
             
-            cell.selectionStyle = .none
-            
+        }
+       else {
+            return UITableViewCell()
 
-            
-            cell.senderMessageLabel.text = dumpMsg[indexPath.row]["msg"]
+        }
+        
+//        if dumpMsg[indexPath.row]["Type"] == "Sender"{
 //
-            return cell
-        }
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "SenderText") as! SenderText_Cell
+//
+//            cell.selectionStyle = .none
+//
+//
+//
+//            cell.senderMessageLabel.text = dumpMsg[indexPath.row]["msg"]
+////
+//            return cell
+//        }
+//
+//        else if dumpMsg[indexPath.row]["Type"] == "Reciever"{
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverText") as! RecieverText_Cell
+//
+//            cell.selectionStyle = .none
+//
+//            cell.receiverMessageLabel.text = dumpMsg[indexPath.row]["msg"]
+//
+//            return cell
+//
+//        }
         
-        else if dumpMsg[indexPath.row]["Type"] == "Reciever"{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverText") as! RecieverText_Cell
-            
-            cell.selectionStyle = .none
-
-            cell.receiverMessageLabel.text = dumpMsg[indexPath.row]["msg"]
-
-            return cell
-
-        }
-        
-        else{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SenderImage") as! SenderImage_Cell
-                   
-                   cell.selectionStyle = .none
-
-                    cell.senderImage.image = self.selectedBitMoji
-//                   self.bubbleHeight.append(500)
-                   return cell
-        }
+//        else{
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "SenderImage") as! SenderImage_Cell
+//
+//                   cell.selectionStyle = .none
+//
+//                    cell.senderImage.image = self.selectedBitMoji
+////                   self.bubbleHeight.append(500)
+//                   return cell
+//        }
        
-        
         
         
     }
@@ -170,6 +284,7 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     
     
     
+   
     
     
     
@@ -183,10 +298,6 @@ class chatRoomVC: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             ChatTextField.textColor = UIColor.black
 
         }
-        
-    
-    
-        
 
         return true
     }

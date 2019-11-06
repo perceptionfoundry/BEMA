@@ -10,6 +10,10 @@ import UIKit
 
 class RecieverImage_Cell: UITableViewCell {
 
+    
+    
+    @IBOutlet weak var recieverImage: UIImageView!
+
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code

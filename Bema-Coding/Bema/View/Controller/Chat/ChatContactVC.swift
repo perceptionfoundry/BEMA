@@ -16,6 +16,9 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var contactTable :UITableView!
     @IBOutlet weak var searchTF :UITextField!
+    
+    
+    
 
     
     
@@ -154,6 +157,8 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let imageString = (showContact[indexPath.section][indexPath.row].imageUrl)!
                
                let imageURL = URL(string: imageString)
+        
+        
                
         cell.userImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
         
@@ -186,5 +191,17 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBAction func continueButton(_ sender: Any){
            performSegue(withIdentifier: "Chat_Segue", sender: nil)
        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "Chat_Segue"{
+            
+            let dest = segue.destination as!  chatRoomVC
+            
+            dest.recieverDetail = self.showContact[selectedSection!][selectedRow!]
+       
+            
+        }
+    }
 
 }
