@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A853A4FE8EA95B0ABF229A3181FD1F22"
-               BlueprintName = "Pods-Bema"
+               BlueprintIdentifier = "854357DC95CF8B8417BCC64BEA5B978C"
+               BlueprintName = "CodableFirebase"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Bema.framework">
+               BuildableName = "CodableFirebase.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import CodableFirebase
+import SDWebImage
 
 class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,6 +24,9 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var dbStore = Firestore.firestore()
     
     
+    var allContact = [User]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +39,59 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print(globalVariable.userSnapDetail?.userId)
+//        print(globalVariable.userSnapDetail?.userId)
+   
         
-        self.dbStore.collection("Friend")
+        self.getData()
+        
     }
     
+    
+    //****** Personalize Functions ***
+    
+    
+    func getData(){
+        let userId = (globalVariable.userSnapDetail?.userId)!
+          
+           let sourceLink = self.dbStore.collection("Friends").document(userId)
+           
+           // ***** GET CONTACT
+           
+           sourceLink.collection("Directory").getDocuments { (snapResult, snapError) in
+               
+               guard let fetchValue = snapResult?.documents else{return}
+               
+               
+               fetchValue.forEach { (value) in
+                   
+                   let getValue = value.data()
+                   
+                   let id = getValue["friendId"] as! String
+                   
+                   print(id)
+                   
+                   self.dbStore.collection("Users").document(id).getDocument { (contactResult, contactError) in
+                       
+                       let fetchData = contactResult?.data()
+                       
+                       print(fetchData)
+                       
+                       let friend = try! FirestoreDecoder().decode(User.self, from: fetchData!)
+                       
+                       self.allContact.append(friend)
+                       
+                       self.contactListTable.reloadData()
+                       
+                   }
+               }
+           }
+    }
     
     //*********** TABLEVIEW DELEGATE FUNCTION *********
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return allContact.count
         
     }
     
@@ -60,6 +107,13 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         else{
             cell.tickImage.isHidden = true
         }
+        
+        let imageString = (allContact[indexPath.row].imageUrl)!
+        
+        let imageURL = URL(string: imageString)
+        
+        cell.userImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+        cell.userName.text = allContact[indexPath.row].displayName
         
         return cell
     }

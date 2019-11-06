@@ -15,7 +15,6 @@
 		F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8723431EE0005EE90F /* Custom_Button.swift */; };
 		F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8823431EE1005EE90F /* Custom_Label.swift */; };
 		F2290AC22371CF5B004680C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2290AC12371CF5B004680C7 /* User.swift */; };
-		F2340AEE2372A8F300355193 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2340AED2372A8F300355193 /* Contacts.swift */; };
 		F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365E9D234BA2870072463E /* ManageWalletVC.swift */; };
 		F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */; };
 		F237042D2368829F0070B366 /* Custom_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237042C2368829F0070B366 /* Custom_TextField.swift */; };
@@ -320,7 +319,6 @@
 		F21B7B8723431EE0005EE90F /* Custom_Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Button.swift; sourceTree = "<group>"; };
 		F21B7B8823431EE1005EE90F /* Custom_Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Label.swift; sourceTree = "<group>"; };
 		F2290AC12371CF5B004680C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F2340AED2372A8F300355193 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		F2365E9D234BA2870072463E /* ManageWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWalletVC.swift; sourceTree = "<group>"; };
 		F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		F237042C2368829F0070B366 /* Custom_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_TextField.swift; sourceTree = "<group>"; };
@@ -502,7 +500,6 @@
 			children = (
 				F24E1EE62343342B0015E658 /* UserEntity.swift */,
 				F2290AC12371CF5B004680C7 /* User.swift */,
-				F2340AED2372A8F300355193 /* Contacts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1076,6 +1073,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bema/Pods-Bema-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -1095,6 +1093,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -1172,7 +1171,6 @@
 				F237043F23688E200070B366 /* RecieverImage_Cell.swift in Sources */,
 				F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */,
 				F2F469522358C25800EF6007 /* UIImage+Extension.swift in Sources */,
-				F2340AEE2372A8F300355193 /* Contacts.swift in Sources */,
 				F23704352368894A0070B366 /* RecieverText_Cell.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F29E6987235DF20700B22AE1 /* CryptoList_AR_VC.swift in Sources */,

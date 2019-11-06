@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import CodableFirebase
+import SDWebImage
 
 class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
@@ -23,17 +26,85 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     ["Adam","Bob","Geoger","Gray","John","Kevin"]]
     
     
+    
+    let recentContact = [User]()
+    
+    var allContact = [User]()
+    
+    var showContact = [[User]]()
+    
+    
     var selectedSection : Int?
     var selectedRow : Int?
+    
+    var dbStore = Firestore.firestore()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contactTable.delegate = self
-        contactTable.dataSource = self
-        contactTable.reloadData()
 
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.getData()
+        
+        self.showContact.append(recentContact)
+    }
+    
+    
+    // ******** PERSONALIZE FUNCTIONS ********
+    func getData(){
+          let userId = (globalVariable.userSnapDetail?.userId)!
+            
+             let sourceLink = self.dbStore.collection("Friends").document(userId)
+             
+             // ***** GET CONTACT
+             
+             sourceLink.collection("Directory").getDocuments { (snapResult, snapError) in
+                 
+                 guard let fetchValue = snapResult?.documents else{return}
+                 
+                 var index = 0
+                 fetchValue.forEach { (value) in
+                     
+                     let getValue = value.data()
+                     
+                     let id = getValue["friendId"] as! String
+                     
+                     print(id)
+                     
+                     self.dbStore.collection("Users").document(id).getDocument { (contactResult, contactError) in
+                         
+                         let fetchData = contactResult?.data()
+                         
+//                         print(fetchData)
+                         
+                         let friend = try! FirestoreDecoder().decode(User.self, from: fetchData!)
+                      
+                        self.allContact.append(friend)
+                        
+                        
+                        index = index + 1
+                        if index == fetchValue.count{
+                            self.showContact.append(self.allContact)
+                            self.contactTable.delegate = self
+                            self.contactTable.dataSource = self
+                            self.contactTable.reloadData()
+                        }
+                         
+                     }
+                    
+
+                 }
+             }
+        
+       
+
+      }
     
     
     
@@ -60,15 +131,16 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
 //************ ROW *****************
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return contactArray[section].count
+  
+//
+        return showContact[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CONTACT", for: indexPath) as! ContactTableViewCell
         
-        cell.userName.text = contactArray[indexPath.section][indexPath.row]
+//        cell.userName.text = contactArray[indexPath.section][indexPath.row]
         
         cell.tickImage.isHidden = true
 
@@ -76,6 +148,15 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if self.selectedSection == indexPath.section && self.selectedRow == indexPath.row{
             cell.tickImage.isHidden = false
         }
+        
+        cell.userName.text = showContact[indexPath.section][indexPath.row].displayName
+        
+        let imageString = (showContact[indexPath.section][indexPath.row].imageUrl)!
+               
+               let imageURL = URL(string: imageString)
+               
+        cell.userImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+        
         
         return cell
     }
