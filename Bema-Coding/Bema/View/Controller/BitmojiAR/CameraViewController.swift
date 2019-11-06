@@ -15,9 +15,7 @@ import LocalAuthentication
 
 
 
-protocol DoubleSegueProtocol {
-    func quit()
-}
+
 
 
 class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransition, DoubleSegueProtocol {

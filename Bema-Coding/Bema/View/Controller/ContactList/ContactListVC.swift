@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -18,6 +19,9 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
   
     var contactProtocol : ContactList_Protocol!
     var selectedIndex = 0
+    var dbStore = Firestore.firestore()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,14 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         contactListTable.delegate = self
         contactListTable.dataSource = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print(globalVariable.userSnapDetail?.userId)
+        
+        self.dbStore.collection("Friend")
     }
     
     

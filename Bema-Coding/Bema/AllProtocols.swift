@@ -19,3 +19,8 @@ protocol ContactList_Protocol {
 protocol cryptoTransition {
     func ConfiguredCrypto(value: [String : String])
 }
+
+
+protocol DoubleSegueProtocol {
+    func quit()
+}

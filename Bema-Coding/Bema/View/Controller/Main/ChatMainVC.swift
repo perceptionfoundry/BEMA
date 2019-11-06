@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -29,12 +31,34 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         contactList.reloadData()
         
         
+  
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(sideMenuAction))
         
         self.DisplayImage.addGestureRecognizer(tap)
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        
+        //******* DP IMAGE ***
+        
+         let entity = globalVariable.userSnapDetail
+        //
+//                print(entity?.imageUrl)
+                
+                let urlString = (entity?.imageUrl)!
+                
+                let imageURL = URL(string: urlString)
+                
+                DisplayImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+        
+        
+        
+    }
     
   //********** PERSONALIZE FUNCTION
     

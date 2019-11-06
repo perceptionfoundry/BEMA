@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import SDWebImage
+
+
 
 class SideMenuVC: UIViewController {
+   
+    
+    
 
     @IBOutlet weak var sideMenuView: UIView!
-    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var displayImage: UIImageView!
+    @IBOutlet weak var displayName: UILabel!
+
+
+//    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -24,12 +34,24 @@ class SideMenuVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        sideMenuView.frame = CGRect(x: -20, y: 164, width: 0, height: view.frame.height * 0.9)
-//
-//
-//
-//               self.open()
+
+       let entity = globalVariable.userSnapDetail
+//        
+        print(entity?.imageUrl)
+        
+        let urlString = (entity?.imageUrl)!
+        
+        let imageURL = URL(string: urlString)
+        
+        displayImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+        
+        
+        displayName.text = entity?.displayName!
+        
+        
     }
+    
+    
     
 
     //************ OUTLET ACTION *************
@@ -54,7 +76,11 @@ class SideMenuVC: UIViewController {
 
     @IBAction func settingButtonAction(_ sender: Any) {}
 
-    @IBAction func logoutButtonAction(_ sender: Any) {}
+    @IBAction func logoutButtonAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "LOGOUT", sender: nil)
+        
+    }
 
     @IBAction func inviteButtonAction(_ sender: Any) {}
 
@@ -64,10 +90,6 @@ class SideMenuVC: UIViewController {
             self.dismiss(animated: true, completion: nil)
    
     }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//          sideMenuView.frame = CGRect(x: 0, y: 164, width: 0, height: view.frame.height * 0.8)
-//    }
+
     
-}
+    }

@@ -72,51 +72,113 @@ class SignInVC: UIViewController {
     private func goToLoginConfirm(_ entity: UserEntity){
         
         
-        globalVariable.userSnapDetail = entity
-        
-        
+//        globalVariable.userSnapDetail = entity
+       
         //********** CREATE NEW USER NODE *******
         
         
         let dbStore = Firestore.firestore()
 
         
-        let collectionRef = dbStore.collection("Users").document()
-        
-        let collectionID = collectionRef.documentID
-        
-        let imageUrl = URL(string: entity.avatar!)
-        
-        if let data = try? Data(contentsOf: imageUrl!)
-         {
-            self.dpImage = UIImage(data: data)!
+        dbStore.collection("Users").whereField("displayName", isEqualTo: (entity.displayName)!).addSnapshotListener { (snap, err) in
             
-         }
-        
-        
-        
-        
-        saveImageVM.SaveImageViewModel(collectionID: collectionID, Title: "DP", selectedImage: self.dpImage!) { (imageURL, status, errMsg) in
+            let name = entity.displayName!
+            let image = entity.avatar!
             
-            if status{
-                print(imageURL!)
+            
+        //***** EXISTING USERS ***********
+        
+            if let value = snap?.documents{
+               
+                // *********** LOCAL USER INFO STORE **************
+
+                value.forEach { (data) in
+                    
+                    let userDetail = data.data()
+                    
+                    let userId = userDetail["userId"] as! String
+      
+                    let usr = User.userDetail
+                    usr.imageUrl = image
+                    usr.displayName = name
+                    usr.userId = userId
+                    globalVariable.userSnapDetail = usr
+                    
+                    
+                    let detailDetail = ["Name": name,
+                                        "Image":image,
+                                        "Id":userId]
+                    
+                    
+                    UserDefaults.standard.set(detailDetail, forKey: "USER")
+                    
+                    UserDefaults.standard.set(true, forKey: "SIGN_IN")
+                    self.performSegue(withIdentifier: "Home_Segue", sender: nil)
+                }
+            }
+                               
+                             
+            
+            
+            // ************* NEW USERS ******
+            
+            else {
+                let collectionRef = dbStore.collection("Users").document()
                 
-                     let dict = ["addedDate": FieldValue.serverTimestamp(),
+                let collectionID = collectionRef.documentID
+                
+                let imageUrl = URL(string: entity.avatar!)
+                
+                if let data = try? Data(contentsOf: imageUrl!)
+                {
+                    self.dpImage = UIImage(data: data)!
+                    
+                }
+                
+                
+                
+                
+                self.saveImageVM.SaveImageViewModel(collectionID: collectionID, Title: "DP", selectedImage: self.dpImage!) { (imageURL, status, errMsg) in
+                    
+                    
+                    
+                    
+                    if status{
+//                        print(imageURL!)
+                        
+                        let dict = ["addedDate": FieldValue.serverTimestamp(),
                                     "displayName":entity.displayName!,
-                                    "imageUrl": imageURL as! String,
+                                    "imageUrl": imageURL!,
                                     "isActive":true,
                                     "isDeleted":false,
                                     "userId":collectionID,] as [String : Any]
-                //
+                        //
                         collectionRef.setData(dict)
-                
-                
-                UserDefaults.standard.set(true, forKey: "SIGN_IN")
-                self.performSegue(withIdentifier: "Home_Segue", sender: nil)
-
+                        
+                        
+                        let detailDetail = ["Name": name,
+                                            "Image":image,
+                                            "Id":collectionID]
+                        
+                        
+                        
+                        print(detailDetail)
+                        
+                        UserDefaults.standard.set(detailDetail, forKey: "USER")
+                        
+                        
+                        UserDefaults.standard.set(true, forKey: "SIGN_IN")
+                        self.performSegue(withIdentifier: "Home_Segue", sender: nil)
+                        
+                        
+                    }
+                }
                 
             }
+  
         }
+        
+        
         
 //
 //

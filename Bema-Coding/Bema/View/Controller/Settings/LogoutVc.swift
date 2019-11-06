@@ -11,6 +11,7 @@ import SCSDKLoginKit
 
 class LogoutVc: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,20 +25,37 @@ class LogoutVc: UIViewController {
 
         SCSDKLoginClient.unlinkCurrentSession { (status) in
             
-            UserDefaults.standard.set(false, forKey: "SIGN_IN")
             
-            if #available(iOS 13.0, *) {
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                           
-                           let vc = storyBoard.instantiateViewController(withIdentifier: "NaviBarController")
+            print(status)
+            
+            if status{
                 
-                self.present(vc, animated: true, completion: nil)
-                           
-//                           self.navigationController?.pushViewController(vc, animated: true)
                 
-            } else {
-                // Fallback on earlier versions
+                UserDefaults.standard.set(false, forKey: "SIGN_IN")
+                
+                
+                DispatchQueue.main.async { () -> Void in
+                    
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    let vc = storyBoard.instantiateViewController(withIdentifier: "NaviBarController")
+                    
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                    //                self.present(vc, animated: true, completion: nil)
+                    
+                }
+                
             }
+            
+            else{
+                print("***************")
+                print("Failed")
+                print("***************")
+
+            }
+
+            
         }
                 }
     

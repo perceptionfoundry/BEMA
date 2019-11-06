@@ -7,33 +7,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "98E70502-0AA7-4122-9A62-028BA095B4E9"
+            uuid = "9FF77227-F844-4DB8-9C95-7649069F2D8E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bema/View/Controller/Main/SignInVC.swift"
+            filePath = "Bema/View/Controller/Settings/LogoutVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "goToLoginConfirm(_:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "yesButtonAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D916AEF1-AF9D-4EAB-BCDA-2A8AAF5B6E06"
+            uuid = "4F1E6AC7-13C6-4E11-9CB5-4EDC488FAB07"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bema/View/Controller/Main/SignInVC.swift"
+            filePath = "Bema/View/Controller/Settings/LogoutVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "goToLoginConfirm(_:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "yesButtonAction(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCF478D3-F26E-4B4A-B707-E798C9A25810"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bema/View/Controller/Settings/LogoutVc.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "yesButtonAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DCF478D3-F26E-4B4A-B707-E798C9A25810 - 7ffecc5fd1feab4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bema.LogoutVc.yesButtonAction(Any) -&gt; ()"
+                  moduleName = "Bema"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shahrukh/Documents/GitHub/BEMA/Bema-Coding/Bema/View/Controller/Settings/LogoutVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "DCF478D3-F26E-4B4A-B707-E798C9A25810 - 8a2063cf2151a42e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Bema.LogoutVc.yesButtonAction(Any) -&gt; ()"
+                  moduleName = "Bema"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shahrukh/Documents/GitHub/BEMA/Bema-Coding/Bema/View/Controller/Settings/LogoutVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "173">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

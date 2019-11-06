@@ -14,6 +14,8 @@
 		F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8623431EE0005EE90F /* Custom_ImageView.swift */; };
 		F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8723431EE0005EE90F /* Custom_Button.swift */; };
 		F21B7B8C23431EE1005EE90F /* Custom_Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21B7B8823431EE1005EE90F /* Custom_Label.swift */; };
+		F2290AC22371CF5B004680C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2290AC12371CF5B004680C7 /* User.swift */; };
+		F2340AEE2372A8F300355193 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2340AED2372A8F300355193 /* Contacts.swift */; };
 		F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365E9D234BA2870072463E /* ManageWalletVC.swift */; };
 		F2365EA1234BA5030072463E /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */; };
 		F237042D2368829F0070B366 /* Custom_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237042C2368829F0070B366 /* Custom_TextField.swift */; };
@@ -317,6 +319,8 @@
 		F21B7B8623431EE0005EE90F /* Custom_ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_ImageView.swift; sourceTree = "<group>"; };
 		F21B7B8723431EE0005EE90F /* Custom_Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Button.swift; sourceTree = "<group>"; };
 		F21B7B8823431EE1005EE90F /* Custom_Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Custom_Label.swift; sourceTree = "<group>"; };
+		F2290AC12371CF5B004680C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F2340AED2372A8F300355193 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		F2365E9D234BA2870072463E /* ManageWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWalletVC.swift; sourceTree = "<group>"; };
 		F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		F237042C2368829F0070B366 /* Custom_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_TextField.swift; sourceTree = "<group>"; };
@@ -497,6 +501,8 @@
 			isa = PBXGroup;
 			children = (
 				F24E1EE62343342B0015E658 /* UserEntity.swift */,
+				F2290AC12371CF5B004680C7 /* User.swift */,
+				F2340AED2372A8F300355193 /* Contacts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1076,6 +1082,7 @@
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKBitmojiKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
@@ -1094,6 +1101,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKBitmojiKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
@@ -1153,6 +1161,7 @@
 				F21B7B8B23431EE1005EE90F /* Custom_Button.swift in Sources */,
 				F21B43D723673836001DD0C5 /* AR_ConfirmVC.swift in Sources */,
 				F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */,
+				F2290AC22371CF5B004680C7 /* User.swift in Sources */,
 				F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */,
 				F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */,
 				F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */,
@@ -1163,6 +1172,7 @@
 				F237043F23688E200070B366 /* RecieverImage_Cell.swift in Sources */,
 				F28AF2DC234F6CE400DF14BE /* Wallet_CryptoTableView.swift in Sources */,
 				F2F469522358C25800EF6007 /* UIImage+Extension.swift in Sources */,
+				F2340AEE2372A8F300355193 /* Contacts.swift in Sources */,
 				F23704352368894A0070B366 /* RecieverText_Cell.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F29E6987235DF20700B22AE1 /* CryptoList_AR_VC.swift in Sources */,

@@ -14,7 +14,7 @@ import Firebase
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var userSnapDetail : UserEntity?
+    var userSnapDetail : User?
     var signInStatus = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -34,7 +34,19 @@ import Firebase
         
         self.signInStatus = UserDefaults.standard.bool(forKey: "SIGN_IN")
         
+        print(self.signInStatus)
+        
         if self.signInStatus == true{
+            
+            let userDetail = UserDefaults.standard.dictionary(forKey: "USER") as! [String:String]
+            
+            let usr = User.userDetail
+            usr.imageUrl = userDetail["Image"]
+            usr.displayName = userDetail["Name"]
+            usr.userId = userDetail["Id"]
+            
+            userSnapDetail = usr
+   
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let mainVC = storyBoard.instantiateViewController(withIdentifier: "Tab_Controller") as! UITabBarController
             self.window?.rootViewController = mainVC
