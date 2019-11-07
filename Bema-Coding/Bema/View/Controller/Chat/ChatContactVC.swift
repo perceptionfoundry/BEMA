@@ -62,6 +62,11 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     // ******** PERSONALIZE FUNCTIONS ********
     func getData(){
           let userId = (globalVariable.userSnapDetail?.userId)!
+        
+        print("*********")
+        print(userId)
+        print("*********")
+
             
              let sourceLink = self.dbStore.collection("Friends").document(userId)
              
