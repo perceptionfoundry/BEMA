@@ -12,6 +12,7 @@ import SCSDKBitmojiKit
 import IQKeyboardManagerSwift
 import Firebase
 import CodableFirebase
+import SDWebImage
 
 class chatRoomVC: UIViewController {
 
@@ -49,14 +50,8 @@ class chatRoomVC: UIViewController {
     
     var allMessage = [Message]()
     var sendMessage = ""
-//    var allMessage = [[String:Any]]()
-    
-//    var dumpMsg = [["Type":"Sender","msg":"hi Shahrukh"],
-//                    ["Type":"Reciever","msg":"hi Gray"],
-//    ["Type":"Sender","msg":"i have job for you"],
-//    ["Type":"Sender","msg":"it is iOS developmsd fg sd fg sd fg sd fg s dfg s dfg s gent with snapkit integration"],
-//    ["Type":"Reciever","msg":"ok"],
-//    ["Type":"Reciever","msg":"what's your budget"]]
+
+    var saveImageVC = SaveImageViewModel()
     
     
     
@@ -72,7 +67,8 @@ class chatRoomVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        self.fetchMessage()
+
         let urlString = (recieverDetail?.imageUrl)!
         
         let imageURL = URL(string: urlString)
@@ -123,12 +119,8 @@ class chatRoomVC: UIViewController {
         let receiverImageXib = UINib(nibName: "RecieverImage_Cell", bundle: nil)
         ChatTableView.register(receiverImageXib, forCellReuseIdentifier: "ReceiverImage")
         
-        
-        
         self.fetchMessage()
-//        ChatTableView.delegate = self
-//        ChatTableView.dataSource = self
-//        ChatTableView.reloadData()
+
         
     }
     
@@ -139,49 +131,35 @@ class chatRoomVC: UIViewController {
     
     func fetchMessage(){
         
-        self.allMessage.removeAll()
-        self.ChatTableView.reloadData()
+  
         
-        self.dbStore.collection("ChatRoom").whereField("roomID", isEqualTo: self.chatRoomTitle).getDocuments { (chatSnap, chatError) in
+        
+        self.dbStore.collection("ChatRoom").whereField("roomId", isEqualTo: self.chatRoomTitle).order(by: "addedOn", descending: false).addSnapshotListener { (chatSnap, chatError) in
             
             guard let fetchValue = chatSnap?.documents else{return}
+            
+            self.allMessage.removeAll()
             
             fetchValue.forEach { (value) in
                 
                 let getData = value.data()
                 
-                
-                
-                
-                let newMessageId = getData["chatId"] as! String
-                
-                print(newMessageId)
-                
-                //********* GET MESSAGE *******
-                self.dbStore.collection("ChatRoom").document(newMessageId).collection("Messages").getDocuments { (messageSnap, messageError) in
-                    
-                    
-                    guard let fetchMsgValue = messageSnap?.documents else{return}
-                    
-                    fetchMsgValue.forEach { (msgValue) in
                         
-                        let getMsgData = msgValue.data()
-                        
-                        let msg = try! FirebaseDecoder().decode(Message.self, from: getMsgData)
-                        
-                        
-                        print(msg.context)
-                        
-                        self.allMessage.append(msg)
-                        self.ChatTableView.delegate = self
-                        self.ChatTableView.dataSource = self
-                        self.ChatTableView.reloadData()
-                    }
-                    
-                    
-                }
                 
+                        let msg = try! FirestoreDecoder().decode(Message.self, from: getData)
+                        
                 
+                    
+                    self.allMessage.append(msg)
+                    self.ChatTableView.delegate = self
+                    self.ChatTableView.dataSource = self
+                    self.ChatTableView.reloadData()
+                
+                let indexPath = NSIndexPath(item: self.allMessage.count - 1, section: 0)
+                self.ChatTableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
+                                       
+                     
+
             }
         }
     }
@@ -193,10 +171,11 @@ class chatRoomVC: UIViewController {
         
        let collectionRef = self.dbStore.collection("ChatRoom").document()
         
-        // ****** CREATE BASIC INFO *****
+        // ****** CREATE MESSAGE INFO *****
         
-        let basisDict = ["chatId": collectionRef.documentID,
-                         "roomID": self.chatRoomTitle,
+        let basisDict = ["addedOn": FieldValue.serverTimestamp(),
+                         "chatId": collectionRef.documentID,
+                         "roomId": self.chatRoomTitle,
                          "senderId" : self.senderId,
                          "receiverId" : self.recieverId,
                          "senderName": (self.senderDetail?.displayName)!,
@@ -204,28 +183,65 @@ class chatRoomVC: UIViewController {
                          "senderImageURL" : (self.senderDetail?.imageUrl)!,
                          "recieverImageURL" : (self.recieverDetail?.imageUrl)!,
                          "readerID":self.recieverId,
+                         "context"  : self.sendMessage,
+                         "composerId" : self.senderId,
+                         "type": "TEXT",
                          "isDeleted": false,
                          "isRead" : false] as [String : Any]
         
         collectionRef.setData(basisDict)
-        
-        
-        //******** CREATE MESSAGE
-        let  contentDict = [ "senderId" : self.senderId,
-                             "receiverId" : self.recieverId,
-                             "type": "TEXT",
-                             "composerId" : self.senderId,
-                             "context"  : self.sendMessage,
-                             "isDeleted" : false,
-                               ] as [String : Any]
-        
-        
-        collectionRef.collection("Messages").addDocument(data: contentDict)
-        
-        self.fetchMessage()
-        
+  
+        self.allMessage.removeAll()
+          self.ChatTableView.reloadData()
     }
     
+    
+    
+    //**************** SEND MEDIA FILE ***************
+    func sendMedia(){
+                 
+              
+              
+             let collectionRef = self.dbStore.collection("ChatRoom").document()
+              
+        let collectionId = collectionRef.documentID
+        
+        saveImageVC.SaveImageViewModel(collectionID: collectionId, Title: "IMG_\(collectionId)", selectedImage: self.selectedBitMoji!) { (imageURl, status, err) in
+            
+            if status{
+                let urlString = imageURl!
+                
+                // ****** CREATE MESSAGE INFO *****
+                          
+                          let basisDict = ["addedOn": FieldValue.serverTimestamp(),
+                                           "chatId": collectionRef.documentID,
+                                           "roomId": self.chatRoomTitle,
+                                           "senderId" : self.senderId,
+                                           "receiverId" : self.recieverId,
+                                           "senderName": (self.senderDetail?.displayName)!,
+                                           "recieverName" : (self.recieverDetail?.displayName)!,
+                                           "senderImageURL" : (self.senderDetail?.imageUrl)!,
+                                           "recieverImageURL" : (self.recieverDetail?.imageUrl)!,
+                                           "readerID":self.recieverId,
+                                           "context"  : urlString,
+                                           "composerId" : self.senderId,
+                                           "type": "MEDIA",
+                                           "isDeleted": false,
+                                           "isRead" : false] as [String : Any]
+                          
+                          collectionRef.setData(basisDict)
+                    
+//                          self.allMessage.removeAll()
+//                            self.ChatTableView.reloadData()
+            }
+        }
+        
+          
+        
+        
+          }
+        
+        
     
   
     
@@ -246,24 +262,13 @@ class chatRoomVC: UIViewController {
               self.ChatTextField.isHidden = false
               self.textFieldMsgStatus = true
               self.ChatTableView.reloadData()
+            
+            self.sendMedia()
               
           }
               
               else{
-//              let dict = ["Type": "Sender", "msg": ChatTextField.text!] as [String : Any]
-            
-//            dumpMsg.append(dict as! [String : String])
-
-            
-//            let  contentDict = [ "senderId" : self.senderId,
-//                                 "receiverId" : self.recieverId,
-//                                 "type": "TEXT",
-//                                 "composerId" : self.senderId,
-//                                 "context"  : ChatTextField.text!,
-//                                 "isDeleted" : false
-//                ] as [String : Any]
 //
-//            self.allMessage.append(contentDict)
               self.sendMessage = ChatTextField.text!
               ChatTextField.text = "Say Something..."
               ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
@@ -455,44 +460,50 @@ extension chatRoomVC: UITableViewDelegate, UITableViewDataSource{
                 }
                 
             }
+            else if self.allMessage[indexPath.row].type! == "MEDIA"{
+                
+                 if self.senderId == self.allMessage[indexPath.row].composerId!{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SenderImage") as! SenderImage_Cell
+                
+            cell.selectionStyle = .none
+
+                let imageLink = allMessage[indexPath.row].context
+                let urlString = (imageLink)!
+                    
+                
+                let imageURL = URL(string: urlString)
+                
+                cell.senderImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+                
+                return cell
+                
+                }
+                
+                 else{
+                    
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverImage") as! RecieverImage_Cell
+                                   
+                               cell.selectionStyle = .none
+
+                                   let imageLink = allMessage[indexPath.row].context
+                                   let urlString = (imageLink)!
+                                   
+                                   let imageURL = URL(string: urlString)
+                                   
+                                   cell.recieverImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+                                   
+                                   return cell
+                    
+                }
+            }
            else {
                 return UITableViewCell()
 
             }
             
-    //        if dumpMsg[indexPath.row]["Type"] == "Sender"{
-    //
-    //            let cell = tableView.dequeueReusableCell(withIdentifier: "SenderText") as! SenderText_Cell
-    //
-    //            cell.selectionStyle = .none
-    //
-    //
-    //
-    //            cell.senderMessageLabel.text = dumpMsg[indexPath.row]["msg"]
-    ////
-    //            return cell
-    //        }
-    //
-    //        else if dumpMsg[indexPath.row]["Type"] == "Reciever"{
-    //            let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverText") as! RecieverText_Cell
-    //
-    //            cell.selectionStyle = .none
-    //
-    //            cell.receiverMessageLabel.text = dumpMsg[indexPath.row]["msg"]
-    //
-    //            return cell
-    //
-    //        }
+
             
-    //        else{
-    //        let cell = tableView.dequeueReusableCell(withIdentifier: "SenderImage") as! SenderImage_Cell
-    //
-    //                   cell.selectionStyle = .none
-    //
-    //                    cell.senderImage.image = self.selectedBitMoji
-    ////                   self.bubbleHeight.append(500)
-    //                   return cell
-    //        }
+
            
             
             
@@ -501,21 +512,20 @@ extension chatRoomVC: UITableViewDelegate, UITableViewDataSource{
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
 
-            return UITableView.automaticDimension
 
-//            if indexPath.row < allMessage.count{
-//
-//                if (allMessage[indexPath.row]["Type"] as! String) == "Image"{
-//                    return 300
-//
-//                }
-//                else{
-//                    return UITableView.automaticDimension
-//                }
-//            }
-//            else{
-//                return 0
-//            }
+            if indexPath.row < allMessage.count{
+
+                if allMessage[indexPath.row].type == "MEDIA"{
+                    return 200
+
+                }
+                else{
+                    return UITableView.automaticDimension
+                }
+            }
+            else{
+                return 0
+            }
 
     //
         }
@@ -560,26 +570,7 @@ extension chatRoomVC: UITextViewDelegate{
                 self.returnAction()
                 textView.resignFirstResponder()
 
-    //            if self.textFieldMsgStatus == false{
-    //            self.ChatBitmojiImage.isHidden = true
-    //            self.textViewHeight.constant = 40
-    //            textView.resignFirstResponder()
-    //            self.ChatTextField.isHidden = false
-    //            self.textFieldMsgStatus = true
-    //            self.ChatTableView.reloadData()
-    //
-    //        }
-    //
-    //            else{
-    //            let dict = ["Type": "Sender", "msg": ChatTextField.text!] as [String : Any]
-    //
-    //            dumpMsg.append(dict as! [String : String])
-    //            textView.text = "Say Something..."
-    //            ChatTextField.textColor = UIColor(red: 0.073, green: 0.624, blue: 0.616, alpha: 1)
-    //                textView.resignFirstResponder()
-    //
-    //            ChatTableView.reloadData()
-    //            }
+  
             }
 
             return true

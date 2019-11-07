@@ -16,6 +16,7 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var contactTable :UITableView!
     @IBOutlet weak var searchTF :UITextField!
+    @IBOutlet weak var continueButton : UIButton!
     
     
     
@@ -46,7 +47,7 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
     }
     
     
@@ -54,6 +55,10 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         super.viewWillAppear(animated)
         
         self.getData()
+        
+        if selectedRow == nil {
+            continueButton.isHidden = true
+        }
         
         self.showContact.append(recentContact)
     }
@@ -173,6 +178,9 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        continueButton.isHidden = false
+
         
         self.selectedRow = indexPath.row
         self.selectedSection = indexPath.section

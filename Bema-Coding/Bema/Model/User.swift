@@ -26,7 +26,7 @@ class User: Codable{
 }
 
 
-extension DocumentReference: DocumentReferenceType {}
-extension GeoPoint: GeoPointType {}
-extension FieldValue: FieldValueType {}
-extension Timestamp: TimestampType {}
+//extension DocumentReference: DocumentReferenceType {}
+//extension GeoPoint: GeoPointType {}
+//extension FieldValue: FieldValueType {}
+//extension Timestamp: TimestampType {}

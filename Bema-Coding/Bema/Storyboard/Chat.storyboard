@@ -138,7 +138,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88T-sY-h5H">
-                                                            <rect key="frame" x="65" y="19" width="205" height="14"/>
+                                                            <rect key="frame" x="65" y="18.5" width="205" height="15"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -210,6 +210,7 @@
                     </view>
                     <connections>
                         <outlet property="contactTable" destination="f4n-5b-t4u" id="W8G-F8-jBh"/>
+                        <outlet property="continueButton" destination="wLc-le-LHW" id="VHT-x6-65K"/>
                         <outlet property="searchTF" destination="KEn-VC-9Rn" id="xf4-Fd-qnb"/>
                         <segue destination="Ae5-if-JsT" kind="show" identifier="Chat_Segue" id="3Lb-st-gmO"/>
                     </connections>
