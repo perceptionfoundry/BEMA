@@ -53,7 +53,9 @@ class chatRoomVC: UIViewController {
 
     var saveImageVC = SaveImageViewModel()
     
-    
+    var senderConversationId = [String]()
+    var receiverConversationId = [String]()
+
     
     
     
@@ -119,6 +121,7 @@ class chatRoomVC: UIViewController {
         let receiverImageXib = UINib(nibName: "RecieverImage_Cell", bundle: nil)
         ChatTableView.register(receiverImageXib, forCellReuseIdentifier: "ReceiverImage")
         
+        self.pastConversation()
         self.fetchMessage()
 
         
@@ -128,6 +131,35 @@ class chatRoomVC: UIViewController {
     
     //******** PERSONALIZE FUNCITON **********
        
+    
+    func pastConversation(){
+        
+        dbStore.collection("Conversation").document(self.senderId).addSnapshotListener { (conversationSnap, conversationErr) in
+            
+            guard let  value = conversationSnap?.data() else{return}
+            
+            self.senderConversationId = value["chatRoom"]  as! [String]
+            
+            
+            print("*****************")
+            print(self.senderConversationId)
+            print("**************")
+        }
+        
+        
+        dbStore.collection("Conversation").document(self.recieverId).addSnapshotListener { (conversationSnap, conversationErr) in
+            
+            guard let  value = conversationSnap?.data() else{return}
+            
+            self.receiverConversationId = value["chatRoom"]  as! [String]
+            
+            
+            print("*****************")
+            print(self.receiverConversationId)
+            print("**************")
+        }
+
+    }
     
     func fetchMessage(){
         
@@ -190,9 +222,23 @@ class chatRoomVC: UIViewController {
                          "isRead" : false] as [String : Any]
         
         collectionRef.setData(basisDict)
+        
+        //************ CONVERSATION **********
+        
+        if senderConversationId.contains(chatRoomTitle) == false {
+        self.senderConversationId.append(self.chatRoomTitle)
+        dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+        }
+        if receiverConversationId.contains(chatRoomTitle) == false{
+            self.receiverConversationId.append(self.chatRoomTitle)
+            dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+        }
+       
+
+    
   
         self.allMessage.removeAll()
-          self.ChatTableView.reloadData()
+        self.ChatTableView.reloadData()
     }
     
     
@@ -231,8 +277,18 @@ class chatRoomVC: UIViewController {
                           
                           collectionRef.setData(basisDict)
                     
-//                          self.allMessage.removeAll()
-//                            self.ChatTableView.reloadData()
+
+                if self.senderConversationId.contains(self.chatRoomTitle) == false {
+                      self.senderConversationId.append(self.chatRoomTitle)
+                    self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+                      }
+                if self.receiverConversationId.contains(self.chatRoomTitle) == false{
+                          self.receiverConversationId.append(self.chatRoomTitle)
+                    self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+                      }
+                
+           
+                
             }
         }
         

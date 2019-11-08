@@ -144,7 +144,7 @@
                                         <rect key="frame" x="0.0" y="83.5" width="375" height="441.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contact" rowHeight="111" id="41q-eg-R7c" customClass="ContactTableViewCell" customModule="Bema" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contact" rowHeight="111" id="41q-eg-R7c" customClass="MessageTableViewCell" customModule="Bema" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="41q-eg-R7c" id="aIi-7s-mDR">
@@ -260,6 +260,14 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="count" destination="yaD-Qt-KnS" id="73w-Xt-5XY"/>
+                                                    <outlet property="countView" destination="6a2-KZ-Q8V" id="42G-YZ-fKt"/>
+                                                    <outlet property="message" destination="OOd-Dp-6D2" id="j05-ou-N4U"/>
+                                                    <outlet property="time" destination="uWA-Mk-Yod" id="IO9-Xz-T2I"/>
+                                                    <outlet property="userImage" destination="cPb-Wk-cXB" id="Ctv-X0-kTd"/>
+                                                    <outlet property="userName" destination="LzT-GS-y8v" id="Sv9-Cb-Q9C"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>

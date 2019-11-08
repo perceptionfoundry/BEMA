@@ -56,6 +56,10 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     var transitionValue = [String:Any]()
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -268,31 +272,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
     }
     
-//    @IBAction func snapButtonTapped(_ sender: Any) {
-//        let snapshot = sceneView.snapshot()
-//        let photo = SCSDKSnapPhoto(image: snapshot)
-//        let snap = SCSDKPhotoSnapContent(snapPhoto: photo)
-//
-//        // Sticker
-//        let sticker = SCSDKSnapSticker(stickerImage: #imageLiteral(resourceName: "snap-ghost"))
-//        snap.sticker = sticker
-//
-//        // Caption
-//        snap.caption = "Snap on Snapchat!"
-//
-//        // URL
-//        snap.attachmentUrl = "https://www.snapchat.com"
-//
-//        let api = SCSDKSnapAPI(content: snap)
-//        api.startSnapping { error in
-//
-//            if let error = error {
-//                print(error.localizedDescription)
-//            } else {
-//                // success
-//            }
-//        }
-//    }
+
     
     @IBAction func bitmojiButtonTapped(_ sender: Any) {
         // Make bitmoji background view

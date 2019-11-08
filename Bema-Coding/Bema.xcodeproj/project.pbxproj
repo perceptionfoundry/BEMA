@@ -207,6 +207,7 @@
 		F2E2235A2343135800931AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E223592343135800931AFA /* Assets.xcassets */; };
 		F2E2235D2343135800931AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E2235B2343135800931AFA /* LaunchScreen.storyboard */; };
 		F2E579D72359F2F300779073 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E579D62359F2F300779073 /* ContactList.storyboard */; };
+		F2EA7A4D2375A8BB0050F291 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA7A4C2375A8BB0050F291 /* MessageTableViewCell.swift */; };
 		F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */; };
 		F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F5234B95E800F3BA47 /* TermVC.swift */; };
 		F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */; };
@@ -422,6 +423,7 @@
 		F2E2235C2343135800931AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E2235E2343135800931AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E579D62359F2F300779073 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
+		F2EA7A4C2375A8BB0050F291 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
 		F2EE38F5234B95E800F3BA47 /* TermVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermVC.swift; sourceTree = "<group>"; };
 		F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordVC.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 				F2B4797B2345C22900DAA960 /* ContactTableViewCell.swift */,
 				F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */,
 				F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */,
+				F2EA7A4C2375A8BB0050F291 /* MessageTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1180,6 +1183,7 @@
 				F29E6987235DF20700B22AE1 /* CryptoList_AR_VC.swift in Sources */,
 				F237042D2368829F0070B366 /* Custom_TextField.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
+				F2EA7A4D2375A8BB0050F291 /* MessageTableViewCell.swift in Sources */,
 				F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */,
 				F2F4694B2358BE7B00EF6007 /* CameraViewController.swift in Sources */,
 				F2365E9E234BA2870072463E /* ManageWalletVC.swift in Sources */,
