@@ -208,6 +208,9 @@
 		F2E2235D2343135800931AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E2235B2343135800931AFA /* LaunchScreen.storyboard */; };
 		F2E579D72359F2F300779073 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E579D62359F2F300779073 /* ContactList.storyboard */; };
 		F2EA7A4D2375A8BB0050F291 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA7A4C2375A8BB0050F291 /* MessageTableViewCell.swift */; };
+		F2EBAA6A23792AEC00BC1E36 /* ContactManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2EBAA6923792AEC00BC1E36 /* ContactManager.storyboard */; };
+		F2EBAA6C23792C2900BC1E36 /* ContactManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EBAA6B23792C2900BC1E36 /* ContactManagerVC.swift */; };
+		F2EBAA6E23792C5400BC1E36 /* ContactManagerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EBAA6D23792C5400BC1E36 /* ContactManagerTableViewCell.swift */; };
 		F2EE38F4234B95D100F3BA47 /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */; };
 		F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F5234B95E800F3BA47 /* TermVC.swift */; };
 		F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */; };
@@ -424,6 +427,9 @@
 		F2E2235E2343135800931AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2E579D62359F2F300779073 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
 		F2EA7A4C2375A8BB0050F291 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		F2EBAA6923792AEC00BC1E36 /* ContactManager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactManager.storyboard; sourceTree = "<group>"; };
+		F2EBAA6B23792C2900BC1E36 /* ContactManagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManagerVC.swift; sourceTree = "<group>"; };
+		F2EBAA6D23792C5400BC1E36 /* ContactManagerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManagerTableViewCell.swift; sourceTree = "<group>"; };
 		F2EE38F3234B95D100F3BA47 /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
 		F2EE38F5234B95E800F3BA47 /* TermVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermVC.swift; sourceTree = "<group>"; };
 		F2EE38F7234B968200F3BA47 /* changePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changePasswordVC.swift; sourceTree = "<group>"; };
@@ -554,6 +560,7 @@
 		F2B479792345C1FF00DAA960 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F2EBAA6F23792EBC00BC1E36 /* ContactManager */,
 				F2A289FF234B66FF001AE873 /* Main */,
 				F2CFB5B123685AD9006970FB /* Chat */,
 				F2A28A00234B6712001AE873 /* Profile */,
@@ -573,6 +580,7 @@
 				F2365EA0234BA5030072463E /* CurrencyTableViewCell.swift */,
 				F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */,
 				F2EA7A4C2375A8BB0050F291 /* MessageTableViewCell.swift */,
+				F2EBAA6D23792C5400BC1E36 /* ContactManagerTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -743,6 +751,7 @@
 				F2F51B292358BC95001930E6 /* BitmojiAR.storyboard */,
 				F2E579D62359F2F300779073 /* ContactList.storyboard */,
 				F2CFB5AF23685735006970FB /* Chat.storyboard */,
+				F2EBAA6923792AEC00BC1E36 /* ContactManager.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -821,6 +830,14 @@
 				F2DE25BE235D981A0033CBED /* AllProtocols.swift */,
 			);
 			path = Bema;
+			sourceTree = "<group>";
+		};
+		F2EBAA6F23792EBC00BC1E36 /* ContactManager */ = {
+			isa = PBXGroup;
+			children = (
+				F2EBAA6B23792C2900BC1E36 /* ContactManagerVC.swift */,
+			);
+			path = ContactManager;
 			sourceTree = "<group>";
 		};
 		F2F469502358C23800EF6007 /* Utils */ = {
@@ -905,6 +922,7 @@
 				F2E579D72359F2F300779073 /* ContactList.storyboard in Resources */,
 				F29E6958235DE4C500B22AE1 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				F29E6979235DE4C500B22AE1 /* NewYorkMedium-Semibold.otf in Resources */,
+				F2EBAA6A23792AEC00BC1E36 /* ContactManager.storyboard in Resources */,
 				F29E691B235DE4C500B22AE1 /* MontserratAlternates-ExtraBold.otf in Resources */,
 				F29E696B235DE4C500B22AE1 /* NewYorkLarge-Regular.otf in Resources */,
 				F29E694B235DE4C500B22AE1 /* SF-Pro-Rounded-Thin.otf in Resources */,
@@ -1171,6 +1189,7 @@
 				F2EE38F6234B95E800F3BA47 /* TermVC.swift in Sources */,
 				F2811441234CE1CE005FE144 /* TrustWalletVC.swift in Sources */,
 				F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */,
+				F2EBAA6C23792C2900BC1E36 /* ContactManagerVC.swift in Sources */,
 				F21B7B8923431EE1005EE90F /* Custom_View.swift in Sources */,
 				F2BD07392344F16B00FB766F /* WalletMainVC.swift in Sources */,
 				F2BD07372344F15600FB766F /* ChatMainVC.swift in Sources */,
@@ -1181,6 +1200,7 @@
 				F23704352368894A0070B366 /* RecieverText_Cell.swift in Sources */,
 				F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */,
 				F29E6987235DF20700B22AE1 /* CryptoList_AR_VC.swift in Sources */,
+				F2EBAA6E23792C5400BC1E36 /* ContactManagerTableViewCell.swift in Sources */,
 				F237042D2368829F0070B366 /* Custom_TextField.swift in Sources */,
 				F2EE38F8234B968200F3BA47 /* changePasswordVC.swift in Sources */,
 				F2EA7A4D2375A8BB0050F291 /* MessageTableViewCell.swift in Sources */,

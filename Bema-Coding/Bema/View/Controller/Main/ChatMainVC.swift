@@ -201,6 +201,13 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     }
     
+    @IBAction func searchButtonAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "CONTACT", sender: nil)
+
+
+       }
+    
     
     
     

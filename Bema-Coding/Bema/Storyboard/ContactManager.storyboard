@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sUW-VS-4l0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Contact ManagerVC-->
+        <scene sceneID="QhZ-th-9e0">
+            <objects>
+                <viewController id="sUW-VS-4l0" customClass="ContactManagerVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Yg-hZ-Mf8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEz-cv-29B">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="163.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-DJ-fHf" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
+                                        <rect key="frame" x="20.5" y="113.5" width="373" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search_gray" translatesAutoresizingMaskIntoConstraints="NO" id="KoU-B7-IBP">
+                                                <rect key="frame" x="10" y="14" width="12" height="12"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="KoU-B7-IBP" secondAttribute="height" multiplier="1:1" id="zKS-CN-rLf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZW-bD-tsx">
+                                                <rect key="frame" x="32" y="11.5" width="321" height="17"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.89414459469999996" green="0.89403337240000003" blue="0.89804142710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="KoU-B7-IBP" firstAttribute="leading" secondItem="M4S-DJ-fHf" secondAttribute="leading" constant="10" id="2KA-rS-qla"/>
+                                            <constraint firstAttribute="trailing" secondItem="RZW-bD-tsx" secondAttribute="trailing" constant="20" id="6iO-m9-lDO"/>
+                                            <constraint firstItem="RZW-bD-tsx" firstAttribute="centerY" secondItem="KoU-B7-IBP" secondAttribute="centerY" id="BH6-a4-Tac"/>
+                                            <constraint firstItem="RZW-bD-tsx" firstAttribute="leading" secondItem="KoU-B7-IBP" secondAttribute="trailing" constant="10" id="ev0-wI-8tz"/>
+                                            <constraint firstAttribute="height" constant="40" id="wKs-Ec-bff"/>
+                                            <constraint firstItem="KoU-B7-IBP" firstAttribute="centerY" secondItem="M4S-DJ-fHf" secondAttribute="centerY" id="wkN-X8-gn4"/>
+                                            <constraint firstItem="KoU-B7-IBP" firstAttribute="height" secondItem="M4S-DJ-fHf" secondAttribute="height" multiplier="0.3" id="zTc-9Q-swB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BEMA_small" translatesAutoresizingMaskIntoConstraints="NO" id="DVb-Qb-mXB">
+                                        <rect key="frame" x="182.5" y="54.5" width="49" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DVb-Qb-mXB" secondAttribute="height" multiplier="1:1" id="dxT-Bn-HVt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK4-9x-4rg">
+                                        <rect key="frame" x="20.5" y="64" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="kzT-Dj-Kqr"/>
+                                            <constraint firstAttribute="width" secondItem="AK4-9x-4rg" secondAttribute="height" multiplier="1:1" id="rHy-gd-vdh"/>
+                                        </constraints>
+                                        <state key="normal" image="back_blue"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="sUW-VS-4l0" eventType="touchUpInside" id="Duq-ev-dNf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="M4S-DJ-fHf" secondAttribute="bottom" constant="10" id="0op-OG-PTN"/>
+                                    <constraint firstItem="AK4-9x-4rg" firstAttribute="leading" secondItem="M4S-DJ-fHf" secondAttribute="leading" id="2VN-u2-yZx"/>
+                                    <constraint firstItem="DVb-Qb-mXB" firstAttribute="height" secondItem="VEz-cv-29B" secondAttribute="height" multiplier="0.3" id="6f6-21-8zA"/>
+                                    <constraint firstItem="M4S-DJ-fHf" firstAttribute="centerX" secondItem="VEz-cv-29B" secondAttribute="centerX" id="DdQ-dd-ep3"/>
+                                    <constraint firstItem="M4S-DJ-fHf" firstAttribute="width" secondItem="VEz-cv-29B" secondAttribute="width" multiplier="0.9" id="Ggf-Uc-JlP"/>
+                                    <constraint firstItem="M4S-DJ-fHf" firstAttribute="top" secondItem="DVb-Qb-mXB" secondAttribute="bottom" constant="10" id="Wwe-yU-Evr"/>
+                                    <constraint firstItem="AK4-9x-4rg" firstAttribute="centerY" secondItem="DVb-Qb-mXB" secondAttribute="centerY" id="mIe-Ss-fIp"/>
+                                    <constraint firstItem="DVb-Qb-mXB" firstAttribute="centerX" secondItem="M4S-DJ-fHf" secondAttribute="centerX" id="nUM-qu-P5c"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGL-vd-x5e">
+                                <rect key="frame" x="52.5" y="183.5" width="64.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ya-9s-SSI">
+                                <rect key="frame" x="0.0" y="201" width="414" height="661"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CONTACT" rowHeight="75" id="RVi-3v-BWO" customClass="ContactManagerTableViewCell" customModule="Bema" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RVi-3v-BWO" id="Vnb-Vz-sxz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jse-tP-xij" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
+                                                    <rect key="frame" x="31" y="15" width="352" height="45"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dp" translatesAutoresizingMaskIntoConstraints="NO" id="YTi-1d-JM0" customClass="Custom_ImageView" customModule="Bema" customModuleProvider="target">
+                                                            <rect key="frame" x="25" y="7.5" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="YTi-1d-JM0" secondAttribute="height" multiplier="1:1" id="LCa-Y6-ljP"/>
+                                                                <constraint firstAttribute="height" constant="30" id="Svy-4Q-45Y"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy4-qU-voe">
+                                                            <rect key="frame" x="65" y="15" width="193.5" height="15"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="oy4-qU-voe" firstAttribute="leading" secondItem="YTi-1d-JM0" secondAttribute="trailing" constant="10" id="9Ol-Tr-adb"/>
+                                                        <constraint firstItem="oy4-qU-voe" firstAttribute="width" secondItem="Jse-tP-xij" secondAttribute="width" multiplier="0.55" id="Dep-2W-rQP"/>
+                                                        <constraint firstItem="YTi-1d-JM0" firstAttribute="leading" secondItem="Jse-tP-xij" secondAttribute="leading" constant="25" id="gLY-uH-Uga"/>
+                                                        <constraint firstItem="oy4-qU-voe" firstAttribute="centerY" secondItem="YTi-1d-JM0" secondAttribute="centerY" id="nox-3z-58t"/>
+                                                        <constraint firstItem="YTi-1d-JM0" firstAttribute="centerY" secondItem="Jse-tP-xij" secondAttribute="centerY" id="pA6-5v-Rkg"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.89414459469999996" green="0.89403337240000003" blue="0.89804142710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="1" height="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbd-wi-1WJ" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                                    <rect key="frame" x="293.5" y="22.5" width="70.5" height="30"/>
+                                                    <color key="backgroundColor" red="0.072999999999999995" green="0.624" blue="0.61599999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Add">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Jse-tP-xij" firstAttribute="centerX" secondItem="Vnb-Vz-sxz" secondAttribute="centerX" id="2Ma-iu-Vyd"/>
+                                                <constraint firstItem="Mbd-wi-1WJ" firstAttribute="centerY" secondItem="oy4-qU-voe" secondAttribute="centerY" id="Dwf-t1-T3U"/>
+                                                <constraint firstItem="Jse-tP-xij" firstAttribute="centerY" secondItem="Vnb-Vz-sxz" secondAttribute="centerY" id="Gfh-dQ-Fkw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mbd-wi-1WJ" secondAttribute="trailing" constant="30" id="J62-Fq-cpZ"/>
+                                                <constraint firstItem="Mbd-wi-1WJ" firstAttribute="width" secondItem="Jse-tP-xij" secondAttribute="width" multiplier="0.2" id="Rrz-Qt-EdT"/>
+                                                <constraint firstItem="Jse-tP-xij" firstAttribute="height" secondItem="Vnb-Vz-sxz" secondAttribute="height" multiplier="0.6" id="mik-fG-RCj"/>
+                                                <constraint firstItem="Jse-tP-xij" firstAttribute="width" secondItem="Vnb-Vz-sxz" secondAttribute="width" multiplier="0.85" id="xI9-Sn-cIk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="actionButton" destination="Mbd-wi-1WJ" id="mvF-dk-6gV"/>
+                                            <outlet property="userImage" destination="YTi-1d-JM0" id="ZBB-A0-LDO"/>
+                                            <outlet property="userName" destination="oy4-qU-voe" id="m1H-p3-RWk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9490322471" green="0.94899672270000002" blue="0.94902092220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="VEz-cv-29B" firstAttribute="height" secondItem="E4Y-v7-3Mv" secondAttribute="height" multiplier="0.2" id="1XX-xt-BxB"/>
+                            <constraint firstItem="E4Y-v7-3Mv" firstAttribute="trailing" secondItem="VEz-cv-29B" secondAttribute="trailing" id="905-zU-2Wp"/>
+                            <constraint firstItem="kGL-vd-x5e" firstAttribute="top" secondItem="VEz-cv-29B" secondAttribute="bottom" constant="20" id="Bih-zW-7da"/>
+                            <constraint firstItem="kGL-vd-x5e" firstAttribute="leading" secondItem="RZW-bD-tsx" secondAttribute="leading" id="Fxm-Iy-DAy"/>
+                            <constraint firstItem="E4Y-v7-3Mv" firstAttribute="bottom" secondItem="4ya-9s-SSI" secondAttribute="bottom" id="JvI-wX-yIY"/>
+                            <constraint firstItem="VEz-cv-29B" firstAttribute="top" secondItem="5Yg-hZ-Mf8" secondAttribute="top" id="R76-AZ-Zsc"/>
+                            <constraint firstItem="VEz-cv-29B" firstAttribute="leading" secondItem="E4Y-v7-3Mv" secondAttribute="leading" id="TN3-Rl-rYO"/>
+                            <constraint firstItem="4ya-9s-SSI" firstAttribute="leading" secondItem="E4Y-v7-3Mv" secondAttribute="leading" id="Upa-2B-PqM"/>
+                            <constraint firstItem="4ya-9s-SSI" firstAttribute="top" secondItem="kGL-vd-x5e" secondAttribute="bottom" id="jdp-vz-Lm8"/>
+                            <constraint firstItem="E4Y-v7-3Mv" firstAttribute="trailing" secondItem="4ya-9s-SSI" secondAttribute="trailing" id="ldh-pf-4px"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E4Y-v7-3Mv"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactListTable" destination="4ya-9s-SSI" id="Hwu-dS-TvH"/>
+                        <outlet property="searchTF" destination="RZW-bD-tsx" id="K2Y-GB-YcX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ui5-2g-s5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101.44927536231884" y="31.473214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BEMA_small" width="38" height="46"/>
+        <image name="Search_gray" width="14" height="14"/>
+        <image name="back_blue" width="12" height="20.5"/>
+        <image name="dp" width="30" height="30"/>
+    </resources>
+</document>
