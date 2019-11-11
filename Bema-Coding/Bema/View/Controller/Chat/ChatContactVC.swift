@@ -86,6 +86,8 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                      
                      let getValue = value.data()
                      
+                          if (getValue["isDeleted"] as! Bool ) == false{
+                            
                      let id = getValue["friendId"] as! String
                      
                      print(id)
@@ -110,7 +112,7 @@ class ChatContactVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                         }
                          
                      }
-                    
+                }
 
                  }
              }

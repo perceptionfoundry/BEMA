@@ -11,7 +11,8 @@ import Firebase
 import CodableFirebase
 
 
-class User: Codable{
+class User: Codable,Equatable{
+   
     
     
     var addedDate: Timestamp!
@@ -23,6 +24,12 @@ class User: Codable{
     
     
     static var userDetail = User()
+    
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+           return lhs.userId == rhs.userId
+       }
+       
 }
 
 

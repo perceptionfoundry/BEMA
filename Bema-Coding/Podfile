@@ -27,4 +27,7 @@ pod 'SDWebImage'
 
 pod 'CodableFirebase'
 
+
+# pod 'ARVideoKit'
+
 end
