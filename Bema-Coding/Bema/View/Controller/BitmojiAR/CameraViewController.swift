@@ -12,18 +12,17 @@ import ARKit
 import SCSDKCreativeKit
 import SCSDKBitmojiKit
 import LocalAuthentication
+import ARVideoKit
+import Photos
 
 
 
 
 
 
-class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransition, DoubleSegueProtocol {
- 
+
+class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransition, DoubleSegueProtocol, RenderARDelegate, RecordARDelegate {
     
-    
-    
-
     
     
     @IBOutlet weak var sceneView: ARSCNView!
@@ -37,9 +36,9 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     @IBOutlet weak var flipButton: UIButton!
     @IBOutlet weak var gallery: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
-
     
-
+    
+    
     
     
     
@@ -57,6 +56,9 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     var transitionValue = [String:Any]()
     
     
+    //******* ARVIdeo
+    var recorder:RecordAR?
+    var screenShotImage : UIImage?
     
     
     
@@ -65,13 +67,45 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
         cryptoView.isHidden = true
         sendButton.isHidden = true
-
+        
+        
+        
+        
+        
+        recorder = RecordAR(ARSceneKit: sceneView)
+        
+        
+        
+        /*----👇---- ARVideoKit Configuration ----👇----*/
+        
+        // Set the recorder's delegate
+        recorder?.delegate = self
+        
+        // Set the renderer's delegate
+        recorder?.renderAR = self
+        
+        // Configure the renderer to perform additional image & video processing 👁
+        recorder?.onlyRenderWhileRecording = false
+        
+        // Configure ARKit content mode. Default is .auto
+        recorder?.contentMode = .aspectFill
+        
+        //record or photo add environment light rendering, Default is false
+        recorder?.enableAdjustEnvironmentLighting = true
+        
+        // Set the UIViewController orientations
+        recorder?.inputViewOrientations = [.landscapeLeft, .landscapeRight, .portrait]
+        // Configure RecordAR to store media files in local app directory
+        recorder?.deleteCacheWhenExported = false
+        
+        
+        
         // fetch your avatar image.
         SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
             DispatchQueue.main.async {
                 if let avatarURL = avatarURL {
                     
-//                    self.iconView.load(from: avatarURL)
+                    //                    self.iconView.load(from: avatarURL)
                 }
             }
         }
@@ -81,72 +115,74 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     //******** PERSONALIZE FUNCTION ******
     
     
-        private func localAuth(){
-                 let context = LAContext()
-                            
-                            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-                                
-                                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
-                                    
-                                    if state{
-                                        // SEGUE
-                                      DispatchQueue.main.async {
-                                        
-                                        
-                                        self.performSegue(withIdentifier: "Next", sender: nil)
-                                        }
-                                    }
-                                    else{
-    //                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
-                                    }
-                                }
-                            }
-                           
-                            else{
-                                self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
-                            }
+    private func localAuth(){
+        let context = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
+                
+                if state{
+                    // SEGUE
+                    DispatchQueue.main.async {
+                        
+                        
+                        self.performSegue(withIdentifier: "Next", sender: nil)
+                    }
+                }
+                else{
+                    //                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
+                }
+            }
         }
-
+            
+        else{
+            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
+        }
+    }
+    
     
     
     
     
     func ShowAlert(Title : String, Message: String){
-          let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
-          let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
-          alertVC.addAction(Dismiss)
-          
-          self.present(alertVC, animated: true, completion: nil)
-      }
+        let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+        let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        alertVC.addAction(Dismiss)
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
     
     
     
     //***** PROTOCOL **********
-      
-      func FetchContact(userDetail: [String : Any]) {
-          
+    
+    func FetchContact(userDetail: [String : Any]) {
+        
         
         self.showBitmojiList()
-      }
+    }
     
     
     
     func ConfiguredCrypto(value: [String : String]) {
-          
-          self.transitionValue = value
-          
-          cryptoimage.image = UIImage(named: value["NAME"]!)
-          cryptoAmount.text = value["AMOUNT"]
-          
-          cryptoCurrency.isHidden = true
-          cryptoView.isHidden = false
-      }
+        
+        self.transitionValue = value
+        
+        cryptoimage.image = UIImage(named: value["NAME"]!)
+        cryptoAmount.text = value["AMOUNT"]
+        
+        cryptoCurrency.isHidden = true
+        cryptoView.isHidden = false
+    }
     
     
     func quit() {
         self.navigationController?.popViewController(animated: true)
-     }
+    }
     
+    
+    //*********
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -160,6 +196,17 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         super.viewWillDisappear(animated)
         
         sceneView.session.pause()
+        
+        
+        if recorder?.status == .recording {
+            recorder?.stopAndExport()
+        }
+        recorder?.onlyRenderWhileRecording = true
+        recorder?.prepare(ARWorldTrackingConfiguration())
+        
+        // Switch off the orientation lock for UIViewControllers with AR Scenes
+        recorder?.rest()
+        
     }
     
     
@@ -186,33 +233,68 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     }
     
     private func showBitmojiList(){
-            // Make bitmoji background view
-            let viewHeight: CGFloat = 300
-            let screen: CGRect = UIScreen.main.bounds
-            let backgroundView = UIView(
-                frame: CGRect(
-                    x: 0,
-                    y: screen.height - viewHeight,
-                    width: screen.width,
-                    height: viewHeight
-                )
+        // Make bitmoji background view
+        let viewHeight: CGFloat = 300
+        let screen: CGRect = UIScreen.main.bounds
+        let backgroundView = UIView(
+            frame: CGRect(
+                x: 0,
+                y: screen.height - viewHeight,
+                width: screen.width,
+                height: viewHeight
             )
-            view.addSubview(backgroundView)
-            bitmojiSelectionView = backgroundView
-            
-            // add child ViewController
-            let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
-            stickerPickerVC.delegate = self
-    //        addChildViewController(stickerPickerVC)
-    //        backgroundView.addSubview(stickerPickerVC.view)
-    //        stickerPickerVC.didMove(toParentViewController: self)
-                    present(stickerPickerVC, animated: true, completion: nil)
-
+        )
+        view.addSubview(backgroundView)
+        bitmojiSelectionView = backgroundView
+        
+        // add child ViewController
+        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+        stickerPickerVC.delegate = self
+        //        addChildViewController(stickerPickerVC)
+        //        backgroundView.addSubview(stickerPickerVC.view)
+        //        stickerPickerVC.didMove(toParentViewController: self)
+        present(stickerPickerVC, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+    func exportMessage(success: Bool, status:PHAuthorizationStatus) {
+        if success {
+            let alert = UIAlertController(title: "Exported", message: "Media exported to camera roll successfully!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Awesome", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else if status == .denied || status == .restricted || status == .notDetermined {
+            let errorView = UIAlertController(title: "😅", message: "Please allow access to the photo library in order to save this media file.", preferredStyle: .alert)
+            let settingsBtn = UIAlertAction(title: "Open Settings", style: .cancel) { (_) -> Void in
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                        })
+                    } else {
+                        UIApplication.shared.openURL(URL(string:UIApplication.openSettingsURLString)!)
+                    }
+                }
+            }
+            errorView.addAction(UIAlertAction(title: "Later", style: UIAlertAction.Style.default, handler: {
+                (UIAlertAction)in
+            }))
+            errorView.addAction(settingsBtn)
+            self.present(errorView, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Exporting Failed", message: "There was an error while exporting your media file.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
+    }
     
     
     //*********** OUTLET ACTION *************
-    @IBAction func ARSnapButtonAction(_ sender: Any) {
+    @IBAction func ARSnapButtonAction(_ sender: UIButton) {
         
         cryptoView.center.y = cryptoView.center.y - 50
         sendButton.isHidden = false
@@ -221,6 +303,64 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         flipButton.isHidden = true
         gallery.isHidden = true
         cameraButton.isHidden = true
+        
+        
+        if sender.tag == 0 {
+            //Photo
+            if recorder?.status == .readyToRecord {
+                let image = self.recorder?.photo()
+                
+                self.screenShotImage = image
+                
+                self.recorder?.export(UIImage: image) { saved, status in
+                    if saved {
+                        // Inform user photo has exported successfully
+                        self.exportMessage(success: saved, status: status)
+                    }
+                }
+            }
+        }
+        
+        //        else if sender.tag == 1 {
+        //                   //Live Photo
+        //                   if recorder?.status == .readyToRecord {
+        //                       caprturingQueue.async {
+        //                           self.recorder?.livePhoto(export: true) { ready, photo, status, saved in
+        //                               /*
+        //                                if ready {
+        //                                // Do something with the `photo` (PHLivePhotoPlus)
+        //                                }
+        //                                */
+        //
+        //                               if saved {
+        //                                   // Inform user Live Photo has exported successfully
+        //                                   self.exportMessage(success: saved, status: status)
+        //                               }
+        //                           }
+        //                       }
+        //                   }
+        //               }
+        
+        //        else if sender.tag == 2 {
+        //                   //GIF
+        //                   if recorder?.status == .readyToRecord {
+        //                       recorder?.gif(forDuration: 3.0, export: true) { ready, gifPath, status, saved in
+        //                           /*
+        //                           if ready {
+        //                               // Do something with the `gifPath`
+        //                           }
+        //                            */
+        //
+        //                           if saved {
+        //                               // Inform user GIF image has exported successfully
+        //                               self.exportMessage(success: saved, status: status)
+        //                           }
+        //                       }
+        //                   }
+        //               }
+        
+        
+        
         
     }
     
@@ -238,10 +378,10 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     @IBAction func sendAction(_ sender: Any) {
         
-       
+        
         
         localAuth()
-       }
+    }
     
     //************** PREPARE SEGUE ****
     
@@ -251,17 +391,17 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
             
             dest.contactProtocol = self
         }
-        
+            
         else if segue.identifier == "Crypto_Segue"{
             let dest = segue.destination as! CryptoList_AR_VC
-                      
-                      dest.cryptoProtocol = self
+            
+            dest.cryptoProtocol = self
         }
-        
+            
         else if segue.identifier == "Next"{
             let dest = segue.destination as! AR_ConfirmVC
-                                
-                                dest.quitProtocol = self
+            
+            dest.quitProtocol = self
         }
         
     }
@@ -272,7 +412,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
     }
     
-
+    
     
     @IBAction func bitmojiButtonTapped(_ sender: Any) {
         // Make bitmoji background view
@@ -292,11 +432,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         // add child ViewController
         let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
         stickerPickerVC.delegate = self
-//        addChildViewController(stickerPickerVC)
-//        backgroundView.addSubview(stickerPickerVC.view)
-//        stickerPickerVC.didMove(toParentViewController: self)
-                present(stickerPickerVC, animated: true, completion: nil)
-
+        present(stickerPickerVC, animated: true, completion: nil)
+        
     }
 }
 
@@ -312,11 +449,11 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
             DispatchQueue.main.async {
                 self.setImageToScene(image: image)
                 self.dismiss(animated: true, completion: nil)
-
+                
                 self.bitmojiSelectionView?.removeFromSuperview()
             }
         }
-    
+        
     }
     
     
@@ -341,3 +478,27 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
 
 
 
+
+//MARK: - ARVideoKit Delegate Methods
+extension CameraViewController {
+    func frame(didRender buffer: CVPixelBuffer, with time: CMTime, using rawBuffer: CVPixelBuffer) {
+        // Do some image/video processing.
+    }
+    
+    func recorder(didEndRecording path: URL, with noError: Bool) {
+        if noError {
+            // Do something with the video path.
+        }
+    }
+    
+    func recorder(didFailRecording error: Error?, and status: String) {
+        // Inform user an error occurred while recording.
+    }
+    
+    func recorder(willEnterBackground status: RecordARStatus) {
+        // Use this method to pause or stop video recording. Check [applicationWillResignActive(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622950-applicationwillresignactive) for more information.
+        if status == .recording {
+            recorder?.stopAndExport()
+        }
+    }
+}

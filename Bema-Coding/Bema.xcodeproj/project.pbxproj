@@ -28,6 +28,8 @@
 		F237044023688E200070B366 /* RecieverImage_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F237043E23688E200070B366 /* RecieverImage_Cell.xib */; };
 		F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE4234332D60015E658 /* SignInVC.swift */; };
 		F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE62343342B0015E658 /* UserEntity.swift */; };
+		F2518CC92379B8700043294B /* ARVideoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2518CC82379B81A0043294B /* ARVideoKit.framework */; };
+		F2518CCA2379B8700043294B /* ARVideoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2518CC82379B81A0043294B /* ARVideoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F25197E5234CF6DE00973F65 /* SetBitmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */; };
 		F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E6234CF6F800973F65 /* InviteVC.swift */; };
 		F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E8234CF72F00973F65 /* LogoutVc.swift */; };
@@ -221,6 +223,30 @@
 		F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2F764C6234B4A71001A981F /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F2518CC72379B81A0043294B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FBD604DA1FA969DD00EC9804;
+			remoteInfo = ARVideoKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2518CCB2379B8700043294B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2518CCA2379B8700043294B /* ARVideoKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4B3A156850A34FF59B5014DA /* Pods_Bema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB8C366F6C2CC8FE928F587 /* Pods-Bema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bema.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bema/Pods-Bema.debug.xcconfig"; sourceTree = "<group>"; };
@@ -337,6 +363,7 @@
 		F237043E23688E200070B366 /* RecieverImage_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecieverImage_Cell.xib; sourceTree = "<group>"; };
 		F24E1EE4234332D60015E658 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		F24E1EE62343342B0015E658 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ARVideoKit.xcodeproj; path = "../../../../../../Downloads/ARVideoKit-swift_5/ARVideoKit.xcodeproj"; sourceTree = "<group>"; };
 		F25197D2234CEE9100973F65 /* Poppins-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.otf"; sourceTree = "<group>"; };
 		F25197D3234CEE9100973F65 /* Poppins-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.otf"; sourceTree = "<group>"; };
 		F25197D4234CEE9200973F65 /* Poppins-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.otf"; sourceTree = "<group>"; };
@@ -445,6 +472,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2518CC92379B8700043294B /* ARVideoKit.framework in Frameworks */,
 				7CD5E49A3F21B10398A9F00C /* Pods_Bema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +559,22 @@
 				F2B479792345C1FF00DAA960 /* Controller */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F2518CC22379B8060043294B /* ARVideo */ = {
+			isa = PBXGroup;
+			children = (
+				F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */,
+			);
+			path = ARVideo;
+			sourceTree = "<group>";
+		};
+		F2518CC42379B81A0043294B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2518CC82379B81A0043294B /* ARVideoKit.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F2A289FF234B66FF001AE873 /* Main */ = {
@@ -814,6 +858,7 @@
 		F2E2234F2343135700931AFA /* Bema */ = {
 			isa = PBXGroup;
 			children = (
+				F2518CC22379B8060043294B /* ARVideo */,
 				F2F469502358C23800EF6007 /* Utils */,
 				F2C88D612344ED4000F3CE2B /* Storyboard */,
 				F24E1EE3234332520015E658 /* View */,
@@ -870,6 +915,7 @@
 				F2E2234A2343135700931AFA /* Frameworks */,
 				F2E2234B2343135700931AFA /* Resources */,
 				17B0C63C9DF82360C80398D6 /* [CP] Embed Pods Frameworks */,
+				F2518CCB2379B8700043294B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -906,12 +952,28 @@
 			mainGroup = F2E223442343135700931AFA;
 			productRefGroup = F2E2234E2343135700931AFA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F2518CC42379B81A0043294B /* Products */;
+					ProjectRef = F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F2E2234C2343135700931AFA /* Bema */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F2518CC82379B81A0043294B /* ARVideoKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ARVideoKit.framework;
+			remoteRef = F2518CC72379B81A0043294B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F2E2234B2343135700931AFA /* Resources */ = {
@@ -1292,7 +1354,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -1346,7 +1408,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

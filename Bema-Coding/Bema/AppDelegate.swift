@@ -10,7 +10,7 @@ import UIKit
 import SCSDKLoginKit
 import IQKeyboardManagerSwift
 import Firebase
-
+import ARVideoKit
 
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -68,7 +68,9 @@ import Firebase
       }
     
     
-    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+    return ViewAR.orientation
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
