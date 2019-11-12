@@ -7,21 +7,56 @@
 //
 
 import UIKit
+import LocalAuthentication
+import Firebase
 
 class AR_ConfirmVC: UIViewController {
-
+    
     
     @IBOutlet weak var confirmView: Custom_View!
     @IBOutlet weak var successfulView: Custom_View!
-
+    @IBOutlet weak var screenShot: UIImageView!
     
-    var quitProtocol: DoubleSegueProtocol!
+    
+    
+    
+    var chatRoomTitle = ""
+    var senderDetail = globalVariable.userSnapDetail
+    var recieverDetail : User?
+    var arImage : UIImage?
+    let saveImageVM = SaveImageViewModel()
+    var recieverId = ""
+      var reciverImage : UIImage?
+      var senderId = ""
+    var senderConversationId = [String]()
+     var receiverConversationId = [String]()
+    
+    let dbStore = Firestore.firestore()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        screenShot.image = arImage!
+        
         successfulView.isHidden = true
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.recieverId = (self.recieverDetail?.userId)!
+              self.senderId = (self.senderDetail?.userId)!
+              
+              if senderId > recieverId{
+                  
+                  self.chatRoomTitle = "\(senderId)_\(recieverId)"
+              }
+              else{
+                  self.chatRoomTitle = "\(recieverId)_\(senderId)"
+              }
     }
     
     @IBAction func yesButtonAction(_ sender: Any) {
@@ -29,21 +64,130 @@ class AR_ConfirmVC: UIViewController {
         successfulView.isHidden = false
         confirmView.isHidden = true
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.dismiss(animated: true, completion: nil)
-            self.quitProtocol.quit()
-            
+        localAuth()
         
-            
-
-        }
-
     }
     
     
     
     @IBAction func noButtonAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        
+        
+        
     }
     
+    
+    
+    //******** PERSONALIZE FUNCTION ******
+    
+    
+    private func localAuth(){
+        let context = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
+                
+                if state{
+                    // SEGUE
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        //                                self.navigationController?.popViewController(animated: true)
+                        
+                        self.sendMedia()
+                        
+                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+                        
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        
+                        
+                    }
+                    
+                    
+                }
+                else{
+                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
+                }
+            }
+        }
+            
+        else{
+            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
+        }
+    }
+    
+    
+    
+    
+    //**************** SEND MEDIA FILE ***************
+    func sendMedia(){
+        
+        let dbStore = Firestore.firestore()
+        
+        
+        let collectionRef = dbStore.collection("ChatRoom").document()
+        
+        let collectionId = collectionRef.documentID
+        
+        saveImageVM.SaveImageViewModel(collectionID: collectionId, Title: "IMG_\(collectionId)", selectedImage: self.arImage!) { (imageURl, status, err) in
+            
+            if status{
+                let urlString = imageURl!
+                
+                // ****** CREATE MESSAGE INFO *****
+                
+                let basisDict = ["addedOn": FieldValue.serverTimestamp(),
+                                 "chatId": collectionRef.documentID,
+                                 "roomId": self.chatRoomTitle,
+                                 "senderId" : self.senderId,
+                                 "receiverId" : self.recieverId,
+                                 "senderName": (self.senderDetail?.displayName)!,
+                                 "recieverName" : (self.recieverDetail?.displayName)!,
+                                 "senderImageURL" : (self.senderDetail?.imageUrl)!,
+                                 "recieverImageURL" : (self.recieverDetail?.imageUrl)!,
+                                 "readerID":self.recieverId,
+                                 "context"  : urlString,
+                                 "composerId" : self.senderId,
+                                 "type": "MEDIA",
+                                 "isDeleted": false,
+                                 "isRead" : false] as [String : Any]
+                
+                
+                print(basisDict)
+                
+//                collectionRef.setData(basisDict)
+//
+//
+//                if self.senderConversationId.contains(self.chatRoomTitle) == false {
+//                    self.senderConversationId.append(self.chatRoomTitle)
+//                    self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+//                }
+//                if self.receiverConversationId.contains(self.chatRoomTitle) == false{
+//                    self.receiverConversationId.append(self.chatRoomTitle)
+//                    self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+//                }
+                
+                
+                
+            }
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    func ShowAlert(Title : String, Message: String){
+        let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+        let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        alertVC.addAction(Dismiss)
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
 }

@@ -7,80 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1BB6FFB2-F984-4A01-B781-6311EB8B28A9"
+            uuid = "7BF18B89-417F-4E66-A29D-46D57DC38A38"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bema/View/Controller/BitmojiAR/CameraViewController.swift"
+            filePath = "Bema/View/Controller/BitmojiAR/AR_ConfirmVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
-            landmarkName = "ARSnapButtonAction(_:)"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "sendMedia()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7872ABB4-1303-4CEC-9F6C-DD571675EBC5"
+            uuid = "7397A114-F6F8-4F41-B698-26EF1B6B96C4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bema/View/Controller/BitmojiAR/CameraViewController.swift"
+            filePath = "Bema/View/Controller/BitmojiAR/AR_ConfirmVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
-            landmarkName = "ARSnapButtonAction(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7872ABB4-1303-4CEC-9F6C-DD571675EBC5 - cfbedc1fe92ef19f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bema.CameraViewController.ARSnapButtonAction(__C.UIButton) -&gt; ()"
-                  moduleName = "Bema"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shahrukh/Documents/GitHub/BEMA/Bema-Coding/Bema/View/Controller/BitmojiAR/CameraViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "315"
-                  endingLineNumber = "315"
-                  offsetFromSymbolStart = "2856">
-               </Location>
-               <Location
-                  uuid = "7872ABB4-1303-4CEC-9F6C-DD571675EBC5 - f519cb0cac98a2b7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, __C.PHAuthorizationStatus) -&gt; () in Bema.CameraViewController.ARSnapButtonAction(__C.UIButton) -&gt; ()"
-                  moduleName = "Bema"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shahrukh/Documents/GitHub/BEMA/Bema-Coding/Bema/View/Controller/BitmojiAR/CameraViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "316"
-                  endingLineNumber = "316"
-                  offsetFromSymbolStart = "148">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3E259007-79F3-4B39-BF3B-43963F6D959D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bema/View/Controller/BitmojiAR/CameraViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
-            landmarkName = "ARSnapButtonAction(_:)"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "sendMedia()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

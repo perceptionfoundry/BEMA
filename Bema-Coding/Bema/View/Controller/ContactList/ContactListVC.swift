@@ -20,7 +20,7 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
   
     var contactProtocol : ContactList_Protocol!
-    var selectedIndex = 0
+    var selectedIndex = -1
     var dbStore = Firestore.firestore()
     
     
@@ -76,7 +76,6 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                        
                        let fetchData = contactResult?.data()
                        
-                       print(fetchData)
                        
                        let friend = try! FirestoreDecoder().decode(User.self, from: fetchData!)
                        
@@ -123,7 +122,13 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            
-           self.selectedIndex = indexPath.row
+        self.selectedIndex = indexPath.row
+        
+        let userDetail = allContact[indexPath.row]
+        
+        contactProtocol.FetchContact(userDetail: userDetail)
+        self.navigationController?.popViewController(animated: true)
+
 
            self.contactListTable.reloadData()
        }
@@ -137,7 +142,7 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     //************** OUTLET ******************
     @IBAction func backButtonAction(_ sender: Any) {
         
-        contactProtocol.FetchContact(userDetail: [:])
+        
         self.navigationController?.popViewController(animated: true)
     }
     

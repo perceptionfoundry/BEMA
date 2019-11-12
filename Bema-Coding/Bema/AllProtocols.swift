@@ -12,7 +12,7 @@ import Foundation
 
 protocol ContactList_Protocol {
     
-    func FetchContact(userDetail:[String:Any])
+    func FetchContact(userDetail:User)
 }
 
 

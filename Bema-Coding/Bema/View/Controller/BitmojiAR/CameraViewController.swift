@@ -32,14 +32,16 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     @IBOutlet weak var cryptoAmount: UILabel!
     
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var cryptoButton:UIButton!
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var flipButton: UIButton!
     @IBOutlet weak var gallery: UIImageView!
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var screenShotView:UIImageView!
     
     
     
-    
+    var reciever : User?
     
     
     
@@ -65,13 +67,169 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cryptoView.isHidden = true
-        sendButton.isHidden = true
+                cryptoView.isHidden = true
+                sendButton.isHidden = true
+                screenShotView.isHidden = true
+        //
+        //
+        //
+        //
+        //
+        //
+        //        recorder = RecordAR(ARSceneKit: sceneView)
+        //
+        //
+        //
+        //        /*----👇---- ARVideoKit Configuration ----👇----*/
+        //
+        //        // Set the recorder's delegate
+        //        recorder?.delegate = self
+        //
+        //        // Set the renderer's delegate
+        //        recorder?.renderAR = self
+        //
+        //        // Configure the renderer to perform additional image & video processing 👁
+        //        recorder?.onlyRenderWhileRecording = false
+        //
+        //        // Configure ARKit content mode. Default is .auto
+        //        recorder?.contentMode = .aspectFill
+        //
+        //        //record or photo add environment light rendering, Default is false
+        //        recorder?.enableAdjustEnvironmentLighting = true
+        //
+        //        // Set the UIViewController orientations
+        //        recorder?.inputViewOrientations = [.landscapeLeft, .landscapeRight, .portrait]
+        //        // Configure RecordAR to store media files in local app directory
+        //        recorder?.deleteCacheWhenExported = false
+        //
+        //
+        //
+        //        // fetch your avatar image.
+        //        SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
+        //            DispatchQueue.main.async {
+        //                if let avatarURL = avatarURL {
+        //
+        //                    //                    self.iconView.load(from: avatarURL)
+        //                }
+        //            }
+        //        }
+    }
+    
+    
+    
+    
+    //    //******** PERSONALIZE FUNCTION ******
+    //
+    //
+    //    private func localAuth(){
+    //        let context = LAContext()
+    //
+    //        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+    //
+    //            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
+    //
+    //                if state{
+    //                    // SEGUE
+    //
+    //
+    //                    DispatchQueue.main.async {
+    //
+    ////                        self.navigationController?.popViewController(animated: true)
+    //                        self.performSegue(withIdentifier: "Next", sender: nil)
+    //                    }
+    //                }
+    //                else{
+    //                    //                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
+    //                }
+    //            }
+    //        }
+    //
+    //        else{
+    //            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
+    //        }
+    //    }
+    
+    
+    
+    
+    
+    
+    func ShowAlert(Title : String, Message: String){
+        let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+        let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        alertVC.addAction(Dismiss)
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    
+    
+    //***** PROTOCOL **********
+    
+    func FetchContact(userDetail: User) {
+        
+        self.reciever = userDetail
+        
+        print(self.reciever?.displayName)
+        
+        self.showBitmojiList()
+    }
+    
+    
+    
+    func ConfiguredCrypto(value: [String : String]) {
+        
+        self.transitionValue = value
+        
+        cryptoimage.image = UIImage(named: value["NAME"]!)
+        cryptoAmount.text = value["AMOUNT"]
+        
+        cryptoCurrency.isHidden = true
+        cryptoView.isHidden = false
+    }
+    
+    
+    
+    func quit() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    //*********
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         
+        self.initialConfigure()
+        
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        sceneView.session.pause()
         
         
+        if recorder?.status == .recording {
+            recorder?.stopAndExport()
+        }
+        recorder?.onlyRenderWhileRecording = true
+        recorder?.prepare(ARWorldTrackingConfiguration())
         
+        // Switch off the orientation lock for UIViewControllers with AR Scenes
+        recorder?.rest()
+        
+    }
+    
+    
+    
+    func initialConfigure(){
+        
+    
         recorder = RecordAR(ARSceneKit: sceneView)
         
         
@@ -103,109 +261,12 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         // fetch your avatar image.
         SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
             DispatchQueue.main.async {
-                if let avatarURL = avatarURL {
-                    
-                    //                    self.iconView.load(from: avatarURL)
-                }
+//                if let avatarURL = avatarURL {
+//                    
+//                    //                    self.iconView.load(from: avatarURL)
+//                }
             }
         }
-    }
-    
-    
-    //******** PERSONALIZE FUNCTION ******
-    
-    
-    private func localAuth(){
-        let context = LAContext()
-        
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-            
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
-                
-                if state{
-                    // SEGUE
-                    DispatchQueue.main.async {
-                        
-                        
-                        self.performSegue(withIdentifier: "Next", sender: nil)
-                    }
-                }
-                else{
-                    //                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
-                }
-            }
-        }
-            
-        else{
-            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
-        }
-    }
-    
-    
-    
-    
-    
-    func ShowAlert(Title : String, Message: String){
-        let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
-        let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
-        alertVC.addAction(Dismiss)
-        
-        self.present(alertVC, animated: true, completion: nil)
-    }
-    
-    
-    
-    //***** PROTOCOL **********
-    
-    func FetchContact(userDetail: [String : Any]) {
-        
-        
-        self.showBitmojiList()
-    }
-    
-    
-    
-    func ConfiguredCrypto(value: [String : String]) {
-        
-        self.transitionValue = value
-        
-        cryptoimage.image = UIImage(named: value["NAME"]!)
-        cryptoAmount.text = value["AMOUNT"]
-        
-        cryptoCurrency.isHidden = true
-        cryptoView.isHidden = false
-    }
-    
-    
-    func quit() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    
-    //*********
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let configuration = ARWorldTrackingConfiguration()
-        sceneView.session.run(configuration)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        sceneView.session.pause()
-        
-        
-        if recorder?.status == .recording {
-            recorder?.stopAndExport()
-        }
-        recorder?.onlyRenderWhileRecording = true
-        recorder?.prepare(ARWorldTrackingConfiguration())
-        
-        // Switch off the orientation lock for UIViewControllers with AR Scenes
-        recorder?.rest()
         
     }
     
@@ -303,6 +364,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         flipButton.isHidden = true
         gallery.isHidden = true
         cameraButton.isHidden = true
+        cryptoButton.isHidden = true
         
         
         if sender.tag == 0 {
@@ -311,6 +373,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                 let image = self.recorder?.photo()
                 
                 self.screenShotImage = image
+                self.screenShotView.image = image
+                self.screenShotView.isHidden = false
                 
                 self.recorder?.export(UIImage: image) { saved, status in
                     if saved {
@@ -320,47 +384,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                 }
             }
         }
-        
-        //        else if sender.tag == 1 {
-        //                   //Live Photo
-        //                   if recorder?.status == .readyToRecord {
-        //                       caprturingQueue.async {
-        //                           self.recorder?.livePhoto(export: true) { ready, photo, status, saved in
-        //                               /*
-        //                                if ready {
-        //                                // Do something with the `photo` (PHLivePhotoPlus)
-        //                                }
-        //                                */
-        //
-        //                               if saved {
-        //                                   // Inform user Live Photo has exported successfully
-        //                                   self.exportMessage(success: saved, status: status)
-        //                               }
-        //                           }
-        //                       }
-        //                   }
-        //               }
-        
-        //        else if sender.tag == 2 {
-        //                   //GIF
-        //                   if recorder?.status == .readyToRecord {
-        //                       recorder?.gif(forDuration: 3.0, export: true) { ready, gifPath, status, saved in
-        //                           /*
-        //                           if ready {
-        //                               // Do something with the `gifPath`
-        //                           }
-        //                            */
-        //
-        //                           if saved {
-        //                               // Inform user GIF image has exported successfully
-        //                               self.exportMessage(success: saved, status: status)
-        //                           }
-        //                       }
-        //                   }
-        //               }
-        
-        
-        
         
     }
     
@@ -378,10 +401,15 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     @IBAction func sendAction(_ sender: Any) {
         
-        
-        
-        localAuth()
+        performSegue(withIdentifier: "Next", sender: nil)
     }
+    
+    
+    
+    
+    
+    
+    
     
     //************** PREPARE SEGUE ****
     
@@ -401,7 +429,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         else if segue.identifier == "Next"{
             let dest = segue.destination as! AR_ConfirmVC
             
-            dest.quitProtocol = self
+            dest.arImage = screenShotImage
+            dest.recieverDetail = self.reciever!
         }
         
     }
@@ -436,6 +465,15 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
     }
 }
+
+
+
+
+
+
+
+
+
 
 extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate {
     

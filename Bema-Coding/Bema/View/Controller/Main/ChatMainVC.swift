@@ -131,8 +131,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let messageTime_Date = messageTime?.dateValue()
         let currentDate = Date()
         
-        print(messageTime_Date)
-        print(currentDate)
+      
         
         let diff = self.getTimeComponentString(olderDate: messageTime_Date!, newerDate: currentDate)
         cell.time.text = diff ?? ""

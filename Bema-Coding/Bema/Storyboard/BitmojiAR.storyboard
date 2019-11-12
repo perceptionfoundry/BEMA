@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aCM-6A-lFM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aCM-6A-lFM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,6 +62,9 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYR-Bb-a22">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6gC-wZ-S3K">
+                                <rect key="frame" x="0.0" y="0.0" width="207" height="896"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr5-6M-HGc">
                                 <rect key="frame" x="339" y="54" width="50" height="50"/>
                                 <constraints>
@@ -154,7 +157,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffr-Rq-qsL">
-                                <rect key="frame" x="312" y="721" width="77" height="35"/>
+                                <rect key="frame" x="312" y="772.5" width="77" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ffr-Rq-qsL" secondAttribute="height" multiplier="11:5" id="J9B-9F-qmk"/>
                                     <constraint firstAttribute="width" constant="77" id="gp9-KG-Zlp"/>
@@ -182,13 +185,17 @@
                             <constraint firstItem="flW-bA-POp" firstAttribute="height" secondItem="Mr5-6M-HGc" secondAttribute="height" id="Sph-vc-fsQ"/>
                             <constraint firstItem="qJa-ys-NjP" firstAttribute="leading" secondItem="0qJ-al-bEY" secondAttribute="leading" constant="10" id="UIx-Rp-FCu"/>
                             <constraint firstItem="0qJ-al-bEY" firstAttribute="trailing" secondItem="PYR-Bb-a22" secondAttribute="trailing" id="Xwf-NO-lTb"/>
+                            <constraint firstItem="6gC-wZ-S3K" firstAttribute="top" secondItem="2Sp-Uo-Vjf" secondAttribute="top" id="a67-qD-Aov"/>
+                            <constraint firstItem="6gC-wZ-S3K" firstAttribute="leading" secondItem="0qJ-al-bEY" secondAttribute="leading" id="df6-JD-QCZ"/>
                             <constraint firstItem="0qJ-al-bEY" firstAttribute="trailing" secondItem="ffr-Rq-qsL" secondAttribute="trailing" constant="25" id="eI4-TC-N5E"/>
                             <constraint firstItem="0qJ-al-bEY" firstAttribute="bottom" secondItem="M8A-PP-lOB" secondAttribute="bottom" constant="25" id="f0Z-oJ-QxC"/>
                             <constraint firstItem="PYR-Bb-a22" firstAttribute="top" secondItem="2Sp-Uo-Vjf" secondAttribute="top" id="g96-Q6-KCY"/>
                             <constraint firstItem="PYR-Bb-a22" firstAttribute="leading" secondItem="0qJ-al-bEY" secondAttribute="leading" id="jcX-pz-S1j"/>
+                            <constraint firstItem="6gC-wZ-S3K" firstAttribute="trailing" secondItem="0qJ-al-bEY" secondAttribute="trailing" multiplier="0.5" id="m1u-Iu-giB"/>
                             <constraint firstItem="flW-bA-POp" firstAttribute="top" secondItem="Mr5-6M-HGc" secondAttribute="bottom" constant="20" id="qfc-gZ-RQs"/>
+                            <constraint firstAttribute="bottom" secondItem="6gC-wZ-S3K" secondAttribute="bottom" id="rgi-8n-Dur"/>
                             <constraint firstItem="0qJ-al-bEY" firstAttribute="trailing" secondItem="s2y-P5-5DK" secondAttribute="trailing" constant="25" id="rmv-kN-doZ"/>
-                            <constraint firstItem="ffr-Rq-qsL" firstAttribute="centerY" secondItem="M8A-PP-lOB" secondAttribute="centerY" id="zpg-q4-wwa"/>
+                            <constraint firstItem="ffr-Rq-qsL" firstAttribute="centerY" secondItem="M8A-PP-lOB" secondAttribute="centerY" multiplier="1.07" id="zpg-q4-wwa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0qJ-al-bEY"/>
                     </view>
@@ -196,16 +203,18 @@
                         <outlet property="cameraButton" destination="M8A-PP-lOB" id="icL-gR-h4R"/>
                         <outlet property="contactButton" destination="Mr5-6M-HGc" id="ojl-v6-tK7"/>
                         <outlet property="cryptoAmount" destination="Wt2-1i-7CV" id="6pV-B7-eFf"/>
+                        <outlet property="cryptoButton" destination="s2y-P5-5DK" id="Oei-m2-UHL"/>
                         <outlet property="cryptoCurrency" destination="s2y-P5-5DK" id="g2U-wB-tK2"/>
                         <outlet property="cryptoView" destination="wAx-lM-OcB" id="3Mn-H0-ggo"/>
                         <outlet property="cryptoimage" destination="M34-5b-Whz" id="97Z-5w-aKI"/>
                         <outlet property="flipButton" destination="flW-bA-POp" id="knU-65-8lv"/>
                         <outlet property="gallery" destination="Oej-aF-UmE" id="VQB-Fe-PV8"/>
                         <outlet property="sceneView" destination="PYR-Bb-a22" id="fuN-rQ-ZrB"/>
+                        <outlet property="screenShotView" destination="6gC-wZ-S3K" id="chy-ck-Gmu"/>
                         <outlet property="sendButton" destination="ffr-Rq-qsL" id="keB-0k-e85"/>
                         <segue destination="PJ3-hM-SBl" kind="show" identifier="Contact_Segue" id="dhw-Ck-Dd7"/>
                         <segue destination="nge-Ok-oSK" kind="show" identifier="Crypto_Segue" id="tfN-HN-2mt"/>
-                        <segue destination="bcZ-sK-2wD" kind="presentation" identifier="Next" id="B0T-rS-bpK"/>
+                        <segue destination="bcZ-sK-2wD" kind="show" identifier="Next" animates="NO" id="9xM-Pa-8my"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dC4-BO-u3Z" sceneMemberID="firstResponder"/>
@@ -237,7 +246,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$106.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaJ-Ib-oXq">
-                                <rect key="frame" x="176.5" y="48.5" width="61" height="25"/>
+                                <rect key="frame" x="176.5" y="48.5" width="61" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -254,7 +263,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmO-RG-ikn" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="83.5" width="414" height="778.5"/>
+                                <rect key="frame" x="0.0" y="83" width="414" height="779"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqy-Th-Vn1" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="52" y="20" width="310.5" height="40"/>
@@ -289,7 +298,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KGv-Ui-6fR">
-                                        <rect key="frame" x="0.0" y="70" width="414" height="708.5"/>
+                                        <rect key="frame" x="0.0" y="70" width="414" height="709"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CRYPTO" rowHeight="100" id="ycx-oC-EJo" customClass="Wallet_CryptoTableView" customModule="Bema" customModuleProvider="target">
@@ -404,13 +413,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etheruem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoL-xp-zUZ">
-                                                <rect key="frame" x="153" y="80" width="87" height="21"/>
+                                                <rect key="frame" x="153.5" y="80" width="86.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSe-ta-4dJ">
-                                                <rect key="frame" x="0.0" y="373.5" width="393" height="249.5"/>
+                                                <rect key="frame" x="0.0" y="374" width="393" height="249"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niM-VO-foj" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                                         <rect key="frame" x="147.5" y="35" width="98" height="30"/>
@@ -844,16 +853,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-Oa-JSo">
-                                                <rect key="frame" x="137.5" y="269.5" width="118" height="49.5"/>
+                                                <rect key="frame" x="137.5" y="269.5" width="118" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valueChange_AR" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-g6-ED7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="49.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="50"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGC-7h-qsr">
-                                                        <rect key="frame" x="65" y="0.0" width="53" height="49.5"/>
+                                                        <rect key="frame" x="65" y="0.0" width="53" height="50"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPJ-JE-U9L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53" height="49.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="53" height="50"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -980,11 +989,14 @@
         <!--ConfirmVC-->
         <scene sceneID="Bz0-uu-jz8">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="bcZ-sK-2wD" customClass="AR_ConfirmVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="bcZ-sK-2wD" customClass="AR_ConfirmVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jrJ-fc-JPw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hYb-QR-MU6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-lr-t3G" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="221.5" width="331" height="327"/>
                                 <subviews>
@@ -1051,6 +1063,7 @@ Successful!</string>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="noButtonAction:" destination="bcZ-sK-2wD" eventType="touchUpInside" id="sdw-8l-xlI"/>
+                                            <segue destination="n6q-A7-JWa" kind="show" id="7Rx-0g-uyd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCP-Fl-Y0b" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
@@ -1098,11 +1111,15 @@ Successful!</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.72659000880000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97256201509999995" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eHC-18-s8V" firstAttribute="centerY" secondItem="wGr-PH-y2M" secondAttribute="centerY" id="5NU-5K-D7d"/>
+                            <constraint firstItem="hYb-QR-MU6" firstAttribute="leading" secondItem="wGr-PH-y2M" secondAttribute="leading" id="Fni-2c-jNT"/>
                             <constraint firstItem="ubq-lr-t3G" firstAttribute="width" secondItem="wGr-PH-y2M" secondAttribute="width" multiplier="0.8" id="HKU-4E-pJx"/>
+                            <constraint firstItem="hYb-QR-MU6" firstAttribute="trailing" secondItem="wGr-PH-y2M" secondAttribute="trailing" id="Jxf-yp-Iai"/>
                             <constraint firstItem="ubq-lr-t3G" firstAttribute="centerX" secondItem="wGr-PH-y2M" secondAttribute="centerX" id="PnX-Qa-zxo"/>
+                            <constraint firstAttribute="bottom" secondItem="hYb-QR-MU6" secondAttribute="bottom" id="Rms-na-0Rj"/>
+                            <constraint firstItem="hYb-QR-MU6" firstAttribute="top" secondItem="jrJ-fc-JPw" secondAttribute="top" id="TKh-ic-ym0"/>
                             <constraint firstItem="ubq-lr-t3G" firstAttribute="height" secondItem="wGr-PH-y2M" secondAttribute="height" multiplier="0.4" id="cYw-eP-nF7"/>
                             <constraint firstItem="eHC-18-s8V" firstAttribute="centerX" secondItem="wGr-PH-y2M" secondAttribute="centerX" id="mbV-P6-Add"/>
                             <constraint firstItem="eHC-18-s8V" firstAttribute="width" secondItem="wGr-PH-y2M" secondAttribute="width" multiplier="0.85" id="sKx-rY-gBA"/>
@@ -1114,12 +1131,23 @@ Successful!</string>
                     <navigationItem key="navigationItem" id="7Ff-7u-BMw"/>
                     <connections>
                         <outlet property="confirmView" destination="eHC-18-s8V" id="G7r-pC-W2j"/>
+                        <outlet property="screenShot" destination="hYb-QR-MU6" id="4QJ-2P-9YS"/>
                         <outlet property="successfulView" destination="ubq-lr-t3G" id="ahx-q4-cj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5X-1k-IjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="989"/>
+            <point key="canvasLocation" x="31.884057971014496" y="880.58035714285711"/>
+        </scene>
+        <!--Navi_Chat-->
+        <scene sceneID="euW-6m-lCf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Navi_Chat" id="n6q-A7-JWa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="J3I-7e-QSf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6H-9t-kRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="1294"/>
         </scene>
     </scenes>
     <resources>

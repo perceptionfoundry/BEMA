@@ -37,7 +37,6 @@ class SideMenuVC: UIViewController {
 
        let entity = globalVariable.userSnapDetail
 //        
-        print(entity?.imageUrl)
         
         let urlString = (entity?.imageUrl)!
         

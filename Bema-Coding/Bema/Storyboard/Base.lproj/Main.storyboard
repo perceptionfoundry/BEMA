@@ -132,7 +132,7 @@
         <!--Chat MainVC-->
         <scene sceneID="YPf-ea-o7b">
             <objects>
-                <viewController id="tkv-9A-zwW" customClass="ChatMainVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CHAT" id="tkv-9A-zwW" customClass="ChatMainVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KXc-Zs-ilZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2706,7 +2706,7 @@ Successful!</string>
         <!--Item-->
         <scene sceneID="ZE0-DL-y7A">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="S7w-q0-Mk6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Navi_Chat" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="S7w-q0-Mk6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rCH-hQ-WyE"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
