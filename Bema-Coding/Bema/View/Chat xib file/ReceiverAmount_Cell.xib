@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="ReceiverAmount_Cell" customModule="Bema" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="331" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sent -- ---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVh-ky-ZV6">
+                        <rect key="frame" x="201" y="23" width="65" height="17.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="k7g-CB-HFo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0l-t0-v5J">
+                        <rect key="frame" x="157.5" y="23" width="33.5" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ETH" translatesAutoresizingMaskIntoConstraints="NO" id="C8b-vf-kaj" customClass="Custom_ImageView" customModule="Bema" customModuleProvider="target">
+                        <rect key="frame" x="276" y="11.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="C8b-vf-kaj" secondAttribute="height" multiplier="1:1" id="BLD-Zj-Xnk"/>
+                            <constraint firstAttribute="height" constant="40" id="jBK-F4-byQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="C8b-vf-kaj" firstAttribute="leading" secondItem="UVh-ky-ZV6" secondAttribute="trailing" constant="10" id="K51-Nd-493"/>
+                    <constraint firstItem="C8b-vf-kaj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KgJ-ho-fR0"/>
+                    <constraint firstItem="C8b-vf-kaj" firstAttribute="width" secondItem="C8b-vf-kaj" secondAttribute="height" multiplier="1:1" id="Qe9-24-IEj"/>
+                    <constraint firstItem="UVh-ky-ZV6" firstAttribute="leading" secondItem="K0l-t0-v5J" secondAttribute="trailing" constant="10" id="WI0-Di-vUB"/>
+                    <constraint firstItem="UVh-ky-ZV6" firstAttribute="centerY" secondItem="K0l-t0-v5J" secondAttribute="centerY" id="mPO-bx-QIp"/>
+                    <constraint firstItem="C8b-vf-kaj" firstAttribute="centerY" secondItem="UVh-ky-ZV6" secondAttribute="centerY" id="sDR-Fp-5I5"/>
+                    <constraint firstAttribute="trailing" secondItem="C8b-vf-kaj" secondAttribute="trailing" constant="15" id="sEI-k5-p98"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="receiverAmount" destination="UVh-ky-ZV6" id="sDp-bJ-0nk"/>
+                <outlet property="receiverCrypto" destination="C8b-vf-kaj" id="Meu-ig-5n2"/>
+                <outlet property="receiverName" destination="K0l-t0-v5J" id="IXi-yz-8rh"/>
+            </connections>
+            <point key="canvasLocation" x="139.85507246376812" y="106.80803571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ETH" width="59" height="59"/>
+    </resources>
+</document>

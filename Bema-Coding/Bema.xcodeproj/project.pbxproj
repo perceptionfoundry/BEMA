@@ -202,6 +202,10 @@
 		F2DE25BF235D981A0033CBED /* AllProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE25BE235D981A0033CBED /* AllProtocols.swift */; };
 		F2E13D9D2356116A00CC5519 /* SendTokenMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E13D9C2356116A00CC5519 /* SendTokenMainVC.swift */; };
 		F2E13D9F2356118000CC5519 /* SendTokenConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E13D9E2356118000CC5519 /* SendTokenConfirmVC.swift */; };
+		F2E1CA5E237B3C94006DF75D /* SenderAmount_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E1CA5C237B3C94006DF75D /* SenderAmount_Cell.swift */; };
+		F2E1CA5F237B3C94006DF75D /* SenderAmount_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E1CA5D237B3C94006DF75D /* SenderAmount_Cell.xib */; };
+		F2E1CA63237B3EB0006DF75D /* ReceiverAmount_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E1CA61237B3EB0006DF75D /* ReceiverAmount_Cell.swift */; };
+		F2E1CA64237B3EB0006DF75D /* ReceiverAmount_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E1CA62237B3EB0006DF75D /* ReceiverAmount_Cell.xib */; };
 		F2E223512343135700931AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E223502343135700931AFA /* AppDelegate.swift */; };
 		F2E223532343135700931AFA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E223522343135700931AFA /* art.scnassets */; };
 		F2E223552343135700931AFA /* AugmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E223542343135700931AFA /* AugmentVC.swift */; };
@@ -444,6 +448,10 @@
 		F2DE25BE235D981A0033CBED /* AllProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProtocols.swift; sourceTree = "<group>"; };
 		F2E13D9C2356116A00CC5519 /* SendTokenMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenMainVC.swift; sourceTree = "<group>"; };
 		F2E13D9E2356118000CC5519 /* SendTokenConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenConfirmVC.swift; sourceTree = "<group>"; };
+		F2E1CA5C237B3C94006DF75D /* SenderAmount_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderAmount_Cell.swift; sourceTree = "<group>"; };
+		F2E1CA5D237B3C94006DF75D /* SenderAmount_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderAmount_Cell.xib; sourceTree = "<group>"; };
+		F2E1CA61237B3EB0006DF75D /* ReceiverAmount_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverAmount_Cell.swift; sourceTree = "<group>"; };
+		F2E1CA62237B3EB0006DF75D /* ReceiverAmount_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiverAmount_Cell.xib; sourceTree = "<group>"; };
 		F2E2234D2343135700931AFA /* Bema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E223502343135700931AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E223522343135700931AFA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -529,6 +537,10 @@
 				F23704382368898E0070B366 /* SenderImage_Cell.xib */,
 				F237043D23688E200070B366 /* RecieverImage_Cell.swift */,
 				F237043E23688E200070B366 /* RecieverImage_Cell.xib */,
+				F2E1CA5C237B3C94006DF75D /* SenderAmount_Cell.swift */,
+				F2E1CA5D237B3C94006DF75D /* SenderAmount_Cell.xib */,
+				F2E1CA61237B3EB0006DF75D /* ReceiverAmount_Cell.swift */,
+				F2E1CA62237B3EB0006DF75D /* ReceiverAmount_Cell.xib */,
 			);
 			path = "Chat xib file";
 			sourceTree = "<group>";
@@ -1080,11 +1092,13 @@
 				F29E695D235DE4C500B22AE1 /* SF-Pro-Text-Ultralight.otf in Resources */,
 				F2F764C7234B4A71001A981F /* Profile.storyboard in Resources */,
 				F2E2235D2343135800931AFA /* LaunchScreen.storyboard in Resources */,
+				F2E1CA5F237B3C94006DF75D /* SenderAmount_Cell.xib in Resources */,
 				F29E6940235DE4C500B22AE1 /* SF-Pro-Display-Thin.otf in Resources */,
 				F29E692B235DE4C500B22AE1 /* NewYorkExtraLarge-BlackItalic.otf in Resources */,
 				F29E6913235DE4C500B22AE1 /* Montserrat-SemiBold.otf in Resources */,
 				F29E6941235DE4C500B22AE1 /* SF-Pro-Display-ThinItalic.otf in Resources */,
 				F237043A2368898E0070B366 /* SenderImage_Cell.xib in Resources */,
+				F2E1CA64237B3EB0006DF75D /* ReceiverAmount_Cell.xib in Resources */,
 				F29E6936235DE4C500B22AE1 /* SF-Pro-Display-Heavy.otf in Resources */,
 				F29E6983235DE4C500B22AE1 /* NewYorkSmall-Regular.otf in Resources */,
 				F29E694D235DE4C500B22AE1 /* SF-Pro-Text-Black.otf in Resources */,
@@ -1234,9 +1248,11 @@
 				F29094AC235606A0004E692F /* confirmToken.swift in Sources */,
 				F2E13D9F2356118000CC5519 /* SendTokenConfirmVC.swift in Sources */,
 				F21B7B8A23431EE1005EE90F /* Custom_ImageView.swift in Sources */,
+				F2E1CA5E237B3C94006DF75D /* SenderAmount_Cell.swift in Sources */,
 				F2D80CEF2347617D00A57D59 /* SideMenuVC.swift in Sources */,
 				F2B4797C2345C22900DAA960 /* ContactTableViewCell.swift in Sources */,
 				F2CAC19D23731B0B000268B5 /* Message.swift in Sources */,
+				F2E1CA63237B3EB0006DF75D /* ReceiverAmount_Cell.swift in Sources */,
 				F23704392368898E0070B366 /* SenderImage_Cell.swift in Sources */,
 				F2CFB5B323685B1D006970FB /* ChatContactVC.swift in Sources */,
 				F2E223512343135700931AFA /* AppDelegate.swift in Sources */,
