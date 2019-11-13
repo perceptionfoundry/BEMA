@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EFA-PU-u21">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EFA-PU-u21">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,6 +51,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQr-5P-gjy">
                                         <rect key="frame" x="30" y="57.5" width="41.5" height="42"/>
                                         <state key="normal" image="Back_white"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="EFA-PU-u21" eventType="touchUpInside" id="BCf-ED-F2h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,17 +78,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulg-6U-RUx" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="33" y="24.5" width="265" height="49"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Address or Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beM-5h-HcT">
-                                                <rect key="frame" x="10" y="0.0" width="124" height="49"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Contact / User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSK-1t-3Af">
+                                                <rect key="frame" x="10" y="10" width="245" height="29"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="beM-5h-HcT" firstAttribute="leading" secondItem="ulg-6U-RUx" secondAttribute="leading" constant="10" id="mC1-WP-Uo4"/>
-                                            <constraint firstAttribute="bottom" secondItem="beM-5h-HcT" secondAttribute="bottom" id="qfb-Kr-fgj"/>
-                                            <constraint firstItem="beM-5h-HcT" firstAttribute="top" secondItem="ulg-6U-RUx" secondAttribute="top" id="wXS-e2-aRZ"/>
+                                            <constraint firstItem="LSK-1t-3Af" firstAttribute="leading" secondItem="ulg-6U-RUx" secondAttribute="leading" constant="10" id="ADY-Re-wJb"/>
+                                            <constraint firstItem="LSK-1t-3Af" firstAttribute="top" secondItem="ulg-6U-RUx" secondAttribute="top" constant="10" id="dqL-Fc-dAk"/>
+                                            <constraint firstAttribute="trailing" secondItem="LSK-1t-3Af" secondAttribute="trailing" constant="10" id="rAz-bt-TZU"/>
+                                            <constraint firstAttribute="bottom" secondItem="LSK-1t-3Af" secondAttribute="bottom" constant="10" id="rGp-Vq-n98"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -122,7 +127,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ETH" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMC-NY-A5G">
                                                 <rect key="frame" x="10" y="0.0" width="225" height="49"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selector" translatesAutoresizingMaskIntoConstraints="NO" id="IPE-tP-uYM">
@@ -811,7 +816,7 @@
                         <outlet property="crytoList" destination="UwV-SQ-hks" id="AhA-Nf-90Q"/>
                         <outlet property="keyboardView" destination="gPa-8a-Dzw" id="Sjs-1g-W0H"/>
                         <outlet property="selectedCrypto" destination="eJ6-Ze-GSN" id="p8k-fk-9Tg"/>
-                        <outlet property="userNameTF" destination="beM-5h-HcT" id="2Wh-aB-O0Y"/>
+                        <outlet property="userNameTF" destination="LSK-1t-3Af" id="L93-3A-5pH"/>
                         <outlet property="walletListView" destination="kW4-E2-GgA" id="aLq-u6-zWQ"/>
                         <outletCollection property="keyboardKeys" destination="qCN-Fj-DFz" collectionClass="NSMutableArray" id="S4f-eJ-PDO"/>
                         <outletCollection property="keyboardKeys" destination="HPi-ge-DOC" collectionClass="NSMutableArray" id="biL-Re-hkh"/>
@@ -826,6 +831,7 @@
                         <outletCollection property="keyboardKeys" destination="Ybx-Et-ghf" collectionClass="NSMutableArray" id="Nqd-tR-LzO"/>
                         <outletCollection property="keyboardKeys" destination="ore-T2-80V" collectionClass="NSMutableArray" id="8Kr-wX-Q3H"/>
                         <segue destination="736-v0-vtI" kind="presentation" identifier="Next" id="wps-TM-AZU"/>
+                        <segue destination="dlu-WZ-vkq" kind="show" identifier="CONTACT" id="LUY-nc-BOL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eu5-FY-k3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -973,7 +979,17 @@ Successful!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikm-uL-u6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="-317"/>
+            <point key="canvasLocation" x="1823" y="231"/>
+        </scene>
+        <!--ContactList-->
+        <scene sceneID="Squ-kk-1TJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactList" id="dlu-WZ-vkq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="igd-MN-Sax"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLO-QC-DUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="-742"/>
         </scene>
     </scenes>
     <resources>

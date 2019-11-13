@@ -9,8 +9,15 @@
 import UIKit
 import LocalAuthentication
 
-class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
-
+class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, ContactList_Protocol {
+    
+    func FetchContact(userDetail: User) {
+        
+        self.userNameTF.textColor = UIColor.black
+        self.userNameTF.text = userDetail.displayName
+    }
+    
+    
     //****** Outlet
     @IBOutlet weak var tabbarView: UIView!
     @IBOutlet weak var crytoList: UITableView!
@@ -18,7 +25,7 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var walletListView: Custom_View!
     @IBOutlet weak var selectedCrypto: UILabel!
     @IBOutlet weak var amountTF: UITextField!
-    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var userNameTF: UILabel!
     
     //********* KEYBOARD COMPONENT *******
     @IBOutlet weak var keyboardView: UIView!
@@ -38,23 +45,42 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         self.keyboardView.isHidden = true
-
         
-    self.tabBarController?.tabBar.isHidden = true
-
-   
-    let tapWalletView = UITapGestureRecognizer(target: self, action: #selector(MoveUp))
-    self.touchArea.addGestureRecognizer(tapWalletView)
-
+        
+        self.tabBarController?.tabBar.isHidden = true
+        
+        
+        let tapWalletView = UITapGestureRecognizer(target: self, action: #selector(MoveUp))
+        self.touchArea.addGestureRecognizer(tapWalletView)
+        
         self.amountTF.delegate  = self
+        
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(Contact_Detail))
+        userNameTF.addGestureRecognizer(tap)
         
         self.crytoList.delegate = self
         self.crytoList.dataSource = self
         self.crytoList.reloadData()
-
+        
+    }
+    
+    
+    @objc func Contact_Detail(){
+        performSegue(withIdentifier: "CONTACT", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "CONTACT" {
+            
+            let dest = segue.destination as! ContactListVC
+            
+            dest.contactProtocol = self
+        }
     }
     // ********* TABLE VIEW DELEGATE FUNCTION ****
     
@@ -78,6 +104,8 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
         self.walletListView.isHidden = true
         self.tabbarView.isHidden = true
+        
+        self.selectedCrypto.text = cryptoAbrevia[indexPath.row]
     }
     
     
@@ -88,7 +116,7 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     
     //********** TEXTFIELD DELEGATE FUNNCTION **
-
+    
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
@@ -99,19 +127,19 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             self.keyboardView.isHidden = false
             
         }
-        
+            
         else{
             
             amountTF.inputView = nil
             self.keyboardView.isHidden = true
             
-
+            
         }
         return true
     }
     
     
-   
+    
     
     
     //******** PERSONALIZE FUNCTION ***********
@@ -128,15 +156,15 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             UIView.animate(withDuration: 1) {
                 self.lastY = self.walletListView.frame.origin.y
                 self.walletListView.frame.origin.y =  (self.view.frame.origin.y + 40)
-                 }
+            }
         }
         else{
             self.currentViewStatus = false
             UIView.animate(withDuration: 1) {
                 self.walletListView.frame.origin.y = self.lastY!
-                 }
+            }
         }
-
+        
     }
     
     
@@ -149,41 +177,41 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     //******** CHAT BUTTON ACTION ***********
-
+    
     @IBAction func chatButtonAction(_ sender: Any) {
         
         self.tabBarController?.selectedIndex = 0
-     }
-
+    }
+    
     
     
     private func localAuth(){
-             let context = LAContext()
+        let context = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
+                
+                if state{
+                    // SEGUE
+                    DispatchQueue.main.async {
                         
-                        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-                            
-                            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
-                                
-                                if state{
-                                    // SEGUE
-                                  DispatchQueue.main.async {
-                                    
-                                    self.crytoList.reloadData()
-                                    self.tabbarView.isHidden = false
-                                    self.walletListView.isHidden = false
-                                    
-                                    self.performSegue(withIdentifier: "Next", sender: nil)
-                                    }
-                                }
-                                else{
-//                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
-                                }
-                            }
-                        }
-                       
-                        else{
-                            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
-                        }
+                        self.crytoList.reloadData()
+                        self.tabbarView.isHidden = false
+                        self.walletListView.isHidden = false
+                        
+                        self.performSegue(withIdentifier: "Next", sender: nil)
+                    }
+                }
+                else{
+                    //                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
+                }
+            }
+        }
+            
+        else{
+            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
+        }
     }
     
     
@@ -203,10 +231,10 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             }
             else{
                 self.localAuth()
-
+                
             }
         }
-     }
+    }
     
     
     
@@ -216,79 +244,79 @@ class WalletMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         if sender.tag == 0{
             let temp = self.amountTF.text ?? ""
             self.amountTF.text = "\(temp)\(sender.tag)"
-               }
+        }
             
-    else if sender.tag == 1{
-          let temp = self.amountTF.text ?? ""
-                       self.amountTF.text = "\(temp)\(sender.tag)"
-         }
-    
-            else if sender.tag == 2{
-                let temp = self.amountTF.text ?? ""
-                           self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
-            
-            else if sender.tag == 3{
+        else if sender.tag == 1{
             let temp = self.amountTF.text ?? ""
-                          self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
             
-            else if sender.tag == 4{
-                 let temp = self.amountTF.text ?? ""
-                            self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
-            
-            else if sender.tag == 5{
-              let temp = self.amountTF.text ?? ""
-                         self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
-            
-            else if sender.tag == 6{
-              let temp = self.amountTF.text ?? ""
-                           self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
-            
-            else if sender.tag == 7{
-               let temp = self.amountTF.text ?? ""
-                          self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
-            
-            else if sender.tag == 8{
+        else if sender.tag == 2{
             let temp = self.amountTF.text ?? ""
-                         self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
             
-            else if sender.tag == 9{
-               let temp = self.amountTF.text ?? ""
-                           self.amountTF.text = "\(temp)\(sender.tag)"
-                 }
+        else if sender.tag == 3{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
             
-            else if sender.tag == 10{
+        else if sender.tag == 4{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
+            
+        else if sender.tag == 5{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
+            
+        else if sender.tag == 6{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
+            
+        else if sender.tag == 7{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
+            
+        else if sender.tag == 8{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
+            
+        else if sender.tag == 9{
+            let temp = self.amountTF.text ?? ""
+            self.amountTF.text = "\(temp)\(sender.tag)"
+        }
+            
+        else if sender.tag == 10{
             
             if amountTF.text?.isEmpty == true{
                 self.amountTF.text = "0."
             }
-            
+                
             else{
                 
-                 let temp = self.amountTF.text
+                let temp = self.amountTF.text
                 
                 if temp!.contains("."){
                     
                 }
-                
+                    
                 else{
                     self.amountTF.text = "\((temp)!)."
                 }
             }
             
-                 }
+        }
             
             
-            else if sender.tag == 11{
+        else if sender.tag == 11{
             self.amountTF.text?.removeLast()
-                
-                }
+            
+        }
         
     }
     

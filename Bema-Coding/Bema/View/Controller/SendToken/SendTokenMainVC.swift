@@ -9,7 +9,15 @@
 import UIKit
 import LocalAuthentication
 
-class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, ContactList_Protocol {
+   
+    
+    func FetchContact(userDetail: User) {
+        
+        self.userNameTF.textColor = UIColor.black
+        self.userNameTF.text = userDetail.displayName
+    }
+    
 
     //****** Outlet
     @IBOutlet weak var tabbarView: UIView!
@@ -19,7 +27,7 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var selectedCrypto: UILabel!
     @IBOutlet weak var amountTF: UITextField!
     @IBOutlet weak var cryptoNameTF: UITextField!
-    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var userNameTF: UILabel!
     
     //********* KEYBOARD COMPONENT *******
     @IBOutlet weak var keyboardView: UIView!
@@ -47,15 +55,21 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     self.tabBarController?.tabBar.isHidden = true
 
+        let tap = UITapGestureRecognizer(target: self, action: #selector(Contact_Detail))
+        userNameTF.addGestureRecognizer(tap)
    
   
-
         self.amountTF.delegate  = self
         self.cryptoNameTF.delegate = self
         self.crytoList.delegate = self
         self.crytoList.dataSource = self
         self.crytoList.reloadData()
 
+    }
+    
+    
+    @objc func Contact_Detail(){
+        performSegue(withIdentifier: "CONTACT", sender: nil)
     }
     // ********* TABLE VIEW DELEGATE FUNCTION ****
     
@@ -78,7 +92,12 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.walletListView.isHidden = true
-//        self.tabbarView.isHidden = true
+        self.cryptoNameTF.text = cryptoName[indexPath.row]
+        self.selectedCrypto.text = cryptoAbrevia[indexPath.row]
+        
+        
+        self.cryptoNameTF.resignFirstResponder()
+        
     }
     
     
@@ -103,24 +122,39 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
             
         else if textField == cryptoNameTF{
-            amountTF.inputView = walletListView
+            
+            cryptoNameTF.inputView = walletListView
                       
             self.walletListView.isHidden = false
             self.keyboardView.isHidden = true
+            
+            
 
         }
-        
+//
         else{
             
             amountTF.inputView = nil
             self.keyboardView.isHidden = true
             self.walletListView.isHidden = true
+            
+            
 
 
         }
         return true
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "CONTACT" {
+            
+            let dest = segue.destination as! ContactListVC
+            
+            dest.contactProtocol = self
+        }
+    }
     
    
     
@@ -144,6 +178,10 @@ class SendTokenMainVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         self.tabBarController?.selectedIndex = 0
      }
 
+    
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
     private func localAuth(){

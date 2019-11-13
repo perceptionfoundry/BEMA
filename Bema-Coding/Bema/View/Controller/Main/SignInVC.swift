@@ -86,32 +86,37 @@ class SignInVC: UIViewController {
             let image = entity.avatar!
             
             
+            print(name)
+            print(image)
+            
         //***** EXISTING USERS ***********
         
+            print(snap?.documents.count)
+            
             if let value = snap?.documents{
-               
+
                 // *********** LOCAL USER INFO STORE **************
 
                 value.forEach { (data) in
-                    
+
                     let userDetail = data.data()
-                    
+
                     let userId = userDetail["userId"] as! String
-      
+
                     let usr = User.userDetail
                     usr.imageUrl = image
                     usr.displayName = name
                     usr.userId = userId
                     globalVariable.userSnapDetail = usr
-                    
-                    
+
+
                     let detailDetail = ["Name": name,
                                         "Image":image,
                                         "Id":userId]
-                    
-                    
+
+
                     UserDefaults.standard.set(detailDetail, forKey: "USER")
-                    
+
                     UserDefaults.standard.set(true, forKey: "SIGN_IN")
                     self.performSegue(withIdentifier: "Home_Segue", sender: nil)
                 }

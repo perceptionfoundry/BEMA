@@ -60,6 +60,8 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
         //******* DP IMAGE ***
         
+        
+        
          let entity = globalVariable.userSnapDetail
         //
 //                print(entity?.imageUrl)
@@ -247,7 +249,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             roomIds.forEach { (ID) in
                 
                 
-                self.dbStore.collection("ChatRoom").whereField("roomId", isEqualTo: ID).order(by: "addedOn", descending: false).addSnapshotListener { (chatSnap, chatError) in
+               self.dbStore.collection("ChatRoom").whereField("roomId", isEqualTo: ID).order(by: "addedOn", descending: false).addSnapshotListener { (chatSnap, chatError) in
                     
                     
                     
@@ -291,6 +293,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                  
 
                 }
+                
                 
             }
             

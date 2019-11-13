@@ -1256,6 +1256,16 @@ you want to leave.</string>
             </objects>
             <point key="canvasLocation" x="1063.768115942029" y="140.625"/>
         </scene>
+        <!--ContactList-->
+        <scene sceneID="ENu-4V-k4N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactList" id="4kV-xi-N5O" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Pcw-Sa-4qP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ey-PX-jvq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3377" y="-1302"/>
+        </scene>
         <!--SendToken-->
         <scene sceneID="NYf-pq-gqx">
             <objects>
@@ -1264,7 +1274,7 @@ you want to leave.</string>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy7-Nz-9rL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3324" y="-831.18440779610205"/>
+            <point key="canvasLocation" x="3492" y="-831"/>
         </scene>
         <!--Wallet MainVC-->
         <scene sceneID="0zl-s6-PbM">
@@ -1361,27 +1371,28 @@ you want to leave.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmm-Ye-6is" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="30" y="28" width="240" height="37"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Address or Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edc-3q-Sth">
-                                                <rect key="frame" x="10" y="0.0" width="184" height="37"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_scan" translatesAutoresizingMaskIntoConstraints="NO" id="LyX-08-3hF">
                                                 <rect key="frame" x="204" y="5.5" width="26" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LyX-08-3hF" secondAttribute="height" multiplier="1:1" id="rb8-TE-jl4"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Contact / User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fNW-1O-JZT">
+                                                <rect key="frame" x="10" y="10" width="184" height="17"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="edc-3q-Sth" firstAttribute="leading" secondItem="rmm-Ye-6is" secondAttribute="leading" constant="10" id="NHZ-4V-fYA"/>
-                                            <constraint firstItem="LyX-08-3hF" firstAttribute="leading" secondItem="edc-3q-Sth" secondAttribute="trailing" constant="10" id="QwH-CE-kxG"/>
-                                            <constraint firstAttribute="bottom" secondItem="edc-3q-Sth" secondAttribute="bottom" id="S8e-2t-8q3"/>
+                                            <constraint firstItem="fNW-1O-JZT" firstAttribute="top" secondItem="rmm-Ye-6is" secondAttribute="top" constant="10" id="8dx-MY-5N5"/>
+                                            <constraint firstItem="LyX-08-3hF" firstAttribute="leading" secondItem="fNW-1O-JZT" secondAttribute="trailing" constant="10" id="SJJ-he-l3z"/>
                                             <constraint firstItem="LyX-08-3hF" firstAttribute="height" secondItem="rmm-Ye-6is" secondAttribute="height" multiplier="0.7" id="T4n-uk-3Xv"/>
-                                            <constraint firstItem="LyX-08-3hF" firstAttribute="centerY" secondItem="edc-3q-Sth" secondAttribute="centerY" id="dBw-oA-Meh"/>
+                                            <constraint firstItem="fNW-1O-JZT" firstAttribute="leading" secondItem="rmm-Ye-6is" secondAttribute="leading" constant="10" id="Z56-zb-1Rk"/>
+                                            <constraint firstAttribute="bottom" secondItem="fNW-1O-JZT" secondAttribute="bottom" constant="10" id="dhE-RP-74O"/>
                                             <constraint firstAttribute="trailing" secondItem="LyX-08-3hF" secondAttribute="trailing" constant="10" id="e3A-vl-wwu"/>
-                                            <constraint firstItem="edc-3q-Sth" firstAttribute="top" secondItem="rmm-Ye-6is" secondAttribute="top" id="foK-Fe-vrl"/>
+                                            <constraint firstItem="LyX-08-3hF" firstAttribute="centerY" secondItem="fNW-1O-JZT" secondAttribute="centerY" id="y1V-vp-VvK"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -1402,7 +1413,7 @@ you want to leave.</string>
                                         <rect key="frame" x="30" y="95" width="240" height="37"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5z-qo-qfy">
-                                                <rect key="frame" x="10" y="0.0" width="190.5" height="37"/>
+                                                <rect key="frame" x="10" y="0.0" width="192" height="37"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1418,8 +1429,8 @@ you want to leave.</string>
                                             <constraint firstItem="y5z-qo-qfy" firstAttribute="leading" secondItem="lyl-HZ-cRk" secondAttribute="leading" constant="10" id="7Mn-mO-6dw"/>
                                             <constraint firstItem="y5z-qo-qfy" firstAttribute="top" secondItem="lyl-HZ-cRk" secondAttribute="top" id="8fw-Gi-1oo"/>
                                             <constraint firstAttribute="bottom" secondItem="y5z-qo-qfy" secondAttribute="bottom" id="AwK-XM-tie"/>
-                                            <constraint firstItem="AZo-FS-gTT" firstAttribute="leading" secondItem="y5z-qo-qfy" secondAttribute="trailing" constant="10" id="DYm-l0-r1j"/>
                                             <constraint firstItem="AZo-FS-gTT" firstAttribute="centerY" secondItem="lyl-HZ-cRk" secondAttribute="centerY" id="dvg-Uw-dVr"/>
+                                            <constraint firstItem="y5z-qo-qfy" firstAttribute="width" secondItem="lyl-HZ-cRk" secondAttribute="width" multiplier="0.8" id="jB4-C7-dmq"/>
                                             <constraint firstAttribute="trailing" secondItem="AZo-FS-gTT" secondAttribute="trailing" constant="10" id="uNv-Ra-AX6"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -2102,7 +2113,7 @@ you want to leave.</string>
                         <outlet property="selectedCrypto" destination="AZo-FS-gTT" id="PzA-Fq-IhM"/>
                         <outlet property="tabbarView" destination="kg5-rK-fHA" id="vJC-Oc-a8w"/>
                         <outlet property="touchArea" destination="lTE-hP-3W9" id="EbV-6w-Gpq"/>
-                        <outlet property="userNameTF" destination="edc-3q-Sth" id="S5Z-cQ-pi8"/>
+                        <outlet property="userNameTF" destination="fNW-1O-JZT" id="ce4-0Y-djC"/>
                         <outlet property="walletListView" destination="4OA-uy-tgh" id="5Au-bR-2fR"/>
                         <outletCollection property="keyboardKeys" destination="ly3-vB-5Fl" collectionClass="NSMutableArray" id="OHF-l1-EJi"/>
                         <outletCollection property="keyboardKeys" destination="Fam-8k-Pve" collectionClass="NSMutableArray" id="XLZ-Eh-Inc"/>
@@ -2117,11 +2128,12 @@ you want to leave.</string>
                         <outletCollection property="keyboardKeys" destination="byZ-ZO-bO2" collectionClass="NSMutableArray" id="3Bk-QQ-Kvw"/>
                         <outletCollection property="keyboardKeys" destination="saf-qo-qEq" collectionClass="NSMutableArray" id="yqE-FN-ksZ"/>
                         <segue destination="c9r-PW-e77" kind="presentation" identifier="Next" id="kOW-iX-3va"/>
+                        <segue destination="4kV-xi-N5O" kind="show" identifier="CONTACT" id="wGm-Td-yEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvg-tZ-bRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762.4000000000001" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="2809" y="-509"/>
         </scene>
         <!--Confirm Token-->
         <scene sceneID="oWG-9o-hWn">
@@ -2754,6 +2766,6 @@ Successful!</string>
         <image name="wallet_Unselected" width="36" height="45.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V7I-0L-w6b"/>
+        <segue reference="oQt-gV-h2o"/>
     </inferredMetricsTieBreakers>
 </document>
