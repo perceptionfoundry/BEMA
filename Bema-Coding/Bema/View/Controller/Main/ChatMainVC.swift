@@ -54,7 +54,10 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewWillAppear(animated)
         
         
-        
+        self.allMessage.removeAll()
+        self.alertCount.removeAll()
+        self.contactList.reloadData()
+
         //******* DP IMAGE ***
         
          let entity = globalVariable.userSnapDetail
@@ -132,9 +135,15 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let currentDate = Date()
         
       
+        print(messageTime)
+        print(currentDate)
         
-        let diff = self.getTimeComponentString(olderDate: messageTime_Date!, newerDate: currentDate)
-        cell.time.text = diff ?? ""
+        if messageTime_Date != nil{
+            let diff = self.getTimeComponentString(olderDate: messageTime_Date!, newerDate: currentDate)
+            cell.time.text = diff ?? ""
+
+        }
+        
         
         return cell
     }

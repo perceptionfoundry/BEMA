@@ -31,6 +31,11 @@ class AR_ConfirmVC: UIViewController {
     var senderConversationId = [String]()
      var receiverConversationId = [String]()
     
+    
+    
+    var cryptoCurrency = ""
+    var tranferAmount = ""
+    
     let dbStore = Firestore.firestore()
     
     
@@ -97,11 +102,11 @@ class AR_ConfirmVC: UIViewController {
                         
                         self.sendMedia()
                         
-                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                        
-                        let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
-                        
-                        self.navigationController?.pushViewController(vc, animated: true)
+//                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//
+//                        let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+//
+//                        self.navigationController?.pushViewController(vc, animated: true)
                         
                         
                     }
@@ -158,22 +163,139 @@ class AR_ConfirmVC: UIViewController {
                 
                 print(basisDict)
                 
-//                collectionRef.setData(basisDict)
-//
-//
-//                if self.senderConversationId.contains(self.chatRoomTitle) == false {
-//                    self.senderConversationId.append(self.chatRoomTitle)
-//                    self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
-//                }
-//                if self.receiverConversationId.contains(self.chatRoomTitle) == false{
-//                    self.receiverConversationId.append(self.chatRoomTitle)
-//                    self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
-//                }
+                collectionRef.setData(basisDict)
                 
                 
+//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//
+//                let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+//
+//                self.navigationController?.pushViewController(vc, animated: true)
+//
+//
+                if self.senderConversationId.contains(self.chatRoomTitle) == false {
+                    self.senderConversationId.append(self.chatRoomTitle)
+                    self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+                }
+                if self.receiverConversationId.contains(self.chatRoomTitle) == false{
+                    self.receiverConversationId.append(self.chatRoomTitle)
+                    self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+                }
+                
+                self.sendAmount()
                 
             }
         }
+        
+        
+        
+        
+    }
+    
+    
+    func sendAmount(){
+        
+        let dbStore = Firestore.firestore()
+        
+        
+        let collectionRef = dbStore.collection("ChatRoom").document()
+        
+        let collectionId = collectionRef.documentID
+        
+        // ****** CREATE MESSAGE INFO *****
+        
+        let basisDict = ["addedOn": FieldValue.serverTimestamp(),
+                         "chatId": collectionId,
+                         "roomId": self.chatRoomTitle,
+                         "senderId" : self.senderId,
+                         "receiverId" : self.recieverId,
+                         "senderName": (self.senderDetail?.displayName)!,
+                         "recieverName" : (self.recieverDetail?.displayName)!,
+                         "senderImageURL" : (self.senderDetail?.imageUrl)!,
+                         "recieverImageURL" : (self.recieverDetail?.imageUrl)!,
+                         "readerID":self.recieverId,
+                         "context"  : "\(self.cryptoCurrency)_\(self.tranferAmount)",
+            "composerId" : self.senderId,
+            "type": "CRYPTO",
+            "isDeleted": false,
+            "isRead" : false] as [String : Any]
+        
+        
+        print(basisDict)
+        
+        collectionRef.setData(basisDict)
+        
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        //
+        //
+        if self.senderConversationId.contains(self.chatRoomTitle) == false {
+            self.senderConversationId.append(self.chatRoomTitle)
+            self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+        }
+        if self.receiverConversationId.contains(self.chatRoomTitle) == false{
+            self.receiverConversationId.append(self.chatRoomTitle)
+            self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+        }
+        
+        
+        //            saveImageVM.SaveImageViewModel(collectionID: collectionId, Title: "IMG_\(collectionId)", selectedImage: self.arImage!) { (imageURl, status, err) in
+        //
+        //
+        //
+        //
+        //
+        ////                if status{
+        ////                    let urlString = imageURl!
+        ////
+        //////                    // ****** CREATE MESSAGE INFO *****
+        //////
+        //////                    let basisDict = ["addedOn": FieldValue.serverTimestamp(),
+        //////                                     "chatId": collectionRef.documentID,
+        //////                                     "roomId": self.chatRoomTitle,
+        //////                                     "senderId" : self.senderId,
+        //////                                     "receiverId" : self.recieverId,
+        //////                                     "senderName": (self.senderDetail?.displayName)!,
+        //////                                     "recieverName" : (self.recieverDetail?.displayName)!,
+        //////                                     "senderImageURL" : (self.senderDetail?.imageUrl)!,
+        //////                                     "recieverImageURL" : (self.recieverDetail?.imageUrl)!,
+        //////                                     "readerID":self.recieverId,
+        //////                                     "context"  : "\(self.cryptoCurrency)_\(self.tranferAmount)",
+        //////                                     "composerId" : self.senderId,
+        //////                                     "type": "CRYPTO",
+        //////                                     "isDeleted": false,
+        //////                                     "isRead" : false] as [String : Any]
+        //////
+        //////
+        //////                    print(basisDict)
+        //////
+        //////                    collectionRef.setData(basisDict)
+        //////
+        //////
+        //////                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //////
+        //////                    let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+        //////
+        //////                    self.navigationController?.pushViewController(vc, animated: true)
+        //////    //
+        //////    //
+        //////                    if self.senderConversationId.contains(self.chatRoomTitle) == false {
+        //////                        self.senderConversationId.append(self.chatRoomTitle)
+        //////                        self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+        //////                    }
+        //////                    if self.receiverConversationId.contains(self.chatRoomTitle) == false{
+        //////                        self.receiverConversationId.append(self.chatRoomTitle)
+        //////                        self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+        //////                    }
+        //////
+        ////
+        ////
+        ////                }
+        //            }
         
         
         

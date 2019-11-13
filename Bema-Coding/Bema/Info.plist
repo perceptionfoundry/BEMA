@@ -46,7 +46,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Bema will use the camera for Augmented Reality.</string>
 	<key>SCSDKClientId</key>
-	<string>06135c5b-9137-4687-8ff3-97790ce271f1</string>
+	<string>e8157061-e091-4628-825f-4ea417425533</string>
 	<key>SCSDKRedirectUrl</key>
 	<string>bema://snap-kit/oauth2</string>
 	<key>SCSDKScopes</key>

@@ -61,7 +61,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     //******* ARVIdeo
     var recorder:RecordAR?
     var screenShotImage : UIImage?
-    
+    var selectedCrypto = ""
+    var selectedAmount = ""
     
     
     override func viewDidLoad() {
@@ -183,6 +184,11 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
         cryptoimage.image = UIImage(named: value["NAME"]!)
         cryptoAmount.text = value["AMOUNT"]
+        
+        
+        self.selectedCrypto = value["NAME"]!
+        self.selectedAmount = value["AMOUNT"]!
+        
         
         cryptoCurrency.isHidden = true
         cryptoView.isHidden = false
@@ -431,6 +437,9 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
             
             dest.arImage = screenShotImage
             dest.recieverDetail = self.reciever!
+            
+            dest.cryptoCurrency = self.selectedCrypto
+            dest.tranferAmount = self.selectedAmount
         }
         
     }

@@ -570,6 +570,23 @@ extension chatRoomVC: UITableViewDelegate, UITableViewDataSource{
                 
                 cell.selectionStyle = .none
                 
+                var contxtArr = [String]()
+                
+                let splitContext = self.allMessage[indexPath.row].context.split(separator: "_")
+                
+               
+                splitContext.forEach { (value) in
+                    
+                    let str = String(value)
+                    contxtArr.append(str)
+                    
+                }
+                
+                print(contxtArr)
+                
+                cell.senderName.text = senderDetail?.displayName
+                cell.senderAmount.text = "send \((contxtArr.last)!)"
+                cell.senderCrypto.image =  UIImage(named: (contxtArr.first)!)
                 
                 
                 return cell
@@ -611,7 +628,7 @@ extension chatRoomVC: UITableViewDelegate, UITableViewDataSource{
         if indexPath.row < allMessage.count{
             
             if allMessage[indexPath.row].type == "MEDIA"{
-                return 200
+                return 300
                 
             }
             else{
