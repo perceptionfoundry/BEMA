@@ -71,90 +71,40 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                 cryptoView.isHidden = true
                 sendButton.isHidden = true
                 screenShotView.isHidden = true
-        //
-        //
-        //
-        //
-        //
-        //
-        //        recorder = RecordAR(ARSceneKit: sceneView)
-        //
-        //
-        //
-        //        /*----👇---- ARVideoKit Configuration ----👇----*/
-        //
-        //        // Set the recorder's delegate
-        //        recorder?.delegate = self
-        //
-        //        // Set the renderer's delegate
-        //        recorder?.renderAR = self
-        //
-        //        // Configure the renderer to perform additional image & video processing 👁
-        //        recorder?.onlyRenderWhileRecording = false
-        //
-        //        // Configure ARKit content mode. Default is .auto
-        //        recorder?.contentMode = .aspectFill
-        //
-        //        //record or photo add environment light rendering, Default is false
-        //        recorder?.enableAdjustEnvironmentLighting = true
-        //
-        //        // Set the UIViewController orientations
-        //        recorder?.inputViewOrientations = [.landscapeLeft, .landscapeRight, .portrait]
-        //        // Configure RecordAR to store media files in local app directory
-        //        recorder?.deleteCacheWhenExported = false
-        //
-        //
-        //
-        //        // fetch your avatar image.
-        //        SCSDKBitmojiClient.fetchAvatarURL { (avatarURL: String?, error: Error?) in
-        //            DispatchQueue.main.async {
-        //                if let avatarURL = avatarURL {
-        //
-        //                    //                    self.iconView.load(from: avatarURL)
-        //                }
-        //            }
-        //        }
+       
     }
     
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        self.initialConfigure()
+        
+        let configuration = ARWorldTrackingConfiguration()
+        sceneView.session.run(configuration)
+    }
     
-    //    //******** PERSONALIZE FUNCTION ******
-    //
-    //
-    //    private func localAuth(){
-    //        let context = LAContext()
-    //
-    //        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil){
-    //
-    //            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an confirm transaction via FaceID/TouchID ") { (state, err) in
-    //
-    //                if state{
-    //                    // SEGUE
-    //
-    //
-    //                    DispatchQueue.main.async {
-    //
-    ////                        self.navigationController?.popViewController(animated: true)
-    //                        self.performSegue(withIdentifier: "Next", sender: nil)
-    //                    }
-    //                }
-    //                else{
-    //                    //                                    self.ShowAlert(Title: "Incorrect Credentials", Message: "Please try again")
-    //                }
-    //            }
-    //        }
-    //
-    //        else{
-    //            self.ShowAlert(Title: "FaceID / TouchID not Configured", Message: "Please go to setting and configure it")
-    //        }
-    //    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        sceneView.session.pause()
+        
+        
+        if recorder?.status == .recording {
+            recorder?.stopAndExport()
+        }
+        recorder?.onlyRenderWhileRecording = true
+        recorder?.prepare(ARWorldTrackingConfiguration())
+        
+        // Switch off the orientation lock for UIViewControllers with AR Scenes
+        recorder?.rest()
+        
+    }
+
     
-    
-    
-    
-    
-    
+
     func ShowAlert(Title : String, Message: String){
         let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
         let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
@@ -171,7 +121,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
         self.reciever = userDetail
         
-        print(self.reciever?.displayName)
+//        print(self.reciever?.displayName)
         
         self.showBitmojiList()
     }
@@ -204,32 +154,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     //*********
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-        self.initialConfigure()
-        
-        let configuration = ARWorldTrackingConfiguration()
-        sceneView.session.run(configuration)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        sceneView.session.pause()
-        
-        
-        if recorder?.status == .recording {
-            recorder?.stopAndExport()
-        }
-        recorder?.onlyRenderWhileRecording = true
-        recorder?.prepare(ARWorldTrackingConfiguration())
-        
-        // Switch off the orientation lock for UIViewControllers with AR Scenes
-        recorder?.rest()
-        
-    }
     
     
     
@@ -300,6 +224,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     }
     
     private func showBitmojiList(){
+        
         // Make bitmoji background view
         let viewHeight: CGFloat = 300
         let screen: CGRect = UIScreen.main.bounds
@@ -406,7 +331,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     
     @IBAction func sendAction(_ sender: Any) {
-        
+        sceneView.session.pause()
+
         performSegue(withIdentifier: "Next", sender: nil)
     }
     

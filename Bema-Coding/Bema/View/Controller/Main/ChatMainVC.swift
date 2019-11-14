@@ -236,31 +236,43 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             guard let value = converSnap?.data() else{return}
             
-            
+           
             
             print(self.sender)
             print(value)
             
             let roomIds = value["chatRoom"] as! [String]
             
+          
             
-            self.allMessage.removeAll()
-
+            
+            
+            
             roomIds.forEach { (ID) in
                 
                 
                self.dbStore.collection("ChatRoom").whereField("roomId", isEqualTo: ID).order(by: "addedOn", descending: false).addSnapshotListener { (chatSnap, chatError) in
                     
                     
-                    
+                
+                
                     
                     guard let fetchValue = chatSnap?.documents else{return}
 
 
+                self.allMessage.removeAll()
+                self.contactList.reloadData()
+
+                
                     var index = 0
                     var count = 0
                     
-
+                chatSnap?.documentChanges.forEach({ (diff) in
+                    
+                    if diff.type == .modified{
+                        print("change")
+                    }
+                })
                     
                      fetchValue.forEach { (value) in
                         

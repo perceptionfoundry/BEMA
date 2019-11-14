@@ -26,10 +26,10 @@ class AR_ConfirmVC: UIViewController {
     var arImage : UIImage?
     let saveImageVM = SaveImageViewModel()
     var recieverId = ""
-      var reciverImage : UIImage?
-      var senderId = ""
+    var reciverImage : UIImage?
+    var senderId = ""
     var senderConversationId = [String]()
-     var receiverConversationId = [String]()
+    var receiverConversationId = [String]()
     
     
     
@@ -53,15 +53,15 @@ class AR_ConfirmVC: UIViewController {
         super.viewWillAppear(animated)
         
         self.recieverId = (self.recieverDetail?.userId)!
-              self.senderId = (self.senderDetail?.userId)!
-              
-              if senderId > recieverId{
-                  
-                  self.chatRoomTitle = "\(senderId)_\(recieverId)"
-              }
-              else{
-                  self.chatRoomTitle = "\(recieverId)_\(senderId)"
-              }
+        self.senderId = (self.senderDetail?.userId)!
+        
+        if senderId > recieverId{
+            
+            self.chatRoomTitle = "\(senderId)_\(recieverId)"
+        }
+        else{
+            self.chatRoomTitle = "\(recieverId)_\(senderId)"
+        }
     }
     
     @IBAction func yesButtonAction(_ sender: Any) {
@@ -102,11 +102,11 @@ class AR_ConfirmVC: UIViewController {
                         
                         self.sendMedia()
                         
-//                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//
-//                        let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
-//
-//                        self.navigationController?.pushViewController(vc, animated: true)
+                        //                        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                        //
+                        //                        let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+                        //
+                        //                        self.navigationController?.pushViewController(vc, animated: true)
                         
                         
                     }
@@ -166,13 +166,13 @@ class AR_ConfirmVC: UIViewController {
                 collectionRef.setData(basisDict)
                 
                 
-//                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//
-//                let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
-//
-//                self.navigationController?.pushViewController(vc, animated: true)
-//
-//
+                //                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                //
+                //                let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+                //
+                //                self.navigationController?.pushViewController(vc, animated: true)
+                //
+                //
                 if self.senderConversationId.contains(self.chatRoomTitle) == false {
                     self.senderConversationId.append(self.chatRoomTitle)
                     self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
@@ -231,8 +231,7 @@ class AR_ConfirmVC: UIViewController {
         let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
         
         self.navigationController?.pushViewController(vc, animated: true)
-        //
-        //
+        
         if self.senderConversationId.contains(self.chatRoomTitle) == false {
             self.senderConversationId.append(self.chatRoomTitle)
             self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
@@ -241,63 +240,6 @@ class AR_ConfirmVC: UIViewController {
             self.receiverConversationId.append(self.chatRoomTitle)
             self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
         }
-        
-        
-        //            saveImageVM.SaveImageViewModel(collectionID: collectionId, Title: "IMG_\(collectionId)", selectedImage: self.arImage!) { (imageURl, status, err) in
-        //
-        //
-        //
-        //
-        //
-        ////                if status{
-        ////                    let urlString = imageURl!
-        ////
-        //////                    // ****** CREATE MESSAGE INFO *****
-        //////
-        //////                    let basisDict = ["addedOn": FieldValue.serverTimestamp(),
-        //////                                     "chatId": collectionRef.documentID,
-        //////                                     "roomId": self.chatRoomTitle,
-        //////                                     "senderId" : self.senderId,
-        //////                                     "receiverId" : self.recieverId,
-        //////                                     "senderName": (self.senderDetail?.displayName)!,
-        //////                                     "recieverName" : (self.recieverDetail?.displayName)!,
-        //////                                     "senderImageURL" : (self.senderDetail?.imageUrl)!,
-        //////                                     "recieverImageURL" : (self.recieverDetail?.imageUrl)!,
-        //////                                     "readerID":self.recieverId,
-        //////                                     "context"  : "\(self.cryptoCurrency)_\(self.tranferAmount)",
-        //////                                     "composerId" : self.senderId,
-        //////                                     "type": "CRYPTO",
-        //////                                     "isDeleted": false,
-        //////                                     "isRead" : false] as [String : Any]
-        //////
-        //////
-        //////                    print(basisDict)
-        //////
-        //////                    collectionRef.setData(basisDict)
-        //////
-        //////
-        //////                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //////
-        //////                    let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
-        //////
-        //////                    self.navigationController?.pushViewController(vc, animated: true)
-        //////    //
-        //////    //
-        //////                    if self.senderConversationId.contains(self.chatRoomTitle) == false {
-        //////                        self.senderConversationId.append(self.chatRoomTitle)
-        //////                        self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
-        //////                    }
-        //////                    if self.receiverConversationId.contains(self.chatRoomTitle) == false{
-        //////                        self.receiverConversationId.append(self.chatRoomTitle)
-        //////                        self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
-        //////                    }
-        //////
-        ////
-        ////
-        ////                }
-        //            }
-        
-        
         
         
     }
