@@ -55,7 +55,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         
         self.allMessage.removeAll()
-        self.alertCount.removeAll()
+//        self.alertCount.removeAll()
         self.contactList.reloadData()
 
         //******* DP IMAGE ***
@@ -90,6 +90,8 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         cell.selectionStyle = .none
         
+        
+            print(self.alertCount)
          cell.countView.isHidden = true
         
         if allMessage[indexPath.row].readerID == self.sender{
@@ -226,7 +228,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
       func fetchMessage(){
         
         allMessage.removeAll()
-        alertCount.removeAll()
+//        alertCount.removeAll()
         contactList.reloadData()
           
     
@@ -261,6 +263,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 
                 self.allMessage.removeAll()
+                self.alertCount.removeAll()
                 self.contactList.reloadData()
 
                 
@@ -368,6 +371,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
              formatter.allowedUnits = [.minute]
              return formatter.string(from: older, to: newer) ?? ""
          }
+        
          
          return nil
      }

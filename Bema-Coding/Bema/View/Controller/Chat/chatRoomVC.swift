@@ -142,6 +142,14 @@ class chatRoomVC: UIViewController {
     //******** PERSONALIZE FUNCITON **********
     
     
+    func makeRead(chatID : String){
+        
+        let dict = ["isRead": true]
+        dbStore.collection("ChatRoom").document(chatID).updateData(dict)
+        
+    }
+    
+    
     func pastConversation(){
         
         dbStore.collection("Conversation").document(self.senderId).addSnapshotListener { (conversationSnap, conversationErr) in
@@ -190,7 +198,9 @@ class chatRoomVC: UIViewController {
                 
                 let msg = try! FirestoreDecoder().decode(Message.self, from: getData)
                 
-                
+                if msg.readerID == self.senderId{
+                    self.makeRead(chatID: msg.chatId)
+                }
                 
                 self.allMessage.append(msg)
                 self.ChatTableView.delegate = self
@@ -735,5 +745,8 @@ extension chatRoomVC: UIImagePickerControllerDelegate, UINavigationControllerDel
         
         
     }
+    
+    
+    
     
 }
