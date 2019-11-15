@@ -34,6 +34,9 @@ class LogoutVc: UIViewController {
                 UserDefaults.standard.set(false, forKey: "SIGN_IN")
                 
                 
+                
+                
+                //********* LOGUT SEGUE
                 DispatchQueue.main.async { () -> Void in
                     
                     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -42,7 +45,7 @@ class LogoutVc: UIViewController {
                     
                     self.navigationController?.pushViewController(vc, animated: true)
                     
-                    //                self.present(vc, animated: true, completion: nil)
+                    globalVariable.window?.rootViewController = vc
                     
                 }
                 

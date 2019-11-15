@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -132,7 +132,7 @@
         <!--Chat MainVC-->
         <scene sceneID="YPf-ea-o7b">
             <objects>
-                <viewController storyboardIdentifier="CHAT" id="tkv-9A-zwW" customClass="ChatMainVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CHAT" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tkv-9A-zwW" customClass="ChatMainVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KXc-Zs-ilZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2766,6 +2766,6 @@ Successful!</string>
         <image name="wallet_Unselected" width="36" height="45.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oQt-gV-h2o"/>
+        <segue reference="V7I-0L-w6b"/>
     </inferredMetricsTieBreakers>
 </document>

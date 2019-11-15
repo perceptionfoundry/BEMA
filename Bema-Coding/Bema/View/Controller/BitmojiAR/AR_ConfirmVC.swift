@@ -232,6 +232,9 @@ class AR_ConfirmVC: UIViewController {
         
         self.navigationController?.pushViewController(vc, animated: true)
         
+        
+        
+        
         if self.senderConversationId.contains(self.chatRoomTitle) == false {
             self.senderConversationId.append(self.chatRoomTitle)
             self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])

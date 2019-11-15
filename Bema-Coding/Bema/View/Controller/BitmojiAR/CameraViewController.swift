@@ -236,15 +236,15 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                 height: viewHeight
             )
         )
-        view.addSubview(backgroundView)
+//        view.addSubview(backgroundView)
         bitmojiSelectionView = backgroundView
         
         // add child ViewController
         let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
         stickerPickerVC.delegate = self
-        //        addChildViewController(stickerPickerVC)
-        //        backgroundView.addSubview(stickerPickerVC.view)
-        //        stickerPickerVC.didMove(toParentViewController: self)
+        //addChild(stickerPickerVC)
+//        backgroundView.addSubview(stickerPickerVC.view)
+        //stickerPickerVC.didMove(toParent: self)
         present(stickerPickerVC, animated: true, completion: nil)
         
     }
@@ -423,7 +423,8 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
                 self.setImageToScene(image: image)
                 self.dismiss(animated: true, completion: nil)
                 
-                self.bitmojiSelectionView?.removeFromSuperview()
+                self.bitmojiSelectionView!.removeFromSuperview()
+                
             }
         }
         
@@ -432,7 +433,7 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
     
     func bitmojiStickerPickerViewController(_ stickerPickerViewController: SCSDKBitmojiStickerPickerViewController, didSelectBitmojiWithURL bitmojiURL: String) {
         
-        bitmojiSelectionView?.removeFromSuperview()
+        
         
         
         
@@ -440,6 +441,7 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
             DispatchQueue.main.async {
                 self.setImageToScene(image: image)
                 self.dismiss(animated: true, completion: nil)
+                self.bitmojiSelectionView?.removeFromSuperview()
             }
         }
     }
