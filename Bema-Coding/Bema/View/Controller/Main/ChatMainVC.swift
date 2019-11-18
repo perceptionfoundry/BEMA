@@ -35,9 +35,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
 
         self.tabBarController?.tabBar.isHidden = true
-//        contactList.delegate = self
-//        contactList.dataSource = self
-//        contactList.reloadData()
+
         
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(sideMenuAction))
@@ -55,7 +53,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         
         self.allMessage.removeAll()
-//        self.alertCount.removeAll()
+        self.alertCount.removeAll()
         self.contactList.reloadData()
 
         //******* DP IMAGE ***
@@ -139,8 +137,8 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let currentDate = Date()
         
       
-        print(messageTime)
-        print(currentDate)
+//        print(messageTime)
+//        print(currentDate)
         
         if messageTime_Date != nil{
             let diff = self.getTimeComponentString(olderDate: messageTime_Date!, newerDate: currentDate)
@@ -246,7 +244,9 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let roomIds = value["chatRoom"] as! [String]
             
           
-            
+            self.allMessage.removeAll()
+                          self.alertCount.removeAll()
+                          self.contactList.reloadData()
             
             
             
@@ -254,18 +254,14 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 
                 
                self.dbStore.collection("ChatRoom").whereField("roomId", isEqualTo: ID).order(by: "addedOn", descending: false).addSnapshotListener { (chatSnap, chatError) in
-                    
-                    
-                
-                
-                    
+
                     guard let fetchValue = chatSnap?.documents else{return}
 
 
-                self.allMessage.removeAll()
-                self.alertCount.removeAll()
-                self.contactList.reloadData()
-
+//                print(fetchValue.count)
+                
+                
+              
                 
                     var index = 0
                     var count = 0
@@ -277,6 +273,8 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     }
                 })
                     
+            
+                
                      fetchValue.forEach { (value) in
                         
                         let getData = value.data()

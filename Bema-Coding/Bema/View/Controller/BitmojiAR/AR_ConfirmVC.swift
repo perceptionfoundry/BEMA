@@ -62,6 +62,9 @@ class AR_ConfirmVC: UIViewController {
         else{
             self.chatRoomTitle = "\(recieverId)_\(senderId)"
         }
+        
+        
+        self.pastConversation()
     }
     
     @IBAction func yesButtonAction(_ sender: Any) {
@@ -227,10 +230,12 @@ class AR_ConfirmVC: UIViewController {
         
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
+
         let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
-        
+
         self.navigationController?.pushViewController(vc, animated: true)
+        
+       
         
         
         
@@ -245,10 +250,39 @@ class AR_ConfirmVC: UIViewController {
         }
         
         
+//        self.navigationController?.popViewController(animated: true)
+        
     }
     
     
-    
+    func pastConversation(){
+          
+          dbStore.collection("Conversation").document(self.senderId).addSnapshotListener { (conversationSnap, conversationErr) in
+              
+              guard let  value = conversationSnap?.data() else{return}
+              
+              self.senderConversationId = value["chatRoom"]  as! [String]
+              
+              
+              print("*****************")
+              print(self.senderConversationId)
+              print("**************")
+          }
+          
+          
+          dbStore.collection("Conversation").document(self.recieverId).addSnapshotListener { (conversationSnap, conversationErr) in
+              
+              guard let  value = conversationSnap?.data() else{return}
+              
+              self.receiverConversationId = value["chatRoom"]  as! [String]
+              
+              
+              print("*****************")
+              print(self.receiverConversationId)
+              print("**************")
+          }
+          
+      }
     
     func ShowAlert(Title : String, Message: String){
         let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)

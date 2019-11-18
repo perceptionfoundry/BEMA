@@ -42,7 +42,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     
     var reciever : User?
-    
+    let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+
     
     
     @IBOutlet weak var iconView: UIImageView! {
@@ -79,12 +80,20 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+   screenShotView.isHidden = true
+
+        
         
         self.initialConfigure()
+        
+        stickerPickerVC.delegate = self
+
         
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
     }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -125,6 +134,10 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
         self.showBitmojiList()
     }
+    
+    
+    
+    
     
     
     
@@ -240,7 +253,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         bitmojiSelectionView = backgroundView
         
         // add child ViewController
-        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+//        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
         stickerPickerVC.delegate = self
         //addChild(stickerPickerVC)
 //        backgroundView.addSubview(stickerPickerVC.view)
@@ -394,8 +407,8 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         bitmojiSelectionView = backgroundView
         
         // add child ViewController
-        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
-        stickerPickerVC.delegate = self
+//        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+//        stickerPickerVC.delegate = self
         present(stickerPickerVC, animated: true, completion: nil)
         
     }
