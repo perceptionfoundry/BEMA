@@ -42,7 +42,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     
     var reciever : User?
-    let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
 
     
     
@@ -86,8 +85,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
         self.initialConfigure()
         
-        stickerPickerVC.delegate = self
-
         
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
@@ -239,6 +236,28 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     private func showBitmojiList(){
         
         // Make bitmoji background view
+//        let viewHeight: CGFloat = 300
+//        let screen: CGRect = UIScreen.main.bounds
+//        let backgroundView = UIView(
+//            frame: CGRect(
+//                x: 0,
+//                y: screen.height - viewHeight,
+//                width: screen.width,
+//                height: viewHeight
+//            )
+//        )
+//        bitmojiSelectionView = backgroundView
+//
+////         add child ViewController
+//                let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+//
+//        stickerPickerVC.delegate = self
+//        present(stickerPickerVC, animated: true, completion: nil)
+        
+        //********
+        
+        
+//        // Make bitmoji background view
         let viewHeight: CGFloat = 300
         let screen: CGRect = UIScreen.main.bounds
         let backgroundView = UIView(
@@ -249,16 +268,21 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                 height: viewHeight
             )
         )
-//        view.addSubview(backgroundView)
+        view.addSubview(backgroundView)
         bitmojiSelectionView = backgroundView
-        
+
         // add child ViewController
-//        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
         stickerPickerVC.delegate = self
-        //addChild(stickerPickerVC)
-//        backgroundView.addSubview(stickerPickerVC.view)
-        //stickerPickerVC.didMove(toParent: self)
-        present(stickerPickerVC, animated: true, completion: nil)
+        addChild(stickerPickerVC)
+
+        self.view.addSubview(stickerPickerVC.view)
+        stickerPickerVC.view.frame = view.bounds
+        stickerPickerVC.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+
+        backgroundView.addSubview(stickerPickerVC.view)
+        stickerPickerVC.didMove(toParent: self)
         
     }
     
@@ -407,7 +431,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         bitmojiSelectionView = backgroundView
         
         // add child ViewController
-//        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
+        let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
 //        stickerPickerVC.delegate = self
         present(stickerPickerVC, animated: true, completion: nil)
         
@@ -434,8 +458,8 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
         if let image = UIImage.load(from: bitmojiURL) {
             DispatchQueue.main.async {
                 self.setImageToScene(image: image)
-                self.dismiss(animated: true, completion: nil)
-                
+//                self.dismiss(animated: true, completion: nil)
+//
                 self.bitmojiSelectionView!.removeFromSuperview()
                 
             }
@@ -453,7 +477,7 @@ extension CameraViewController: SCSDKBitmojiStickerPickerViewControllerDelegate 
         if let image = UIImage.load(from: bitmojiURL) {
             DispatchQueue.main.async {
                 self.setImageToScene(image: image)
-                self.dismiss(animated: true, completion: nil)
+//                self.dismiss(animated: true, completion: nil)
                 self.bitmojiSelectionView?.removeFromSuperview()
             }
         }

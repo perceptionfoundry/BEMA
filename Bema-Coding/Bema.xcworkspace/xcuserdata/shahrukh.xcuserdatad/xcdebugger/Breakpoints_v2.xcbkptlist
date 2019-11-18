@@ -14,8 +14,8 @@
             filePath = "Bema/View/Controller/Main/ChatMainVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "fetchMessage()"
             landmarkType = "7">
          </BreakpointContent>

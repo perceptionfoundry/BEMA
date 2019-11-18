@@ -52,9 +52,9 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewWillAppear(animated)
         
         
-        self.allMessage.removeAll()
-        self.alertCount.removeAll()
-        self.contactList.reloadData()
+//        self.allMessage.removeAll()
+//        self.alertCount.removeAll()
+//        self.contactList.reloadData()
 
         //******* DP IMAGE ***
         
@@ -243,10 +243,10 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             let roomIds = value["chatRoom"] as! [String]
             
-          
-            self.allMessage.removeAll()
-                          self.alertCount.removeAll()
-                          self.contactList.reloadData()
+            
+//            self.allMessage.removeAll()
+//            self.alertCount.removeAll()
+//            self.contactList.reloadData()
             
             
             
@@ -258,9 +258,10 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     guard let fetchValue = chatSnap?.documents else{return}
 
 
-//                print(fetchValue.count)
-                
-                
+             
+//                self.allMessage.removeAll()
+//                self.alertCount.removeAll()
+//                self.contactList.reloadData()
               
                 
                     var index = 0
@@ -268,8 +269,11 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     
                 chatSnap?.documentChanges.forEach({ (diff) in
                     
+                
+                
                     if diff.type == .modified{
                         print("change")
+                 
                     }
                 })
                     

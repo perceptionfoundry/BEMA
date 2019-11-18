@@ -36,7 +36,6 @@ class AR_ConfirmVC: UIViewController {
     var cryptoCurrency = ""
     var tranferAmount = ""
     
-    let dbStore = Firestore.firestore()
     
     
     override func viewDidLoad() {
@@ -52,6 +51,7 @@ class AR_ConfirmVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+
         self.recieverId = (self.recieverDetail?.userId)!
         self.senderId = (self.senderDetail?.userId)!
         
@@ -63,8 +63,9 @@ class AR_ConfirmVC: UIViewController {
             self.chatRoomTitle = "\(recieverId)_\(senderId)"
         }
         
-        
         self.pastConversation()
+
+        
     }
     
     @IBAction func yesButtonAction(_ sender: Any) {
@@ -178,11 +179,11 @@ class AR_ConfirmVC: UIViewController {
                 //
                 if self.senderConversationId.contains(self.chatRoomTitle) == false {
                     self.senderConversationId.append(self.chatRoomTitle)
-                    self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+                    dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
                 }
                 if self.receiverConversationId.contains(self.chatRoomTitle) == false{
                     self.receiverConversationId.append(self.chatRoomTitle)
-                    self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+                    dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
                 }
                 
                 self.sendAmount()
@@ -242,11 +243,11 @@ class AR_ConfirmVC: UIViewController {
         
         if self.senderConversationId.contains(self.chatRoomTitle) == false {
             self.senderConversationId.append(self.chatRoomTitle)
-            self.dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
+            dbStore.collection("Conversation").document(self.senderId).setData(["chatRoom":self.senderConversationId])
         }
         if self.receiverConversationId.contains(self.chatRoomTitle) == false{
             self.receiverConversationId.append(self.chatRoomTitle)
-            self.dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
+            dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
         }
         
         
@@ -257,6 +258,9 @@ class AR_ConfirmVC: UIViewController {
     
     func pastConversation(){
           
+        let dbStore = Firestore.firestore()
+
+        
           dbStore.collection("Conversation").document(self.senderId).addSnapshotListener { (conversationSnap, conversationErr) in
               
               guard let  value = conversationSnap?.data() else{return}
