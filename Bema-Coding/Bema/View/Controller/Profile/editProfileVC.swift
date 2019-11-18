@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class editProfileVC: UIViewController {
 
@@ -14,10 +15,25 @@ class editProfileVC: UIViewController {
     //********* OUTLET
     
     @IBOutlet weak var displayImage : Custom_ImageView!
+    @IBOutlet weak var displayName : UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
+          let entity = globalVariable.userSnapDetail
+        //
+                
+                let urlString = (entity?.imageUrl)!
+                
+                let imageURL = URL(string: urlString)
+                
+                displayImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+        
+        
+        displayName.text = (entity?.displayName)!
     }
     
     

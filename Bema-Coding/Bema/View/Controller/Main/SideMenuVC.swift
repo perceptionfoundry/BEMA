@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import Firebase
 
 
 
@@ -19,6 +20,9 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var displayImage: UIImageView!
     @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var FriendCount: UILabel!
+
+    
 
 
 //    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
@@ -34,6 +38,7 @@ class SideMenuVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        FriendCount.text = "0"
 
        let entity = globalVariable.userSnapDetail
 //        
@@ -48,9 +53,55 @@ class SideMenuVC: UIViewController {
         displayName.text = entity?.displayName!
         
         
+        getData()
     }
     
     
+    
+    
+    
+    func getData(){
+           let userId = (globalVariable.userSnapDetail?.userId)!
+             
+        let dbStore = Firestore.firestore()
+        
+              let sourceLink = dbStore.collection("Friends").document(userId)
+              
+              // ***** GET CONTACT
+              
+              sourceLink.collection("Directory").getDocuments { (snapResult, snapError) in
+                  
+                  guard let fetchValue = snapResult?.documents else{return}
+                  
+                self.FriendCount.text = "\(fetchValue.count)"
+
+                
+//                  fetchValue.forEach { (value) in
+//
+//                      let getValue = value.data()
+//
+//                         if (getValue["isDeleted"] as! Bool ) == false{
+//
+//                      let id = getValue["friendId"] as! String
+//
+//                      print(id)
+//
+//                      dbStore.collection("Users").document(id).getDocument { (contactResult, contactError) in
+//
+//                          let fetchData = contactResult?.data()
+//
+//
+//                          let friend = try! FirestoreDecoder().decode(User.self, from: fetchData!)
+//
+//                          self.allContact.append(friend)
+//
+//                          self.contactListTable.reloadData()
+//
+//                      }
+//               }
+//                  }
+              }
+       }
     
 
     //************ OUTLET ACTION *************

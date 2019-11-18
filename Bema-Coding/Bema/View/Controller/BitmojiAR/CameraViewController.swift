@@ -65,6 +65,9 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     var selectedAmount = ""
     
     
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,6 +84,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
    screenShotView.isHidden = true
 
+        
         
         
         self.initialConfigure()
@@ -110,7 +114,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     }
 
     
-
 
     
     

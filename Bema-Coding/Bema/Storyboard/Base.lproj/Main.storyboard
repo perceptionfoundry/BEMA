@@ -416,8 +416,8 @@
                     <connections>
                         <outlet property="DisplayImage" destination="TiJ-XX-l4B" id="mYI-Pf-m3u"/>
                         <outlet property="contactList" destination="K84-CZ-kgL" id="5io-AW-TN4"/>
-                        <segue destination="evs-vu-der" kind="presentation" identifier="Menu_Segue" id="l6T-X8-ZU7"/>
                         <segue destination="xVC-8H-iY2" kind="show" identifier="CONTACT" id="xfB-Mm-PUU"/>
+                        <segue destination="evs-vu-der" kind="presentation" identifier="Menu_Segue" id="jpw-vu-iwX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aho-Ai-hLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -775,7 +775,7 @@ you want to leave.</string>
         <!--Side MenuVC-->
         <scene sceneID="mQI-n1-7go">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Lz2-Nz-jfF" customClass="SideMenuVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="Lz2-Nz-jfF" customClass="SideMenuVC" customModule="Bema" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p18-43-hLt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1178,6 +1178,7 @@ you want to leave.</string>
                     </view>
                     <navigationItem key="navigationItem" id="A4E-41-LYU"/>
                     <connections>
+                        <outlet property="FriendCount" destination="RPH-li-fzM" id="63R-kd-rqg"/>
                         <outlet property="displayImage" destination="by8-sk-lOh" id="cZZ-aA-q2t"/>
                         <outlet property="displayName" destination="GGK-BU-J7M" id="b8E-k2-UQo"/>
                         <outlet property="sideMenuView" destination="d2Z-Pd-VUb" id="JQf-zI-jdX"/>
@@ -2653,13 +2654,14 @@ Successful!</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" navigationBarHidden="YES" id="evs-vu-der" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Qit-g7-AIS"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D8M-F1-etU">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Lz2-Nz-jfF" kind="relationship" relationship="rootViewController" id="Lzq-h5-3hA"/>
+                        <segue destination="Lz2-Nz-jfF" kind="relationship" relationship="rootViewController" id="CCb-C0-LiR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TC6-pQ-oz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

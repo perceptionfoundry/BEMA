@@ -229,12 +229,7 @@ class AR_ConfirmVC: UIViewController {
         
         collectionRef.setData(basisDict)
         
-        
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 
-        let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
-
-        self.navigationController?.pushViewController(vc, animated: true)
         
        
         
@@ -249,6 +244,15 @@ class AR_ConfirmVC: UIViewController {
             self.receiverConversationId.append(self.chatRoomTitle)
             dbStore.collection("Conversation").document(self.recieverId).setData(["chatRoom":self.receiverConversationId])
         }
+        
+        
+        
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+                let vc = storyBoard.instantiateViewController(withIdentifier: "CHAT")
+        
+                self.navigationController?.pushViewController(vc, animated: true)
         
         
 //        self.navigationController?.popViewController(animated: true)
