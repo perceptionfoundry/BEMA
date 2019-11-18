@@ -111,13 +111,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
 
     
 
-    func ShowAlert(Title : String, Message: String){
-        let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
-        let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
-        alertVC.addAction(Dismiss)
-        
-        self.present(alertVC, animated: true, completion: nil)
-    }
+
     
     
     
@@ -161,7 +155,17 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     }
     
     
-    //*********
+    //*********  PERSONALIZE FUNCTION *****
+    
+    
+    func ShowAlert(Title : String, Message: String){
+        let alertVC = UIAlertController(title: Title, message: Message, preferredStyle: .alert)
+        let Dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+        alertVC.addAction(Dismiss)
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
+
     
     
     
@@ -325,33 +329,75 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     //*********** OUTLET ACTION *************
     @IBAction func ARSnapButtonAction(_ sender: UIButton) {
         
-        cryptoView.center.y = cryptoView.center.y - 50
-        sendButton.isHidden = false
-        
-        contactButton.isHidden = true
-        flipButton.isHidden = true
-        gallery.isHidden = true
-        cameraButton.isHidden = true
-        cryptoButton.isHidden = true
-        
-        
-        if sender.tag == 0 {
-            //Photo
-            if recorder?.status == .readyToRecord {
-                let image = self.recorder?.photo()
-                
-                self.screenShotImage = image
-                self.screenShotView.image = image
-                self.screenShotView.isHidden = false
-                
-                self.recorder?.export(UIImage: image) { saved, status in
-                    if saved {
-                        // Inform user photo has exported successfully
-                        self.exportMessage(success: saved, status: status)
-                    }
-                }
+        if reciever == nil{
+            
+            self.ShowAlert(Title: "Add contact", Message: "Please add desire contact")
+        }
+        else{
+            
+            if selectedAmount == ""{
+                self.ShowAlert(Title: "Transaction Amount ??", Message: "Please your desire amount before send ")
+            }
+            
+            else{
+                cryptoView.center.y = cryptoView.center.y - 50
+                       sendButton.isHidden = false
+                       
+                       contactButton.isHidden = true
+                       flipButton.isHidden = true
+                       gallery.isHidden = true
+                       cameraButton.isHidden = true
+                       cryptoButton.isHidden = true
+                       
+                       
+                       if sender.tag == 0 {
+                           //Photo
+                           if recorder?.status == .readyToRecord {
+                               let image = self.recorder?.photo()
+                               
+                               self.screenShotImage = image
+                               self.screenShotView.image = image
+                               self.screenShotView.isHidden = false
+                               
+                               self.recorder?.export(UIImage: image) { saved, status in
+                                   if saved {
+                                       // Inform user photo has exported successfully
+                                       self.exportMessage(success: saved, status: status)
+                                   }
+                               }
+                           }
+                       }
             }
         }
+        
+        
+//        cryptoView.center.y = cryptoView.center.y - 50
+//        sendButton.isHidden = false
+//
+//        contactButton.isHidden = true
+//        flipButton.isHidden = true
+//        gallery.isHidden = true
+//        cameraButton.isHidden = true
+//        cryptoButton.isHidden = true
+//
+//
+//        if sender.tag == 0 {
+//            //Photo
+//            if recorder?.status == .readyToRecord {
+//                let image = self.recorder?.photo()
+//
+//                self.screenShotImage = image
+//                self.screenShotView.image = image
+//                self.screenShotView.isHidden = false
+//
+//                self.recorder?.export(UIImage: image) { saved, status in
+//                    if saved {
+//                        // Inform user photo has exported successfully
+//                        self.exportMessage(success: saved, status: status)
+//                    }
+//                }
+//            }
+//        }
         
     }
     

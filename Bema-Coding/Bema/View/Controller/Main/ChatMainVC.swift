@@ -13,7 +13,7 @@ import CodableFirebase
 
 
 class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     
     // OUTLET
     
@@ -26,18 +26,18 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     let dbStore = Firestore.firestore()
-      
-      var allMessage = [Message]()
+    
+    var allMessage = [Message]()
     var alertCount = [Int]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.tabBarController?.tabBar.isHidden = true
-
         
-
+        self.tabBarController?.tabBar.isHidden = true
+        
+        
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(sideMenuAction))
         
         self.DisplayImage.addGestureRecognizer(tap)
@@ -52,31 +52,31 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewWillAppear(animated)
         
         
-//        self.allMessage.removeAll()
-//        self.alertCount.removeAll()
-//        self.contactList.reloadData()
-
+        //        self.allMessage.removeAll()
+        //        self.alertCount.removeAll()
+        //        self.contactList.reloadData()
+        
         //******* DP IMAGE ***
         
         
         
-         let entity = globalVariable.userSnapDetail
+        let entity = globalVariable.userSnapDetail
         //
-//                print(entity?.imageUrl)
-                
-                let urlString = (entity?.imageUrl)!
-                
-                let imageURL = URL(string: urlString)
-                
-                DisplayImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
+        //                print(entity?.imageUrl)
+        
+        let urlString = (entity?.imageUrl)!
+        
+        let imageURL = URL(string: urlString)
+        
+        DisplayImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
         
         
         self.fetchMessage()
-
+        
     }
     
-  
- //********** TABLE VIEW *****
+    
+    //********** TABLE VIEW *****
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allMessage.count
@@ -89,8 +89,8 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         
         
-            print(self.alertCount)
-         cell.countView.isHidden = true
+        print(self.alertCount)
+        cell.countView.isHidden = true
         
         if allMessage[indexPath.row].readerID == self.sender{
             
@@ -108,9 +108,9 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if sender == allMessage[indexPath.row].composerId{
             
             cell.userName.text = allMessage[indexPath.row].recieverName
-                  cell.message.text = allMessage[indexPath.row].context
-                  
-                  //****** IMAGE ********
+            cell.message.text = allMessage[indexPath.row].context
+            
+            //****** IMAGE ********
             let urlString = (allMessage[indexPath.row].recieverImageURL)
             let imageURL = URL(string: urlString!)
             cell.userImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
@@ -118,9 +118,9 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         else{
             
             cell.userName.text = allMessage[indexPath.row].senderName
-                  cell.message.text = allMessage[indexPath.row].context
-                  
-                  //****** IMAGE ********
+            cell.message.text = allMessage[indexPath.row].context
+            
+            //****** IMAGE ********
             let urlString = (allMessage[indexPath.row].senderImageURL)
             let imageURL = URL(string: urlString!)
             cell.userImage.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "contact_AR"), options: .progressiveLoad, context: nil)
@@ -128,7 +128,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
         //
-      
+        
         
         
         //******** TIME **********
@@ -136,14 +136,14 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let messageTime_Date = messageTime?.dateValue()
         let currentDate = Date()
         
-      
-//        print(messageTime)
-//        print(currentDate)
+        
+        //        print(messageTime)
+        //        print(currentDate)
         
         if messageTime_Date != nil{
             let diff = self.getTimeComponentString(olderDate: messageTime_Date!, newerDate: currentDate)
             cell.time.text = diff ?? ""
-
+            
         }
         
         
@@ -183,7 +183,7 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 guard let values = result?.documents else{return}
                 
                 values.forEach { (value) in
-                 
+                    
                     
                     let getdata = value.data()
                     
@@ -205,38 +205,38 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 120
         
     }
-
+    
     @IBAction func walletButtonAction(_ sender: Any) {
         self.tabBarController?.selectedIndex = 1
-
+        
     }
     
     @IBAction func searchButtonAction(_ sender: Any) {
         
         self.performSegue(withIdentifier: "CONTACT", sender: nil)
-
-
-       }
+        
+        
+    }
     
     
     
     
     //********** PERSONALIZE FUNCTION
-
-      func fetchMessage(){
+    
+    func fetchMessage(){
         
         allMessage.removeAll()
-//        alertCount.removeAll()
+        //        alertCount.removeAll()
         contactList.reloadData()
-          
-    
+        
+        
         self.dbStore.collection("Conversation").document(self.sender).addSnapshotListener { (converSnap, converErr) in
             
             
             
             guard let value = converSnap?.data() else{return}
             
-           
+            
             
             print(self.sender)
             print(value)
@@ -244,80 +244,83 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             let roomIds = value["chatRoom"] as! [String]
             
             
-//            self.allMessage.removeAll()
-//            self.alertCount.removeAll()
-//            self.contactList.reloadData()
+            //            self.allMessage.removeAll()
+            //            self.alertCount.removeAll()
+            //            self.contactList.reloadData()
             
             
             
             roomIds.forEach { (ID) in
                 
                 
-               self.dbStore.collection("ChatRoom").whereField("roomId", isEqualTo: ID).order(by: "addedOn", descending: false).addSnapshotListener { (chatSnap, chatError) in
-
+                self.dbStore.collection("ChatRoom").whereField("roomId", isEqualTo: ID).order(by: "addedOn", descending: false).addSnapshotListener { (chatSnap, chatError) in
+                    
                     guard let fetchValue = chatSnap?.documents else{return}
-
-
-             
-//                self.allMessage.removeAll()
-//                self.alertCount.removeAll()
-//                self.contactList.reloadData()
-              
-                
+                    
+                    
+                    
+                    //                self.allMessage.removeAll()
+                    //                self.alertCount.removeAll()
+                    //                self.contactList.reloadData()
+                    
+                    
                     var index = 0
                     var count = 0
                     
-                chatSnap?.documentChanges.forEach({ (diff) in
-                    
-                
-                
-                    if diff.type == .modified{
-                        print("change")
-                 
-                    }
-                })
-                    
-            
-                
-                     fetchValue.forEach { (value) in
-                        
-                        let getData = value.data()
-             
-                        let msg = try! FirestoreDecoder().decode(Message.self, from: getData)
+                    chatSnap?.documentChanges.forEach({ (diff) in
                         
                         
-                        index += 1
-                        
-                        if msg.isRead == false  &&  msg.readerID == self.sender{
+                        if diff.type == .added{
                             
-                            count += 1
-                        }
-                     
-                        
-                        if index == fetchValue.count {
+                            print("added")
                             
-                        
-                            self.allMessage.append(msg)
-                            self.alertCount.append(count)
-                            self.contactList.delegate = self
-                            self.contactList.dataSource = self
-                            self.contactList.reloadData()
+                            
+                            fetchValue.forEach { (value) in
+                                
+                                let getData = value.data()
+                                
+                                let msg = try! FirestoreDecoder().decode(Message.self, from: getData)
+                                
+                                
+                                index += 1
+                                
+                                if msg.isRead == false  &&  msg.readerID == self.sender{
+                                    
+                                    count += 1
+                                }
+                                
+                                
+                                if index == fetchValue.count {
+                                    
+                                    
+                                    self.allMessage.append(msg)
+                                    self.alertCount.append(count)
+                                    self.contactList.delegate = self
+                                    self.contactList.dataSource = self
+                                    self.contactList.reloadData()
+                                }
+                                
+                                
+                                
+                            }
                         }
                         
-                        
-                        
-                    }
-                 
-
+                    })
+                    
+                    
+                    
+                    
+                    
+                    
                 }
                 
                 
             }
             
-
-          }
-      }
-
+            
+        }
+    }
+    
     
     
     
@@ -326,57 +329,57 @@ class ChatMainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @objc func sideMenuAction(){
         
         self.performSegue(withIdentifier: "Menu_Segue", sender: nil)
-     
+        
     }
     
     
     
     func getTimeComponentString(olderDate older: Date,newerDate newer: Date) -> (String?)  {
-         let formatter = DateComponentsFormatter()
+        let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .short
-         
-         let componentsLeftTime = Calendar.current.dateComponents([.minute , .hour , .day,.month, .weekOfMonth,.year], from: older, to: newer)
-         
-         let year = componentsLeftTime.year ?? 0
-         if  year > 0 {
-             formatter.allowedUnits = [.year]
-             return formatter.string(from: older, to: newer)
-         }
-         
-         
-         let month = componentsLeftTime.month ?? 0
-         if  month > 0 {
-             formatter.allowedUnits = [.month]
-             return formatter.string(from: older, to: newer)
-         }
-         
-         let weekOfMonth = componentsLeftTime.weekOfMonth ?? 0
-         if  weekOfMonth > 0 {
-             formatter.allowedUnits = [.weekOfMonth]
-             return formatter.string(from: older, to: newer)
-         }
-         
-         let day = componentsLeftTime.day ?? 0
-         if  day > 0 {
-             formatter.allowedUnits = [.day]
-             return formatter.string(from: older, to: newer)
-         }
-         
-         let hour = componentsLeftTime.hour ?? 0
-         if  hour > 0 {
-             formatter.allowedUnits = [.hour]
-             return formatter.string(from: older, to: newer)
-         }
-         
-         let minute = componentsLeftTime.minute ?? 0
-         if  minute > 0 {
-             formatter.allowedUnits = [.minute]
-             return formatter.string(from: older, to: newer) ?? ""
-         }
         
-         
-         return nil
-     }
+        let componentsLeftTime = Calendar.current.dateComponents([.minute , .hour , .day,.month, .weekOfMonth,.year], from: older, to: newer)
+        
+        let year = componentsLeftTime.year ?? 0
+        if  year > 0 {
+            formatter.allowedUnits = [.year]
+            return formatter.string(from: older, to: newer)
+        }
+        
+        
+        let month = componentsLeftTime.month ?? 0
+        if  month > 0 {
+            formatter.allowedUnits = [.month]
+            return formatter.string(from: older, to: newer)
+        }
+        
+        let weekOfMonth = componentsLeftTime.weekOfMonth ?? 0
+        if  weekOfMonth > 0 {
+            formatter.allowedUnits = [.weekOfMonth]
+            return formatter.string(from: older, to: newer)
+        }
+        
+        let day = componentsLeftTime.day ?? 0
+        if  day > 0 {
+            formatter.allowedUnits = [.day]
+            return formatter.string(from: older, to: newer)
+        }
+        
+        let hour = componentsLeftTime.hour ?? 0
+        if  hour > 0 {
+            formatter.allowedUnits = [.hour]
+            return formatter.string(from: older, to: newer)
+        }
+        
+        let minute = componentsLeftTime.minute ?? 0
+        if  minute > 0 {
+            formatter.allowedUnits = [.minute]
+            return formatter.string(from: older, to: newer) ?? ""
+        }
+        
+        
+        return nil
+    }
     
     
     
