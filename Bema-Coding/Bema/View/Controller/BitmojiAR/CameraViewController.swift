@@ -74,6 +74,10 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                 cryptoView.isHidden = true
                 sendButton.isHidden = true
                 screenShotView.isHidden = true
+        
+        // Pinch to Resize AR-object
+              let pinch = UIPinchGestureRecognizer(target: self, action: #selector(pinched))
+              sceneView.addGestureRecognizer(pinch)
        
     }
     
@@ -218,6 +222,52 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     }
     
     
+    
+    // PINCHED FUNCTION
+        @objc func pinched(recognizer : UIPinchGestureRecognizer){
+            
+            if recognizer.view == sceneView{
+                
+                let touchview  = sceneView
+                let touchPoint = recognizer.location(in: recognizer.view)
+                
+                let hitTest = touchview!.hitTest(touchPoint, options: [:])
+                
+                if !hitTest.isEmpty{
+                    
+                    
+//                    InfoLabel.text = "Resize "
+    //                InfoLabel.textColor = UIColor.white
+
+                    let hitResult = hitTest.first!
+                    
+                    
+//                    print((hitResult.node.geometry?.name)!)
+                    // PANE is the  HITRESULT
+                    
+                    
+                    DispatchQueue.main.async {
+//                        if hitResult.node.geometry?.name == "Pane" || (hitResult.node.geometry?.name)! == "Frame"{
+                            let node = hitResult.node
+                            
+                            let pinchAction = SCNAction.scale(by: recognizer.scale, duration: 0)
+                            node.runAction(pinchAction)
+                            recognizer.scale = 1
+//                    }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//                            self.InfoLabel.text = "TAP ON SCREEN TO ADD YOUR ART "
+    //                        self.InfoLabel.textColor = UIColor.white
+                        })
+                  
+    //
+
+                    }
+                }
+            }
+            
+        }
+    
+    
     // MARK: About creating node
     
     private func setImageToScene(image: UIImage) {
@@ -237,31 +287,12 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         geometry.firstMaterial?.diffuse.contents = image
         node.geometry = geometry
         node.position = position
+        node.name = "bitmoji"
         return node
     }
     
     private func showBitmojiList(){
         
-        // Make bitmoji background view
-//        let viewHeight: CGFloat = 300
-//        let screen: CGRect = UIScreen.main.bounds
-//        let backgroundView = UIView(
-//            frame: CGRect(
-//                x: 0,
-//                y: screen.height - viewHeight,
-//                width: screen.width,
-//                height: viewHeight
-//            )
-//        )
-//        bitmojiSelectionView = backgroundView
-//
-////         add child ViewController
-//                let stickerPickerVC = SCSDKBitmojiStickerPickerViewController()
-//
-//        stickerPickerVC.delegate = self
-//        present(stickerPickerVC, animated: true, completion: nil)
-        
-        //********
         
         
 //        // Make bitmoji background view
