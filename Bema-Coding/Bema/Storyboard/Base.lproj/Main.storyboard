@@ -828,7 +828,7 @@ you want to leave.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82F-4t-geo">
-                                        <rect key="frame" x="39" y="514" width="184.5" height="48"/>
+                                        <rect key="frame" x="45.5" y="529" width="184.5" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="82F-4t-geo" secondAttribute="height" multiplier="196:51" id="1gm-R2-FNu"/>
                                         </constraints>
@@ -841,14 +841,14 @@ you want to leave.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJz-5M-Azw">
                                         <rect key="frame" x="0.0" y="199" width="262.5" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXh-RR-Opz">
-                                                <rect key="frame" x="97.5" y="21.5" width="68" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXh-RR-Opz">
+                                                <rect key="frame" x="85" y="21.5" width="93" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="LTt-hc-eYz">
-                                                <rect key="frame" x="215.5" y="24" width="47" height="11.5"/>
+                                                <rect key="frame" x="205.5" y="24" width="47" height="11.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="47" id="Igw-TF-AMG"/>
                                                     <constraint firstAttribute="height" constant="11.5" id="yVw-lr-mXe"/>
@@ -862,7 +862,7 @@ you want to leave.</string>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="9qI-ka-b3Q">
-                                                <rect key="frame" x="56" y="19.5" width="21.5" height="21"/>
+                                                <rect key="frame" x="43.5" y="19.5" width="21.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9qI-ka-b3Q" secondAttribute="height" multiplier="1:1" id="4GX-xA-hVG"/>
                                                 </constraints>
@@ -887,7 +887,7 @@ you want to leave.</string>
                                             <constraint firstAttribute="trailing" secondItem="JHI-kd-aUS" secondAttribute="trailing" id="nbi-7V-su5"/>
                                             <constraint firstItem="LTt-hc-eYz" firstAttribute="centerY" secondItem="fXh-RR-Opz" secondAttribute="centerY" id="p2Q-zF-cbj"/>
                                             <constraint firstItem="fXh-RR-Opz" firstAttribute="centerY" secondItem="UJz-5M-Azw" secondAttribute="centerY" id="p2s-36-HUF"/>
-                                            <constraint firstAttribute="trailing" secondItem="LTt-hc-eYz" secondAttribute="trailing" id="qX1-VN-w7W"/>
+                                            <constraint firstAttribute="trailing" secondItem="LTt-hc-eYz" secondAttribute="trailing" constant="10" id="qX1-VN-w7W"/>
                                             <constraint firstItem="fXh-RR-Opz" firstAttribute="centerX" secondItem="UJz-5M-Azw" secondAttribute="centerX" id="s4l-8u-TRt"/>
                                             <constraint firstItem="UPd-SU-a3n" firstAttribute="top" secondItem="UJz-5M-Azw" secondAttribute="top" id="wop-uQ-N1f"/>
                                             <constraint firstItem="UPd-SU-a3n" firstAttribute="leading" secondItem="UJz-5M-Azw" secondAttribute="leading" id="yVQ-Zm-3FC"/>
@@ -896,8 +896,8 @@ you want to leave.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28A-55-RcJ">
                                         <rect key="frame" x="0.0" y="259" width="262.5" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Bitmoji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44s-ZL-eDh">
-                                                <rect key="frame" x="95.5" y="21.5" width="72" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Bitmoji" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44s-ZL-eDh">
+                                                <rect key="frame" x="85" y="21.5" width="93" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -917,7 +917,7 @@ you want to leave.</string>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side_bitmoji" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-En-SPX">
-                                                <rect key="frame" x="56" y="18" width="24.5" height="24"/>
+                                                <rect key="frame" x="43.5" y="19.5" width="21.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ucp-En-SPX" secondAttribute="height" multiplier="1:1" id="iLb-6Y-8sW"/>
                                                 </constraints>
@@ -941,7 +941,7 @@ you want to leave.</string>
                                             <constraint firstAttribute="bottom" secondItem="8S8-vx-x6b" secondAttribute="bottom" id="QeO-dl-Vcc"/>
                                             <constraint firstItem="aU5-5u-kcy" firstAttribute="centerY" secondItem="44s-ZL-eDh" secondAttribute="centerY" id="RKz-xl-0yZ"/>
                                             <constraint firstItem="UQr-jl-uUX" firstAttribute="leading" secondItem="28A-55-RcJ" secondAttribute="leading" id="Yt6-vb-8DB"/>
-                                            <constraint firstItem="ucp-En-SPX" firstAttribute="height" secondItem="28A-55-RcJ" secondAttribute="height" multiplier="0.4" id="jKV-G1-liV"/>
+                                            <constraint firstItem="ucp-En-SPX" firstAttribute="height" secondItem="28A-55-RcJ" secondAttribute="height" multiplier="0.35" id="jKV-G1-liV"/>
                                             <constraint firstItem="44s-ZL-eDh" firstAttribute="centerY" secondItem="28A-55-RcJ" secondAttribute="centerY" id="jpR-LN-aP0"/>
                                             <constraint firstItem="UQr-jl-uUX" firstAttribute="top" secondItem="28A-55-RcJ" secondAttribute="top" id="qIT-u0-vLS"/>
                                             <constraint firstItem="8S8-vx-x6b" firstAttribute="leading" secondItem="28A-55-RcJ" secondAttribute="leading" id="vx4-Zh-fSX"/>
@@ -950,7 +950,7 @@ you want to leave.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpS-jA-ebV">
                                         <rect key="frame" x="0.0" y="319" width="262.5" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72r-n9-YKz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Wallet" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72r-n9-YKz">
                                                 <rect key="frame" x="85" y="21.5" width="93" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -971,7 +971,7 @@ you want to leave.</string>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side_wallet" translatesAutoresizingMaskIntoConstraints="NO" id="8RH-IP-86l">
-                                                <rect key="frame" x="56" y="18" width="24.5" height="24"/>
+                                                <rect key="frame" x="43.5" y="19.5" width="21.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8RH-IP-86l" secondAttribute="height" multiplier="1:1" id="oCS-dI-xuh"/>
                                                 </constraints>
@@ -986,7 +986,7 @@ you want to leave.</string>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="8RH-IP-86l" firstAttribute="height" secondItem="HpS-jA-ebV" secondAttribute="height" multiplier="0.4" id="1Xi-wb-qdF"/>
+                                            <constraint firstItem="8RH-IP-86l" firstAttribute="height" secondItem="HpS-jA-ebV" secondAttribute="height" multiplier="0.35" id="1Xi-wb-qdF"/>
                                             <constraint firstItem="gCH-EW-Ayh" firstAttribute="top" secondItem="oUG-bc-Q4T" secondAttribute="bottom" id="COh-EO-vgj"/>
                                             <constraint firstItem="72r-n9-YKz" firstAttribute="centerY" secondItem="HpS-jA-ebV" secondAttribute="centerY" id="KUv-2P-2Q3"/>
                                             <constraint firstItem="oUG-bc-Q4T" firstAttribute="leading" secondItem="HpS-jA-ebV" secondAttribute="leading" id="MTf-Ux-wsr"/>
@@ -1004,8 +1004,8 @@ you want to leave.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-RV-e7L">
                                         <rect key="frame" x="0.0" y="379" width="262.5" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-tf-EFu">
-                                                <rect key="frame" x="109" y="21.5" width="44.5" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-tf-EFu">
+                                                <rect key="frame" x="85" y="21.5" width="93" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1025,7 +1025,7 @@ you want to leave.</string>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side_setting" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-L4-14j">
-                                                <rect key="frame" x="56" y="15" width="30.5" height="30"/>
+                                                <rect key="frame" x="43.5" y="19.5" width="21.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Sb9-L4-14j" secondAttribute="height" multiplier="1:1" id="WwZ-h2-RjS"/>
                                                 </constraints>
@@ -1047,7 +1047,7 @@ you want to leave.</string>
                                             <constraint firstAttribute="trailing" secondItem="r0r-5F-yDj" secondAttribute="trailing" id="YLl-nF-HZY"/>
                                             <constraint firstItem="JJ6-tf-EFu" firstAttribute="centerY" secondItem="BjH-RV-e7L" secondAttribute="centerY" id="eWa-sj-RQn"/>
                                             <constraint firstItem="B2m-1f-9Mh" firstAttribute="centerY" secondItem="JJ6-tf-EFu" secondAttribute="centerY" id="eo9-n0-EBx"/>
-                                            <constraint firstItem="Sb9-L4-14j" firstAttribute="height" secondItem="BjH-RV-e7L" secondAttribute="height" multiplier="0.5" id="mYP-MA-eEa"/>
+                                            <constraint firstItem="Sb9-L4-14j" firstAttribute="height" secondItem="BjH-RV-e7L" secondAttribute="height" multiplier="0.35" id="mYP-MA-eEa"/>
                                             <constraint firstAttribute="trailing" secondItem="FS9-bB-TSg" secondAttribute="trailing" id="oPn-j5-JiY"/>
                                             <constraint firstItem="Sb9-L4-14j" firstAttribute="centerY" secondItem="JJ6-tf-EFu" secondAttribute="centerY" id="r7W-jv-di9"/>
                                             <constraint firstItem="r0r-5F-yDj" firstAttribute="leading" secondItem="BjH-RV-e7L" secondAttribute="leading" id="rqY-dT-pPc"/>
@@ -1058,8 +1058,8 @@ you want to leave.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBO-6W-lqA">
                                         <rect key="frame" x="0.0" y="439" width="262.5" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojb-uh-i7n">
-                                                <rect key="frame" x="106" y="22" width="51" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Out" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojb-uh-i7n">
+                                                <rect key="frame" x="85" y="22" width="93" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1079,7 +1079,7 @@ you want to leave.</string>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side_logout" translatesAutoresizingMaskIntoConstraints="NO" id="Gp5-fH-yuL">
-                                                <rect key="frame" x="56" y="15" width="30.5" height="30"/>
+                                                <rect key="frame" x="43.5" y="19.5" width="21.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Gp5-fH-yuL" secondAttribute="height" multiplier="1:1" id="CwF-y0-4x7"/>
                                                 </constraints>
@@ -1104,7 +1104,7 @@ you want to leave.</string>
                                             <constraint firstItem="pXt-HQ-NqH" firstAttribute="top" secondItem="mBO-6W-lqA" secondAttribute="top" id="d4p-3A-oNI"/>
                                             <constraint firstAttribute="trailing" secondItem="pXt-HQ-NqH" secondAttribute="trailing" id="f2h-kA-gGI"/>
                                             <constraint firstItem="BSk-q0-bT1" firstAttribute="leading" secondItem="mBO-6W-lqA" secondAttribute="leading" id="vr3-FJ-b53"/>
-                                            <constraint firstItem="Gp5-fH-yuL" firstAttribute="height" secondItem="mBO-6W-lqA" secondAttribute="height" multiplier="0.5" id="yXa-vr-hxf"/>
+                                            <constraint firstItem="Gp5-fH-yuL" firstAttribute="height" secondItem="mBO-6W-lqA" secondAttribute="height" multiplier="0.35" id="yXa-vr-hxf"/>
                                             <constraint firstItem="Gp5-fH-yuL" firstAttribute="centerY" secondItem="Ojb-uh-i7n" secondAttribute="centerY" id="zP5-x4-X44"/>
                                         </constraints>
                                     </view>
@@ -1116,6 +1116,8 @@ you want to leave.</string>
                                     <constraint firstAttribute="trailing" secondItem="UJz-5M-Azw" secondAttribute="trailing" id="2e3-ua-tH9"/>
                                     <constraint firstItem="GGK-BU-J7M" firstAttribute="centerX" secondItem="by8-sk-lOh" secondAttribute="centerX" id="56y-l7-Lyb"/>
                                     <constraint firstAttribute="trailing" secondItem="BjH-RV-e7L" secondAttribute="trailing" id="5p6-k1-fgt"/>
+                                    <constraint firstItem="Ojb-uh-i7n" firstAttribute="leading" secondItem="JJ6-tf-EFu" secondAttribute="leading" id="6vD-t6-1Qz"/>
+                                    <constraint firstItem="44s-ZL-eDh" firstAttribute="leading" secondItem="fXh-RR-Opz" secondAttribute="leading" id="8Gc-2G-gbI"/>
                                     <constraint firstItem="8RH-IP-86l" firstAttribute="leading" secondItem="ucp-En-SPX" secondAttribute="leading" id="9L1-Kr-NKy"/>
                                     <constraint firstItem="ucp-En-SPX" firstAttribute="leading" secondItem="9qI-ka-b3Q" secondAttribute="leading" id="EJI-cC-hBd"/>
                                     <constraint firstAttribute="trailing" secondItem="28A-55-RcJ" secondAttribute="trailing" id="EbW-Vr-TwW"/>
@@ -1138,31 +1140,39 @@ you want to leave.</string>
                                     <constraint firstItem="RPH-li-fzM" firstAttribute="width" secondItem="d2Z-Pd-VUb" secondAttribute="width" multiplier="0.1" id="Uuw-Je-8oR"/>
                                     <constraint firstItem="Sb9-L4-14j" firstAttribute="leading" secondItem="8RH-IP-86l" secondAttribute="leading" id="XRC-I6-irx"/>
                                     <constraint firstItem="by8-sk-lOh" firstAttribute="centerX" secondItem="d2Z-Pd-VUb" secondAttribute="centerX" id="YlA-T5-Gf2"/>
+                                    <constraint firstItem="JJ6-tf-EFu" firstAttribute="leading" secondItem="72r-n9-YKz" secondAttribute="leading" id="Z6d-bY-FRa"/>
                                     <constraint firstItem="xtL-ff-AS2" firstAttribute="top" secondItem="d2Z-Pd-VUb" secondAttribute="top" constant="10" id="b0d-pP-Z3h"/>
                                     <constraint firstItem="mBO-6W-lqA" firstAttribute="height" secondItem="BjH-RV-e7L" secondAttribute="height" id="bgX-eU-N7Z"/>
                                     <constraint firstItem="UJz-5M-Azw" firstAttribute="top" secondItem="RKk-Rn-Xb2" secondAttribute="bottom" id="blP-tx-qnu"/>
                                     <constraint firstItem="by8-sk-lOh" firstAttribute="centerY" secondItem="d2Z-Pd-VUb" secondAttribute="centerY" multiplier="0.2" id="cXd-XL-BbO"/>
                                     <constraint firstItem="28A-55-RcJ" firstAttribute="leading" secondItem="d2Z-Pd-VUb" secondAttribute="leading" id="d2E-1i-hC6"/>
                                     <constraint firstItem="28A-55-RcJ" firstAttribute="top" secondItem="UJz-5M-Azw" secondAttribute="bottom" id="d8R-MG-xbX"/>
-                                    <constraint firstItem="82F-4t-geo" firstAttribute="centerX" secondItem="by8-sk-lOh" secondAttribute="centerX" id="dUo-ZE-c7q"/>
+                                    <constraint firstItem="82F-4t-geo" firstAttribute="centerX" secondItem="by8-sk-lOh" secondAttribute="centerX" multiplier="1.05" id="dUo-ZE-c7q"/>
                                     <constraint firstItem="BjH-RV-e7L" firstAttribute="leading" secondItem="d2Z-Pd-VUb" secondAttribute="leading" id="fCu-w4-Cnj"/>
                                     <constraint firstItem="RPH-li-fzM" firstAttribute="centerY" secondItem="FHL-iF-xZ3" secondAttribute="centerY" id="ki1-hT-Ige"/>
                                     <constraint firstItem="UJz-5M-Azw" firstAttribute="height" secondItem="d2Z-Pd-VUb" secondAttribute="height" multiplier="0.1" id="kxm-cP-3Qi"/>
-                                    <constraint firstItem="82F-4t-geo" firstAttribute="top" secondItem="mBO-6W-lqA" secondAttribute="bottom" constant="15" id="mMd-mz-eeS"/>
+                                    <constraint firstItem="82F-4t-geo" firstAttribute="top" secondItem="mBO-6W-lqA" secondAttribute="bottom" constant="30" id="mMd-mz-eeS"/>
                                     <constraint firstItem="RKk-Rn-Xb2" firstAttribute="centerX" secondItem="d2Z-Pd-VUb" secondAttribute="centerX" id="pPv-ch-RpK"/>
                                     <constraint firstItem="HpS-jA-ebV" firstAttribute="leading" secondItem="d2Z-Pd-VUb" secondAttribute="leading" id="pX0-Se-oaF"/>
                                     <constraint firstAttribute="trailing" secondItem="xtL-ff-AS2" secondAttribute="trailing" constant="10" id="vpz-LP-WRc"/>
                                     <constraint firstItem="mBO-6W-lqA" firstAttribute="leading" secondItem="d2Z-Pd-VUb" secondAttribute="leading" id="xFS-0t-mFG"/>
+                                    <constraint firstItem="72r-n9-YKz" firstAttribute="leading" secondItem="44s-ZL-eDh" secondAttribute="leading" id="xpK-I2-BQf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="1" height="1"/>
+                                        <size key="value" width="2" height="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
                                         <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="0.2032587756849315" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

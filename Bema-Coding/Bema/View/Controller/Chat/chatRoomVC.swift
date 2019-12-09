@@ -592,10 +592,10 @@ extension chatRoomVC: UITableViewDelegate, UITableViewDataSource{
                     
                 }
                 
-                print(contxtArr)
+//                print(contxtArr)
                 
                 cell.senderName.text = senderDetail?.displayName
-                cell.senderAmount.text = "send \((contxtArr.last)!)"
+                cell.senderAmount.text = "sent \((contxtArr.last)!)"
                 cell.senderCrypto.image =  UIImage(named: (contxtArr.first)!)
                 
                 

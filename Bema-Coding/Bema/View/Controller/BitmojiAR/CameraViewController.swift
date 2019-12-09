@@ -95,8 +95,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
    screenShotView.isHidden = true
 
         
-        
-        
         self.initialConfigure()
         
         
@@ -134,7 +132,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
         self.reciever = userDetail
         
-//        print(self.reciever?.displayName)
         
         self.showBitmojiList()
     }
@@ -150,7 +147,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         self.transitionValue = value
         
         cryptoimage.image = UIImage(named: value["NAME"]!)
-        cryptoAmount.text = value["AMOUNT"]
+        cryptoAmount.text = "$ \(value["AMOUNT"] ?? "0")"
         
         
         self.selectedCrypto = value["NAME"]!
@@ -277,19 +274,13 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
 
                 
                     DispatchQueue.main.async {
-//                        if hitResult.node.geometry?.name == "Pane" || (hitResult.node.geometry?.name)! == "Frame"{
                             let node = hitResult.node
                             
                             let pinchAction = SCNAction.scale(by: recognizer.scale, duration: 0)
                             node.runAction(pinchAction)
                             recognizer.scale = 1
-//                    }
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-////                            self.InfoLabel.text = "TAP ON SCREEN TO ADD YOUR ART "
-//    //                        self.InfoLabel.textColor = UIColor.white
-//                        })
-                  
-    //
+
+
 
                     }
                 }
@@ -317,7 +308,6 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         geometry.firstMaterial?.diffuse.contents = image
         node.geometry = geometry
         node.position = position
-//        self.bitmojiNode.position = position
         node.name = "bitmoji"
         return node
     }
