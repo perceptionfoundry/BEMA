@@ -55,6 +55,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     
     private var bitmojiSelectionView: UIView?
     
+    var bitmojiNode: SCNNode!
     var transitionValue = [String:Any]()
     
     
@@ -78,6 +79,11 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         // Pinch to Resize AR-object
               let pinch = UIPinchGestureRecognizer(target: self, action: #selector(pinched))
               sceneView.addGestureRecognizer(pinch)
+        
+        
+        // Relocate to Resize AR-object
+        let long = UIPanGestureRecognizer(target: self, action: #selector(relocateGesture))
+        sceneView.addGestureRecognizer(long)
        
     }
     
@@ -222,6 +228,36 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
     }
     
     
+    @objc func relocateGesture(_ gesture: UIPanGestureRecognizer) {
+
+
+        gesture.minimumNumberOfTouches = 1
+
+           let results = self.sceneView.hitTest(gesture.location(in: gesture.view), types: ARHitTestResult.ResultType.featurePoint)
+
+           guard let result: ARHitTestResult = results.first else {
+               return
+           }
+
+           let hits = self.sceneView.hitTest(gesture.location(in: gesture.view), options: nil)
+           if let tappedNode = hits.first?.node {
+               let position = SCNVector3Make(result.worldTransform.columns.3.x, result.worldTransform.columns.3.y, result.worldTransform.columns.3.z)
+               tappedNode.position = position
+           }
+        
+        
+        
+                    
+
+        
+        
+        
+    }
+    
+    
+    
+    
+    
     
     // PINCHED FUNCTION
         @objc func pinched(recognizer : UIPinchGestureRecognizer){
@@ -235,17 +271,11 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                 
                 if !hitTest.isEmpty{
                     
-                    
-//                    InfoLabel.text = "Resize "
-    //                InfoLabel.textColor = UIColor.white
+
 
                     let hitResult = hitTest.first!
-                    
-                    
-//                    print((hitResult.node.geometry?.name)!)
-                    // PANE is the  HITRESULT
-                    
-                    
+
+                
                     DispatchQueue.main.async {
 //                        if hitResult.node.geometry?.name == "Pane" || (hitResult.node.geometry?.name)! == "Frame"{
                             let node = hitResult.node
@@ -254,10 +284,10 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
                             node.runAction(pinchAction)
                             recognizer.scale = 1
 //                    }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-//                            self.InfoLabel.text = "TAP ON SCREEN TO ADD YOUR ART "
-    //                        self.InfoLabel.textColor = UIColor.white
-                        })
+//                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+////                            self.InfoLabel.text = "TAP ON SCREEN TO ADD YOUR ART "
+//    //                        self.InfoLabel.textColor = UIColor.white
+//                        })
                   
     //
 
@@ -287,6 +317,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         geometry.firstMaterial?.diffuse.contents = image
         node.geometry = geometry
         node.position = position
+//        self.bitmojiNode.position = position
         node.name = "bitmoji"
         return node
     }
@@ -296,7 +327,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         
         
 //        // Make bitmoji background view
-        let viewHeight: CGFloat = 300
+        let viewHeight: CGFloat = self.view.frame.height - 100
         let screen: CGRect = UIScreen.main.bounds
         let backgroundView = UIView(
             frame: CGRect(
@@ -405,33 +436,7 @@ class CameraViewController: UIViewController, ContactList_Protocol, cryptoTransi
         }
         
         
-//        cryptoView.center.y = cryptoView.center.y - 50
-//        sendButton.isHidden = false
-//
-//        contactButton.isHidden = true
-//        flipButton.isHidden = true
-//        gallery.isHidden = true
-//        cameraButton.isHidden = true
-//        cryptoButton.isHidden = true
-//
-//
-//        if sender.tag == 0 {
-//            //Photo
-//            if recorder?.status == .readyToRecord {
-//                let image = self.recorder?.photo()
-//
-//                self.screenShotImage = image
-//                self.screenShotView.image = image
-//                self.screenShotView.isHidden = false
-//
-//                self.recorder?.export(UIImage: image) { saved, status in
-//                    if saved {
-//                        // Inform user photo has exported successfully
-//                        self.exportMessage(success: saved, status: status)
-//                    }
-//                }
-//            }
-//        }
+
         
     }
     
