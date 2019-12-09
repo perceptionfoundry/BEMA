@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="syv-Ca-u8L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="syv-Ca-u8L">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,10 +107,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIX-ko-1tH" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
-                                                    <rect key="frame" x="31" y="15" width="352" height="45"/>
+                                                    <rect key="frame" x="31" y="7.5" width="352" height="60"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dp" translatesAutoresizingMaskIntoConstraints="NO" id="GTz-i5-3vG" customClass="Custom_ImageView" customModule="Bema" customModuleProvider="target">
-                                                            <rect key="frame" x="25" y="7.5" width="30" height="30"/>
+                                                            <rect key="frame" x="25" y="15" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="GHf-bR-dDS"/>
                                                                 <constraint firstAttribute="width" secondItem="GTz-i5-3vG" secondAttribute="height" multiplier="1:1" id="RrH-10-mlH"/>
@@ -122,13 +122,13 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currency_tick" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-yG-ouW">
-                                                            <rect key="frame" x="309.5" y="11.5" width="22.5" height="22.5"/>
+                                                            <rect key="frame" x="302" y="15" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="dr7-yG-ouW" secondAttribute="height" multiplier="1:1" id="ZQf-ll-hno"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6G-ww-5Wb">
-                                                            <rect key="frame" x="65" y="15" width="193.5" height="15"/>
+                                                            <rect key="frame" x="65" y="22.5" width="193.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -147,7 +147,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
-                                                            <real key="value" value="25"/>
+                                                            <real key="value" value="30"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                             <real key="value" value="2"/>
@@ -166,7 +166,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="VIX-ko-1tH" firstAttribute="height" secondItem="ghp-16-9vC" secondAttribute="height" multiplier="0.6" id="PnT-O4-TlO"/>
+                                                <constraint firstItem="VIX-ko-1tH" firstAttribute="height" secondItem="ghp-16-9vC" secondAttribute="height" multiplier="0.8" id="PnT-O4-TlO"/>
                                                 <constraint firstItem="VIX-ko-1tH" firstAttribute="centerY" secondItem="ghp-16-9vC" secondAttribute="centerY" id="hIb-gn-Bf8"/>
                                                 <constraint firstItem="VIX-ko-1tH" firstAttribute="centerX" secondItem="ghp-16-9vC" secondAttribute="centerX" id="hdm-fu-zEr"/>
                                                 <constraint firstItem="VIX-ko-1tH" firstAttribute="width" secondItem="ghp-16-9vC" secondAttribute="width" multiplier="0.85" id="vPi-VX-J98"/>
