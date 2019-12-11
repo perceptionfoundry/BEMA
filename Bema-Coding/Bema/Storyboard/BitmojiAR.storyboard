@@ -97,14 +97,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_AR" translatesAutoresizingMaskIntoConstraints="NO" id="Oej-aF-UmE">
-                                <rect key="frame" x="25" y="719.5" width="38" height="38"/>
+                                <rect key="frame" x="25" y="769" width="38" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="ryR-UP-3jT"/>
                                     <constraint firstAttribute="width" secondItem="Oej-aF-UmE" secondAttribute="height" multiplier="1:1" id="zXE-Lf-UI4"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8A-PP-lOB">
-                                <rect key="frame" x="108.5" y="640" width="197" height="197"/>
+                                <rect key="frame" x="158" y="738.5" width="98.5" height="98.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="M8A-PP-lOB" secondAttribute="height" multiplier="1:1" id="xrV-Tk-KRR"/>
                                 </constraints>
@@ -125,7 +125,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAx-lM-OcB">
-                                <rect key="frame" x="319" y="703.5" width="70" height="70"/>
+                                <rect key="frame" x="319" y="753" width="70" height="70"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M34-5b-Whz" customClass="Custom_ImageView" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="23" y="10" width="24" height="24"/>
@@ -157,7 +157,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffr-Rq-qsL">
-                                <rect key="frame" x="312" y="772.5" width="77" height="35"/>
+                                <rect key="frame" x="312" y="825.5" width="77" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ffr-Rq-qsL" secondAttribute="height" multiplier="11:5" id="J9B-9F-qmk"/>
                                     <constraint firstAttribute="width" constant="77" id="gp9-KG-Zlp"/>
@@ -369,6 +369,9 @@
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="C_Radius">
                                                                     <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" white="0.66666666666666663" alpha="0.21184717465753425" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
