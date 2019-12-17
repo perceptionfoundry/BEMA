@@ -1010,7 +1010,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQT-eD-SFc">
-                                        <rect key="frame" x="94.5" y="46.5" width="142" height="41.5"/>
+                                        <rect key="frame" x="101.5" y="48" width="128" height="40"/>
                                         <string key="text">Token Transfer is
 Successful!</string>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
@@ -1042,13 +1042,13 @@ Successful!</string>
                                 <rect key="frame" x="31" y="351" width="352" height="204.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm transaction?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4G-b3-Xje">
-                                        <rect key="frame" x="72" y="39" width="208" height="23.5"/>
+                                        <rect key="frame" x="87" y="39.5" width="178.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7u-vf-zHO" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="53" y="77.5" width="105.5" height="45"/>
+                                        <rect key="frame" x="53" y="77" width="105.5" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Ubv-OC-VWh"/>
                                         </constraints>
@@ -1070,7 +1070,7 @@ Successful!</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCP-Fl-Y0b" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
-                                        <rect key="frame" x="193.5" y="77.5" width="105.5" height="45"/>
+                                        <rect key="frame" x="193.5" y="77" width="105.5" height="45"/>
                                         <color key="backgroundColor" red="0.071193896229999998" green="0.61186456680000001" blue="0.60393893720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
                                         <state key="normal" title="Yes">

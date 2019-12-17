@@ -28,8 +28,6 @@
 		F237044023688E200070B366 /* RecieverImage_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F237043E23688E200070B366 /* RecieverImage_Cell.xib */; };
 		F24E1EE5234332D60015E658 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE4234332D60015E658 /* SignInVC.swift */; };
 		F24E1EE72343342B0015E658 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24E1EE62343342B0015E658 /* UserEntity.swift */; };
-		F2518CC92379B8700043294B /* ARVideoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2518CC82379B81A0043294B /* ARVideoKit.framework */; };
-		F2518CCA2379B8700043294B /* ARVideoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2518CC82379B81A0043294B /* ARVideoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F25197E5234CF6DE00973F65 /* SetBitmojiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E4234CF6DE00973F65 /* SetBitmojiVC.swift */; };
 		F25197E7234CF6F800973F65 /* InviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E6234CF6F800973F65 /* InviteVC.swift */; };
 		F25197E9234CF72F00973F65 /* LogoutVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25197E8234CF72F00973F65 /* LogoutVc.swift */; };
@@ -228,9 +226,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F2518CC72379B81A0043294B /* PBXContainerItemProxy */ = {
+		F27A8E3C23A8A0F20033CBA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */;
+			containerPortal = F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FBD604DA1FA969DD00EC9804;
 			remoteInfo = ARVideoKit;
@@ -244,7 +242,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F2518CCA2379B8700043294B /* ARVideoKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +364,6 @@
 		F237043E23688E200070B366 /* RecieverImage_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecieverImage_Cell.xib; sourceTree = "<group>"; };
 		F24E1EE4234332D60015E658 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		F24E1EE62343342B0015E658 /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
-		F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ARVideoKit.xcodeproj; path = "../../../../../../Downloads/ARVideoKit-swift_5/ARVideoKit.xcodeproj"; sourceTree = "<group>"; };
 		F25197D2234CEE9100973F65 /* Poppins-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.otf"; sourceTree = "<group>"; };
 		F25197D3234CEE9100973F65 /* Poppins-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.otf"; sourceTree = "<group>"; };
 		F25197D4234CEE9200973F65 /* Poppins-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.otf"; sourceTree = "<group>"; };
@@ -391,6 +387,7 @@
 		F25197E8234CF72F00973F65 /* LogoutVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVc.swift; sourceTree = "<group>"; };
 		F26EA894236DB0BB00CE259A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F27275E1237060AC0070B88A /* SaveImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveImageViewModel.swift; sourceTree = "<group>"; };
+		F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ARVideoKit.xcodeproj; sourceTree = "<group>"; };
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_CryptoTableView.swift; sourceTree = "<group>"; };
 		F29094AB235606A0004E692F /* confirmToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmToken.swift; sourceTree = "<group>"; };
@@ -480,7 +477,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2518CC92379B8700043294B /* ARVideoKit.framework in Frameworks */,
 				7CD5E49A3F21B10398A9F00C /* Pods_Bema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,15 +572,15 @@
 		F2518CC22379B8060043294B /* ARVideo */ = {
 			isa = PBXGroup;
 			children = (
-				F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */,
+				F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */,
 			);
 			path = ARVideo;
 			sourceTree = "<group>";
 		};
-		F2518CC42379B81A0043294B /* Products */ = {
+		F27A8E3923A8A0F20033CBA9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2518CC82379B81A0043294B /* ARVideoKit.framework */,
+				F27A8E3D23A8A0F20033CBA9 /* ARVideoKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -966,8 +962,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F2518CC42379B81A0043294B /* Products */;
-					ProjectRef = F2518CC32379B81A0043294B /* ARVideoKit.xcodeproj */;
+					ProductGroup = F27A8E3923A8A0F20033CBA9 /* Products */;
+					ProjectRef = F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -978,11 +974,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F2518CC82379B81A0043294B /* ARVideoKit.framework */ = {
+		F27A8E3D23A8A0F20033CBA9 /* ARVideoKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ARVideoKit.framework;
-			remoteRef = F2518CC72379B81A0043294B /* PBXContainerItemProxy */;
+			remoteRef = F27A8E3C23A8A0F20033CBA9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
