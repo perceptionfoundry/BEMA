@@ -192,6 +192,8 @@
 		F2C5CD4723560CB4009D7F74 /* SendToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */; };
 		F2CAC19D23731B0B000268B5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAC19C23731B0B000268B5 /* Message.swift */; };
 		F2CE806A234B8E06009933A2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CE8069234B8E06009933A2 /* SettingVC.swift */; };
+		F2CF6BD023A8A4B6004E6AA6 /* ARVideoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CF6BCF23A8A429004E6AA6 /* ARVideoKit.framework */; };
+		F2CF6BD123A8A4B6004E6AA6 /* ARVideoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2CF6BCF23A8A429004E6AA6 /* ARVideoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2CFB5B023685735006970FB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CFB5AF23685735006970FB /* Chat.storyboard */; };
 		F2CFB5B323685B1D006970FB /* ChatContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB5B223685B1D006970FB /* ChatContactVC.swift */; };
 		F2CFB5B523687EEF006970FB /* chatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFB5B423687EEF006970FB /* chatRoomVC.swift */; };
@@ -226,9 +228,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F27A8E3C23A8A0F20033CBA9 /* PBXContainerItemProxy */ = {
+		F2CF6BCE23A8A429004E6AA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */;
+			containerPortal = F2CF6BCA23A8A429004E6AA6 /* ARVideoKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FBD604DA1FA969DD00EC9804;
 			remoteInfo = ARVideoKit;
@@ -236,12 +238,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F2518CCB2379B8700043294B /* Embed Frameworks */ = {
+		F27A8E4823A8A3830033CBA9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F2CF6BD123A8A4B6004E6AA6 /* ARVideoKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +390,6 @@
 		F25197E8234CF72F00973F65 /* LogoutVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutVc.swift; sourceTree = "<group>"; };
 		F26EA894236DB0BB00CE259A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F27275E1237060AC0070B88A /* SaveImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveImageViewModel.swift; sourceTree = "<group>"; };
-		F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ARVideoKit.xcodeproj; sourceTree = "<group>"; };
 		F2811440234CE1CE005FE144 /* TrustWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustWalletVC.swift; sourceTree = "<group>"; };
 		F28AF2DB234F6CE400DF14BE /* Wallet_CryptoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_CryptoTableView.swift; sourceTree = "<group>"; };
 		F29094AB235606A0004E692F /* confirmToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmToken.swift; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 		F2C5CD4623560CB4009D7F74 /* SendToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendToken.storyboard; sourceTree = "<group>"; };
 		F2CAC19C23731B0B000268B5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F2CE8069234B8E06009933A2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		F2CF6BCA23A8A429004E6AA6 /* ARVideoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ARVideoKit.xcodeproj; path = "../../../ARVideoKit-swift_5/ARVideoKit.xcodeproj"; sourceTree = "<group>"; };
 		F2CFB5AF23685735006970FB /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		F2CFB5B223685B1D006970FB /* ChatContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContactVC.swift; sourceTree = "<group>"; };
 		F2CFB5B423687EEF006970FB /* chatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatRoomVC.swift; sourceTree = "<group>"; };
@@ -477,6 +480,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CF6BD023A8A4B6004E6AA6 /* ARVideoKit.framework in Frameworks */,
 				7CD5E49A3F21B10398A9F00C /* Pods_Bema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,17 +576,9 @@
 		F2518CC22379B8060043294B /* ARVideo */ = {
 			isa = PBXGroup;
 			children = (
-				F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */,
+				F2CF6BCA23A8A429004E6AA6 /* ARVideoKit.xcodeproj */,
 			);
 			path = ARVideo;
-			sourceTree = "<group>";
-		};
-		F27A8E3923A8A0F20033CBA9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F27A8E3D23A8A0F20033CBA9 /* ARVideoKit.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F2A289FF234B66FF001AE873 /* Main */ = {
@@ -819,6 +815,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		F2CF6BCB23A8A429004E6AA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2CF6BCF23A8A429004E6AA6 /* ARVideoKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F2CFB5B123685AD9006970FB /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,7 +927,7 @@
 				F2E2234A2343135700931AFA /* Frameworks */,
 				F2E2234B2343135700931AFA /* Resources */,
 				17B0C63C9DF82360C80398D6 /* [CP] Embed Pods Frameworks */,
-				F2518CCB2379B8700043294B /* Embed Frameworks */,
+				F27A8E4823A8A3830033CBA9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -962,8 +966,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F27A8E3923A8A0F20033CBA9 /* Products */;
-					ProjectRef = F27A8E3823A8A0F20033CBA9 /* ARVideoKit.xcodeproj */;
+					ProductGroup = F2CF6BCB23A8A429004E6AA6 /* Products */;
+					ProjectRef = F2CF6BCA23A8A429004E6AA6 /* ARVideoKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -974,11 +978,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F27A8E3D23A8A0F20033CBA9 /* ARVideoKit.framework */ = {
+		F2CF6BCF23A8A429004E6AA6 /* ARVideoKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ARVideoKit.framework;
-			remoteRef = F27A8E3C23A8A0F20033CBA9 /* PBXContainerItemProxy */;
+			remoteRef = F2CF6BCE23A8A429004E6AA6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
