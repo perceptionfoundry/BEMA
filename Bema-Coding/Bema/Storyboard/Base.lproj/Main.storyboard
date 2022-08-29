@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZR-2M-zg9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZR-2M-zg9">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -77,7 +78,7 @@
                                             <constraint firstAttribute="width" secondItem="xHW-V2-FPx" secondAttribute="height" multiplier="1:1" id="89C-o0-bMw"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-gc-fCo">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-gc-fCo">
                                         <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="SWT-VD-1ty" eventType="touchUpInside" id="V6P-Uq-Cby"/>
@@ -104,7 +105,8 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="A5x-el-a7f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="A5x-el-a7f" firstAttribute="bottom" secondItem="byr-YH-dqI" secondAttribute="bottom" id="EyB-ac-RAV"/>
                             <constraint firstItem="mhR-Ah-5P2" firstAttribute="width" secondItem="byr-YH-dqI" secondAttribute="width" multiplier="0.85" id="FiM-kD-5dC"/>
@@ -118,7 +120,6 @@
                             <constraint firstItem="mhR-Ah-5P2" firstAttribute="top" secondItem="23u-I1-Tz2" secondAttribute="bottom" constant="10" id="vu8-wB-7sG"/>
                             <constraint firstItem="a9z-i6-Uvr" firstAttribute="centerX" secondItem="mhR-Ah-5P2" secondAttribute="centerX" id="yHv-5y-KEh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="A5x-el-a7f"/>
                     </view>
                     <navigationItem key="navigationItem" id="stw-OS-Ydh"/>
                     <connections>
@@ -141,11 +142,11 @@
                                 <rect key="frame" x="0.0" y="62" width="375" height="525"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K84-CZ-kgL">
-                                        <rect key="frame" x="0.0" y="83.5" width="375" height="441.5"/>
+                                        <rect key="frame" x="0.0" y="84.5" width="375" height="440.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contact" rowHeight="111" id="41q-eg-R7c" customClass="MessageTableViewCell" customModule="Bema" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="111"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="375" height="111"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="41q-eg-R7c" id="aIi-7s-mDR">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
@@ -155,13 +156,13 @@
                                                             <rect key="frame" x="19" y="14" width="337.5" height="83"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWA-Mk-Yod">
-                                                                    <rect key="frame" x="291" y="26" width="26.5" height="14"/>
+                                                                    <rect key="frame" x="285" y="25.5" width="32.5" height="15"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                                                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" systemColor="systemGrayColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6a2-KZ-Q8V" customClass="Custom_View" customModule="Bema" customModuleProvider="target">
-                                                                    <rect key="frame" x="297.5" y="50" width="20" height="20"/>
+                                                                    <rect key="frame" x="297.5" y="50.5" width="20" height="20"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="count_circle" translatesAutoresizingMaskIntoConstraints="NO" id="UNp-9y-g2q">
                                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -205,13 +206,13 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzT-GS-y8v">
-                                                                    <rect key="frame" x="90.5" y="23.5" width="168.5" height="19"/>
+                                                                    <rect key="frame" x="90.5" y="23" width="168.5" height="20"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOd-Dp-6D2">
-                                                                    <rect key="frame" x="90.5" y="47.5" width="168.5" height="14"/>
+                                                                    <rect key="frame" x="90.5" y="48" width="168.5" height="15"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                                     <color key="textColor" red="0.64364975690841675" green="0.64374464750289917" blue="0.64362907409667969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -272,13 +273,13 @@
                                         </prototypes>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ps-qx-0cC">
-                                        <rect key="frame" x="30" y="30" width="91.5" height="23.5"/>
+                                        <rect key="frame" x="30" y="30" width="99.5" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="K84-CZ-kgL" firstAttribute="top" secondItem="5Ps-qx-0cC" secondAttribute="bottom" constant="30" id="Dgl-KV-E4y"/>
                                     <constraint firstAttribute="trailing" secondItem="K84-CZ-kgL" secondAttribute="trailing" id="SmD-3e-ENN"/>
@@ -365,13 +366,14 @@
                                         <rect key="frame" x="0.0" y="21.5" width="150" height="85.5"/>
                                         <state key="normal" image="chat_Selected"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-XX-Gi2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-XX-Gi2">
                                         <rect key="frame" x="150" y="8" width="75" height="60"/>
                                         <connections>
                                             <segue destination="K8o-sI-AP8" kind="show" id="V7I-0L-w6b"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="FGk-C9-bSK"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TL0-Tl-OmD" firstAttribute="height" secondItem="4Jw-tK-a28" secondAttribute="height" multiplier="0.8" id="2t7-h1-DQu"/>
@@ -392,9 +394,9 @@
                                     <constraint firstAttribute="bottom" secondItem="YVh-xX-vC4" secondAttribute="bottom" id="tC7-VU-888"/>
                                     <constraint firstItem="bQ9-XX-Gi2" firstAttribute="height" secondItem="TL0-Tl-OmD" secondAttribute="height" multiplier="0.7" id="utu-Cc-QPG"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="FGk-C9-bSK"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5kB-uz-TFk"/>
                         <color key="backgroundColor" red="0.96079713106155396" green="0.96076112985610962" blue="0.96078568696975708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="29K-H7-7ke" firstAttribute="leading" secondItem="KXc-Zs-ilZ" secondAttribute="leading" id="Kad-mh-pW3"/>
@@ -410,7 +412,6 @@
                             <constraint firstItem="bjf-Iw-otx" firstAttribute="leading" secondItem="5kB-uz-TFk" secondAttribute="leading" id="vwH-oT-coT"/>
                             <constraint firstItem="bjf-Iw-otx" firstAttribute="centerX" secondItem="5kB-uz-TFk" secondAttribute="centerX" id="wV5-2X-bdp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5kB-uz-TFk"/>
                     </view>
                     <navigationItem key="navigationItem" id="MOt-KL-hQO"/>
                     <connections>
@@ -464,7 +465,7 @@ head over to snapchat?</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmH-1v-2ir" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmH-1v-2ir" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="37.5" y="188" width="105" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="hqD-zU-a0m"/>
@@ -485,7 +486,7 @@ head over to snapchat?</string>
                                             <action selector="noButtonAction:" destination="sfR-EV-Geg" eventType="touchUpInside" id="nNb-Od-0e8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67d-g6-f0P" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67d-g6-f0P" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="157.5" y="188" width="105" height="40"/>
                                         <color key="backgroundColor" red="0.2174637616" green="0.93898904319999998" blue="0.81568568939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -527,6 +528,7 @@ head over to snapchat?</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6bd-xW-1aS"/>
                         <color key="backgroundColor" white="1" alpha="0.74966989436619713" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="S92-C7-6qv" firstAttribute="centerX" secondItem="6bd-xW-1aS" secondAttribute="centerX" id="0mI-bG-FGD"/>
@@ -534,7 +536,6 @@ head over to snapchat?</string>
                             <constraint firstItem="S92-C7-6qv" firstAttribute="height" secondItem="6bd-xW-1aS" secondAttribute="height" multiplier="0.425" id="UQj-59-qdX"/>
                             <constraint firstItem="S92-C7-6qv" firstAttribute="width" secondItem="6bd-xW-1aS" secondAttribute="width" multiplier="0.8" id="dr9-YH-oVf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6bd-xW-1aS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmc-zi-MYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -579,7 +580,7 @@ to join the fun.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSz-Xi-pLE" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSz-Xi-pLE" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="32.5" y="163.5" width="92" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="7JO-Vu-sCk"/>
@@ -600,7 +601,7 @@ to join the fun.</string>
                                             <action selector="noButtonAction:" destination="Srb-6f-DNe" eventType="touchUpInside" id="8dT-UJ-nZE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaP-sk-dcW" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaP-sk-dcW" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="137.5" y="163.5" width="92" height="45"/>
                                         <color key="backgroundColor" red="0.2174637616" green="0.93898904319999998" blue="0.81568568939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
@@ -637,6 +638,7 @@ to join the fun.</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="idB-ve-mGN"/>
                         <color key="backgroundColor" white="1" alpha="0.75211817781690138" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="azE-an-dpi" firstAttribute="centerX" secondItem="idB-ve-mGN" secondAttribute="centerX" id="g21-dk-5rL"/>
@@ -644,7 +646,6 @@ to join the fun.</string>
                             <constraint firstItem="azE-an-dpi" firstAttribute="width" secondItem="idB-ve-mGN" secondAttribute="width" multiplier="0.7" id="z2s-d5-z0x"/>
                             <constraint firstItem="azE-an-dpi" firstAttribute="height" secondItem="idB-ve-mGN" secondAttribute="height" multiplier="0.4" id="zv3-9m-qGy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="idB-ve-mGN"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hq5-1a-9Qh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -675,7 +676,7 @@ to join the fun.</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Logout?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iSn-Zh-afs">
                                         <rect key="frame" x="28" y="44.5" width="225" height="45"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="32"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFs-DZ-MWd">
@@ -686,7 +687,7 @@ you want to leave.</string>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nJ-Wg-ROZ" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nJ-Wg-ROZ" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="35" y="169" width="98.5" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="W5O-25-Xuu"/>
@@ -707,7 +708,7 @@ you want to leave.</string>
                                             <action selector="noButtonAction:" destination="NhL-za-SSW" eventType="touchUpInside" id="piN-01-5wX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-yi-kP7" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-yi-kP7" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="147.5" y="169" width="98.5" height="45"/>
                                         <color key="backgroundColor" red="0.071193896229999998" green="0.61186456680000001" blue="0.60393893720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
@@ -758,6 +759,7 @@ you want to leave.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="KPr-5P-ngo"/>
                         <color key="backgroundColor" white="1" alpha="0.745818661971831" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="j9c-Wh-K1G" firstAttribute="width" secondItem="KPr-5P-ngo" secondAttribute="width" multiplier="0.75" id="DTy-zE-iYZ"/>
@@ -765,7 +767,6 @@ you want to leave.</string>
                             <constraint firstItem="j9c-Wh-K1G" firstAttribute="centerX" secondItem="KPr-5P-ngo" secondAttribute="centerX" id="a0z-jv-zWv"/>
                             <constraint firstItem="j9c-Wh-K1G" firstAttribute="centerY" secondItem="KPr-5P-ngo" secondAttribute="centerY" id="bxo-DD-4C9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="KPr-5P-ngo"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqC-bp-qV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -867,7 +868,7 @@ you want to leave.</string>
                                                     <constraint firstAttribute="width" secondItem="9qI-ka-b3Q" secondAttribute="height" multiplier="1:1" id="4GX-xA-hVG"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPd-SU-a3n">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPd-SU-a3n">
                                                 <rect key="frame" x="0.0" y="0.0" width="262.5" height="59.5"/>
                                                 <connections>
                                                     <action selector="profileButtonAction:" destination="Lz2-Nz-jfF" eventType="touchUpInside" id="p50-6i-XOG"/>
@@ -922,7 +923,7 @@ you want to leave.</string>
                                                     <constraint firstAttribute="width" secondItem="ucp-En-SPX" secondAttribute="height" multiplier="1:1" id="iLb-6Y-8sW"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQr-jl-uUX">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQr-jl-uUX">
                                                 <rect key="frame" x="0.0" y="0.0" width="262.5" height="59.5"/>
                                                 <connections>
                                                     <action selector="bitmojiButtonAction:" destination="Lz2-Nz-jfF" eventType="touchUpInside" id="C1V-W0-XMy"/>
@@ -976,7 +977,7 @@ you want to leave.</string>
                                                     <constraint firstAttribute="width" secondItem="8RH-IP-86l" secondAttribute="height" multiplier="1:1" id="oCS-dI-xuh"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUG-bc-Q4T">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUG-bc-Q4T">
                                                 <rect key="frame" x="0.0" y="0.0" width="262.5" height="59.5"/>
                                                 <connections>
                                                     <action selector="walletButtonAction:" destination="Lz2-Nz-jfF" eventType="touchUpInside" id="2xd-h8-A3c"/>
@@ -1030,7 +1031,7 @@ you want to leave.</string>
                                                     <constraint firstAttribute="width" secondItem="Sb9-L4-14j" secondAttribute="height" multiplier="1:1" id="WwZ-h2-RjS"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-5F-yDj">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-5F-yDj">
                                                 <rect key="frame" x="0.0" y="0.0" width="262.5" height="59.5"/>
                                                 <connections>
                                                     <action selector="settingButtonAction:" destination="Lz2-Nz-jfF" eventType="touchUpInside" id="czG-6w-sCo"/>
@@ -1084,7 +1085,7 @@ you want to leave.</string>
                                                     <constraint firstAttribute="width" secondItem="Gp5-fH-yuL" secondAttribute="height" multiplier="1:1" id="CwF-y0-4x7"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-HQ-NqH">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-HQ-NqH">
                                                 <rect key="frame" x="0.0" y="0.0" width="262.5" height="59.5"/>
                                                 <connections>
                                                     <action selector="logoutButtonAction:" destination="Lz2-Nz-jfF" eventType="touchUpInside" id="DUJ-BM-tO1"/>
@@ -1177,6 +1178,7 @@ you want to leave.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="rNa-Md-3kZ"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d2Z-Pd-VUb" firstAttribute="leading" secondItem="rNa-Md-3kZ" secondAttribute="leading" constant="-20" id="9Qy-qZ-75Q"/>
@@ -1184,7 +1186,6 @@ you want to leave.</string>
                             <constraint firstItem="d2Z-Pd-VUb" firstAttribute="centerY" secondItem="rNa-Md-3kZ" secondAttribute="centerY" id="BgE-EY-95n"/>
                             <constraint firstItem="d2Z-Pd-VUb" firstAttribute="height" secondItem="rNa-Md-3kZ" secondAttribute="height" multiplier="0.9" id="DUq-Pn-v2w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rNa-Md-3kZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="A4E-41-LYU"/>
                     <connections>
@@ -1211,14 +1212,14 @@ you want to leave.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
@@ -1302,18 +1303,18 @@ you want to leave.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="247"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$230.86" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJ6-bj-ccQ">
-                                        <rect key="frame" x="56.5" y="68" width="262.5" height="37.5"/>
+                                        <rect key="frame" x="56.5" y="67" width="262.5" height="39.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyL-E3-bD9">
-                                        <rect key="frame" x="121.5" y="105.5" width="132" height="26"/>
+                                        <rect key="frame" x="113.5" y="106.5" width="148" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDs-Lk-X8y" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDs-Lk-X8y" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="56.5" y="165.5" width="112" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1331,7 +1332,7 @@ you want to leave.</string>
                                             <segue destination="5Oy-a0-YZV" kind="show" id="fGn-5h-buo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlT-hh-pur" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlT-hh-pur" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="216" y="165.5" width="112" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1347,14 +1348,14 @@ you want to leave.</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-yY-EaZ">
-                                        <rect key="frame" x="320.5" y="38" width="24.5" height="25"/>
+                                        <rect key="frame" x="320.5" y="37" width="24.5" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JOE-yY-EaZ" secondAttribute="height" multiplier="1:1" id="AsS-jH-7e4"/>
                                         </constraints>
                                         <state key="normal" image="wallet_Shot_Button"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="xId-bd-9A5" firstAttribute="top" secondItem="iW3-NL-Hbj" secondAttribute="top" id="45z-7T-Jr1"/>
                                     <constraint firstAttribute="trailing" secondItem="xId-bd-9A5" secondAttribute="trailing" id="52u-fS-IPl"/>
@@ -1395,7 +1396,7 @@ you want to leave.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="fNW-1O-JZT" firstAttribute="top" secondItem="rmm-Ye-6is" secondAttribute="top" constant="10" id="8dx-MY-5N5"/>
                                             <constraint firstItem="LyX-08-3hF" firstAttribute="leading" secondItem="fNW-1O-JZT" secondAttribute="trailing" constant="10" id="SJJ-he-l3z"/>
@@ -1429,13 +1430,13 @@ you want to leave.</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-FS-gTT">
-                                                <rect key="frame" x="210.5" y="12.5" width="19.5" height="12"/>
+                                                <rect key="frame" x="209" y="12.5" width="21" height="12"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="y5z-qo-qfy" firstAttribute="leading" secondItem="lyl-HZ-cRk" secondAttribute="leading" constant="10" id="7Mn-mO-6dw"/>
                                             <constraint firstItem="y5z-qo-qfy" firstAttribute="top" secondItem="lyl-HZ-cRk" secondAttribute="top" id="8fw-Gi-1oo"/>
@@ -1516,7 +1517,7 @@ you want to leave.</string>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="opB-cE-AaJ">
-                                                <rect key="frame" x="31" y="12" width="226.5" height="17"/>
+                                                <rect key="frame" x="31" y="11" width="226.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1541,7 +1542,7 @@ you want to leave.</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CRYPTO" rowHeight="100" id="ZC4-Xq-0i7" customClass="Wallet_CryptoTableView" customModule="Bema" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="375" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZC4-Xq-0i7" id="H4n-if-Epe">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -1575,7 +1576,7 @@ you want to leave.</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="MQL-Z0-cPQ" firstAttribute="width" secondItem="lNN-af-N55" secondAttribute="width" multiplier="0.4" id="2LX-70-lFg"/>
                                                                 <constraint firstItem="qoB-PT-fFi" firstAttribute="height" secondItem="lNN-af-N55" secondAttribute="height" multiplier="0.5" id="3RD-sF-1BK"/>
@@ -1631,7 +1632,7 @@ you want to leave.</string>
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="G59-vd-cBz" firstAttribute="leading" secondItem="4OA-uy-tgh" secondAttribute="leading" id="0DR-di-qBs"/>
                                     <constraint firstItem="G59-vd-cBz" firstAttribute="top" secondItem="f76-lQ-yaG" secondAttribute="bottom" constant="20" id="1i2-aK-tuf"/>
@@ -1681,7 +1682,7 @@ you want to leave.</string>
                                             <action selector="chatButtonAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="7qz-Oz-Gv2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wt-Km-Xa5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wt-Km-Xa5">
                                         <rect key="frame" x="150" y="21.5" width="75" height="85.5"/>
                                         <connections>
                                             <segue destination="K8o-sI-AP8" kind="show" id="oQt-gV-h2o"/>
@@ -1712,7 +1713,7 @@ you want to leave.</string>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AT-U9-rAj">
                                 <rect key="frame" x="0.0" y="650" width="375" height="201"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byZ-ZO-bO2" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byZ-ZO-bO2" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="175.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1739,7 +1740,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="tzq-DE-h3v"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-8k-Pve" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-8k-Pve" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="25.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1769,7 +1770,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="xpT-Ce-KTh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly3-vB-5Fl" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly3-vB-5Fl" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="25.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1796,7 +1797,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="lOy-gW-3WT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHc-RP-ibr" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHc-RP-ibr" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="25.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1823,7 +1824,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="0yb-kf-MjA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiy-K9-dcc" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiy-K9-dcc" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="75.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1850,7 +1851,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="41T-D3-NCy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-wY-xxo" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-wY-xxo" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="75.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1877,7 +1878,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="RNw-Za-Rbl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrT-B1-HMM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrT-B1-HMM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="75.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1904,7 +1905,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="Smd-tJ-qb8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cd-YZ-086" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cd-YZ-086" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="125.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1931,7 +1932,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="6ug-8A-aIM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pM-f9-2Am" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pM-f9-2Am" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="125.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1958,7 +1959,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="Wtf-vW-aHQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-6c-JPl" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-6c-JPl" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="125.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1985,7 +1986,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="A02-8s-qlu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-wV-Uee" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-wV-Uee" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="175.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2012,7 +2013,7 @@ you want to leave.</string>
                                             <action selector="keyboardKeyAction:" destination="3Vr-9w-whh" eventType="touchUpInside" id="FzT-Fn-pA0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saf-qo-qEq" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saf-qo-qEq" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="175.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2092,6 +2093,7 @@ you want to leave.</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="M4x-9O-Vsa"/>
                         <color key="backgroundColor" red="1" green="0.99997597932815552" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="3AT-U9-rAj" firstAttribute="trailing" secondItem="M4x-9O-Vsa" secondAttribute="trailing" id="3jF-bc-BMq"/>
@@ -2114,7 +2116,6 @@ you want to leave.</string>
                             <constraint firstItem="kg5-rK-fHA" firstAttribute="leading" secondItem="M4x-9O-Vsa" secondAttribute="leading" id="xDK-WR-pce"/>
                             <constraint firstItem="4OA-uy-tgh" firstAttribute="top" secondItem="iW3-NL-Hbj" secondAttribute="bottom" constant="-30" id="yy8-VW-xIp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="M4x-9O-Vsa"/>
                     </view>
                     <navigationItem key="navigationItem" id="aJT-Yc-Rc2"/>
                     <connections>
@@ -2172,7 +2173,7 @@ Successful!</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Cyc-Bp-vhm" firstAttribute="top" secondItem="5sk-rW-y2O" secondAttribute="bottom" constant="10" id="GP0-Cb-J8N"/>
                                     <constraint firstItem="5sk-rW-y2O" firstAttribute="centerX" secondItem="EfQ-q0-TBI" secondAttribute="centerX" id="QNO-NF-uGz"/>
@@ -2201,7 +2202,7 @@ Successful!</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-4s-PzM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-4s-PzM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="48" y="68.5" width="95.5" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Lfk-GO-3fD"/>
@@ -2222,7 +2223,7 @@ Successful!</string>
                                             <action selector="noButtonAction:" destination="c9r-PW-e77" eventType="touchUpInside" id="TGb-kH-aZ5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSQ-NI-fCM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSQ-NI-fCM" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="175.5" y="68.5" width="95.5" height="45"/>
                                         <color key="backgroundColor" red="0.071193896229999998" green="0.61186456680000001" blue="0.60393893720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
@@ -2242,7 +2243,7 @@ Successful!</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="jSU-6Q-9re" firstAttribute="centerX" secondItem="dsN-7j-5Bd" secondAttribute="centerX" id="ARR-3A-ohD"/>
                                     <constraint firstItem="nSQ-NI-fCM" firstAttribute="height" secondItem="Gma-4s-PzM" secondAttribute="height" id="EWn-RI-iwA"/>
@@ -2267,6 +2268,7 @@ Successful!</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="TTV-zD-vFX"/>
                         <color key="backgroundColor" white="1" alpha="0.72659000880281688" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EfQ-q0-TBI" firstAttribute="height" secondItem="TTV-zD-vFX" secondAttribute="height" multiplier="0.4" id="8Ux-af-Mey"/>
@@ -2278,7 +2280,6 @@ Successful!</string>
                             <constraint firstItem="EfQ-q0-TBI" firstAttribute="width" secondItem="TTV-zD-vFX" secondAttribute="width" multiplier="0.8" id="r8q-9h-OF0"/>
                             <constraint firstItem="EfQ-q0-TBI" firstAttribute="centerX" secondItem="TTV-zD-vFX" secondAttribute="centerX" id="ztB-nE-b5l"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TTV-zD-vFX"/>
                     </view>
                     <connections>
                         <outlet property="confirmView" destination="dsN-7j-5Bd" id="KtH-bs-Nj2"/>
@@ -2300,7 +2301,7 @@ Successful!</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKG-js-DQX">
                                 <rect key="frame" x="0.0" y="450" width="375" height="217"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMq-kb-Ieg" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMq-kb-Ieg" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="28.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2324,7 +2325,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MG-gU-Yx9" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MG-gU-Yx9" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="78.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2348,7 +2349,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBZ-c4-fu6" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBZ-c4-fu6" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="128.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2372,7 +2373,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1i-oQ-xXD" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1i-oQ-xXD" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="128.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2396,7 +2397,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-V9-q5c" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-V9-q5c" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="128.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2420,7 +2421,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-ST-Jm2" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-ST-Jm2" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="178.5" width="94" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2444,7 +2445,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRb-iF-Sfu" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRb-iF-Sfu" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="178.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2468,7 +2469,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mI-He-fQF" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mI-He-fQF" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="78.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2492,7 +2493,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gci-Ng-Mnh" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gci-Ng-Mnh" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="78.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2516,7 +2517,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-PA-3dR" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-PA-3dR" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="254.5" y="28.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2540,7 +2541,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLe-8a-233" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLe-8a-233" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="28.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2567,7 +2568,7 @@ Successful!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDb-cO-POd" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDb-cO-POd" customClass="Custom_Button" customModule="Bema" customModuleProvider="target">
                                         <rect key="frame" x="27" y="178.5" width="93.5" height="30"/>
                                         <color key="backgroundColor" red="0.9609581828" green="0.96854132410000005" blue="0.9725518823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -2644,6 +2645,7 @@ Successful!</string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="l4K-wC-ZYm"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HKG-js-DQX" firstAttribute="leading" secondItem="l4K-wC-ZYm" secondAttribute="leading" id="0rZ-NW-xa9"/>
@@ -2652,7 +2654,6 @@ Successful!</string>
                             <constraint firstItem="HKG-js-DQX" firstAttribute="bottom" secondItem="l4K-wC-ZYm" secondAttribute="bottom" id="Ydd-wW-TbB"/>
                             <constraint firstItem="HKG-js-DQX" firstAttribute="height" secondItem="l4K-wC-ZYm" secondAttribute="height" multiplier="0.325" id="slI-96-raL"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="l4K-wC-ZYm"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3I-g7-YXH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2747,6 +2748,119 @@ Successful!</string>
             <point key="canvasLocation" x="1824.8" y="701.19940029985014"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1MG-gU-Yx9">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="1mI-He-fQF">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="3cd-YZ-086">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="67d-g6-f0P">
+            <size key="intrinsicContentSize" width="32" height="36"/>
+        </designable>
+        <designable name="6pM-f9-2Am">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="9nJ-Wg-ROZ">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="AMq-kb-Ieg">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="AlT-hh-pur">
+            <size key="intrinsicContentSize" width="54" height="30"/>
+        </designable>
+        <designable name="CDx-Q6-l7R">
+            <size key="intrinsicContentSize" width="145" height="47"/>
+        </designable>
+        <designable name="DmH-1v-2ir">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="Fam-8k-Pve">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Fdz-wV-Uee">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="GBZ-c4-fu6">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Gma-4s-PzM">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="KMW-V9-q5c">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="OoB-PA-3dR">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="PrT-B1-HMM">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="TJ6-6c-JPl">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="TLe-8a-233">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="TRb-iF-Sfu">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="TaP-sk-dcW">
+            <size key="intrinsicContentSize" width="32" height="36"/>
+        </designable>
+        <designable name="UDs-Lk-X8y">
+            <size key="intrinsicContentSize" width="36" height="30"/>
+        </designable>
+        <designable name="ZUK-ST-Jm2">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="byZ-ZO-bO2">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="c1i-oQ-xXD">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="cPb-Wk-cXB">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="gci-Ng-Mnh">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="iRf-yi-kP7">
+            <size key="intrinsicContentSize" width="32" height="36"/>
+        </designable>
+        <designable name="jiy-K9-dcc">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="lSz-Xi-pLE">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="ly3-vB-5Fl">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="nSQ-NI-fCM">
+            <size key="intrinsicContentSize" width="32" height="36"/>
+        </designable>
+        <designable name="pDb-cO-POd">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="qjG-wY-xxo">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="saf-qo-qEq">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="vHc-RP-ibr">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="V7I-0L-w6b"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="BEMA_small" width="38" height="46"/>
         <image name="Back" width="13" height="21"/>
@@ -2776,8 +2890,14 @@ Successful!</string>
         <image name="wallet_Selected" width="36" height="46"/>
         <image name="wallet_Shot_Button" width="29.5" height="29.5"/>
         <image name="wallet_Unselected" width="36" height="45.5"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="V7I-0L-w6b"/>
-    </inferredMetricsTieBreakers>
 </document>
